@@ -84,7 +84,7 @@ public enum SaleType
   }
   public static final com.google.protobuf.Descriptors.EnumDescriptor
       getDescriptor() {
-    return io.bloombox.schema.product.struct.SaleDescriptorOuterClass.getDescriptor().getEnumTypes().get(0);
+    return io.bloombox.schema.product.struct.ProductDiscount.getDescriptor().getEnumTypes().get(0);
   }
 
   private static final SaleType[] VALUES = values();

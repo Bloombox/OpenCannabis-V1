@@ -26,8 +26,8 @@ public static partial class ContentReflection {
           "bnQuRW5jb2RpbmcSDwoHY29udGVudBgDIAEoDBIbCghsYW5ndWFnZRgEIAEo",
           "DjIJLkxhbmd1YWdlEiEKC2NvbXByZXNzaW9uGAUgASgLMgwuQ29tcHJlc3Np",
           "b24iKAoEVHlwZRIICgRURVhUEAASDAoITUFSS0RPV04QARIICgRIVE1MEAIi",
-          "FAoIRW5jb2RpbmcSCAoEVVRGOBAAQh4KGmlvLmJsb29tYm94LnNjaGVtYS5j",
-          "b250ZW50UAFiBnByb3RvMw=="));
+          "FAoIRW5jb2RpbmcSCAoEVVRGOBAAQi4KGmlvLmJsb29tYm94LnNjaGVtYS5j",
+          "b250ZW50Qg5HZW5lcmljQ29udGVudFABYgZwcm90bzM="));
     descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
         new pbr::FileDescriptor[] { global::LanguageReflection.Descriptor, global::CompressionReflection.Descriptor, },
         new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {

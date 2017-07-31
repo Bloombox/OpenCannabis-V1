@@ -66,12 +66,12 @@ public  final class VideoType extends
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return io.bloombox.schema.media.MediaTypeOuterClass.internal_static_VideoType_descriptor;
+    return io.bloombox.schema.media.MediaItemType.internal_static_VideoType_descriptor;
   }
 
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return io.bloombox.schema.media.MediaTypeOuterClass.internal_static_VideoType_fieldAccessorTable
+    return io.bloombox.schema.media.MediaItemType.internal_static_VideoType_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             io.bloombox.schema.media.VideoType.class, io.bloombox.schema.media.VideoType.Builder.class);
   }
@@ -360,12 +360,12 @@ public  final class VideoType extends
       io.bloombox.schema.media.VideoTypeOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.media.MediaTypeOuterClass.internal_static_VideoType_descriptor;
+      return io.bloombox.schema.media.MediaItemType.internal_static_VideoType_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.media.MediaTypeOuterClass.internal_static_VideoType_fieldAccessorTable
+      return io.bloombox.schema.media.MediaItemType.internal_static_VideoType_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.media.VideoType.class, io.bloombox.schema.media.VideoType.Builder.class);
     }
@@ -394,7 +394,7 @@ public  final class VideoType extends
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return io.bloombox.schema.media.MediaTypeOuterClass.internal_static_VideoType_descriptor;
+      return io.bloombox.schema.media.MediaItemType.internal_static_VideoType_descriptor;
     }
 
     public io.bloombox.schema.media.VideoType getDefaultInstanceForType() {

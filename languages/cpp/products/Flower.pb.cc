@@ -129,10 +129,11 @@ void AddDescriptorsImpl() {
       "roductContent\022%\n\rmaterial_data\030\025 \001(\0132\016.M"
       "aterialsData\022\037\n\005flags\030\026 \001(\0132\020.FlagsDescr"
       "iptor\022 \n\007pricing\030\027 \001(\0132\017.ProductPricingB"
-      "\036\n\032io.bloombox.schema.productP\000b\006proto3"
+      "-\n\032io.bloombox.schema.productB\rFlowerPro"
+      "ductP\000b\006proto3"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 399);
+      descriptor, 414);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "products/Flower.proto", &protobuf_RegisterTypes);
   ::protobuf_base_2fProductKey_2eproto::AddDescriptors();

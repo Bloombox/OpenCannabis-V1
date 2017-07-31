@@ -69,12 +69,12 @@ public  final class Name extends
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return io.bloombox.schema.content.NameOuterClass.internal_static_Name_descriptor;
+    return io.bloombox.schema.content.NameContent.internal_static_Name_descriptor;
   }
 
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return io.bloombox.schema.content.NameOuterClass.internal_static_Name_fieldAccessorTable
+    return io.bloombox.schema.content.NameContent.internal_static_Name_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             io.bloombox.schema.content.Name.class, io.bloombox.schema.content.Name.Builder.class);
   }
@@ -330,12 +330,12 @@ public  final class Name extends
       io.bloombox.schema.content.NameOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.content.NameOuterClass.internal_static_Name_descriptor;
+      return io.bloombox.schema.content.NameContent.internal_static_Name_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.content.NameOuterClass.internal_static_Name_fieldAccessorTable
+      return io.bloombox.schema.content.NameContent.internal_static_Name_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.content.Name.class, io.bloombox.schema.content.Name.Builder.class);
     }
@@ -366,7 +366,7 @@ public  final class Name extends
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return io.bloombox.schema.content.NameOuterClass.internal_static_Name_descriptor;
+      return io.bloombox.schema.content.NameContent.internal_static_Name_descriptor;
     }
 
     public io.bloombox.schema.content.Name getDefaultInstanceForType() {

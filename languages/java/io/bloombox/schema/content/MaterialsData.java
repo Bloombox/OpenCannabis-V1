@@ -95,12 +95,12 @@ public  final class MaterialsData extends
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return io.bloombox.schema.content.MaterialsDataOuterClass.internal_static_MaterialsData_descriptor;
+    return io.bloombox.schema.content.MaterialsContent.internal_static_MaterialsData_descriptor;
   }
 
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return io.bloombox.schema.content.MaterialsDataOuterClass.internal_static_MaterialsData_fieldAccessorTable
+    return io.bloombox.schema.content.MaterialsContent.internal_static_MaterialsData_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             io.bloombox.schema.content.MaterialsData.class, io.bloombox.schema.content.MaterialsData.Builder.class);
   }
@@ -388,12 +388,12 @@ public  final class MaterialsData extends
       io.bloombox.schema.content.MaterialsDataOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.content.MaterialsDataOuterClass.internal_static_MaterialsData_descriptor;
+      return io.bloombox.schema.content.MaterialsContent.internal_static_MaterialsData_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.content.MaterialsDataOuterClass.internal_static_MaterialsData_fieldAccessorTable
+      return io.bloombox.schema.content.MaterialsContent.internal_static_MaterialsData_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.content.MaterialsData.class, io.bloombox.schema.content.MaterialsData.Builder.class);
     }
@@ -432,7 +432,7 @@ public  final class MaterialsData extends
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return io.bloombox.schema.content.MaterialsDataOuterClass.internal_static_MaterialsData_descriptor;
+      return io.bloombox.schema.content.MaterialsContent.internal_static_MaterialsData_descriptor;
     }
 
     public io.bloombox.schema.content.MaterialsData getDefaultInstanceForType() {

@@ -168,10 +168,11 @@ void AddDescriptorsImpl() {
       "\n\004HTML\020\001\022\007\n\003PDF\020\002\022\014\n\010MARKDOWN\020\003\"W\n\tVideo"
       "Type\022\"\n\004kind\030\001 \001(\0162\024.VideoType.VideoKind"
       "\"&\n\tVideoKind\022\007\n\003MP4\020\000\022\007\n\003FLV\020\001\022\007\n\003HLS\020\002"
-      "B\034\n\030io.bloombox.schema.mediaP\001b\006proto3"
+      "B+\n\030io.bloombox.schema.mediaB\rMediaItemT"
+      "ypeP\001b\006proto3"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 598);
+      descriptor, 613);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "media/MediaType.proto", &protobuf_RegisterTypes);
   ::google::protobuf::internal::OnShutdown(&TableStruct::Shutdown);

@@ -104,11 +104,11 @@ void AddDescriptorsImpl() {
   static const char descriptor[] = {
       "\n\026base/ProductType.proto\032\026base/ProductKi"
       "nd.proto\")\n\013ProductType\022\032\n\004kind\030\001 \001(\0162\014."
-      "ProductKindB\033\n\027io.bloombox.schema.baseP\001"
-      "b\006proto3"
+      "ProductKindB,\n\027io.bloombox.schema.baseB\017"
+      "BaseProductTypeP\001b\006proto3"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 128);
+      descriptor, 145);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "base/ProductType.proto", &protobuf_RegisterTypes);
   ::protobuf_base_2fProductKind_2eproto::AddDescriptors();

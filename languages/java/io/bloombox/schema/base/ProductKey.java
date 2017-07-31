@@ -62,12 +62,12 @@ public  final class ProductKey extends
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return io.bloombox.schema.base.ProductKeyOuterClass.internal_static_ProductKey_descriptor;
+    return io.bloombox.schema.base.BaseProductKey.internal_static_ProductKey_descriptor;
   }
 
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return io.bloombox.schema.base.ProductKeyOuterClass.internal_static_ProductKey_fieldAccessorTable
+    return io.bloombox.schema.base.BaseProductKey.internal_static_ProductKey_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             io.bloombox.schema.base.ProductKey.class, io.bloombox.schema.base.ProductKey.Builder.class);
   }
@@ -263,12 +263,12 @@ public  final class ProductKey extends
       io.bloombox.schema.base.ProductKeyOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.base.ProductKeyOuterClass.internal_static_ProductKey_descriptor;
+      return io.bloombox.schema.base.BaseProductKey.internal_static_ProductKey_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.base.ProductKeyOuterClass.internal_static_ProductKey_fieldAccessorTable
+      return io.bloombox.schema.base.BaseProductKey.internal_static_ProductKey_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.base.ProductKey.class, io.bloombox.schema.base.ProductKey.Builder.class);
     }
@@ -297,7 +297,7 @@ public  final class ProductKey extends
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return io.bloombox.schema.base.ProductKeyOuterClass.internal_static_ProductKey_descriptor;
+      return io.bloombox.schema.base.BaseProductKey.internal_static_ProductKey_descriptor;
     }
 
     public io.bloombox.schema.base.ProductKey getDefaultInstanceForType() {

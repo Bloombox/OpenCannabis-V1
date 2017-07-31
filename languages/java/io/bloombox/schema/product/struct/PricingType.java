@@ -88,7 +88,7 @@ public enum PricingType
   }
   public static final com.google.protobuf.Descriptors.EnumDescriptor
       getDescriptor() {
-    return io.bloombox.schema.product.struct.PricingDescriptorOuterClass.getDescriptor().getEnumTypes().get(0);
+    return io.bloombox.schema.product.struct.ProductPricingSpec.getDescriptor().getEnumTypes().get(0);
   }
 
   private static final PricingType[] VALUES = values();

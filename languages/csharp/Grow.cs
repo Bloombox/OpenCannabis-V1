@@ -21,8 +21,9 @@ public static partial class GrowReflection {
     byte[] descriptorData = global::System.Convert.FromBase64String(
         string.Concat(
           "ChJzdHJ1Y3RzL0dyb3cucHJvdG8qPAoER3JvdxILCgdHRU5FUklDEAASCgoG",
-          "SU5ET09SEAESDgoKR1JFRU5IT1VTRRACEgsKB09VVERPT1IQA0IlCiFpby5i",
-          "bG9vbWJveC5zY2hlbWEucHJvZHVjdC5zdHJ1Y3RQAWIGcHJvdG8z"));
+          "SU5ET09SEAESDgoKR1JFRU5IT1VTRRACEgsKB09VVERPT1IQA0IzCiFpby5i",
+          "bG9vbWJveC5zY2hlbWEucHJvZHVjdC5zdHJ1Y3RCDE1hdGVyaWFsR3Jvd1AB",
+          "YgZwcm90bzM="));
     descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
         new pbr::FileDescriptor[] { },
         new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Grow), }, null));

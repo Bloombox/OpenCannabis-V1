@@ -81,12 +81,12 @@ public  final class WeightedPricingDescriptor extends
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return io.bloombox.schema.product.struct.PricingDescriptorOuterClass.internal_static_WeightedPricingDescriptor_descriptor;
+    return io.bloombox.schema.product.struct.ProductPricingSpec.internal_static_WeightedPricingDescriptor_descriptor;
   }
 
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return io.bloombox.schema.product.struct.PricingDescriptorOuterClass.internal_static_WeightedPricingDescriptor_fieldAccessorTable
+    return io.bloombox.schema.product.struct.ProductPricingSpec.internal_static_WeightedPricingDescriptor_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             io.bloombox.schema.product.struct.WeightedPricingDescriptor.class, io.bloombox.schema.product.struct.WeightedPricingDescriptor.Builder.class);
   }
@@ -324,12 +324,12 @@ public  final class WeightedPricingDescriptor extends
       io.bloombox.schema.product.struct.WeightedPricingDescriptorOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.product.struct.PricingDescriptorOuterClass.internal_static_WeightedPricingDescriptor_descriptor;
+      return io.bloombox.schema.product.struct.ProductPricingSpec.internal_static_WeightedPricingDescriptor_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.product.struct.PricingDescriptorOuterClass.internal_static_WeightedPricingDescriptor_fieldAccessorTable
+      return io.bloombox.schema.product.struct.ProductPricingSpec.internal_static_WeightedPricingDescriptor_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.product.struct.WeightedPricingDescriptor.class, io.bloombox.schema.product.struct.WeightedPricingDescriptor.Builder.class);
     }
@@ -366,7 +366,7 @@ public  final class WeightedPricingDescriptor extends
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return io.bloombox.schema.product.struct.PricingDescriptorOuterClass.internal_static_WeightedPricingDescriptor_descriptor;
+      return io.bloombox.schema.product.struct.ProductPricingSpec.internal_static_WeightedPricingDescriptor_descriptor;
     }
 
     public io.bloombox.schema.product.struct.WeightedPricingDescriptor getDefaultInstanceForType() {

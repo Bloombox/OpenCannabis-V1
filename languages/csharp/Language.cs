@@ -21,8 +21,8 @@ public static partial class LanguageReflection {
     byte[] descriptorData = global::System.Convert.FromBase64String(
         string.Concat(
           "ChNiYXNlL0xhbmd1YWdlLnByb3RvKjAKCExhbmd1YWdlEgsKB0VOR0xJU0gQ",
-          "ABILCgdTUEFOSVNIEAESCgoGRlJFTkNIEAJCGwoXaW8uYmxvb21ib3guc2No",
-          "ZW1hLmJhc2VQAWIGcHJvdG8z"));
+          "ABILCgdTUEFOSVNIEAESCgoGRlJFTkNIEAJCKQoXaW8uYmxvb21ib3guc2No",
+          "ZW1hLmJhc2VCDEJhc2VMYW5ndWFnZVABYgZwcm90bzM="));
     descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
         new pbr::FileDescriptor[] { },
         new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Language), }, null));

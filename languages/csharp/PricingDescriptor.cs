@@ -39,8 +39,9 @@ public static partial class PricingDescriptorReflection {
           "RUlHSFRFRBABEgsKB0ZSRUVCSUUQAiqJAQoRUHJpY2luZ1dlaWdodFRpZXIS",
           "CQoFT1RIRVIQABIICgRHUkFNEAESDAoISEFMRkdSQU0QAhIPCgtRVUFSVEVS",
           "R1JBTRADEgcKA0RVQhAEEgoKBkVJR0hUSBAFEgsKB1FVQVJURVIQBhIICgRI",
-          "QUxGEAcSCQoFT1VOQ0UQCBIJCgVQT1VORBAJQiUKIWlvLmJsb29tYm94LnNj",
-          "aGVtYS5wcm9kdWN0LnN0cnVjdFABYgZwcm90bzM="));
+          "QUxGEAcSCQoFT1VOQ0UQCBIJCgVQT1VORBAJQjkKIWlvLmJsb29tYm94LnNj",
+          "aGVtYS5wcm9kdWN0LnN0cnVjdEISUHJvZHVjdFByaWNpbmdTcGVjUAFiBnBy",
+          "b3RvMw=="));
     descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
         new pbr::FileDescriptor[] { global::SaleDescriptorReflection.Descriptor, },
         new pbr::GeneratedClrTypeInfo(new[] {typeof(global::PricingType), typeof(global::PricingWeightTier), }, new pbr::GeneratedClrTypeInfo[] {

@@ -117,11 +117,11 @@ void AddDescriptorsImpl() {
       "\001(\014\022\033\n\010language\030\004 \001(\0162\t.Language\022!\n\013comp"
       "ression\030\005 \001(\0132\014.Compression\"(\n\004Type\022\010\n\004T"
       "EXT\020\000\022\014\n\010MARKDOWN\020\001\022\010\n\004HTML\020\002\"\024\n\010Encodin"
-      "g\022\010\n\004UTF8\020\000B\036\n\032io.bloombox.schema.conten"
-      "tP\001b\006proto3"
+      "g\022\010\n\004UTF8\020\000B.\n\032io.bloombox.schema.conten"
+      "tB\016GenericContentP\001b\006proto3"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 331);
+      descriptor, 347);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "content/Content.proto", &protobuf_RegisterTypes);
   ::protobuf_base_2fLanguage_2eproto::AddDescriptors();

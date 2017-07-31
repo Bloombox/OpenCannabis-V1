@@ -68,12 +68,12 @@ public  final class Compression extends
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return io.bloombox.schema.base.CompressionOuterClass.internal_static_Compression_descriptor;
+    return io.bloombox.schema.base.BaseCompression.internal_static_Compression_descriptor;
   }
 
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return io.bloombox.schema.base.CompressionOuterClass.internal_static_Compression_fieldAccessorTable
+    return io.bloombox.schema.base.BaseCompression.internal_static_Compression_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             io.bloombox.schema.base.Compression.class, io.bloombox.schema.base.Compression.Builder.class);
   }
@@ -361,12 +361,12 @@ public  final class Compression extends
       io.bloombox.schema.base.CompressionOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.base.CompressionOuterClass.internal_static_Compression_descriptor;
+      return io.bloombox.schema.base.BaseCompression.internal_static_Compression_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.base.CompressionOuterClass.internal_static_Compression_fieldAccessorTable
+      return io.bloombox.schema.base.BaseCompression.internal_static_Compression_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.base.Compression.class, io.bloombox.schema.base.Compression.Builder.class);
     }
@@ -397,7 +397,7 @@ public  final class Compression extends
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return io.bloombox.schema.base.CompressionOuterClass.internal_static_Compression_descriptor;
+      return io.bloombox.schema.base.BaseCompression.internal_static_Compression_descriptor;
     }
 
     public io.bloombox.schema.base.Compression getDefaultInstanceForType() {

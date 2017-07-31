@@ -24,8 +24,8 @@ public static partial class MaterialsDataReflection {
           "cm90bxoVc3RydWN0cy9TcGVjaWVzLnByb3RvGhZzdHJ1Y3RzL0dlbmV0aWNz",
           "LnByb3RvInEKDU1hdGVyaWFsc0RhdGESEwoLaW5ncmVkaWVudHMYASADKAkS",
           "EwoEZ3JvdxgCIAEoDjIFLkdyb3cSGQoHc3BlY2llcxgDIAEoDjIILlNwZWNp",
-          "ZXMSGwoIZ2VuZXRpY3MYBCABKAsyCS5HZW5ldGljc0IeChppby5ibG9vbWJv",
-          "eC5zY2hlbWEuY29udGVudFABYgZwcm90bzM="));
+          "ZXMSGwoIZ2VuZXRpY3MYBCABKAsyCS5HZW5ldGljc0IwChppby5ibG9vbWJv",
+          "eC5zY2hlbWEuY29udGVudEIQTWF0ZXJpYWxzQ29udGVudFABYgZwcm90bzM="));
     descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
         new pbr::FileDescriptor[] { global::GrowReflection.Descriptor, global::SpeciesReflection.Descriptor, global::GeneticsReflection.Descriptor, },
         new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {

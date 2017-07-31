@@ -24,7 +24,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='products/Flower.proto',
   package='',
   syntax='proto3',
-  serialized_pb=_b('\n\x15products/Flower.proto\x1a\x15\x62\x61se/ProductKey.proto\x1a\x1b\x63ontent/MaterialsData.proto\x1a\x1c\x63ontent/ProductContent.proto\x1a\x1dstructs/FlagsDescriptor.proto\x1a\'structs/pricing/PricingDescriptor.proto\"\xb3\x01\n\x06\x46lower\x12\x18\n\x03key\x18\x01 \x01(\x0b\x32\x0b.ProductKey\x12%\n\x0cproduct_data\x18\x14 \x01(\x0b\x32\x0f.ProductContent\x12%\n\rmaterial_data\x18\x15 \x01(\x0b\x32\x0e.MaterialsData\x12\x1f\n\x05\x66lags\x18\x16 \x01(\x0b\x32\x10.FlagsDescriptor\x12 \n\x07pricing\x18\x17 \x01(\x0b\x32\x0f.ProductPricingB\x1e\n\x1aio.bloombox.schema.productP\x00\x62\x06proto3')
+  serialized_pb=_b('\n\x15products/Flower.proto\x1a\x15\x62\x61se/ProductKey.proto\x1a\x1b\x63ontent/MaterialsData.proto\x1a\x1c\x63ontent/ProductContent.proto\x1a\x1dstructs/FlagsDescriptor.proto\x1a\'structs/pricing/PricingDescriptor.proto\"\xb3\x01\n\x06\x46lower\x12\x18\n\x03key\x18\x01 \x01(\x0b\x32\x0b.ProductKey\x12%\n\x0cproduct_data\x18\x14 \x01(\x0b\x32\x0f.ProductContent\x12%\n\rmaterial_data\x18\x15 \x01(\x0b\x32\x0e.MaterialsData\x12\x1f\n\x05\x66lags\x18\x16 \x01(\x0b\x32\x10.FlagsDescriptor\x12 \n\x07pricing\x18\x17 \x01(\x0b\x32\x0f.ProductPricingB-\n\x1aio.bloombox.schema.productB\rFlowerProductP\x00\x62\x06proto3')
   ,
   dependencies=[base_dot_ProductKey__pb2.DESCRIPTOR,content_dot_MaterialsData__pb2.DESCRIPTOR,content_dot_ProductContent__pb2.DESCRIPTOR,structs_dot_FlagsDescriptor__pb2.DESCRIPTOR,structs_dot_pricing_dot_PricingDescriptor__pb2.DESCRIPTOR,])
 
@@ -106,5 +106,5 @@ _sym_db.RegisterMessage(Flower)
 
 
 DESCRIPTOR.has_options = True
-DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\032io.bloombox.schema.productP\000'))
+DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\032io.bloombox.schema.productB\rFlowerProductP\000'))
 # @@protoc_insertion_point(module_scope)

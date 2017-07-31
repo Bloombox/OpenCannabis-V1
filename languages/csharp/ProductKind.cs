@@ -23,8 +23,8 @@ public static partial class ProductKindReflection {
           "ChZiYXNlL1Byb2R1Y3RLaW5kLnByb3RvKoABCgtQcm9kdWN0S2luZBILCgdG",
           "TE9XRVJTEAASCwoHRURJQkxFUxABEgwKCEVYVFJBQ1RTEAISDAoIUFJFUk9M",
           "TFMQAxIOCgpBUE9USEVDQVJZEAQSDgoKQ0FSVFJJREdFUxAFEgoKBlBMQU5U",
-          "UxAGEg8KC01FUkNIQU5ESVNFEAdCGwoXaW8uYmxvb21ib3guc2NoZW1hLmJh",
-          "c2VQAWIGcHJvdG8z"));
+          "UxAGEg8KC01FUkNIQU5ESVNFEAdCLAoXaW8uYmxvb21ib3guc2NoZW1hLmJh",
+          "c2VCD0Jhc2VQcm9kdWN0S2luZFABYgZwcm90bzM="));
     descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
         new pbr::FileDescriptor[] { },
         new pbr::GeneratedClrTypeInfo(new[] {typeof(global::ProductKind), }, null));

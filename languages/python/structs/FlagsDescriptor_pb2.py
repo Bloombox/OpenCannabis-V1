@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='structs/FlagsDescriptor.proto',
   package='',
   syntax='proto3',
-  serialized_pb=_b('\n\x1dstructs/FlagsDescriptor.proto\"=\n\x10ProductFlagValue\x12\x1a\n\x04type\x18\x01 \x01(\x0e\x32\x0c.ProductFlag\x12\r\n\x05value\x18\x02 \x01(\x08\"2\n\x0eProductFlagset\x12 \n\x05\x66lags\x18\x01 \x03(\x0b\x32\x11.ProductFlagValue\"j\n\x0f\x46lagsDescriptor\x12\x0f\n\x07visible\x18\x01 \x01(\x08\x12\x0f\n\x07premium\x18\x02 \x01(\x08\x12\x10\n\x08\x66\x65\x61tured\x18\x03 \x01(\x08\x12\x12\n\nlastchance\x18\x04 \x01(\x08\x12\x0f\n\x07inhouse\x18\x05 \x01(\x08*R\n\x0bProductFlag\x12\x0b\n\x07VISIBLE\x10\x00\x12\x0b\n\x07PREMIUM\x10\x01\x12\x0c\n\x08\x46\x45\x41TURED\x10\x02\x12\x0e\n\nLASTCHANCE\x10\x03\x12\x0b\n\x07INHOUSE\x10\x04\x42%\n!io.bloombox.schema.product.structP\x01\x62\x06proto3')
+  serialized_pb=_b('\n\x1dstructs/FlagsDescriptor.proto\"=\n\x10ProductFlagValue\x12\x1a\n\x04type\x18\x01 \x01(\x0e\x32\x0c.ProductFlag\x12\r\n\x05value\x18\x02 \x01(\x08\"2\n\x0eProductFlagset\x12 \n\x05\x66lags\x18\x01 \x03(\x0b\x32\x11.ProductFlagValue\"j\n\x0f\x46lagsDescriptor\x12\x0f\n\x07visible\x18\x01 \x01(\x08\x12\x0f\n\x07premium\x18\x02 \x01(\x08\x12\x10\n\x08\x66\x65\x61tured\x18\x03 \x01(\x08\x12\x12\n\nlastchance\x18\x04 \x01(\x08\x12\x0f\n\x07inhouse\x18\x05 \x01(\x08*R\n\x0bProductFlag\x12\x0b\n\x07VISIBLE\x10\x00\x12\x0b\n\x07PREMIUM\x10\x01\x12\x0c\n\x08\x46\x45\x41TURED\x10\x02\x12\x0e\n\nLASTCHANCE\x10\x03\x12\x0b\n\x07INHOUSE\x10\x04\x42\x32\n!io.bloombox.schema.product.structB\x0b\x42\x61seStructsP\x01\x62\x06proto3')
 )
 
 _PRODUCTFLAG = _descriptor.EnumDescriptor(
@@ -224,5 +224,5 @@ _sym_db.RegisterMessage(FlagsDescriptor)
 
 
 DESCRIPTOR.has_options = True
-DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n!io.bloombox.schema.product.structP\001'))
+DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n!io.bloombox.schema.product.structB\013BaseStructsP\001'))
 # @@protoc_insertion_point(module_scope)

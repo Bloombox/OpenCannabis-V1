@@ -104,12 +104,12 @@ public  final class SaleDescriptor extends
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return io.bloombox.schema.product.struct.SaleDescriptorOuterClass.internal_static_SaleDescriptor_descriptor;
+    return io.bloombox.schema.product.struct.ProductDiscount.internal_static_SaleDescriptor_descriptor;
   }
 
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return io.bloombox.schema.product.struct.SaleDescriptorOuterClass.internal_static_SaleDescriptor_fieldAccessorTable
+    return io.bloombox.schema.product.struct.ProductDiscount.internal_static_SaleDescriptor_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             io.bloombox.schema.product.struct.SaleDescriptor.class, io.bloombox.schema.product.struct.SaleDescriptor.Builder.class);
   }
@@ -441,12 +441,12 @@ public  final class SaleDescriptor extends
       io.bloombox.schema.product.struct.SaleDescriptorOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.product.struct.SaleDescriptorOuterClass.internal_static_SaleDescriptor_descriptor;
+      return io.bloombox.schema.product.struct.ProductDiscount.internal_static_SaleDescriptor_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.product.struct.SaleDescriptorOuterClass.internal_static_SaleDescriptor_fieldAccessorTable
+      return io.bloombox.schema.product.struct.ProductDiscount.internal_static_SaleDescriptor_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.product.struct.SaleDescriptor.class, io.bloombox.schema.product.struct.SaleDescriptor.Builder.class);
     }
@@ -489,7 +489,7 @@ public  final class SaleDescriptor extends
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return io.bloombox.schema.product.struct.SaleDescriptorOuterClass.internal_static_SaleDescriptor_descriptor;
+      return io.bloombox.schema.product.struct.ProductDiscount.internal_static_SaleDescriptor_descriptor;
     }
 
     public io.bloombox.schema.product.struct.SaleDescriptor getDefaultInstanceForType() {

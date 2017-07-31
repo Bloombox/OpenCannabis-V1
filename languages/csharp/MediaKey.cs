@@ -21,7 +21,8 @@ public static partial class MediaKeyReflection {
     byte[] descriptorData = global::System.Convert.FromBase64String(
         string.Concat(
           "ChRtZWRpYS9NZWRpYUtleS5wcm90byIWCghNZWRpYUtleRIKCgJpZBgBIAEo",
-          "CUIcChhpby5ibG9vbWJveC5zY2hlbWEubWVkaWFQAWIGcHJvdG8z"));
+          "CUIqChhpby5ibG9vbWJveC5zY2hlbWEubWVkaWFCDE1lZGlhSXRlbUtleVAB",
+          "YgZwcm90bzM="));
     descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
         new pbr::FileDescriptor[] { },
         new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {

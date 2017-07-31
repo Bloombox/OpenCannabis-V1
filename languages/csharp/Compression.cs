@@ -22,8 +22,8 @@ public static partial class CompressionReflection {
         string.Concat(
           "ChZiYXNlL0NvbXByZXNzaW9uLnByb3RvIlEKC0NvbXByZXNzaW9uEg8KB2Vu",
           "YWJsZWQYASABKAgSHwoEdHlwZRgCIAEoDjIRLkNvbXByZXNzaW9uLlR5cGUi",
-          "EAoEVHlwZRIICgRHWklQEABCGwoXaW8uYmxvb21ib3guc2NoZW1hLmJhc2VQ",
-          "AWIGcHJvdG8z"));
+          "EAoEVHlwZRIICgRHWklQEABCLAoXaW8uYmxvb21ib3guc2NoZW1hLmJhc2VC",
+          "D0Jhc2VDb21wcmVzc2lvblABYgZwcm90bzM="));
     descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
         new pbr::FileDescriptor[] { },
         new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {

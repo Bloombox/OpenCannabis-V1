@@ -102,11 +102,11 @@ void AddDescriptorsImpl() {
   InitDefaults();
   static const char descriptor[] = {
       "\n\025base/ProductKey.proto\"\030\n\nProductKey\022\n\n"
-      "\002id\030\001 \001(\tB\033\n\027io.bloombox.schema.baseP\001b\006"
-      "proto3"
+      "\002id\030\001 \001(\tB+\n\027io.bloombox.schema.baseB\016Ba"
+      "seProductKeyP\001b\006proto3"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 86);
+      descriptor, 102);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "base/ProductKey.proto", &protobuf_RegisterTypes);
   ::google::protobuf::internal::OnShutdown(&TableStruct::Shutdown);

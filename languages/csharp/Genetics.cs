@@ -22,8 +22,8 @@ public static partial class GeneticsReflection {
         string.Concat(
           "ChZzdHJ1Y3RzL0dlbmV0aWNzLnByb3RvGhJjb250ZW50L05hbWUucHJvdG8i",
           "NgoIR2VuZXRpY3MSEwoEbWFsZRgBIAEoCzIFLk5hbWUSFQoGZmVtYWxlGAIg",
-          "ASgLMgUuTmFtZUIlCiFpby5ibG9vbWJveC5zY2hlbWEucHJvZHVjdC5zdHJ1",
-          "Y3RQAWIGcHJvdG8z"));
+          "ASgLMgUuTmFtZUI2CiFpby5ibG9vbWJveC5zY2hlbWEucHJvZHVjdC5zdHJ1",
+          "Y3RCD0dlbmV0aWNzU3RydWN0c1ABYgZwcm90bzM="));
     descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
         new pbr::FileDescriptor[] { global::NameReflection.Descriptor, },
         new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {

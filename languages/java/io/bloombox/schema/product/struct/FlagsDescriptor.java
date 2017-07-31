@@ -85,12 +85,12 @@ public  final class FlagsDescriptor extends
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return io.bloombox.schema.product.struct.FlagsDescriptorOuterClass.internal_static_FlagsDescriptor_descriptor;
+    return io.bloombox.schema.product.struct.BaseStructs.internal_static_FlagsDescriptor_descriptor;
   }
 
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return io.bloombox.schema.product.struct.FlagsDescriptorOuterClass.internal_static_FlagsDescriptor_fieldAccessorTable
+    return io.bloombox.schema.product.struct.BaseStructs.internal_static_FlagsDescriptor_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             io.bloombox.schema.product.struct.FlagsDescriptor.class, io.bloombox.schema.product.struct.FlagsDescriptor.Builder.class);
   }
@@ -347,12 +347,12 @@ public  final class FlagsDescriptor extends
       io.bloombox.schema.product.struct.FlagsDescriptorOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.product.struct.FlagsDescriptorOuterClass.internal_static_FlagsDescriptor_descriptor;
+      return io.bloombox.schema.product.struct.BaseStructs.internal_static_FlagsDescriptor_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.product.struct.FlagsDescriptorOuterClass.internal_static_FlagsDescriptor_fieldAccessorTable
+      return io.bloombox.schema.product.struct.BaseStructs.internal_static_FlagsDescriptor_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.product.struct.FlagsDescriptor.class, io.bloombox.schema.product.struct.FlagsDescriptor.Builder.class);
     }
@@ -389,7 +389,7 @@ public  final class FlagsDescriptor extends
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return io.bloombox.schema.product.struct.FlagsDescriptorOuterClass.internal_static_FlagsDescriptor_descriptor;
+      return io.bloombox.schema.product.struct.BaseStructs.internal_static_FlagsDescriptor_descriptor;
     }
 
     public io.bloombox.schema.product.struct.FlagsDescriptor getDefaultInstanceForType() {

@@ -21,7 +21,8 @@ public static partial class ProductKeyReflection {
     byte[] descriptorData = global::System.Convert.FromBase64String(
         string.Concat(
           "ChViYXNlL1Byb2R1Y3RLZXkucHJvdG8iGAoKUHJvZHVjdEtleRIKCgJpZBgB",
-          "IAEoCUIbChdpby5ibG9vbWJveC5zY2hlbWEuYmFzZVABYgZwcm90bzM="));
+          "IAEoCUIrChdpby5ibG9vbWJveC5zY2hlbWEuYmFzZUIOQmFzZVByb2R1Y3RL",
+          "ZXlQAWIGcHJvdG8z"));
     descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
         new pbr::FileDescriptor[] { },
         new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {

@@ -93,7 +93,7 @@ public enum Grow
   }
   public static final com.google.protobuf.Descriptors.EnumDescriptor
       getDescriptor() {
-    return io.bloombox.schema.product.struct.GrowOuterClass.getDescriptor().getEnumTypes().get(0);
+    return io.bloombox.schema.product.struct.MaterialGrow.getDescriptor().getEnumTypes().get(0);
   }
 
   private static final Grow[] VALUES = values();

@@ -129,7 +129,7 @@ public enum ProductKind
   }
   public static final com.google.protobuf.Descriptors.EnumDescriptor
       getDescriptor() {
-    return io.bloombox.schema.base.ProductKindOuterClass.getDescriptor().getEnumTypes().get(0);
+    return io.bloombox.schema.base.BaseProductKind.getDescriptor().getEnumTypes().get(0);
   }
 
   private static final ProductKind[] VALUES = values();

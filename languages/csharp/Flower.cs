@@ -28,7 +28,8 @@ public static partial class FlowerReflection {
           "X2RhdGEYFCABKAsyDy5Qcm9kdWN0Q29udGVudBIlCg1tYXRlcmlhbF9kYXRh",
           "GBUgASgLMg4uTWF0ZXJpYWxzRGF0YRIfCgVmbGFncxgWIAEoCzIQLkZsYWdz",
           "RGVzY3JpcHRvchIgCgdwcmljaW5nGBcgASgLMg8uUHJvZHVjdFByaWNpbmdC",
-          "HgoaaW8uYmxvb21ib3guc2NoZW1hLnByb2R1Y3RQAGIGcHJvdG8z"));
+          "LQoaaW8uYmxvb21ib3guc2NoZW1hLnByb2R1Y3RCDUZsb3dlclByb2R1Y3RQ",
+          "AGIGcHJvdG8z"));
     descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
         new pbr::FileDescriptor[] { global::ProductKeyReflection.Descriptor, global::MaterialsDataReflection.Descriptor, global::ProductContentReflection.Descriptor, global::FlagsDescriptorReflection.Descriptor, global::PricingDescriptorReflection.Descriptor, },
         new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {

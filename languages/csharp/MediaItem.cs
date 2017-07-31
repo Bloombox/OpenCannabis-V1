@@ -23,8 +23,8 @@ public static partial class MediaItemReflection {
           "ChVtZWRpYS9NZWRpYUl0ZW0ucHJvdG8aFG1lZGlhL01lZGlhS2V5LnByb3Rv",
           "GhVtZWRpYS9NZWRpYVR5cGUucHJvdG8iSwoJTWVkaWFJdGVtEhYKA2tleRgB",
           "IAEoCzIJLk1lZGlhS2V5EhgKBHR5cGUYAiABKAsyCi5NZWRpYVR5cGUSDAoE",
-          "bmFtZRgDIAEoCUIcChhpby5ibG9vbWJveC5zY2hlbWEubWVkaWFQAWIGcHJv",
-          "dG8z"));
+          "bmFtZRgDIAEoCUIrChhpby5ibG9vbWJveC5zY2hlbWEubWVkaWFCDUF0dGFj",
+          "aGVkTWVkaWFQAWIGcHJvdG8z"));
     descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
         new pbr::FileDescriptor[] { global::MediaKeyReflection.Descriptor, global::MediaTypeReflection.Descriptor, },
         new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {

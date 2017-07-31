@@ -66,12 +66,12 @@ public  final class ProductType extends
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return io.bloombox.schema.base.ProductTypeOuterClass.internal_static_ProductType_descriptor;
+    return io.bloombox.schema.base.BaseProductType.internal_static_ProductType_descriptor;
   }
 
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return io.bloombox.schema.base.ProductTypeOuterClass.internal_static_ProductType_fieldAccessorTable
+    return io.bloombox.schema.base.BaseProductType.internal_static_ProductType_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             io.bloombox.schema.base.ProductType.class, io.bloombox.schema.base.ProductType.Builder.class);
   }
@@ -253,12 +253,12 @@ public  final class ProductType extends
       io.bloombox.schema.base.ProductTypeOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.base.ProductTypeOuterClass.internal_static_ProductType_descriptor;
+      return io.bloombox.schema.base.BaseProductType.internal_static_ProductType_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.base.ProductTypeOuterClass.internal_static_ProductType_fieldAccessorTable
+      return io.bloombox.schema.base.BaseProductType.internal_static_ProductType_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.base.ProductType.class, io.bloombox.schema.base.ProductType.Builder.class);
     }
@@ -287,7 +287,7 @@ public  final class ProductType extends
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return io.bloombox.schema.base.ProductTypeOuterClass.internal_static_ProductType_descriptor;
+      return io.bloombox.schema.base.BaseProductType.internal_static_ProductType_descriptor;
     }
 
     public io.bloombox.schema.base.ProductType getDefaultInstanceForType() {

@@ -105,12 +105,12 @@ public  final class MediaType extends
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return io.bloombox.schema.media.MediaTypeOuterClass.internal_static_MediaType_descriptor;
+    return io.bloombox.schema.media.MediaItemType.internal_static_MediaType_descriptor;
   }
 
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return io.bloombox.schema.media.MediaTypeOuterClass.internal_static_MediaType_fieldAccessorTable
+    return io.bloombox.schema.media.MediaItemType.internal_static_MediaType_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             io.bloombox.schema.media.MediaType.class, io.bloombox.schema.media.MediaType.Builder.class);
   }
@@ -519,12 +519,12 @@ public  final class MediaType extends
       io.bloombox.schema.media.MediaTypeOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.media.MediaTypeOuterClass.internal_static_MediaType_descriptor;
+      return io.bloombox.schema.media.MediaItemType.internal_static_MediaType_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.media.MediaTypeOuterClass.internal_static_MediaType_fieldAccessorTable
+      return io.bloombox.schema.media.MediaItemType.internal_static_MediaType_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.media.MediaType.class, io.bloombox.schema.media.MediaType.Builder.class);
     }
@@ -571,7 +571,7 @@ public  final class MediaType extends
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return io.bloombox.schema.media.MediaTypeOuterClass.internal_static_MediaType_descriptor;
+      return io.bloombox.schema.media.MediaItemType.internal_static_MediaType_descriptor;
     }
 
     public io.bloombox.schema.media.MediaType getDefaultInstanceForType() {

@@ -21,8 +21,8 @@ public static partial class NameReflection {
     byte[] descriptorData = global::System.Convert.FromBase64String(
         string.Concat(
           "ChJjb250ZW50L05hbWUucHJvdG8iKAoETmFtZRIPCgdwcmltYXJ5GAEgASgJ",
-          "Eg8KB2Rpc3BsYXkYAiABKAlCHgoaaW8uYmxvb21ib3guc2NoZW1hLmNvbnRl",
-          "bnRQAWIGcHJvdG8z"));
+          "Eg8KB2Rpc3BsYXkYAiABKAlCKwoaaW8uYmxvb21ib3guc2NoZW1hLmNvbnRl",
+          "bnRCC05hbWVDb250ZW50UAFiBnByb3RvMw=="));
     descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
         new pbr::FileDescriptor[] { },
         new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {

@@ -103,11 +103,11 @@ void AddDescriptorsImpl() {
   InitDefaults();
   static const char descriptor[] = {
       "\n\022content/Name.proto\"(\n\004Name\022\017\n\007primary\030"
-      "\001 \001(\t\022\017\n\007display\030\002 \001(\tB\036\n\032io.bloombox.sc"
-      "hema.contentP\001b\006proto3"
+      "\001 \001(\t\022\017\n\007display\030\002 \001(\tB+\n\032io.bloombox.sc"
+      "hema.contentB\013NameContentP\001b\006proto3"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 102);
+      descriptor, 115);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "content/Name.proto", &protobuf_RegisterTypes);
   ::google::protobuf::internal::OnShutdown(&TableStruct::Shutdown);

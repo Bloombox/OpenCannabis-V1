@@ -102,11 +102,11 @@ void AddDescriptorsImpl() {
   InitDefaults();
   static const char descriptor[] = {
       "\n\024media/MediaKey.proto\"\026\n\010MediaKey\022\n\n\002id"
-      "\030\001 \001(\tB\034\n\030io.bloombox.schema.mediaP\001b\006pr"
-      "oto3"
+      "\030\001 \001(\tB*\n\030io.bloombox.schema.mediaB\014Medi"
+      "aItemKeyP\001b\006proto3"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 84);
+      descriptor, 98);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "media/MediaKey.proto", &protobuf_RegisterTypes);
   ::google::protobuf::internal::OnShutdown(&TableStruct::Shutdown);

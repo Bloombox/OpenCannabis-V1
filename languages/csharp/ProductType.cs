@@ -22,7 +22,8 @@ public static partial class ProductTypeReflection {
         string.Concat(
           "ChZiYXNlL1Byb2R1Y3RUeXBlLnByb3RvGhZiYXNlL1Byb2R1Y3RLaW5kLnBy",
           "b3RvIikKC1Byb2R1Y3RUeXBlEhoKBGtpbmQYASABKA4yDC5Qcm9kdWN0S2lu",
-          "ZEIbChdpby5ibG9vbWJveC5zY2hlbWEuYmFzZVABYgZwcm90bzM="));
+          "ZEIsChdpby5ibG9vbWJveC5zY2hlbWEuYmFzZUIPQmFzZVByb2R1Y3RUeXBl",
+          "UAFiBnByb3RvMw=="));
     descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
         new pbr::FileDescriptor[] { global::ProductKindReflection.Descriptor, },
         new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {

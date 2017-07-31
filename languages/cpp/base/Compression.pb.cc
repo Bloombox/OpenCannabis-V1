@@ -105,11 +105,12 @@ void AddDescriptorsImpl() {
   static const char descriptor[] = {
       "\n\026base/Compression.proto\"Q\n\013Compression\022"
       "\017\n\007enabled\030\001 \001(\010\022\037\n\004type\030\002 \001(\0162\021.Compres"
-      "sion.Type\"\020\n\004Type\022\010\n\004GZIP\020\000B\033\n\027io.bloomb"
-      "ox.schema.baseP\001b\006proto3"
+      "sion.Type\"\020\n\004Type\022\010\n\004GZIP\020\000B,\n\027io.bloomb"
+      "ox.schema.baseB\017BaseCompressionP\001b\006proto"
+      "3"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 144);
+      descriptor, 161);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "base/Compression.proto", &protobuf_RegisterTypes);
   ::google::protobuf::internal::OnShutdown(&TableStruct::Shutdown);

@@ -72,12 +72,12 @@ public  final class DocumentType extends
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return io.bloombox.schema.media.MediaTypeOuterClass.internal_static_DocumentType_descriptor;
+    return io.bloombox.schema.media.MediaItemType.internal_static_DocumentType_descriptor;
   }
 
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return io.bloombox.schema.media.MediaTypeOuterClass.internal_static_DocumentType_fieldAccessorTable
+    return io.bloombox.schema.media.MediaItemType.internal_static_DocumentType_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             io.bloombox.schema.media.DocumentType.class, io.bloombox.schema.media.DocumentType.Builder.class);
   }
@@ -396,12 +396,12 @@ public  final class DocumentType extends
       io.bloombox.schema.media.DocumentTypeOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.media.MediaTypeOuterClass.internal_static_DocumentType_descriptor;
+      return io.bloombox.schema.media.MediaItemType.internal_static_DocumentType_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.media.MediaTypeOuterClass.internal_static_DocumentType_fieldAccessorTable
+      return io.bloombox.schema.media.MediaItemType.internal_static_DocumentType_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.media.DocumentType.class, io.bloombox.schema.media.DocumentType.Builder.class);
     }
@@ -432,7 +432,7 @@ public  final class DocumentType extends
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return io.bloombox.schema.media.MediaTypeOuterClass.internal_static_DocumentType_descriptor;
+      return io.bloombox.schema.media.MediaItemType.internal_static_DocumentType_descriptor;
     }
 
     public io.bloombox.schema.media.DocumentType getDefaultInstanceForType() {

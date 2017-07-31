@@ -26,8 +26,8 @@ public static partial class SaleDescriptorReflection {
           "X2Ftb3VudBgUIAEoDRIUCgxib2dvX3RyaWdnZXIYFSABKA0SEwoLYm9nb19y",
           "ZXdhcmQYFiABKA0SFwoPbG95YWx0eV90cmlnZ2VyGBcgASgNEhYKDmxveWFs",
           "dHlfcmV3YXJkGBggASgNKjEKCFNhbGVUeXBlEg4KClBFUkNFTlRBR0UQABII",
-          "CgRCT0dPEAESCwoHTE9ZQUxUWRACQiUKIWlvLmJsb29tYm94LnNjaGVtYS5w",
-          "cm9kdWN0LnN0cnVjdFABYgZwcm90bzM="));
+          "CgRCT0dPEAESCwoHTE9ZQUxUWRACQjYKIWlvLmJsb29tYm94LnNjaGVtYS5w",
+          "cm9kdWN0LnN0cnVjdEIPUHJvZHVjdERpc2NvdW50UAFiBnByb3RvMw=="));
     descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
         new pbr::FileDescriptor[] { },
         new pbr::GeneratedClrTypeInfo(new[] {typeof(global::SaleType), }, new pbr::GeneratedClrTypeInfo[] {

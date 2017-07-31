@@ -112,11 +112,11 @@ void AddDescriptorsImpl() {
       "\n\025media/MediaItem.proto\032\024media/MediaKey."
       "proto\032\025media/MediaType.proto\"K\n\tMediaIte"
       "m\022\026\n\003key\030\001 \001(\0132\t.MediaKey\022\030\n\004type\030\002 \001(\0132"
-      "\n.MediaType\022\014\n\004name\030\003 \001(\tB\034\n\030io.bloombox"
-      ".schema.mediaP\001b\006proto3"
+      "\n.MediaType\022\014\n\004name\030\003 \001(\tB+\n\030io.bloombox"
+      ".schema.mediaB\rAttachedMediaP\001b\006proto3"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 183);
+      descriptor, 198);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "media/MediaItem.proto", &protobuf_RegisterTypes);
   ::protobuf_media_2fMediaKey_2eproto::AddDescriptors();

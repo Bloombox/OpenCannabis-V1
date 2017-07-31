@@ -32,8 +32,8 @@ public static partial class MediaTypeReflection {
           "ZWQYAiABKAgiOAoMRG9jdW1lbnRLaW5kEgcKA1RYVBAAEggKBEhUTUwQARIH",
           "CgNQREYQAhIMCghNQVJLRE9XThADIlcKCVZpZGVvVHlwZRIiCgRraW5kGAEg",
           "ASgOMhQuVmlkZW9UeXBlLlZpZGVvS2luZCImCglWaWRlb0tpbmQSBwoDTVA0",
-          "EAASBwoDRkxWEAESBwoDSExTEAJCHAoYaW8uYmxvb21ib3guc2NoZW1hLm1l",
-          "ZGlhUAFiBnByb3RvMw=="));
+          "EAASBwoDRkxWEAESBwoDSExTEAJCKwoYaW8uYmxvb21ib3guc2NoZW1hLm1l",
+          "ZGlhQg1NZWRpYUl0ZW1UeXBlUAFiBnByb3RvMw=="));
     descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
         new pbr::FileDescriptor[] { },
         new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {

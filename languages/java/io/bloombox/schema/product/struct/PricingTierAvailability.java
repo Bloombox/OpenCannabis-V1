@@ -67,12 +67,12 @@ public  final class PricingTierAvailability extends
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return io.bloombox.schema.product.struct.PricingDescriptorOuterClass.internal_static_PricingTierAvailability_descriptor;
+    return io.bloombox.schema.product.struct.ProductPricingSpec.internal_static_PricingTierAvailability_descriptor;
   }
 
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return io.bloombox.schema.product.struct.PricingDescriptorOuterClass.internal_static_PricingTierAvailability_fieldAccessorTable
+    return io.bloombox.schema.product.struct.ProductPricingSpec.internal_static_PricingTierAvailability_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             io.bloombox.schema.product.struct.PricingTierAvailability.class, io.bloombox.schema.product.struct.PricingTierAvailability.Builder.class);
   }
@@ -266,12 +266,12 @@ public  final class PricingTierAvailability extends
       io.bloombox.schema.product.struct.PricingTierAvailabilityOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.product.struct.PricingDescriptorOuterClass.internal_static_PricingTierAvailability_descriptor;
+      return io.bloombox.schema.product.struct.ProductPricingSpec.internal_static_PricingTierAvailability_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.product.struct.PricingDescriptorOuterClass.internal_static_PricingTierAvailability_fieldAccessorTable
+      return io.bloombox.schema.product.struct.ProductPricingSpec.internal_static_PricingTierAvailability_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.product.struct.PricingTierAvailability.class, io.bloombox.schema.product.struct.PricingTierAvailability.Builder.class);
     }
@@ -302,7 +302,7 @@ public  final class PricingTierAvailability extends
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return io.bloombox.schema.product.struct.PricingDescriptorOuterClass.internal_static_PricingTierAvailability_descriptor;
+      return io.bloombox.schema.product.struct.ProductPricingSpec.internal_static_PricingTierAvailability_descriptor;
     }
 
     public io.bloombox.schema.product.struct.PricingTierAvailability getDefaultInstanceForType() {

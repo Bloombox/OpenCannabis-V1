@@ -111,7 +111,7 @@ public enum Species
   }
   public static final com.google.protobuf.Descriptors.EnumDescriptor
       getDescriptor() {
-    return io.bloombox.schema.product.struct.SpeciesOuterClass.getDescriptor().getEnumTypes().get(0);
+    return io.bloombox.schema.product.struct.MaterialSpecies.getDescriptor().getEnumTypes().get(0);
   }
 
   private static final Species[] VALUES = values();

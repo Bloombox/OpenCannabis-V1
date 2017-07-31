@@ -21,15 +21,16 @@ public static partial class ProductContentReflection {
     byte[] descriptorData = global::System.Convert.FromBase64String(
         string.Concat(
           "Chxjb250ZW50L1Byb2R1Y3RDb250ZW50LnByb3RvGhJjb250ZW50L05hbWUu",
-          "cHJvdG8aE2NvbnRlbnQvQnJhbmQucHJvdG8aFWNvbnRlbnQvQ29udGVudC5w",
+          "cHJvdG8aFWNvbnRlbnQvQ29udGVudC5wcm90bxoTY29udGVudC9CcmFuZC5w",
           "cm90bxoVbWVkaWEvTWVkaWFJdGVtLnByb3RvIr8BCg5Qcm9kdWN0Q29udGVu",
           "dBITCgRuYW1lGAEgASgLMgUuTmFtZRIZCgdzdW1tYXJ5GAIgASgLMgguQ29u",
           "dGVudBIVCgVicmFuZBgDIAEoCzIGLkJyYW5kEhkKBW1lZGlhGBQgAygLMgou",
           "TWVkaWFJdGVtEhcKBXVzYWdlGB4gASgLMgguQ29udGVudBIYCgZkb3NhZ2UY",
-          "HyABKAsyCC5Db250ZW50EhgKBmFkdmljZRggIAEoCzIILkNvbnRlbnRCHgoa",
-          "aW8uYmxvb21ib3guc2NoZW1hLmNvbnRlbnRQAWIGcHJvdG8z"));
+          "HyABKAsyCC5Db250ZW50EhgKBmFkdmljZRggIAEoCzIILkNvbnRlbnRCLwoa",
+          "aW8uYmxvb21ib3guc2NoZW1hLmNvbnRlbnRCD0F0dGFjaGVkQ29udGVudFAB",
+          "YgZwcm90bzM="));
     descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
-        new pbr::FileDescriptor[] { global::NameReflection.Descriptor, global::BrandReflection.Descriptor, global::ContentReflection.Descriptor, global::MediaItemReflection.Descriptor, },
+        new pbr::FileDescriptor[] { global::NameReflection.Descriptor, global::ContentReflection.Descriptor, global::BrandReflection.Descriptor, global::MediaItemReflection.Descriptor, },
         new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {
           new pbr::GeneratedClrTypeInfo(typeof(global::ProductContent), global::ProductContent.Parser, new[]{ "Name", "Summary", "Brand", "Media", "Usage", "Dosage", "Advice" }, null, null, null)
         }));

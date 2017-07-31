@@ -24,8 +24,8 @@ public static partial class BrandReflection {
           "bnRlbnQvQ29udGVudC5wcm90bxoVbWVkaWEvTWVkaWFJdGVtLnByb3RvImoK",
           "BUJyYW5kEhMKBG5hbWUYASABKAsyBS5OYW1lEhYKBnBhcmVudBgCIAEoCzIG",
           "LkJyYW5kEhkKB3N1bW1hcnkYAyABKAsyCC5Db250ZW50EhkKBW1lZGlhGBQg",
-          "AygLMgouTWVkaWFJdGVtQh4KGmlvLmJsb29tYm94LnNjaGVtYS5jb250ZW50",
-          "UAFiBnByb3RvMw=="));
+          "AygLMgouTWVkaWFJdGVtQiwKGmlvLmJsb29tYm94LnNjaGVtYS5jb250ZW50",
+          "QgxCcmFuZENvbnRlbnRQAWIGcHJvdG8z"));
     descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
         new pbr::FileDescriptor[] { global::NameReflection.Descriptor, global::ContentReflection.Descriptor, global::MediaItemReflection.Descriptor, },
         new pbr::GeneratedClrTypeInfo(null, new pbr::GeneratedClrTypeInfo[] {

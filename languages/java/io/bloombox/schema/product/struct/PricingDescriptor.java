@@ -105,12 +105,12 @@ public  final class PricingDescriptor extends
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return io.bloombox.schema.product.struct.PricingDescriptorOuterClass.internal_static_PricingDescriptor_descriptor;
+    return io.bloombox.schema.product.struct.ProductPricingSpec.internal_static_PricingDescriptor_descriptor;
   }
 
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return io.bloombox.schema.product.struct.PricingDescriptorOuterClass.internal_static_PricingDescriptor_fieldAccessorTable
+    return io.bloombox.schema.product.struct.ProductPricingSpec.internal_static_PricingDescriptor_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             io.bloombox.schema.product.struct.PricingDescriptor.class, io.bloombox.schema.product.struct.PricingDescriptor.Builder.class);
   }
@@ -415,12 +415,12 @@ public  final class PricingDescriptor extends
       io.bloombox.schema.product.struct.PricingDescriptorOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.product.struct.PricingDescriptorOuterClass.internal_static_PricingDescriptor_descriptor;
+      return io.bloombox.schema.product.struct.ProductPricingSpec.internal_static_PricingDescriptor_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.product.struct.PricingDescriptorOuterClass.internal_static_PricingDescriptor_fieldAccessorTable
+      return io.bloombox.schema.product.struct.ProductPricingSpec.internal_static_PricingDescriptor_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.product.struct.PricingDescriptor.class, io.bloombox.schema.product.struct.PricingDescriptor.Builder.class);
     }
@@ -467,7 +467,7 @@ public  final class PricingDescriptor extends
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return io.bloombox.schema.product.struct.PricingDescriptorOuterClass.internal_static_PricingDescriptor_descriptor;
+      return io.bloombox.schema.product.struct.ProductPricingSpec.internal_static_PricingDescriptor_descriptor;
     }
 
     public io.bloombox.schema.product.struct.PricingDescriptor getDefaultInstanceForType() {

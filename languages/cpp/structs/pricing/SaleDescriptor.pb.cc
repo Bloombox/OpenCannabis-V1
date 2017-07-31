@@ -116,11 +116,11 @@ void AddDescriptorsImpl() {
       "gger\030\025 \001(\r\022\023\n\013bogo_reward\030\026 \001(\r\022\027\n\017loyal"
       "ty_trigger\030\027 \001(\r\022\026\n\016loyalty_reward\030\030 \001(\r"
       "*1\n\010SaleType\022\016\n\nPERCENTAGE\020\000\022\010\n\004BOGO\020\001\022\013"
-      "\n\007LOYALTY\020\002B%\n!io.bloombox.schema.produc"
-      "t.structP\001b\006proto3"
+      "\n\007LOYALTY\020\002B6\n!io.bloombox.schema.produc"
+      "t.structB\017ProductDiscountP\001b\006proto3"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 338);
+      descriptor, 355);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "structs/pricing/SaleDescriptor.proto", &protobuf_RegisterTypes);
   ::google::protobuf::internal::OnShutdown(&TableStruct::Shutdown);

@@ -30,8 +30,8 @@
 #include <google/protobuf/extension_set.h>  // IWYU pragma: export
 #include <google/protobuf/unknown_field_set.h>
 #include "content/Name.pb.h"
-#include "content/Brand.pb.h"
 #include "content/Content.pb.h"
+#include "content/Brand.pb.h"
 #include "media/MediaItem.pb.h"
 // @@protoc_insertion_point(includes)
 class Brand;

@@ -147,7 +147,7 @@ public enum PricingWeightTier
   }
   public static final com.google.protobuf.Descriptors.EnumDescriptor
       getDescriptor() {
-    return io.bloombox.schema.product.struct.PricingDescriptorOuterClass.getDescriptor().getEnumTypes().get(1);
+    return io.bloombox.schema.product.struct.ProductPricingSpec.getDescriptor().getEnumTypes().get(1);
   }
 
   private static final PricingWeightTier[] VALUES = values();

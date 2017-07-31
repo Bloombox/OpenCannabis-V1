@@ -22,8 +22,9 @@ public static partial class SpeciesReflection {
         string.Concat(
           "ChVzdHJ1Y3RzL1NwZWNpZXMucHJvdG8qZAoHU3BlY2llcxIPCgtVTlNQRUNJ",
           "RklFRBAAEgoKBlNBVElWQRABEhEKDUhZQlJJRF9TQVRJVkEQAhIKCgZIWUJS",
-          "SUQQAxIRCg1IWUJSSURfSU5ESUNBEAQSCgoGSU5ESUNBEAVCJQohaW8uYmxv",
-          "b21ib3guc2NoZW1hLnByb2R1Y3Quc3RydWN0UAFiBnByb3RvMw=="));
+          "SUQQAxIRCg1IWUJSSURfSU5ESUNBEAQSCgoGSU5ESUNBEAVCNgohaW8uYmxv",
+          "b21ib3guc2NoZW1hLnByb2R1Y3Quc3RydWN0Qg9NYXRlcmlhbFNwZWNpZXNQ",
+          "AWIGcHJvdG8z"));
     descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
         new pbr::FileDescriptor[] { },
         new pbr::GeneratedClrTypeInfo(new[] {typeof(global::Species), }, null));

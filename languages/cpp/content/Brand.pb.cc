@@ -117,11 +117,12 @@ void AddDescriptorsImpl() {
       "o\032\025content/Content.proto\032\025media/MediaIte"
       "m.proto\"j\n\005Brand\022\023\n\004name\030\001 \001(\0132\005.Name\022\026\n"
       "\006parent\030\002 \001(\0132\006.Brand\022\031\n\007summary\030\003 \001(\0132\010"
-      ".Content\022\031\n\005media\030\024 \003(\0132\n.MediaItemB\036\n\032i"
-      "o.bloombox.schema.contentP\001b\006proto3"
+      ".Content\022\031\n\005media\030\024 \003(\0132\n.MediaItemB,\n\032i"
+      "o.bloombox.schema.contentB\014BrandContentP"
+      "\001b\006proto3"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 235);
+      descriptor, 249);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "content/Brand.proto", &protobuf_RegisterTypes);
   ::protobuf_content_2fName_2eproto::AddDescriptors();

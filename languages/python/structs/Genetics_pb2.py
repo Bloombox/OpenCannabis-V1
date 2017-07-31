@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='structs/Genetics.proto',
   package='',
   syntax='proto3',
-  serialized_pb=_b('\n\x16structs/Genetics.proto\x1a\x12\x63ontent/Name.proto\"6\n\x08Genetics\x12\x13\n\x04male\x18\x01 \x01(\x0b\x32\x05.Name\x12\x15\n\x06\x66\x65male\x18\x02 \x01(\x0b\x32\x05.NameB%\n!io.bloombox.schema.product.structP\x01\x62\x06proto3')
+  serialized_pb=_b('\n\x16structs/Genetics.proto\x1a\x12\x63ontent/Name.proto\"6\n\x08Genetics\x12\x13\n\x04male\x18\x01 \x01(\x0b\x32\x05.Name\x12\x15\n\x06\x66\x65male\x18\x02 \x01(\x0b\x32\x05.NameB6\n!io.bloombox.schema.product.structB\x0fGeneticsStructsP\x01\x62\x06proto3')
   ,
   dependencies=[content_dot_Name__pb2.DESCRIPTOR,])
 
@@ -78,5 +78,5 @@ _sym_db.RegisterMessage(Genetics)
 
 
 DESCRIPTOR.has_options = True
-DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n!io.bloombox.schema.product.structP\001'))
+DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n!io.bloombox.schema.product.structB\017GeneticsStructsP\001'))
 # @@protoc_insertion_point(module_scope)

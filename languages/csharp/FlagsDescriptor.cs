@@ -27,8 +27,8 @@ public static partial class FlagsDescriptorReflection {
           "KAgSDwoHcHJlbWl1bRgCIAEoCBIQCghmZWF0dXJlZBgDIAEoCBISCgpsYXN0",
           "Y2hhbmNlGAQgASgIEg8KB2luaG91c2UYBSABKAgqUgoLUHJvZHVjdEZsYWcS",
           "CwoHVklTSUJMRRAAEgsKB1BSRU1JVU0QARIMCghGRUFUVVJFRBACEg4KCkxB",
-          "U1RDSEFOQ0UQAxILCgdJTkhPVVNFEARCJQohaW8uYmxvb21ib3guc2NoZW1h",
-          "LnByb2R1Y3Quc3RydWN0UAFiBnByb3RvMw=="));
+          "U1RDSEFOQ0UQAxILCgdJTkhPVVNFEARCMgohaW8uYmxvb21ib3guc2NoZW1h",
+          "LnByb2R1Y3Quc3RydWN0QgtCYXNlU3RydWN0c1ABYgZwcm90bzM="));
     descriptor = pbr::FileDescriptor.FromGeneratedCode(descriptorData,
         new pbr::FileDescriptor[] { },
         new pbr::GeneratedClrTypeInfo(new[] {typeof(global::ProductFlag), }, new pbr::GeneratedClrTypeInfo[] {

@@ -62,12 +62,12 @@ public  final class MediaKey extends
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return io.bloombox.schema.media.MediaKeyOuterClass.internal_static_MediaKey_descriptor;
+    return io.bloombox.schema.media.MediaItemKey.internal_static_MediaKey_descriptor;
   }
 
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return io.bloombox.schema.media.MediaKeyOuterClass.internal_static_MediaKey_fieldAccessorTable
+    return io.bloombox.schema.media.MediaItemKey.internal_static_MediaKey_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             io.bloombox.schema.media.MediaKey.class, io.bloombox.schema.media.MediaKey.Builder.class);
   }
@@ -263,12 +263,12 @@ public  final class MediaKey extends
       io.bloombox.schema.media.MediaKeyOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.media.MediaKeyOuterClass.internal_static_MediaKey_descriptor;
+      return io.bloombox.schema.media.MediaItemKey.internal_static_MediaKey_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.media.MediaKeyOuterClass.internal_static_MediaKey_fieldAccessorTable
+      return io.bloombox.schema.media.MediaItemKey.internal_static_MediaKey_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.media.MediaKey.class, io.bloombox.schema.media.MediaKey.Builder.class);
     }
@@ -297,7 +297,7 @@ public  final class MediaKey extends
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return io.bloombox.schema.media.MediaKeyOuterClass.internal_static_MediaKey_descriptor;
+      return io.bloombox.schema.media.MediaItemKey.internal_static_MediaKey_descriptor;
     }
 
     public io.bloombox.schema.media.MediaKey getDefaultInstanceForType() {

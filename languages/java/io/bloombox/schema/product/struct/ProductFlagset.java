@@ -68,12 +68,12 @@ public  final class ProductFlagset extends
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return io.bloombox.schema.product.struct.FlagsDescriptorOuterClass.internal_static_ProductFlagset_descriptor;
+    return io.bloombox.schema.product.struct.BaseStructs.internal_static_ProductFlagset_descriptor;
   }
 
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return io.bloombox.schema.product.struct.FlagsDescriptorOuterClass.internal_static_ProductFlagset_fieldAccessorTable
+    return io.bloombox.schema.product.struct.BaseStructs.internal_static_ProductFlagset_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             io.bloombox.schema.product.struct.ProductFlagset.class, io.bloombox.schema.product.struct.ProductFlagset.Builder.class);
   }
@@ -273,12 +273,12 @@ public  final class ProductFlagset extends
       io.bloombox.schema.product.struct.ProductFlagsetOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.product.struct.FlagsDescriptorOuterClass.internal_static_ProductFlagset_descriptor;
+      return io.bloombox.schema.product.struct.BaseStructs.internal_static_ProductFlagset_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.product.struct.FlagsDescriptorOuterClass.internal_static_ProductFlagset_fieldAccessorTable
+      return io.bloombox.schema.product.struct.BaseStructs.internal_static_ProductFlagset_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.product.struct.ProductFlagset.class, io.bloombox.schema.product.struct.ProductFlagset.Builder.class);
     }
@@ -312,7 +312,7 @@ public  final class ProductFlagset extends
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return io.bloombox.schema.product.struct.FlagsDescriptorOuterClass.internal_static_ProductFlagset_descriptor;
+      return io.bloombox.schema.product.struct.BaseStructs.internal_static_ProductFlagset_descriptor;
     }
 
     public io.bloombox.schema.product.struct.ProductFlagset getDefaultInstanceForType() {

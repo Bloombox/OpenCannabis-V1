@@ -114,11 +114,11 @@ void AddDescriptorsImpl() {
       "s/Genetics.proto\"q\n\rMaterialsData\022\023\n\013ing"
       "redients\030\001 \003(\t\022\023\n\004grow\030\002 \001(\0162\005.Grow\022\031\n\007s"
       "pecies\030\003 \001(\0162\010.Species\022\033\n\010genetics\030\004 \001(\013"
-      "2\t.GeneticsB\036\n\032io.bloombox.schema.conten"
-      "tP\001b\006proto3"
+      "2\t.GeneticsB0\n\032io.bloombox.schema.conten"
+      "tB\020MaterialsContentP\001b\006proto3"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 251);
+      descriptor, 269);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "content/MaterialsData.proto", &protobuf_RegisterTypes);
   ::protobuf_structs_2fGrow_2eproto::AddDescriptors();

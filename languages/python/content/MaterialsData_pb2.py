@@ -22,7 +22,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='content/MaterialsData.proto',
   package='',
   syntax='proto3',
-  serialized_pb=_b('\n\x1b\x63ontent/MaterialsData.proto\x1a\x12structs/Grow.proto\x1a\x15structs/Species.proto\x1a\x16structs/Genetics.proto\"q\n\rMaterialsData\x12\x13\n\x0bingredients\x18\x01 \x03(\t\x12\x13\n\x04grow\x18\x02 \x01(\x0e\x32\x05.Grow\x12\x19\n\x07species\x18\x03 \x01(\x0e\x32\x08.Species\x12\x1b\n\x08genetics\x18\x04 \x01(\x0b\x32\t.GeneticsB\x1e\n\x1aio.bloombox.schema.contentP\x01\x62\x06proto3')
+  serialized_pb=_b('\n\x1b\x63ontent/MaterialsData.proto\x1a\x12structs/Grow.proto\x1a\x15structs/Species.proto\x1a\x16structs/Genetics.proto\"q\n\rMaterialsData\x12\x13\n\x0bingredients\x18\x01 \x03(\t\x12\x13\n\x04grow\x18\x02 \x01(\x0e\x32\x05.Grow\x12\x19\n\x07species\x18\x03 \x01(\x0e\x32\x08.Species\x12\x1b\n\x08genetics\x18\x04 \x01(\x0b\x32\t.GeneticsB0\n\x1aio.bloombox.schema.contentB\x10MaterialsContentP\x01\x62\x06proto3')
   ,
   dependencies=[structs_dot_Grow__pb2.DESCRIPTOR,structs_dot_Species__pb2.DESCRIPTOR,structs_dot_Genetics__pb2.DESCRIPTOR,])
 
@@ -95,5 +95,5 @@ _sym_db.RegisterMessage(MaterialsData)
 
 
 DESCRIPTOR.has_options = True
-DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\032io.bloombox.schema.contentP\001'))
+DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\032io.bloombox.schema.contentB\020MaterialsContentP\001'))
 # @@protoc_insertion_point(module_scope)

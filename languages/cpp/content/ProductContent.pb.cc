@@ -98,8 +98,8 @@ void TableStruct::InitDefaultsImpl() {
 
   ::google::protobuf::internal::InitProtobufDefaults();
   ::protobuf_content_2fName_2eproto::InitDefaults();
-  ::protobuf_content_2fBrand_2eproto::InitDefaults();
   ::protobuf_content_2fContent_2eproto::InitDefaults();
+  ::protobuf_content_2fBrand_2eproto::InitDefaults();
   ::protobuf_media_2fMediaItem_2eproto::InitDefaults();
   _ProductContent_default_instance_.DefaultConstruct();
   _ProductContent_default_instance_.get_mutable()->name_ = const_cast< ::Name*>(
@@ -124,22 +124,23 @@ void AddDescriptorsImpl() {
   InitDefaults();
   static const char descriptor[] = {
       "\n\034content/ProductContent.proto\032\022content/"
-      "Name.proto\032\023content/Brand.proto\032\025content"
-      "/Content.proto\032\025media/MediaItem.proto\"\277\001"
+      "Name.proto\032\025content/Content.proto\032\023conte"
+      "nt/Brand.proto\032\025media/MediaItem.proto\"\277\001"
       "\n\016ProductContent\022\023\n\004name\030\001 \001(\0132\005.Name\022\031\n"
       "\007summary\030\002 \001(\0132\010.Content\022\025\n\005brand\030\003 \001(\0132"
       "\006.Brand\022\031\n\005media\030\024 \003(\0132\n.MediaItem\022\027\n\005us"
       "age\030\036 \001(\0132\010.Content\022\030\n\006dosage\030\037 \001(\0132\010.Co"
-      "ntent\022\030\n\006advice\030  \001(\0132\010.ContentB\036\n\032io.bl"
-      "oombox.schema.contentP\001b\006proto3"
+      "ntent\022\030\n\006advice\030  \001(\0132\010.ContentB/\n\032io.bl"
+      "oombox.schema.contentB\017AttachedContentP\001"
+      "b\006proto3"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 351);
+      descriptor, 368);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "content/ProductContent.proto", &protobuf_RegisterTypes);
   ::protobuf_content_2fName_2eproto::AddDescriptors();
-  ::protobuf_content_2fBrand_2eproto::AddDescriptors();
   ::protobuf_content_2fContent_2eproto::AddDescriptors();
+  ::protobuf_content_2fBrand_2eproto::AddDescriptors();
   ::protobuf_media_2fMediaItem_2eproto::AddDescriptors();
   ::google::protobuf::internal::OnShutdown(&TableStruct::Shutdown);
 }

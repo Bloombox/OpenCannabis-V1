@@ -4,8 +4,8 @@
 require 'google/protobuf'
 
 require 'content/Name_pb'
-require 'content/Brand_pb'
 require 'content/Content_pb'
+require 'content/Brand_pb'
 require 'media/MediaItem_pb'
 Google::Protobuf::DescriptorPool.generated_pool.build do
   add_message "ProductContent" do

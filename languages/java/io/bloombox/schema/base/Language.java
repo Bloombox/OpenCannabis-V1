@@ -84,7 +84,7 @@ public enum Language
   }
   public static final com.google.protobuf.Descriptors.EnumDescriptor
       getDescriptor() {
-    return io.bloombox.schema.base.LanguageOuterClass.getDescriptor().getEnumTypes().get(0);
+    return io.bloombox.schema.base.BaseLanguage.getDescriptor().getEnumTypes().get(0);
   }
 
   private static final Language[] VALUES = values();

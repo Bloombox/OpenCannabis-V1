@@ -81,12 +81,12 @@ public  final class Genetics extends
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return io.bloombox.schema.product.struct.GeneticsOuterClass.internal_static_Genetics_descriptor;
+    return io.bloombox.schema.product.struct.GeneticsStructs.internal_static_Genetics_descriptor;
   }
 
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return io.bloombox.schema.product.struct.GeneticsOuterClass.internal_static_Genetics_fieldAccessorTable
+    return io.bloombox.schema.product.struct.GeneticsStructs.internal_static_Genetics_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             io.bloombox.schema.product.struct.Genetics.class, io.bloombox.schema.product.struct.Genetics.Builder.class);
   }
@@ -312,12 +312,12 @@ public  final class Genetics extends
       io.bloombox.schema.product.struct.GeneticsOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.product.struct.GeneticsOuterClass.internal_static_Genetics_descriptor;
+      return io.bloombox.schema.product.struct.GeneticsStructs.internal_static_Genetics_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.product.struct.GeneticsOuterClass.internal_static_Genetics_fieldAccessorTable
+      return io.bloombox.schema.product.struct.GeneticsStructs.internal_static_Genetics_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.product.struct.Genetics.class, io.bloombox.schema.product.struct.Genetics.Builder.class);
     }
@@ -356,7 +356,7 @@ public  final class Genetics extends
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return io.bloombox.schema.product.struct.GeneticsOuterClass.internal_static_Genetics_descriptor;
+      return io.bloombox.schema.product.struct.GeneticsStructs.internal_static_Genetics_descriptor;
     }
 
     public io.bloombox.schema.product.struct.Genetics getDefaultInstanceForType() {

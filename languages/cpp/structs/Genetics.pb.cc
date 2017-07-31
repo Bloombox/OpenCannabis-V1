@@ -109,11 +109,12 @@ void AddDescriptorsImpl() {
   static const char descriptor[] = {
       "\n\026structs/Genetics.proto\032\022content/Name.p"
       "roto\"6\n\010Genetics\022\023\n\004male\030\001 \001(\0132\005.Name\022\025\n"
-      "\006female\030\002 \001(\0132\005.NameB%\n!io.bloombox.sche"
-      "ma.product.structP\001b\006proto3"
+      "\006female\030\002 \001(\0132\005.NameB6\n!io.bloombox.sche"
+      "ma.product.structB\017GeneticsStructsP\001b\006pr"
+      "oto3"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 147);
+      descriptor, 164);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "structs/Genetics.proto", &protobuf_RegisterTypes);
   ::protobuf_content_2fName_2eproto::AddDescriptors();

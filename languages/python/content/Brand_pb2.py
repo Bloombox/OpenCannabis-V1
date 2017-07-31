@@ -22,7 +22,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='content/Brand.proto',
   package='',
   syntax='proto3',
-  serialized_pb=_b('\n\x13\x63ontent/Brand.proto\x1a\x12\x63ontent/Name.proto\x1a\x15\x63ontent/Content.proto\x1a\x15media/MediaItem.proto\"j\n\x05\x42rand\x12\x13\n\x04name\x18\x01 \x01(\x0b\x32\x05.Name\x12\x16\n\x06parent\x18\x02 \x01(\x0b\x32\x06.Brand\x12\x19\n\x07summary\x18\x03 \x01(\x0b\x32\x08.Content\x12\x19\n\x05media\x18\x14 \x03(\x0b\x32\n.MediaItemB\x1e\n\x1aio.bloombox.schema.contentP\x01\x62\x06proto3')
+  serialized_pb=_b('\n\x13\x63ontent/Brand.proto\x1a\x12\x63ontent/Name.proto\x1a\x15\x63ontent/Content.proto\x1a\x15media/MediaItem.proto\"j\n\x05\x42rand\x12\x13\n\x04name\x18\x01 \x01(\x0b\x32\x05.Name\x12\x16\n\x06parent\x18\x02 \x01(\x0b\x32\x06.Brand\x12\x19\n\x07summary\x18\x03 \x01(\x0b\x32\x08.Content\x12\x19\n\x05media\x18\x14 \x03(\x0b\x32\n.MediaItemB,\n\x1aio.bloombox.schema.contentB\x0c\x42randContentP\x01\x62\x06proto3')
   ,
   dependencies=[content_dot_Name__pb2.DESCRIPTOR,content_dot_Content__pb2.DESCRIPTOR,media_dot_MediaItem__pb2.DESCRIPTOR,])
 
@@ -96,5 +96,5 @@ _sym_db.RegisterMessage(Brand)
 
 
 DESCRIPTOR.has_options = True
-DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\032io.bloombox.schema.contentP\001'))
+DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\032io.bloombox.schema.contentB\014BrandContentP\001'))
 # @@protoc_insertion_point(module_scope)

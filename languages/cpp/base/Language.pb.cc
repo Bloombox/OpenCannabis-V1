@@ -82,11 +82,12 @@ void AddDescriptorsImpl() {
   InitDefaults();
   static const char descriptor[] = {
       "\n\023base/Language.proto*0\n\010Language\022\013\n\007ENG"
-      "LISH\020\000\022\013\n\007SPANISH\020\001\022\n\n\006FRENCH\020\002B\033\n\027io.bl"
-      "oombox.schema.baseP\001b\006proto3"
+      "LISH\020\000\022\013\n\007SPANISH\020\001\022\n\n\006FRENCH\020\002B)\n\027io.bl"
+      "oombox.schema.baseB\014BaseLanguageP\001b\006prot"
+      "o3"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 108);
+      descriptor, 122);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "base/Language.proto", &protobuf_RegisterTypes);
   ::google::protobuf::internal::OnShutdown(&TableStruct::Shutdown);

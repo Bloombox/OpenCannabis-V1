@@ -21,7 +21,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='media/MediaItem.proto',
   package='',
   syntax='proto3',
-  serialized_pb=_b('\n\x15media/MediaItem.proto\x1a\x14media/MediaKey.proto\x1a\x15media/MediaType.proto\"K\n\tMediaItem\x12\x16\n\x03key\x18\x01 \x01(\x0b\x32\t.MediaKey\x12\x18\n\x04type\x18\x02 \x01(\x0b\x32\n.MediaType\x12\x0c\n\x04name\x18\x03 \x01(\tB\x1c\n\x18io.bloombox.schema.mediaP\x01\x62\x06proto3')
+  serialized_pb=_b('\n\x15media/MediaItem.proto\x1a\x14media/MediaKey.proto\x1a\x15media/MediaType.proto\"K\n\tMediaItem\x12\x16\n\x03key\x18\x01 \x01(\x0b\x32\t.MediaKey\x12\x18\n\x04type\x18\x02 \x01(\x0b\x32\n.MediaType\x12\x0c\n\x04name\x18\x03 \x01(\tB+\n\x18io.bloombox.schema.mediaB\rAttachedMediaP\x01\x62\x06proto3')
   ,
   dependencies=[media_dot_MediaKey__pb2.DESCRIPTOR,media_dot_MediaType__pb2.DESCRIPTOR,])
 
@@ -86,5 +86,5 @@ _sym_db.RegisterMessage(MediaItem)
 
 
 DESCRIPTOR.has_options = True
-DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\030io.bloombox.schema.mediaP\001'))
+DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\030io.bloombox.schema.mediaB\rAttachedMediaP\001'))
 # @@protoc_insertion_point(module_scope)

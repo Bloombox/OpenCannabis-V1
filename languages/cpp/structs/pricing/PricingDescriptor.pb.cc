@@ -213,11 +213,11 @@ void AddDescriptorsImpl() {
       "Tier\022\t\n\005OTHER\020\000\022\010\n\004GRAM\020\001\022\014\n\010HALFGRAM\020\002\022"
       "\017\n\013QUARTERGRAM\020\003\022\007\n\003DUB\020\004\022\n\n\006EIGHTH\020\005\022\013\n"
       "\007QUARTER\020\006\022\010\n\004HALF\020\007\022\t\n\005OUNCE\020\010\022\t\n\005POUND"
-      "\020\tB%\n!io.bloombox.schema.product.structP"
-      "\001b\006proto3"
+      "\020\tB9\n!io.bloombox.schema.product.structB"
+      "\022ProductPricingSpecP\001b\006proto3"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 929);
+      descriptor, 949);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "structs/pricing/PricingDescriptor.proto", &protobuf_RegisterTypes);
   ::protobuf_structs_2fpricing_2fSaleDescriptor_2eproto::AddDescriptors();

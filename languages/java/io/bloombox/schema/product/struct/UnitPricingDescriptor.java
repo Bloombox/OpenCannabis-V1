@@ -91,12 +91,12 @@ public  final class UnitPricingDescriptor extends
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return io.bloombox.schema.product.struct.PricingDescriptorOuterClass.internal_static_UnitPricingDescriptor_descriptor;
+    return io.bloombox.schema.product.struct.ProductPricingSpec.internal_static_UnitPricingDescriptor_descriptor;
   }
 
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return io.bloombox.schema.product.struct.PricingDescriptorOuterClass.internal_static_UnitPricingDescriptor_fieldAccessorTable
+    return io.bloombox.schema.product.struct.ProductPricingSpec.internal_static_UnitPricingDescriptor_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             io.bloombox.schema.product.struct.UnitPricingDescriptor.class, io.bloombox.schema.product.struct.UnitPricingDescriptor.Builder.class);
   }
@@ -361,12 +361,12 @@ public  final class UnitPricingDescriptor extends
       io.bloombox.schema.product.struct.UnitPricingDescriptorOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.product.struct.PricingDescriptorOuterClass.internal_static_UnitPricingDescriptor_descriptor;
+      return io.bloombox.schema.product.struct.ProductPricingSpec.internal_static_UnitPricingDescriptor_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.product.struct.PricingDescriptorOuterClass.internal_static_UnitPricingDescriptor_fieldAccessorTable
+      return io.bloombox.schema.product.struct.ProductPricingSpec.internal_static_UnitPricingDescriptor_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.product.struct.UnitPricingDescriptor.class, io.bloombox.schema.product.struct.UnitPricingDescriptor.Builder.class);
     }
@@ -408,7 +408,7 @@ public  final class UnitPricingDescriptor extends
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return io.bloombox.schema.product.struct.PricingDescriptorOuterClass.internal_static_UnitPricingDescriptor_descriptor;
+      return io.bloombox.schema.product.struct.ProductPricingSpec.internal_static_UnitPricingDescriptor_descriptor;
     }
 
     public io.bloombox.schema.product.struct.UnitPricingDescriptor getDefaultInstanceForType() {

@@ -14,8 +14,8 @@ _sym_db = _symbol_database.Default()
 
 
 from content import Name_pb2 as content_dot_Name__pb2
-from content import Brand_pb2 as content_dot_Brand__pb2
 from content import Content_pb2 as content_dot_Content__pb2
+from content import Brand_pb2 as content_dot_Brand__pb2
 from media import MediaItem_pb2 as media_dot_MediaItem__pb2
 
 
@@ -23,9 +23,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='content/ProductContent.proto',
   package='',
   syntax='proto3',
-  serialized_pb=_b('\n\x1c\x63ontent/ProductContent.proto\x1a\x12\x63ontent/Name.proto\x1a\x13\x63ontent/Brand.proto\x1a\x15\x63ontent/Content.proto\x1a\x15media/MediaItem.proto\"\xbf\x01\n\x0eProductContent\x12\x13\n\x04name\x18\x01 \x01(\x0b\x32\x05.Name\x12\x19\n\x07summary\x18\x02 \x01(\x0b\x32\x08.Content\x12\x15\n\x05\x62rand\x18\x03 \x01(\x0b\x32\x06.Brand\x12\x19\n\x05media\x18\x14 \x03(\x0b\x32\n.MediaItem\x12\x17\n\x05usage\x18\x1e \x01(\x0b\x32\x08.Content\x12\x18\n\x06\x64osage\x18\x1f \x01(\x0b\x32\x08.Content\x12\x18\n\x06\x61\x64vice\x18  \x01(\x0b\x32\x08.ContentB\x1e\n\x1aio.bloombox.schema.contentP\x01\x62\x06proto3')
+  serialized_pb=_b('\n\x1c\x63ontent/ProductContent.proto\x1a\x12\x63ontent/Name.proto\x1a\x15\x63ontent/Content.proto\x1a\x13\x63ontent/Brand.proto\x1a\x15media/MediaItem.proto\"\xbf\x01\n\x0eProductContent\x12\x13\n\x04name\x18\x01 \x01(\x0b\x32\x05.Name\x12\x19\n\x07summary\x18\x02 \x01(\x0b\x32\x08.Content\x12\x15\n\x05\x62rand\x18\x03 \x01(\x0b\x32\x06.Brand\x12\x19\n\x05media\x18\x14 \x03(\x0b\x32\n.MediaItem\x12\x17\n\x05usage\x18\x1e \x01(\x0b\x32\x08.Content\x12\x18\n\x06\x64osage\x18\x1f \x01(\x0b\x32\x08.Content\x12\x18\n\x06\x61\x64vice\x18  \x01(\x0b\x32\x08.ContentB/\n\x1aio.bloombox.schema.contentB\x0f\x41ttachedContentP\x01\x62\x06proto3')
   ,
-  dependencies=[content_dot_Name__pb2.DESCRIPTOR,content_dot_Brand__pb2.DESCRIPTOR,content_dot_Content__pb2.DESCRIPTOR,media_dot_MediaItem__pb2.DESCRIPTOR,])
+  dependencies=[content_dot_Name__pb2.DESCRIPTOR,content_dot_Content__pb2.DESCRIPTOR,content_dot_Brand__pb2.DESCRIPTOR,media_dot_MediaItem__pb2.DESCRIPTOR,])
 
 
 
@@ -121,5 +121,5 @@ _sym_db.RegisterMessage(ProductContent)
 
 
 DESCRIPTOR.has_options = True
-DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\032io.bloombox.schema.contentP\001'))
+DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\032io.bloombox.schema.contentB\017AttachedContentP\001'))
 # @@protoc_insertion_point(module_scope)

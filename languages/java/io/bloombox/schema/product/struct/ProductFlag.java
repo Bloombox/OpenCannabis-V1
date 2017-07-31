@@ -102,7 +102,7 @@ public enum ProductFlag
   }
   public static final com.google.protobuf.Descriptors.EnumDescriptor
       getDescriptor() {
-    return io.bloombox.schema.product.struct.FlagsDescriptorOuterClass.getDescriptor().getEnumTypes().get(0);
+    return io.bloombox.schema.product.struct.BaseStructs.getDescriptor().getEnumTypes().get(0);
   }
 
   private static final ProductFlag[] VALUES = values();

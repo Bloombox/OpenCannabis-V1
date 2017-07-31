@@ -54,12 +54,12 @@ public  final class FreebiePricingDescriptor extends
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return io.bloombox.schema.product.struct.PricingDescriptorOuterClass.internal_static_FreebiePricingDescriptor_descriptor;
+    return io.bloombox.schema.product.struct.ProductPricingSpec.internal_static_FreebiePricingDescriptor_descriptor;
   }
 
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return io.bloombox.schema.product.struct.PricingDescriptorOuterClass.internal_static_FreebiePricingDescriptor_fieldAccessorTable
+    return io.bloombox.schema.product.struct.ProductPricingSpec.internal_static_FreebiePricingDescriptor_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             io.bloombox.schema.product.struct.FreebiePricingDescriptor.class, io.bloombox.schema.product.struct.FreebiePricingDescriptor.Builder.class);
   }
@@ -211,12 +211,12 @@ public  final class FreebiePricingDescriptor extends
       io.bloombox.schema.product.struct.FreebiePricingDescriptorOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.product.struct.PricingDescriptorOuterClass.internal_static_FreebiePricingDescriptor_descriptor;
+      return io.bloombox.schema.product.struct.ProductPricingSpec.internal_static_FreebiePricingDescriptor_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.product.struct.PricingDescriptorOuterClass.internal_static_FreebiePricingDescriptor_fieldAccessorTable
+      return io.bloombox.schema.product.struct.ProductPricingSpec.internal_static_FreebiePricingDescriptor_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.product.struct.FreebiePricingDescriptor.class, io.bloombox.schema.product.struct.FreebiePricingDescriptor.Builder.class);
     }
@@ -243,7 +243,7 @@ public  final class FreebiePricingDescriptor extends
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return io.bloombox.schema.product.struct.PricingDescriptorOuterClass.internal_static_FreebiePricingDescriptor_descriptor;
+      return io.bloombox.schema.product.struct.ProductPricingSpec.internal_static_FreebiePricingDescriptor_descriptor;
     }
 
     public io.bloombox.schema.product.struct.FreebiePricingDescriptor getDefaultInstanceForType() {

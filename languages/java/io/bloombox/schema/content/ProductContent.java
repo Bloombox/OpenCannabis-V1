@@ -146,12 +146,12 @@ public  final class ProductContent extends
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return io.bloombox.schema.content.ProductContentOuterClass.internal_static_ProductContent_descriptor;
+    return io.bloombox.schema.content.AttachedContent.internal_static_ProductContent_descriptor;
   }
 
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return io.bloombox.schema.content.ProductContentOuterClass.internal_static_ProductContent_fieldAccessorTable
+    return io.bloombox.schema.content.AttachedContent.internal_static_ProductContent_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             io.bloombox.schema.content.ProductContent.class, io.bloombox.schema.content.ProductContent.Builder.class);
   }
@@ -666,12 +666,12 @@ public  final class ProductContent extends
       io.bloombox.schema.content.ProductContentOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.content.ProductContentOuterClass.internal_static_ProductContent_descriptor;
+      return io.bloombox.schema.content.AttachedContent.internal_static_ProductContent_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.content.ProductContentOuterClass.internal_static_ProductContent_fieldAccessorTable
+      return io.bloombox.schema.content.AttachedContent.internal_static_ProductContent_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.content.ProductContent.class, io.bloombox.schema.content.ProductContent.Builder.class);
     }
@@ -741,7 +741,7 @@ public  final class ProductContent extends
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return io.bloombox.schema.content.ProductContentOuterClass.internal_static_ProductContent_descriptor;
+      return io.bloombox.schema.content.AttachedContent.internal_static_ProductContent_descriptor;
     }
 
     public io.bloombox.schema.content.ProductContent getDefaultInstanceForType() {

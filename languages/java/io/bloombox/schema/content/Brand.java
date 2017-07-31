@@ -107,12 +107,12 @@ public  final class Brand extends
   }
   public static final com.google.protobuf.Descriptors.Descriptor
       getDescriptor() {
-    return io.bloombox.schema.content.BrandOuterClass.internal_static_Brand_descriptor;
+    return io.bloombox.schema.content.BrandContent.internal_static_Brand_descriptor;
   }
 
   protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
       internalGetFieldAccessorTable() {
-    return io.bloombox.schema.content.BrandOuterClass.internal_static_Brand_fieldAccessorTable
+    return io.bloombox.schema.content.BrandContent.internal_static_Brand_fieldAccessorTable
         .ensureFieldAccessorsInitialized(
             io.bloombox.schema.content.Brand.class, io.bloombox.schema.content.Brand.Builder.class);
   }
@@ -456,12 +456,12 @@ public  final class Brand extends
       io.bloombox.schema.content.BrandOrBuilder {
     public static final com.google.protobuf.Descriptors.Descriptor
         getDescriptor() {
-      return io.bloombox.schema.content.BrandOuterClass.internal_static_Brand_descriptor;
+      return io.bloombox.schema.content.BrandContent.internal_static_Brand_descriptor;
     }
 
     protected com.google.protobuf.GeneratedMessageV3.FieldAccessorTable
         internalGetFieldAccessorTable() {
-      return io.bloombox.schema.content.BrandOuterClass.internal_static_Brand_fieldAccessorTable
+      return io.bloombox.schema.content.BrandContent.internal_static_Brand_fieldAccessorTable
           .ensureFieldAccessorsInitialized(
               io.bloombox.schema.content.Brand.class, io.bloombox.schema.content.Brand.Builder.class);
     }
@@ -513,7 +513,7 @@ public  final class Brand extends
 
     public com.google.protobuf.Descriptors.Descriptor
         getDescriptorForType() {
-      return io.bloombox.schema.content.BrandOuterClass.internal_static_Brand_descriptor;
+      return io.bloombox.schema.content.BrandContent.internal_static_Brand_descriptor;
     }
 
     public io.bloombox.schema.content.Brand getDefaultInstanceForType() {
