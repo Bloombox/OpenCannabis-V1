@@ -110,6 +110,12 @@ class Content : public ::google::protobuf::Message /* @@protoc_insertion_point(c
     return *this;
   }
 
+  inline ::google::protobuf::Arena* GetArena() const PROTOBUF_FINAL {
+    return GetArenaNoVirtual();
+  }
+  inline void* GetMaybeArenaPointer() const PROTOBUF_FINAL {
+    return MaybeArenaPtr();
+  }
   static const ::google::protobuf::Descriptor* descriptor();
   static const Content& default_instance();
 
@@ -120,6 +126,7 @@ class Content : public ::google::protobuf::Message /* @@protoc_insertion_point(c
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
     0;
 
+  void UnsafeArenaSwap(Content* other);
   void Swap(Content* other);
 
   // implements Message ----------------------------------------------
@@ -147,12 +154,17 @@ class Content : public ::google::protobuf::Message /* @@protoc_insertion_point(c
   void SharedDtor();
   void SetCachedSize(int size) const PROTOBUF_FINAL;
   void InternalSwap(Content* other);
+  protected:
+  explicit Content(::google::protobuf::Arena* arena);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::google::protobuf::Arena* arena);
   private:
   inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
-    return NULL;
+    return _internal_metadata_.arena();
   }
   inline void* MaybeArenaPtr() const {
-    return NULL;
+    return _internal_metadata_.raw_arena_ptr();
   }
   public:
 
@@ -219,23 +231,32 @@ class Content : public ::google::protobuf::Message /* @@protoc_insertion_point(c
   static const int kContentFieldNumber = 3;
   const ::std::string& content() const;
   void set_content(const ::std::string& value);
-  #if LANG_CXX11
-  void set_content(::std::string&& value);
-  #endif
   void set_content(const char* value);
   void set_content(const void* value, size_t size);
   ::std::string* mutable_content();
   ::std::string* release_content();
   void set_allocated_content(::std::string* content);
+  ::std::string* unsafe_arena_release_content();
+  void unsafe_arena_set_allocated_content(
+      ::std::string* content);
 
   // .Compression compression = 5;
   bool has_compression() const;
   void clear_compression();
   static const int kCompressionFieldNumber = 5;
+  private:
+  void _slow_mutable_compression();
+  void _slow_set_allocated_compression(
+      ::google::protobuf::Arena* message_arena, ::Compression** compression);
+  ::Compression* _slow_release_compression();
+  public:
   const ::Compression& compression() const;
   ::Compression* mutable_compression();
   ::Compression* release_compression();
   void set_allocated_compression(::Compression* compression);
+  ::Compression* unsafe_arena_release_compression();
+  void unsafe_arena_set_allocated_compression(
+      ::Compression* compression);
 
   // .Content.Type type = 1;
   void clear_type();
@@ -259,6 +280,9 @@ class Content : public ::google::protobuf::Message /* @@protoc_insertion_point(c
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  friend class ::google::protobuf::Arena;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
   ::google::protobuf::internal::ArenaStringPtr content_;
   ::Compression* compression_;
   int type_;
@@ -305,46 +329,47 @@ inline void Content::set_encoding(::Content_Encoding value) {
 
 // bytes content = 3;
 inline void Content::clear_content() {
-  content_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  content_.ClearToEmpty(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
 }
 inline const ::std::string& Content::content() const {
   // @@protoc_insertion_point(field_get:Content.content)
-  return content_.GetNoArena();
+  return content_.Get();
 }
 inline void Content::set_content(const ::std::string& value) {
   
-  content_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  content_.Set(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value, GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set:Content.content)
 }
-#if LANG_CXX11
-inline void Content::set_content(::std::string&& value) {
-  
-  content_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:Content.content)
-}
-#endif
 inline void Content::set_content(const char* value) {
   GOOGLE_DCHECK(value != NULL);
   
-  content_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  content_.Set(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set_char:Content.content)
 }
-inline void Content::set_content(const void* value, size_t size) {
+inline void Content::set_content(const void* value,
+    size_t size) {
   
-  content_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(reinterpret_cast<const char*>(value), size));
+  content_.Set(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set_pointer:Content.content)
 }
 inline ::std::string* Content::mutable_content() {
   
   // @@protoc_insertion_point(field_mutable:Content.content)
-  return content_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  return content_.Mutable(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
 }
 inline ::std::string* Content::release_content() {
   // @@protoc_insertion_point(field_release:Content.content)
   
-  return content_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  return content_.Release(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
+}
+inline ::std::string* Content::unsafe_arena_release_content() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:Content.content)
+  GOOGLE_DCHECK(GetArenaNoVirtual() != NULL);
+  
+  return content_.UnsafeArenaRelease(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      GetArenaNoVirtual());
 }
 inline void Content::set_allocated_content(::std::string* content) {
   if (content != NULL) {
@@ -352,8 +377,21 @@ inline void Content::set_allocated_content(::std::string* content) {
   } else {
     
   }
-  content_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), content);
+  content_.SetAllocated(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), content,
+      GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set_allocated:Content.content)
+}
+inline void Content::unsafe_arena_set_allocated_content(
+    ::std::string* content) {
+  GOOGLE_DCHECK(GetArenaNoVirtual() != NULL);
+  if (content != NULL) {
+    
+  } else {
+    
+  }
+  content_.UnsafeArenaSetAllocated(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      content, GetArenaNoVirtual());
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:Content.content)
 }
 
 // .Language language = 4;
@@ -386,7 +424,7 @@ inline const ::Compression& Content::compression() const {
 inline ::Compression* Content::mutable_compression() {
   
   if (compression_ == NULL) {
-    compression_ = new ::Compression;
+    _slow_mutable_compression();
   }
   // @@protoc_insertion_point(field_mutable:Content.compression)
   return compression_;
@@ -394,12 +432,22 @@ inline ::Compression* Content::mutable_compression() {
 inline ::Compression* Content::release_compression() {
   // @@protoc_insertion_point(field_release:Content.compression)
   
-  ::Compression* temp = compression_;
-  compression_ = NULL;
-  return temp;
+  if (GetArenaNoVirtual() != NULL) {
+    return _slow_release_compression();
+  } else {
+    ::Compression* temp = compression_;
+    compression_ = NULL;
+    return temp;
+  }
 }
-inline void Content::set_allocated_compression(::Compression* compression) {
-  delete compression_;
+inline  void Content::set_allocated_compression(::Compression* compression) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete compression_;
+  }
+  if (compression != NULL) {
+    _slow_set_allocated_compression(message_arena, &compression);
+  }
   compression_ = compression;
   if (compression) {
     

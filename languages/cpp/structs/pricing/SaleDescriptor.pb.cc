@@ -116,11 +116,11 @@ void AddDescriptorsImpl() {
       "gger\030\025 \001(\r\022\023\n\013bogo_reward\030\026 \001(\r\022\027\n\017loyal"
       "ty_trigger\030\027 \001(\r\022\026\n\016loyalty_reward\030\030 \001(\r"
       "*1\n\010SaleType\022\016\n\nPERCENTAGE\020\000\022\010\n\004BOGO\020\001\022\013"
-      "\n\007LOYALTY\020\002B6\n!io.bloombox.schema.produc"
-      "t.structB\017ProductDiscountP\001b\006proto3"
+      "\n\007LOYALTY\020\002B;\n!io.bloombox.schema.produc"
+      "t.structB\017ProductDiscountH\001P\001\370\001\001b\006proto3"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 355);
+      descriptor, 360);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "structs/pricing/SaleDescriptor.proto", &protobuf_RegisterTypes);
   ::google::protobuf::internal::OnShutdown(&TableStruct::Shutdown);
@@ -176,6 +176,16 @@ SaleDescriptor::SaleDescriptor()
   SharedCtor();
   // @@protoc_insertion_point(constructor:SaleDescriptor)
 }
+SaleDescriptor::SaleDescriptor(::google::protobuf::Arena* arena)
+  : ::google::protobuf::Message(),
+  _internal_metadata_(arena) {
+#ifdef GOOGLE_PROTOBUF_NO_STATIC_INITIALIZER
+  protobuf_structs_2fpricing_2fSaleDescriptor_2eproto::InitDefaults();
+#endif  // GOOGLE_PROTOBUF_NO_STATIC_INITIALIZER
+  SharedCtor();
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:SaleDescriptor)
+}
 SaleDescriptor::SaleDescriptor(const SaleDescriptor& from)
   : ::google::protobuf::Message(),
       _internal_metadata_(NULL),
@@ -199,8 +209,19 @@ SaleDescriptor::~SaleDescriptor() {
 }
 
 void SaleDescriptor::SharedDtor() {
+  ::google::protobuf::Arena* arena = GetArenaNoVirtual();
+  if (arena != NULL) {
+    return;
+  }
+
 }
 
+void SaleDescriptor::ArenaDtor(void* object) {
+  SaleDescriptor* _this = reinterpret_cast< SaleDescriptor* >(object);
+  (void)_this;
+}
+void SaleDescriptor::RegisterArenaDtor(::google::protobuf::Arena* arena) {
+}
 void SaleDescriptor::SetCachedSize(int size) const {
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
   _cached_size_ = size;
@@ -217,11 +238,7 @@ const SaleDescriptor& SaleDescriptor::default_instance() {
 }
 
 SaleDescriptor* SaleDescriptor::New(::google::protobuf::Arena* arena) const {
-  SaleDescriptor* n = new SaleDescriptor;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
+  return ::google::protobuf::Arena::CreateMessage<SaleDescriptor>(arena);
 }
 
 void SaleDescriptor::Clear() {
@@ -610,6 +627,21 @@ bool SaleDescriptor::IsInitialized() const {
 
 void SaleDescriptor::Swap(SaleDescriptor* other) {
   if (other == this) return;
+  if (GetArenaNoVirtual() == other->GetArenaNoVirtual()) {
+    InternalSwap(other);
+  } else {
+    SaleDescriptor* temp = New(GetArenaNoVirtual());
+    temp->MergeFrom(*other);
+    other->CopyFrom(*this);
+    InternalSwap(temp);
+    if (GetArenaNoVirtual() == NULL) {
+      delete temp;
+    }
+  }
+}
+void SaleDescriptor::UnsafeArenaSwap(SaleDescriptor* other) {
+  if (other == this) return;
+  GOOGLE_DCHECK(GetArenaNoVirtual() == other->GetArenaNoVirtual());
   InternalSwap(other);
 }
 void SaleDescriptor::InternalSwap(SaleDescriptor* other) {

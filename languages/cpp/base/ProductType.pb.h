@@ -63,6 +63,12 @@ class ProductType : public ::google::protobuf::Message /* @@protoc_insertion_poi
     return *this;
   }
 
+  inline ::google::protobuf::Arena* GetArena() const PROTOBUF_FINAL {
+    return GetArenaNoVirtual();
+  }
+  inline void* GetMaybeArenaPointer() const PROTOBUF_FINAL {
+    return MaybeArenaPtr();
+  }
   static const ::google::protobuf::Descriptor* descriptor();
   static const ProductType& default_instance();
 
@@ -73,6 +79,7 @@ class ProductType : public ::google::protobuf::Message /* @@protoc_insertion_poi
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
     0;
 
+  void UnsafeArenaSwap(ProductType* other);
   void Swap(ProductType* other);
 
   // implements Message ----------------------------------------------
@@ -100,12 +107,17 @@ class ProductType : public ::google::protobuf::Message /* @@protoc_insertion_poi
   void SharedDtor();
   void SetCachedSize(int size) const PROTOBUF_FINAL;
   void InternalSwap(ProductType* other);
+  protected:
+  explicit ProductType(::google::protobuf::Arena* arena);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::google::protobuf::Arena* arena);
   private:
   inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
-    return NULL;
+    return _internal_metadata_.arena();
   }
   inline void* MaybeArenaPtr() const {
-    return NULL;
+    return _internal_metadata_.raw_arena_ptr();
   }
   public:
 
@@ -125,6 +137,9 @@ class ProductType : public ::google::protobuf::Message /* @@protoc_insertion_poi
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  friend class ::google::protobuf::Arena;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
   int kind_;
   mutable int _cached_size_;
   friend struct protobuf_base_2fProductType_2eproto::TableStruct;

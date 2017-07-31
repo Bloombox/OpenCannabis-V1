@@ -33,8 +33,8 @@ public final class MaterialsContent {
       "s/Genetics.proto\"q\n\rMaterialsData\022\023\n\013ing" +
       "redients\030\001 \003(\t\022\023\n\004grow\030\002 \001(\0162\005.Grow\022\031\n\007s" +
       "pecies\030\003 \001(\0162\010.Species\022\033\n\010genetics\030\004 \001(\013" +
-      "2\t.GeneticsB0\n\032io.bloombox.schema.conten" +
-      "tB\020MaterialsContentP\001b\006proto3"
+      "2\t.GeneticsB5\n\032io.bloombox.schema.conten" +
+      "tB\020MaterialsContentH\001P\001\370\001\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

@@ -68,6 +68,12 @@ class MaterialsData : public ::google::protobuf::Message /* @@protoc_insertion_p
     return *this;
   }
 
+  inline ::google::protobuf::Arena* GetArena() const PROTOBUF_FINAL {
+    return GetArenaNoVirtual();
+  }
+  inline void* GetMaybeArenaPointer() const PROTOBUF_FINAL {
+    return MaybeArenaPtr();
+  }
   static const ::google::protobuf::Descriptor* descriptor();
   static const MaterialsData& default_instance();
 
@@ -78,6 +84,7 @@ class MaterialsData : public ::google::protobuf::Message /* @@protoc_insertion_p
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
     0;
 
+  void UnsafeArenaSwap(MaterialsData* other);
   void Swap(MaterialsData* other);
 
   // implements Message ----------------------------------------------
@@ -105,12 +112,17 @@ class MaterialsData : public ::google::protobuf::Message /* @@protoc_insertion_p
   void SharedDtor();
   void SetCachedSize(int size) const PROTOBUF_FINAL;
   void InternalSwap(MaterialsData* other);
+  protected:
+  explicit MaterialsData(::google::protobuf::Arena* arena);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::google::protobuf::Arena* arena);
   private:
   inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
-    return NULL;
+    return _internal_metadata_.arena();
   }
   inline void* MaybeArenaPtr() const {
-    return NULL;
+    return _internal_metadata_.raw_arena_ptr();
   }
   public:
 
@@ -146,10 +158,19 @@ class MaterialsData : public ::google::protobuf::Message /* @@protoc_insertion_p
   bool has_genetics() const;
   void clear_genetics();
   static const int kGeneticsFieldNumber = 4;
+  private:
+  void _slow_mutable_genetics();
+  void _slow_set_allocated_genetics(
+      ::google::protobuf::Arena* message_arena, ::Genetics** genetics);
+  ::Genetics* _slow_release_genetics();
+  public:
   const ::Genetics& genetics() const;
   ::Genetics* mutable_genetics();
   ::Genetics* release_genetics();
   void set_allocated_genetics(::Genetics* genetics);
+  ::Genetics* unsafe_arena_release_genetics();
+  void unsafe_arena_set_allocated_genetics(
+      ::Genetics* genetics);
 
   // .Grow grow = 2;
   void clear_grow();
@@ -167,6 +188,9 @@ class MaterialsData : public ::google::protobuf::Message /* @@protoc_insertion_p
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  friend class ::google::protobuf::Arena;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
   ::google::protobuf::RepeatedPtrField< ::std::string> ingredients_;
   ::Genetics* genetics_;
   int grow_;
@@ -295,7 +319,7 @@ inline const ::Genetics& MaterialsData::genetics() const {
 inline ::Genetics* MaterialsData::mutable_genetics() {
   
   if (genetics_ == NULL) {
-    genetics_ = new ::Genetics;
+    _slow_mutable_genetics();
   }
   // @@protoc_insertion_point(field_mutable:MaterialsData.genetics)
   return genetics_;
@@ -303,12 +327,22 @@ inline ::Genetics* MaterialsData::mutable_genetics() {
 inline ::Genetics* MaterialsData::release_genetics() {
   // @@protoc_insertion_point(field_release:MaterialsData.genetics)
   
-  ::Genetics* temp = genetics_;
-  genetics_ = NULL;
-  return temp;
+  if (GetArenaNoVirtual() != NULL) {
+    return _slow_release_genetics();
+  } else {
+    ::Genetics* temp = genetics_;
+    genetics_ = NULL;
+    return temp;
+  }
 }
-inline void MaterialsData::set_allocated_genetics(::Genetics* genetics) {
-  delete genetics_;
+inline  void MaterialsData::set_allocated_genetics(::Genetics* genetics) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete genetics_;
+  }
+  if (genetics != NULL) {
+    _slow_set_allocated_genetics(message_arena, &genetics);
+  }
   genetics_ = genetics;
   if (genetics) {
     

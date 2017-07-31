@@ -85,6 +85,12 @@ class SaleDescriptor : public ::google::protobuf::Message /* @@protoc_insertion_
     return *this;
   }
 
+  inline ::google::protobuf::Arena* GetArena() const PROTOBUF_FINAL {
+    return GetArenaNoVirtual();
+  }
+  inline void* GetMaybeArenaPointer() const PROTOBUF_FINAL {
+    return MaybeArenaPtr();
+  }
   static const ::google::protobuf::Descriptor* descriptor();
   static const SaleDescriptor& default_instance();
 
@@ -95,6 +101,7 @@ class SaleDescriptor : public ::google::protobuf::Message /* @@protoc_insertion_
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
     0;
 
+  void UnsafeArenaSwap(SaleDescriptor* other);
   void Swap(SaleDescriptor* other);
 
   // implements Message ----------------------------------------------
@@ -122,12 +129,17 @@ class SaleDescriptor : public ::google::protobuf::Message /* @@protoc_insertion_
   void SharedDtor();
   void SetCachedSize(int size) const PROTOBUF_FINAL;
   void InternalSwap(SaleDescriptor* other);
+  protected:
+  explicit SaleDescriptor(::google::protobuf::Arena* arena);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::google::protobuf::Arena* arena);
   private:
   inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
-    return NULL;
+    return _internal_metadata_.arena();
   }
   inline void* MaybeArenaPtr() const {
-    return NULL;
+    return _internal_metadata_.raw_arena_ptr();
   }
   public:
 
@@ -189,6 +201,9 @@ class SaleDescriptor : public ::google::protobuf::Message /* @@protoc_insertion_
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  friend class ::google::protobuf::Arena;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
   ::google::protobuf::uint64 effective_;
   ::google::protobuf::uint64 expiration_;
   int type_;

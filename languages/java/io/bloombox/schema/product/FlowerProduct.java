@@ -1564,8 +1564,8 @@ public final class FlowerProduct {
       "roductContent\022%\n\rmaterial_data\030\025 \001(\0132\016.M" +
       "aterialsData\022\037\n\005flags\030\026 \001(\0132\020.FlagsDescr" +
       "iptor\022 \n\007pricing\030\027 \001(\0132\017.ProductPricingB" +
-      "-\n\032io.bloombox.schema.productB\rFlowerPro",
-      "ductP\000b\006proto3"
+      "2\n\032io.bloombox.schema.productB\rFlowerPro",
+      "ductH\001P\000\370\001\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

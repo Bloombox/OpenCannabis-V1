@@ -117,12 +117,12 @@ void AddDescriptorsImpl() {
       "o\032\025content/Content.proto\032\025media/MediaIte"
       "m.proto\"j\n\005Brand\022\023\n\004name\030\001 \001(\0132\005.Name\022\026\n"
       "\006parent\030\002 \001(\0132\006.Brand\022\031\n\007summary\030\003 \001(\0132\010"
-      ".Content\022\031\n\005media\030\024 \003(\0132\n.MediaItemB,\n\032i"
-      "o.bloombox.schema.contentB\014BrandContentP"
-      "\001b\006proto3"
+      ".Content\022\031\n\005media\030\024 \003(\0132\n.MediaItemB1\n\032i"
+      "o.bloombox.schema.contentB\014BrandContentH"
+      "\001P\001\370\001\001b\006proto3"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 249);
+      descriptor, 254);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "content/Brand.proto", &protobuf_RegisterTypes);
   ::protobuf_content_2fName_2eproto::AddDescriptors();
@@ -147,6 +147,147 @@ struct StaticDescriptorInitializer {
 
 // ===================================================================
 
+void Brand::_slow_mutable_name() {
+  name_ = ::google::protobuf::Arena::CreateMessage< ::Name >(
+      GetArenaNoVirtual());
+}
+::Name* Brand::_slow_release_name() {
+  if (name_ == NULL) {
+    return NULL;
+  } else {
+    ::Name* temp = new ::Name(*name_);
+    name_ = NULL;
+    return temp;
+  }
+}
+::Name* Brand::unsafe_arena_release_name() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:Brand.name)
+  
+  ::Name* temp = name_;
+  name_ = NULL;
+  return temp;
+}
+void Brand::_slow_set_allocated_name(
+    ::google::protobuf::Arena* message_arena, ::Name** name) {
+    if (message_arena != NULL && 
+        ::google::protobuf::Arena::GetArena(*name) == NULL) {
+      message_arena->Own(*name);
+    } else if (message_arena !=
+               ::google::protobuf::Arena::GetArena(*name)) {
+      ::Name* new_name = 
+            ::google::protobuf::Arena::CreateMessage< ::Name >(
+            message_arena);
+      new_name->CopyFrom(**name);
+      *name = new_name;
+    }
+}
+void Brand::unsafe_arena_set_allocated_name(
+    ::Name* name) {
+  if (GetArenaNoVirtual() == NULL) {
+    delete name_;
+  }
+  name_ = name;
+  if (name) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:Brand.name)
+}
+void Brand::_slow_mutable_parent() {
+  parent_ = ::google::protobuf::Arena::CreateMessage< ::Brand >(
+      GetArenaNoVirtual());
+}
+::Brand* Brand::_slow_release_parent() {
+  if (parent_ == NULL) {
+    return NULL;
+  } else {
+    ::Brand* temp = new ::Brand(*parent_);
+    parent_ = NULL;
+    return temp;
+  }
+}
+::Brand* Brand::unsafe_arena_release_parent() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:Brand.parent)
+  
+  ::Brand* temp = parent_;
+  parent_ = NULL;
+  return temp;
+}
+void Brand::_slow_set_allocated_parent(
+    ::google::protobuf::Arena* message_arena, ::Brand** parent) {
+    if (message_arena != NULL && 
+        ::google::protobuf::Arena::GetArena(*parent) == NULL) {
+      message_arena->Own(*parent);
+    } else if (message_arena !=
+               ::google::protobuf::Arena::GetArena(*parent)) {
+      ::Brand* new_parent = 
+            ::google::protobuf::Arena::CreateMessage< ::Brand >(
+            message_arena);
+      new_parent->CopyFrom(**parent);
+      *parent = new_parent;
+    }
+}
+void Brand::unsafe_arena_set_allocated_parent(
+    ::Brand* parent) {
+  if (GetArenaNoVirtual() == NULL) {
+    delete parent_;
+  }
+  parent_ = parent;
+  if (parent) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:Brand.parent)
+}
+void Brand::_slow_mutable_summary() {
+  summary_ = ::google::protobuf::Arena::CreateMessage< ::Content >(
+      GetArenaNoVirtual());
+}
+::Content* Brand::_slow_release_summary() {
+  if (summary_ == NULL) {
+    return NULL;
+  } else {
+    ::Content* temp = new ::Content(*summary_);
+    summary_ = NULL;
+    return temp;
+  }
+}
+::Content* Brand::unsafe_arena_release_summary() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:Brand.summary)
+  
+  ::Content* temp = summary_;
+  summary_ = NULL;
+  return temp;
+}
+void Brand::_slow_set_allocated_summary(
+    ::google::protobuf::Arena* message_arena, ::Content** summary) {
+    if (message_arena != NULL && 
+        ::google::protobuf::Arena::GetArena(*summary) == NULL) {
+      message_arena->Own(*summary);
+    } else if (message_arena !=
+               ::google::protobuf::Arena::GetArena(*summary)) {
+      ::Content* new_summary = 
+            ::google::protobuf::Arena::CreateMessage< ::Content >(
+            message_arena);
+      new_summary->CopyFrom(**summary);
+      *summary = new_summary;
+    }
+}
+void Brand::unsafe_arena_set_allocated_summary(
+    ::Content* summary) {
+  if (GetArenaNoVirtual() == NULL) {
+    delete summary_;
+  }
+  summary_ = summary;
+  if (summary) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:Brand.summary)
+}
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int Brand::kNameFieldNumber;
 const int Brand::kParentFieldNumber;
@@ -161,6 +302,17 @@ Brand::Brand()
   }
   SharedCtor();
   // @@protoc_insertion_point(constructor:Brand)
+}
+Brand::Brand(::google::protobuf::Arena* arena)
+  : ::google::protobuf::Message(),
+  _internal_metadata_(arena),
+  media_(arena) {
+#ifdef GOOGLE_PROTOBUF_NO_STATIC_INITIALIZER
+  protobuf_content_2fBrand_2eproto::InitDefaults();
+#endif  // GOOGLE_PROTOBUF_NO_STATIC_INITIALIZER
+  SharedCtor();
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:Brand)
 }
 Brand::Brand(const Brand& from)
   : ::google::protobuf::Message(),
@@ -198,6 +350,11 @@ Brand::~Brand() {
 }
 
 void Brand::SharedDtor() {
+  ::google::protobuf::Arena* arena = GetArenaNoVirtual();
+  if (arena != NULL) {
+    return;
+  }
+
   if (this != internal_default_instance()) {
     delete name_;
   }
@@ -209,6 +366,12 @@ void Brand::SharedDtor() {
   }
 }
 
+void Brand::ArenaDtor(void* object) {
+  Brand* _this = reinterpret_cast< Brand* >(object);
+  (void)_this;
+}
+void Brand::RegisterArenaDtor(::google::protobuf::Arena* arena) {
+}
 void Brand::SetCachedSize(int size) const {
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
   _cached_size_ = size;
@@ -225,11 +388,7 @@ const Brand& Brand::default_instance() {
 }
 
 Brand* Brand::New(::google::protobuf::Arena* arena) const {
-  Brand* n = new Brand;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
+  return ::google::protobuf::Arena::CreateMessage<Brand>(arena);
 }
 
 void Brand::Clear() {
@@ -497,6 +656,21 @@ bool Brand::IsInitialized() const {
 
 void Brand::Swap(Brand* other) {
   if (other == this) return;
+  if (GetArenaNoVirtual() == other->GetArenaNoVirtual()) {
+    InternalSwap(other);
+  } else {
+    Brand* temp = New(GetArenaNoVirtual());
+    temp->MergeFrom(*other);
+    other->CopyFrom(*this);
+    InternalSwap(temp);
+    if (GetArenaNoVirtual() == NULL) {
+      delete temp;
+    }
+  }
+}
+void Brand::UnsafeArenaSwap(Brand* other) {
+  if (other == this) return;
+  GOOGLE_DCHECK(GetArenaNoVirtual() == other->GetArenaNoVirtual());
   InternalSwap(other);
 }
 void Brand::InternalSwap(Brand* other) {
@@ -531,7 +705,7 @@ const ::Name& Brand::name() const {
 ::Name* Brand::mutable_name() {
   
   if (name_ == NULL) {
-    name_ = new ::Name;
+    _slow_mutable_name();
   }
   // @@protoc_insertion_point(field_mutable:Brand.name)
   return name_;
@@ -539,12 +713,22 @@ const ::Name& Brand::name() const {
 ::Name* Brand::release_name() {
   // @@protoc_insertion_point(field_release:Brand.name)
   
-  ::Name* temp = name_;
-  name_ = NULL;
-  return temp;
+  if (GetArenaNoVirtual() != NULL) {
+    return _slow_release_name();
+  } else {
+    ::Name* temp = name_;
+    name_ = NULL;
+    return temp;
+  }
 }
-void Brand::set_allocated_name(::Name* name) {
-  delete name_;
+ void Brand::set_allocated_name(::Name* name) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete name_;
+  }
+  if (name != NULL) {
+    _slow_set_allocated_name(message_arena, &name);
+  }
   name_ = name;
   if (name) {
     
@@ -570,7 +754,7 @@ const ::Brand& Brand::parent() const {
 ::Brand* Brand::mutable_parent() {
   
   if (parent_ == NULL) {
-    parent_ = new ::Brand;
+    _slow_mutable_parent();
   }
   // @@protoc_insertion_point(field_mutable:Brand.parent)
   return parent_;
@@ -578,12 +762,22 @@ const ::Brand& Brand::parent() const {
 ::Brand* Brand::release_parent() {
   // @@protoc_insertion_point(field_release:Brand.parent)
   
-  ::Brand* temp = parent_;
-  parent_ = NULL;
-  return temp;
+  if (GetArenaNoVirtual() != NULL) {
+    return _slow_release_parent();
+  } else {
+    ::Brand* temp = parent_;
+    parent_ = NULL;
+    return temp;
+  }
 }
-void Brand::set_allocated_parent(::Brand* parent) {
-  delete parent_;
+ void Brand::set_allocated_parent(::Brand* parent) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete parent_;
+  }
+  if (parent != NULL) {
+    _slow_set_allocated_parent(message_arena, &parent);
+  }
   parent_ = parent;
   if (parent) {
     
@@ -609,7 +803,7 @@ const ::Content& Brand::summary() const {
 ::Content* Brand::mutable_summary() {
   
   if (summary_ == NULL) {
-    summary_ = new ::Content;
+    _slow_mutable_summary();
   }
   // @@protoc_insertion_point(field_mutable:Brand.summary)
   return summary_;
@@ -617,12 +811,22 @@ const ::Content& Brand::summary() const {
 ::Content* Brand::release_summary() {
   // @@protoc_insertion_point(field_release:Brand.summary)
   
-  ::Content* temp = summary_;
-  summary_ = NULL;
-  return temp;
+  if (GetArenaNoVirtual() != NULL) {
+    return _slow_release_summary();
+  } else {
+    ::Content* temp = summary_;
+    summary_ = NULL;
+    return temp;
+  }
 }
-void Brand::set_allocated_summary(::Content* summary) {
-  delete summary_;
+ void Brand::set_allocated_summary(::Content* summary) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete summary_;
+  }
+  if (summary != NULL) {
+    _slow_set_allocated_summary(message_arena, &summary);
+  }
   summary_ = summary;
   if (summary) {
     

@@ -21,7 +21,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='content/Content.proto',
   package='',
   syntax='proto3',
-  serialized_pb=_b('\n\x15\x63ontent/Content.proto\x1a\x13\x62\x61se/Language.proto\x1a\x16\x62\x61se/Compression.proto\"\xdc\x01\n\x07\x43ontent\x12\x1b\n\x04type\x18\x01 \x01(\x0e\x32\r.Content.Type\x12#\n\x08\x65ncoding\x18\x02 \x01(\x0e\x32\x11.Content.Encoding\x12\x0f\n\x07\x63ontent\x18\x03 \x01(\x0c\x12\x1b\n\x08language\x18\x04 \x01(\x0e\x32\t.Language\x12!\n\x0b\x63ompression\x18\x05 \x01(\x0b\x32\x0c.Compression\"(\n\x04Type\x12\x08\n\x04TEXT\x10\x00\x12\x0c\n\x08MARKDOWN\x10\x01\x12\x08\n\x04HTML\x10\x02\"\x14\n\x08\x45ncoding\x12\x08\n\x04UTF8\x10\x00\x42.\n\x1aio.bloombox.schema.contentB\x0eGenericContentP\x01\x62\x06proto3')
+  serialized_pb=_b('\n\x15\x63ontent/Content.proto\x1a\x13\x62\x61se/Language.proto\x1a\x16\x62\x61se/Compression.proto\"\xdc\x01\n\x07\x43ontent\x12\x1b\n\x04type\x18\x01 \x01(\x0e\x32\r.Content.Type\x12#\n\x08\x65ncoding\x18\x02 \x01(\x0e\x32\x11.Content.Encoding\x12\x0f\n\x07\x63ontent\x18\x03 \x01(\x0c\x12\x1b\n\x08language\x18\x04 \x01(\x0e\x32\t.Language\x12!\n\x0b\x63ompression\x18\x05 \x01(\x0b\x32\x0c.Compression\"(\n\x04Type\x12\x08\n\x04TEXT\x10\x00\x12\x0c\n\x08MARKDOWN\x10\x01\x12\x08\n\x04HTML\x10\x02\"\x14\n\x08\x45ncoding\x12\x08\n\x04UTF8\x10\x00\x42\x33\n\x1aio.bloombox.schema.contentB\x0eGenericContentH\x01P\x01\xf8\x01\x01\x62\x06proto3')
   ,
   dependencies=[base_dot_Language__pb2.DESCRIPTOR,base_dot_Compression__pb2.DESCRIPTOR,])
 
@@ -150,5 +150,5 @@ _sym_db.RegisterMessage(Content)
 
 
 DESCRIPTOR.has_options = True
-DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\032io.bloombox.schema.contentB\016GenericContentP\001'))
+DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\032io.bloombox.schema.contentB\016GenericContentH\001P\001\370\001\001'))
 # @@protoc_insertion_point(module_scope)

@@ -83,6 +83,12 @@ class Compression : public ::google::protobuf::Message /* @@protoc_insertion_poi
     return *this;
   }
 
+  inline ::google::protobuf::Arena* GetArena() const PROTOBUF_FINAL {
+    return GetArenaNoVirtual();
+  }
+  inline void* GetMaybeArenaPointer() const PROTOBUF_FINAL {
+    return MaybeArenaPtr();
+  }
   static const ::google::protobuf::Descriptor* descriptor();
   static const Compression& default_instance();
 
@@ -93,6 +99,7 @@ class Compression : public ::google::protobuf::Message /* @@protoc_insertion_poi
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
     0;
 
+  void UnsafeArenaSwap(Compression* other);
   void Swap(Compression* other);
 
   // implements Message ----------------------------------------------
@@ -120,12 +127,17 @@ class Compression : public ::google::protobuf::Message /* @@protoc_insertion_poi
   void SharedDtor();
   void SetCachedSize(int size) const PROTOBUF_FINAL;
   void InternalSwap(Compression* other);
+  protected:
+  explicit Compression(::google::protobuf::Arena* arena);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::google::protobuf::Arena* arena);
   private:
   inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
-    return NULL;
+    return _internal_metadata_.arena();
   }
   inline void* MaybeArenaPtr() const {
-    return NULL;
+    return _internal_metadata_.raw_arena_ptr();
   }
   public:
 
@@ -175,6 +187,9 @@ class Compression : public ::google::protobuf::Message /* @@protoc_insertion_poi
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  friend class ::google::protobuf::Arena;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
   bool enabled_;
   int type_;
   mutable int _cached_size_;

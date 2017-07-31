@@ -1,6 +1,6 @@
 
 # OpenCannabis
-## Release __1.0.0-beta2__
+## Release __1.0.0-beta3__
 
 _An Open Model for the Legal Cannabis Industry_
 
@@ -44,11 +44,14 @@ Currently-supported languages include:
 - [C++](https://github.com/Bloombox/OpenCannabis/tree/master/languages/cpp)
 - [C#](https://github.com/Bloombox/OpenCannabis/tree/master/languages/csharp)
 - [Java](https://github.com/Bloombox/OpenCannabis/tree/master/languages/java)
+- [JavaNano](https://github.com/Bloombox/OpenCannabis/tree/master/languages/javanano)
 - [JavaScript](https://github.com/Bloombox/OpenCannabis/tree/master/languages/js)
 - [PHP](https://github.com/Bloombox/OpenCannabis/tree/master/languages/php)
 - [Python](https://github.com/Bloombox/OpenCannabis/tree/master/languages/python)
 - [Ruby](https://github.com/Bloombox/OpenCannabis/tree/master/languages/ruby)
 - [Swift](https://github.com/Bloombox/OpenCannabis/tree/master/languages/swift)
+- [Obj-C](https://github.com/Bloombox/OpenCannabis/tree/master/languages/objc)
+- [Go](https://github.com/Bloombox/OpenCannabis/tree/master/languages/go)
 
 
 ### Usage

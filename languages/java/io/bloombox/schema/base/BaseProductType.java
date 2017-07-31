@@ -30,8 +30,8 @@ public final class BaseProductType {
     java.lang.String[] descriptorData = {
       "\n\026base/ProductType.proto\032\026base/ProductKi" +
       "nd.proto\")\n\013ProductType\022\032\n\004kind\030\001 \001(\0162\014." +
-      "ProductKindB,\n\027io.bloombox.schema.baseB\017" +
-      "BaseProductTypeP\001b\006proto3"
+      "ProductKindB1\n\027io.bloombox.schema.baseB\017" +
+      "BaseProductTypeH\001P\001\370\001\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

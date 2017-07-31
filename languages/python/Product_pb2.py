@@ -22,7 +22,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='Product.proto',
   package='',
   syntax='proto3',
-  serialized_pb=_b('\n\rProduct.proto\x1a\x15\x62\x61se/ProductKey.proto\x1a\x16\x62\x61se/ProductType.proto\x1a\x19google/protobuf/any.proto\"c\n\x07Product\x12\x18\n\x03key\x18\x01 \x01(\x0b\x32\x0b.ProductKey\x12\x1a\n\x04type\x18\x02 \x01(\x0b\x32\x0c.ProductType\x12\"\n\x04\x64\x61ta\x18\x03 \x01(\x0b\x32\x14.google.protobuf.AnyB(\n\x17io.bloombox.schema.baseB\x0b\x42\x61seProductP\x01\x62\x06proto3')
+  serialized_pb=_b('\n\rProduct.proto\x1a\x15\x62\x61se/ProductKey.proto\x1a\x16\x62\x61se/ProductType.proto\x1a\x19google/protobuf/any.proto\"c\n\x07Product\x12\x18\n\x03key\x18\x01 \x01(\x0b\x32\x0b.ProductKey\x12\x1a\n\x04type\x18\x02 \x01(\x0b\x32\x0c.ProductType\x12\"\n\x04\x64\x61ta\x18\x03 \x01(\x0b\x32\x14.google.protobuf.AnyB-\n\x17io.bloombox.schema.baseB\x0b\x42\x61seProductH\x01P\x01\xf8\x01\x01\x62\x06proto3')
   ,
   dependencies=[base_dot_ProductKey__pb2.DESCRIPTOR,base_dot_ProductType__pb2.DESCRIPTOR,google_dot_protobuf_dot_any__pb2.DESCRIPTOR,])
 
@@ -88,5 +88,5 @@ _sym_db.RegisterMessage(Product)
 
 
 DESCRIPTOR.has_options = True
-DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\027io.bloombox.schema.baseB\013BaseProductP\001'))
+DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\027io.bloombox.schema.baseB\013BaseProductH\001P\001\370\001\001'))
 # @@protoc_insertion_point(module_scope)

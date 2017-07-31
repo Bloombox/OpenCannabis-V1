@@ -133,6 +133,12 @@ class PricingTierAvailability : public ::google::protobuf::Message /* @@protoc_i
     return *this;
   }
 
+  inline ::google::protobuf::Arena* GetArena() const PROTOBUF_FINAL {
+    return GetArenaNoVirtual();
+  }
+  inline void* GetMaybeArenaPointer() const PROTOBUF_FINAL {
+    return MaybeArenaPtr();
+  }
   static const ::google::protobuf::Descriptor* descriptor();
   static const PricingTierAvailability& default_instance();
 
@@ -143,6 +149,7 @@ class PricingTierAvailability : public ::google::protobuf::Message /* @@protoc_i
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
     0;
 
+  void UnsafeArenaSwap(PricingTierAvailability* other);
   void Swap(PricingTierAvailability* other);
 
   // implements Message ----------------------------------------------
@@ -170,12 +177,17 @@ class PricingTierAvailability : public ::google::protobuf::Message /* @@protoc_i
   void SharedDtor();
   void SetCachedSize(int size) const PROTOBUF_FINAL;
   void InternalSwap(PricingTierAvailability* other);
+  protected:
+  explicit PricingTierAvailability(::google::protobuf::Arena* arena);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::google::protobuf::Arena* arena);
   private:
   inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
-    return NULL;
+    return _internal_metadata_.arena();
   }
   inline void* MaybeArenaPtr() const {
-    return NULL;
+    return _internal_metadata_.raw_arena_ptr();
   }
   public:
 
@@ -201,6 +213,9 @@ class PricingTierAvailability : public ::google::protobuf::Message /* @@protoc_i
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  friend class ::google::protobuf::Arena;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
   bool offered_;
   bool available_;
   mutable int _cached_size_;
@@ -220,6 +235,12 @@ class UnitPricingDescriptor : public ::google::protobuf::Message /* @@protoc_ins
     return *this;
   }
 
+  inline ::google::protobuf::Arena* GetArena() const PROTOBUF_FINAL {
+    return GetArenaNoVirtual();
+  }
+  inline void* GetMaybeArenaPointer() const PROTOBUF_FINAL {
+    return MaybeArenaPtr();
+  }
   static const ::google::protobuf::Descriptor* descriptor();
   static const UnitPricingDescriptor& default_instance();
 
@@ -230,6 +251,7 @@ class UnitPricingDescriptor : public ::google::protobuf::Message /* @@protoc_ins
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
     1;
 
+  void UnsafeArenaSwap(UnitPricingDescriptor* other);
   void Swap(UnitPricingDescriptor* other);
 
   // implements Message ----------------------------------------------
@@ -257,12 +279,17 @@ class UnitPricingDescriptor : public ::google::protobuf::Message /* @@protoc_ins
   void SharedDtor();
   void SetCachedSize(int size) const PROTOBUF_FINAL;
   void InternalSwap(UnitPricingDescriptor* other);
+  protected:
+  explicit UnitPricingDescriptor(::google::protobuf::Arena* arena);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::google::protobuf::Arena* arena);
   private:
   inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
-    return NULL;
+    return _internal_metadata_.arena();
   }
   inline void* MaybeArenaPtr() const {
-    return NULL;
+    return _internal_metadata_.raw_arena_ptr();
   }
   public:
 
@@ -288,10 +315,19 @@ class UnitPricingDescriptor : public ::google::protobuf::Message /* @@protoc_ins
   bool has_status() const;
   void clear_status();
   static const int kStatusFieldNumber = 2;
+  private:
+  void _slow_mutable_status();
+  void _slow_set_allocated_status(
+      ::google::protobuf::Arena* message_arena, ::PricingTierAvailability** status);
+  ::PricingTierAvailability* _slow_release_status();
+  public:
   const ::PricingTierAvailability& status() const;
   ::PricingTierAvailability* mutable_status();
   ::PricingTierAvailability* release_status();
   void set_allocated_status(::PricingTierAvailability* status);
+  ::PricingTierAvailability* unsafe_arena_release_status();
+  void unsafe_arena_set_allocated_status(
+      ::PricingTierAvailability* status);
 
   // float price_value = 1;
   void clear_price_value();
@@ -303,6 +339,9 @@ class UnitPricingDescriptor : public ::google::protobuf::Message /* @@protoc_ins
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  friend class ::google::protobuf::Arena;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
   ::google::protobuf::RepeatedPtrField< ::SaleDescriptor > discounts_;
   ::PricingTierAvailability* status_;
   float price_value_;
@@ -323,6 +362,12 @@ class WeightedPricingDescriptor : public ::google::protobuf::Message /* @@protoc
     return *this;
   }
 
+  inline ::google::protobuf::Arena* GetArena() const PROTOBUF_FINAL {
+    return GetArenaNoVirtual();
+  }
+  inline void* GetMaybeArenaPointer() const PROTOBUF_FINAL {
+    return MaybeArenaPtr();
+  }
   static const ::google::protobuf::Descriptor* descriptor();
   static const WeightedPricingDescriptor& default_instance();
 
@@ -333,6 +378,7 @@ class WeightedPricingDescriptor : public ::google::protobuf::Message /* @@protoc
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
     2;
 
+  void UnsafeArenaSwap(WeightedPricingDescriptor* other);
   void Swap(WeightedPricingDescriptor* other);
 
   // implements Message ----------------------------------------------
@@ -360,12 +406,17 @@ class WeightedPricingDescriptor : public ::google::protobuf::Message /* @@protoc
   void SharedDtor();
   void SetCachedSize(int size) const PROTOBUF_FINAL;
   void InternalSwap(WeightedPricingDescriptor* other);
+  protected:
+  explicit WeightedPricingDescriptor(::google::protobuf::Arena* arena);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::google::protobuf::Arena* arena);
   private:
   inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
-    return NULL;
+    return _internal_metadata_.arena();
   }
   inline void* MaybeArenaPtr() const {
-    return NULL;
+    return _internal_metadata_.raw_arena_ptr();
   }
   public:
 
@@ -379,10 +430,19 @@ class WeightedPricingDescriptor : public ::google::protobuf::Message /* @@protoc
   bool has_tier() const;
   void clear_tier();
   static const int kTierFieldNumber = 2;
+  private:
+  void _slow_mutable_tier();
+  void _slow_set_allocated_tier(
+      ::google::protobuf::Arena* message_arena, ::UnitPricingDescriptor** tier);
+  ::UnitPricingDescriptor* _slow_release_tier();
+  public:
   const ::UnitPricingDescriptor& tier() const;
   ::UnitPricingDescriptor* mutable_tier();
   ::UnitPricingDescriptor* release_tier();
   void set_allocated_tier(::UnitPricingDescriptor* tier);
+  ::UnitPricingDescriptor* unsafe_arena_release_tier();
+  void unsafe_arena_set_allocated_tier(
+      ::UnitPricingDescriptor* tier);
 
   // .PricingWeightTier weight = 1;
   void clear_weight();
@@ -400,6 +460,9 @@ class WeightedPricingDescriptor : public ::google::protobuf::Message /* @@protoc
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  friend class ::google::protobuf::Arena;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
   ::UnitPricingDescriptor* tier_;
   int weight_;
   float weightingrams_;
@@ -420,6 +483,12 @@ class FreebiePricingDescriptor : public ::google::protobuf::Message /* @@protoc_
     return *this;
   }
 
+  inline ::google::protobuf::Arena* GetArena() const PROTOBUF_FINAL {
+    return GetArenaNoVirtual();
+  }
+  inline void* GetMaybeArenaPointer() const PROTOBUF_FINAL {
+    return MaybeArenaPtr();
+  }
   static const ::google::protobuf::Descriptor* descriptor();
   static const FreebiePricingDescriptor& default_instance();
 
@@ -430,6 +499,7 @@ class FreebiePricingDescriptor : public ::google::protobuf::Message /* @@protoc_
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
     3;
 
+  void UnsafeArenaSwap(FreebiePricingDescriptor* other);
   void Swap(FreebiePricingDescriptor* other);
 
   // implements Message ----------------------------------------------
@@ -457,12 +527,17 @@ class FreebiePricingDescriptor : public ::google::protobuf::Message /* @@protoc_
   void SharedDtor();
   void SetCachedSize(int size) const PROTOBUF_FINAL;
   void InternalSwap(FreebiePricingDescriptor* other);
+  protected:
+  explicit FreebiePricingDescriptor(::google::protobuf::Arena* arena);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::google::protobuf::Arena* arena);
   private:
   inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
-    return NULL;
+    return _internal_metadata_.arena();
   }
   inline void* MaybeArenaPtr() const {
-    return NULL;
+    return _internal_metadata_.raw_arena_ptr();
   }
   public:
 
@@ -476,6 +551,9 @@ class FreebiePricingDescriptor : public ::google::protobuf::Message /* @@protoc_
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  friend class ::google::protobuf::Arena;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
   mutable int _cached_size_;
   friend struct protobuf_structs_2fpricing_2fPricingDescriptor_2eproto::TableStruct;
 };
@@ -493,6 +571,12 @@ class PricingDescriptor : public ::google::protobuf::Message /* @@protoc_inserti
     return *this;
   }
 
+  inline ::google::protobuf::Arena* GetArena() const PROTOBUF_FINAL {
+    return GetArenaNoVirtual();
+  }
+  inline void* GetMaybeArenaPointer() const PROTOBUF_FINAL {
+    return MaybeArenaPtr();
+  }
   static const ::google::protobuf::Descriptor* descriptor();
   static const PricingDescriptor& default_instance();
 
@@ -503,6 +587,7 @@ class PricingDescriptor : public ::google::protobuf::Message /* @@protoc_inserti
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
     4;
 
+  void UnsafeArenaSwap(PricingDescriptor* other);
   void Swap(PricingDescriptor* other);
 
   // implements Message ----------------------------------------------
@@ -530,12 +615,17 @@ class PricingDescriptor : public ::google::protobuf::Message /* @@protoc_inserti
   void SharedDtor();
   void SetCachedSize(int size) const PROTOBUF_FINAL;
   void InternalSwap(PricingDescriptor* other);
+  protected:
+  explicit PricingDescriptor(::google::protobuf::Arena* arena);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::google::protobuf::Arena* arena);
   private:
   inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
-    return NULL;
+    return _internal_metadata_.arena();
   }
   inline void* MaybeArenaPtr() const {
-    return NULL;
+    return _internal_metadata_.raw_arena_ptr();
   }
   public:
 
@@ -549,28 +639,55 @@ class PricingDescriptor : public ::google::protobuf::Message /* @@protoc_inserti
   bool has_unit() const;
   void clear_unit();
   static const int kUnitFieldNumber = 20;
+  private:
+  void _slow_mutable_unit();
+  void _slow_set_allocated_unit(
+      ::google::protobuf::Arena* message_arena, ::UnitPricingDescriptor** unit);
+  ::UnitPricingDescriptor* _slow_release_unit();
+  public:
   const ::UnitPricingDescriptor& unit() const;
   ::UnitPricingDescriptor* mutable_unit();
   ::UnitPricingDescriptor* release_unit();
   void set_allocated_unit(::UnitPricingDescriptor* unit);
+  ::UnitPricingDescriptor* unsafe_arena_release_unit();
+  void unsafe_arena_set_allocated_unit(
+      ::UnitPricingDescriptor* unit);
 
   // .WeightedPricingDescriptor weighted = 21;
   bool has_weighted() const;
   void clear_weighted();
   static const int kWeightedFieldNumber = 21;
+  private:
+  void _slow_mutable_weighted();
+  void _slow_set_allocated_weighted(
+      ::google::protobuf::Arena* message_arena, ::WeightedPricingDescriptor** weighted);
+  ::WeightedPricingDescriptor* _slow_release_weighted();
+  public:
   const ::WeightedPricingDescriptor& weighted() const;
   ::WeightedPricingDescriptor* mutable_weighted();
   ::WeightedPricingDescriptor* release_weighted();
   void set_allocated_weighted(::WeightedPricingDescriptor* weighted);
+  ::WeightedPricingDescriptor* unsafe_arena_release_weighted();
+  void unsafe_arena_set_allocated_weighted(
+      ::WeightedPricingDescriptor* weighted);
 
   // .FreebiePricingDescriptor freebie = 22;
   bool has_freebie() const;
   void clear_freebie();
   static const int kFreebieFieldNumber = 22;
+  private:
+  void _slow_mutable_freebie();
+  void _slow_set_allocated_freebie(
+      ::google::protobuf::Arena* message_arena, ::FreebiePricingDescriptor** freebie);
+  ::FreebiePricingDescriptor* _slow_release_freebie();
+  public:
   const ::FreebiePricingDescriptor& freebie() const;
   ::FreebiePricingDescriptor* mutable_freebie();
   ::FreebiePricingDescriptor* release_freebie();
   void set_allocated_freebie(::FreebiePricingDescriptor* freebie);
+  ::FreebiePricingDescriptor* unsafe_arena_release_freebie();
+  void unsafe_arena_set_allocated_freebie(
+      ::FreebiePricingDescriptor* freebie);
 
   // .PricingType type = 1;
   void clear_type();
@@ -582,6 +699,9 @@ class PricingDescriptor : public ::google::protobuf::Message /* @@protoc_inserti
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  friend class ::google::protobuf::Arena;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
   ::UnitPricingDescriptor* unit_;
   ::WeightedPricingDescriptor* weighted_;
   ::FreebiePricingDescriptor* freebie_;
@@ -603,6 +723,12 @@ class ProductPricing : public ::google::protobuf::Message /* @@protoc_insertion_
     return *this;
   }
 
+  inline ::google::protobuf::Arena* GetArena() const PROTOBUF_FINAL {
+    return GetArenaNoVirtual();
+  }
+  inline void* GetMaybeArenaPointer() const PROTOBUF_FINAL {
+    return MaybeArenaPtr();
+  }
   static const ::google::protobuf::Descriptor* descriptor();
   static const ProductPricing& default_instance();
 
@@ -613,6 +739,7 @@ class ProductPricing : public ::google::protobuf::Message /* @@protoc_insertion_
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
     5;
 
+  void UnsafeArenaSwap(ProductPricing* other);
   void Swap(ProductPricing* other);
 
   // implements Message ----------------------------------------------
@@ -640,12 +767,17 @@ class ProductPricing : public ::google::protobuf::Message /* @@protoc_insertion_
   void SharedDtor();
   void SetCachedSize(int size) const PROTOBUF_FINAL;
   void InternalSwap(ProductPricing* other);
+  protected:
+  explicit ProductPricing(::google::protobuf::Arena* arena);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::google::protobuf::Arena* arena);
   private:
   inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
-    return NULL;
+    return _internal_metadata_.arena();
   }
   inline void* MaybeArenaPtr() const {
-    return NULL;
+    return _internal_metadata_.raw_arena_ptr();
   }
   public:
 
@@ -683,6 +815,9 @@ class ProductPricing : public ::google::protobuf::Message /* @@protoc_insertion_
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  friend class ::google::protobuf::Arena;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
   ::google::protobuf::RepeatedPtrField< ::SaleDescriptor > discounts_;
   ::google::protobuf::RepeatedPtrField< ::PricingDescriptor > manifest_;
   mutable int _cached_size_;
@@ -758,7 +893,7 @@ inline const ::PricingTierAvailability& UnitPricingDescriptor::status() const {
 inline ::PricingTierAvailability* UnitPricingDescriptor::mutable_status() {
   
   if (status_ == NULL) {
-    status_ = new ::PricingTierAvailability;
+    _slow_mutable_status();
   }
   // @@protoc_insertion_point(field_mutable:UnitPricingDescriptor.status)
   return status_;
@@ -766,12 +901,22 @@ inline ::PricingTierAvailability* UnitPricingDescriptor::mutable_status() {
 inline ::PricingTierAvailability* UnitPricingDescriptor::release_status() {
   // @@protoc_insertion_point(field_release:UnitPricingDescriptor.status)
   
-  ::PricingTierAvailability* temp = status_;
-  status_ = NULL;
-  return temp;
+  if (GetArenaNoVirtual() != NULL) {
+    return _slow_release_status();
+  } else {
+    ::PricingTierAvailability* temp = status_;
+    status_ = NULL;
+    return temp;
+  }
 }
-inline void UnitPricingDescriptor::set_allocated_status(::PricingTierAvailability* status) {
-  delete status_;
+inline  void UnitPricingDescriptor::set_allocated_status(::PricingTierAvailability* status) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete status_;
+  }
+  if (status != NULL) {
+    _slow_set_allocated_status(message_arena, &status);
+  }
   status_ = status;
   if (status) {
     
@@ -845,7 +990,7 @@ inline const ::UnitPricingDescriptor& WeightedPricingDescriptor::tier() const {
 inline ::UnitPricingDescriptor* WeightedPricingDescriptor::mutable_tier() {
   
   if (tier_ == NULL) {
-    tier_ = new ::UnitPricingDescriptor;
+    _slow_mutable_tier();
   }
   // @@protoc_insertion_point(field_mutable:WeightedPricingDescriptor.tier)
   return tier_;
@@ -853,12 +998,22 @@ inline ::UnitPricingDescriptor* WeightedPricingDescriptor::mutable_tier() {
 inline ::UnitPricingDescriptor* WeightedPricingDescriptor::release_tier() {
   // @@protoc_insertion_point(field_release:WeightedPricingDescriptor.tier)
   
-  ::UnitPricingDescriptor* temp = tier_;
-  tier_ = NULL;
-  return temp;
+  if (GetArenaNoVirtual() != NULL) {
+    return _slow_release_tier();
+  } else {
+    ::UnitPricingDescriptor* temp = tier_;
+    tier_ = NULL;
+    return temp;
+  }
 }
-inline void WeightedPricingDescriptor::set_allocated_tier(::UnitPricingDescriptor* tier) {
-  delete tier_;
+inline  void WeightedPricingDescriptor::set_allocated_tier(::UnitPricingDescriptor* tier) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete tier_;
+  }
+  if (tier != NULL) {
+    _slow_set_allocated_tier(message_arena, &tier);
+  }
   tier_ = tier;
   if (tier) {
     
@@ -920,7 +1075,7 @@ inline const ::UnitPricingDescriptor& PricingDescriptor::unit() const {
 inline ::UnitPricingDescriptor* PricingDescriptor::mutable_unit() {
   
   if (unit_ == NULL) {
-    unit_ = new ::UnitPricingDescriptor;
+    _slow_mutable_unit();
   }
   // @@protoc_insertion_point(field_mutable:PricingDescriptor.unit)
   return unit_;
@@ -928,12 +1083,22 @@ inline ::UnitPricingDescriptor* PricingDescriptor::mutable_unit() {
 inline ::UnitPricingDescriptor* PricingDescriptor::release_unit() {
   // @@protoc_insertion_point(field_release:PricingDescriptor.unit)
   
-  ::UnitPricingDescriptor* temp = unit_;
-  unit_ = NULL;
-  return temp;
+  if (GetArenaNoVirtual() != NULL) {
+    return _slow_release_unit();
+  } else {
+    ::UnitPricingDescriptor* temp = unit_;
+    unit_ = NULL;
+    return temp;
+  }
 }
-inline void PricingDescriptor::set_allocated_unit(::UnitPricingDescriptor* unit) {
-  delete unit_;
+inline  void PricingDescriptor::set_allocated_unit(::UnitPricingDescriptor* unit) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete unit_;
+  }
+  if (unit != NULL) {
+    _slow_set_allocated_unit(message_arena, &unit);
+  }
   unit_ = unit;
   if (unit) {
     
@@ -959,7 +1124,7 @@ inline const ::WeightedPricingDescriptor& PricingDescriptor::weighted() const {
 inline ::WeightedPricingDescriptor* PricingDescriptor::mutable_weighted() {
   
   if (weighted_ == NULL) {
-    weighted_ = new ::WeightedPricingDescriptor;
+    _slow_mutable_weighted();
   }
   // @@protoc_insertion_point(field_mutable:PricingDescriptor.weighted)
   return weighted_;
@@ -967,12 +1132,22 @@ inline ::WeightedPricingDescriptor* PricingDescriptor::mutable_weighted() {
 inline ::WeightedPricingDescriptor* PricingDescriptor::release_weighted() {
   // @@protoc_insertion_point(field_release:PricingDescriptor.weighted)
   
-  ::WeightedPricingDescriptor* temp = weighted_;
-  weighted_ = NULL;
-  return temp;
+  if (GetArenaNoVirtual() != NULL) {
+    return _slow_release_weighted();
+  } else {
+    ::WeightedPricingDescriptor* temp = weighted_;
+    weighted_ = NULL;
+    return temp;
+  }
 }
-inline void PricingDescriptor::set_allocated_weighted(::WeightedPricingDescriptor* weighted) {
-  delete weighted_;
+inline  void PricingDescriptor::set_allocated_weighted(::WeightedPricingDescriptor* weighted) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete weighted_;
+  }
+  if (weighted != NULL) {
+    _slow_set_allocated_weighted(message_arena, &weighted);
+  }
   weighted_ = weighted;
   if (weighted) {
     
@@ -998,7 +1173,7 @@ inline const ::FreebiePricingDescriptor& PricingDescriptor::freebie() const {
 inline ::FreebiePricingDescriptor* PricingDescriptor::mutable_freebie() {
   
   if (freebie_ == NULL) {
-    freebie_ = new ::FreebiePricingDescriptor;
+    _slow_mutable_freebie();
   }
   // @@protoc_insertion_point(field_mutable:PricingDescriptor.freebie)
   return freebie_;
@@ -1006,12 +1181,22 @@ inline ::FreebiePricingDescriptor* PricingDescriptor::mutable_freebie() {
 inline ::FreebiePricingDescriptor* PricingDescriptor::release_freebie() {
   // @@protoc_insertion_point(field_release:PricingDescriptor.freebie)
   
-  ::FreebiePricingDescriptor* temp = freebie_;
-  freebie_ = NULL;
-  return temp;
+  if (GetArenaNoVirtual() != NULL) {
+    return _slow_release_freebie();
+  } else {
+    ::FreebiePricingDescriptor* temp = freebie_;
+    freebie_ = NULL;
+    return temp;
+  }
 }
-inline void PricingDescriptor::set_allocated_freebie(::FreebiePricingDescriptor* freebie) {
-  delete freebie_;
+inline  void PricingDescriptor::set_allocated_freebie(::FreebiePricingDescriptor* freebie) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete freebie_;
+  }
+  if (freebie != NULL) {
+    _slow_set_allocated_freebie(message_arena, &freebie);
+  }
   freebie_ = freebie;
   if (freebie) {
     

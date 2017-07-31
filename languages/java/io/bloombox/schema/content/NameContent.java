@@ -29,8 +29,8 @@ public final class NameContent {
   static {
     java.lang.String[] descriptorData = {
       "\n\022content/Name.proto\"(\n\004Name\022\017\n\007primary\030" +
-      "\001 \001(\t\022\017\n\007display\030\002 \001(\tB+\n\032io.bloombox.sc" +
-      "hema.contentB\013NameContentP\001b\006proto3"
+      "\001 \001(\t\022\017\n\007display\030\002 \001(\tB0\n\032io.bloombox.sc" +
+      "hema.contentB\013NameContentH\001P\001\370\001\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

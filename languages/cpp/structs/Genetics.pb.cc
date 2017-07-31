@@ -109,12 +109,12 @@ void AddDescriptorsImpl() {
   static const char descriptor[] = {
       "\n\026structs/Genetics.proto\032\022content/Name.p"
       "roto\"6\n\010Genetics\022\023\n\004male\030\001 \001(\0132\005.Name\022\025\n"
-      "\006female\030\002 \001(\0132\005.NameB6\n!io.bloombox.sche"
-      "ma.product.structB\017GeneticsStructsP\001b\006pr"
-      "oto3"
+      "\006female\030\002 \001(\0132\005.NameB;\n!io.bloombox.sche"
+      "ma.product.structB\017GeneticsStructsH\001P\001\370\001"
+      "\001b\006proto3"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 164);
+      descriptor, 169);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "structs/Genetics.proto", &protobuf_RegisterTypes);
   ::protobuf_content_2fName_2eproto::AddDescriptors();
@@ -137,6 +137,100 @@ struct StaticDescriptorInitializer {
 
 // ===================================================================
 
+void Genetics::_slow_mutable_male() {
+  male_ = ::google::protobuf::Arena::CreateMessage< ::Name >(
+      GetArenaNoVirtual());
+}
+::Name* Genetics::_slow_release_male() {
+  if (male_ == NULL) {
+    return NULL;
+  } else {
+    ::Name* temp = new ::Name(*male_);
+    male_ = NULL;
+    return temp;
+  }
+}
+::Name* Genetics::unsafe_arena_release_male() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:Genetics.male)
+  
+  ::Name* temp = male_;
+  male_ = NULL;
+  return temp;
+}
+void Genetics::_slow_set_allocated_male(
+    ::google::protobuf::Arena* message_arena, ::Name** male) {
+    if (message_arena != NULL && 
+        ::google::protobuf::Arena::GetArena(*male) == NULL) {
+      message_arena->Own(*male);
+    } else if (message_arena !=
+               ::google::protobuf::Arena::GetArena(*male)) {
+      ::Name* new_male = 
+            ::google::protobuf::Arena::CreateMessage< ::Name >(
+            message_arena);
+      new_male->CopyFrom(**male);
+      *male = new_male;
+    }
+}
+void Genetics::unsafe_arena_set_allocated_male(
+    ::Name* male) {
+  if (GetArenaNoVirtual() == NULL) {
+    delete male_;
+  }
+  male_ = male;
+  if (male) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:Genetics.male)
+}
+void Genetics::_slow_mutable_female() {
+  female_ = ::google::protobuf::Arena::CreateMessage< ::Name >(
+      GetArenaNoVirtual());
+}
+::Name* Genetics::_slow_release_female() {
+  if (female_ == NULL) {
+    return NULL;
+  } else {
+    ::Name* temp = new ::Name(*female_);
+    female_ = NULL;
+    return temp;
+  }
+}
+::Name* Genetics::unsafe_arena_release_female() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:Genetics.female)
+  
+  ::Name* temp = female_;
+  female_ = NULL;
+  return temp;
+}
+void Genetics::_slow_set_allocated_female(
+    ::google::protobuf::Arena* message_arena, ::Name** female) {
+    if (message_arena != NULL && 
+        ::google::protobuf::Arena::GetArena(*female) == NULL) {
+      message_arena->Own(*female);
+    } else if (message_arena !=
+               ::google::protobuf::Arena::GetArena(*female)) {
+      ::Name* new_female = 
+            ::google::protobuf::Arena::CreateMessage< ::Name >(
+            message_arena);
+      new_female->CopyFrom(**female);
+      *female = new_female;
+    }
+}
+void Genetics::unsafe_arena_set_allocated_female(
+    ::Name* female) {
+  if (GetArenaNoVirtual() == NULL) {
+    delete female_;
+  }
+  female_ = female;
+  if (female) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:Genetics.female)
+}
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int Genetics::kMaleFieldNumber;
 const int Genetics::kFemaleFieldNumber;
@@ -149,6 +243,16 @@ Genetics::Genetics()
   }
   SharedCtor();
   // @@protoc_insertion_point(constructor:Genetics)
+}
+Genetics::Genetics(::google::protobuf::Arena* arena)
+  : ::google::protobuf::Message(),
+  _internal_metadata_(arena) {
+#ifdef GOOGLE_PROTOBUF_NO_STATIC_INITIALIZER
+  protobuf_structs_2fGenetics_2eproto::InitDefaults();
+#endif  // GOOGLE_PROTOBUF_NO_STATIC_INITIALIZER
+  SharedCtor();
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:Genetics)
 }
 Genetics::Genetics(const Genetics& from)
   : ::google::protobuf::Message(),
@@ -180,6 +284,11 @@ Genetics::~Genetics() {
 }
 
 void Genetics::SharedDtor() {
+  ::google::protobuf::Arena* arena = GetArenaNoVirtual();
+  if (arena != NULL) {
+    return;
+  }
+
   if (this != internal_default_instance()) {
     delete male_;
   }
@@ -188,6 +297,12 @@ void Genetics::SharedDtor() {
   }
 }
 
+void Genetics::ArenaDtor(void* object) {
+  Genetics* _this = reinterpret_cast< Genetics* >(object);
+  (void)_this;
+}
+void Genetics::RegisterArenaDtor(::google::protobuf::Arena* arena) {
+}
 void Genetics::SetCachedSize(int size) const {
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
   _cached_size_ = size;
@@ -204,11 +319,7 @@ const Genetics& Genetics::default_instance() {
 }
 
 Genetics* Genetics::New(::google::protobuf::Arena* arena) const {
-  Genetics* n = new Genetics;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
+  return ::google::protobuf::Arena::CreateMessage<Genetics>(arena);
 }
 
 void Genetics::Clear() {
@@ -399,6 +510,21 @@ bool Genetics::IsInitialized() const {
 
 void Genetics::Swap(Genetics* other) {
   if (other == this) return;
+  if (GetArenaNoVirtual() == other->GetArenaNoVirtual()) {
+    InternalSwap(other);
+  } else {
+    Genetics* temp = New(GetArenaNoVirtual());
+    temp->MergeFrom(*other);
+    other->CopyFrom(*this);
+    InternalSwap(temp);
+    if (GetArenaNoVirtual() == NULL) {
+      delete temp;
+    }
+  }
+}
+void Genetics::UnsafeArenaSwap(Genetics* other) {
+  if (other == this) return;
+  GOOGLE_DCHECK(GetArenaNoVirtual() == other->GetArenaNoVirtual());
   InternalSwap(other);
 }
 void Genetics::InternalSwap(Genetics* other) {
@@ -431,7 +557,7 @@ const ::Name& Genetics::male() const {
 ::Name* Genetics::mutable_male() {
   
   if (male_ == NULL) {
-    male_ = new ::Name;
+    _slow_mutable_male();
   }
   // @@protoc_insertion_point(field_mutable:Genetics.male)
   return male_;
@@ -439,12 +565,22 @@ const ::Name& Genetics::male() const {
 ::Name* Genetics::release_male() {
   // @@protoc_insertion_point(field_release:Genetics.male)
   
-  ::Name* temp = male_;
-  male_ = NULL;
-  return temp;
+  if (GetArenaNoVirtual() != NULL) {
+    return _slow_release_male();
+  } else {
+    ::Name* temp = male_;
+    male_ = NULL;
+    return temp;
+  }
 }
-void Genetics::set_allocated_male(::Name* male) {
-  delete male_;
+ void Genetics::set_allocated_male(::Name* male) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete male_;
+  }
+  if (male != NULL) {
+    _slow_set_allocated_male(message_arena, &male);
+  }
   male_ = male;
   if (male) {
     
@@ -470,7 +606,7 @@ const ::Name& Genetics::female() const {
 ::Name* Genetics::mutable_female() {
   
   if (female_ == NULL) {
-    female_ = new ::Name;
+    _slow_mutable_female();
   }
   // @@protoc_insertion_point(field_mutable:Genetics.female)
   return female_;
@@ -478,12 +614,22 @@ const ::Name& Genetics::female() const {
 ::Name* Genetics::release_female() {
   // @@protoc_insertion_point(field_release:Genetics.female)
   
-  ::Name* temp = female_;
-  female_ = NULL;
-  return temp;
+  if (GetArenaNoVirtual() != NULL) {
+    return _slow_release_female();
+  } else {
+    ::Name* temp = female_;
+    female_ = NULL;
+    return temp;
+  }
 }
-void Genetics::set_allocated_female(::Name* female) {
-  delete female_;
+ void Genetics::set_allocated_female(::Name* female) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete female_;
+  }
+  if (female != NULL) {
+    _slow_set_allocated_female(message_arena, &female);
+  }
   female_ = female;
   if (female) {
     

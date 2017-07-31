@@ -32,8 +32,9 @@ public final class BaseProduct {
       "base/ProductType.proto\032\031google/protobuf/" +
       "any.proto\"c\n\007Product\022\030\n\003key\030\001 \001(\0132\013.Prod" +
       "uctKey\022\032\n\004type\030\002 \001(\0132\014.ProductType\022\"\n\004da" +
-      "ta\030\003 \001(\0132\024.google.protobuf.AnyB(\n\027io.blo" +
-      "ombox.schema.baseB\013BaseProductP\001b\006proto3"
+      "ta\030\003 \001(\0132\024.google.protobuf.AnyB-\n\027io.blo" +
+      "ombox.schema.baseB\013BaseProductH\001P\001\370\001\001b\006p" +
+      "roto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

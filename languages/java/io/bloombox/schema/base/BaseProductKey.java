@@ -29,8 +29,8 @@ public final class BaseProductKey {
   static {
     java.lang.String[] descriptorData = {
       "\n\025base/ProductKey.proto\"\030\n\nProductKey\022\n\n" +
-      "\002id\030\001 \001(\tB+\n\027io.bloombox.schema.baseB\016Ba" +
-      "seProductKeyP\001b\006proto3"
+      "\002id\030\001 \001(\tB0\n\027io.bloombox.schema.baseB\016Ba" +
+      "seProductKeyH\001P\001\370\001\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

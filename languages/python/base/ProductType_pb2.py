@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='base/ProductType.proto',
   package='',
   syntax='proto3',
-  serialized_pb=_b('\n\x16\x62\x61se/ProductType.proto\x1a\x16\x62\x61se/ProductKind.proto\")\n\x0bProductType\x12\x1a\n\x04kind\x18\x01 \x01(\x0e\x32\x0c.ProductKindB,\n\x17io.bloombox.schema.baseB\x0f\x42\x61seProductTypeP\x01\x62\x06proto3')
+  serialized_pb=_b('\n\x16\x62\x61se/ProductType.proto\x1a\x16\x62\x61se/ProductKind.proto\")\n\x0bProductType\x12\x1a\n\x04kind\x18\x01 \x01(\x0e\x32\x0c.ProductKindB1\n\x17io.bloombox.schema.baseB\x0f\x42\x61seProductTypeH\x01P\x01\xf8\x01\x01\x62\x06proto3')
   ,
   dependencies=[base_dot_ProductKind__pb2.DESCRIPTOR,])
 
@@ -70,5 +70,5 @@ _sym_db.RegisterMessage(ProductType)
 
 
 DESCRIPTOR.has_options = True
-DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\027io.bloombox.schema.baseB\017BaseProductTypeP\001'))
+DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\027io.bloombox.schema.baseB\017BaseProductTypeH\001P\001\370\001\001'))
 # @@protoc_insertion_point(module_scope)

@@ -78,6 +78,12 @@ class Product : public ::google::protobuf::Message /* @@protoc_insertion_point(c
     return *this;
   }
 
+  inline ::google::protobuf::Arena* GetArena() const PROTOBUF_FINAL {
+    return GetArenaNoVirtual();
+  }
+  inline void* GetMaybeArenaPointer() const PROTOBUF_FINAL {
+    return MaybeArenaPtr();
+  }
   static const ::google::protobuf::Descriptor* descriptor();
   static const Product& default_instance();
 
@@ -88,6 +94,7 @@ class Product : public ::google::protobuf::Message /* @@protoc_insertion_point(c
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
     0;
 
+  void UnsafeArenaSwap(Product* other);
   void Swap(Product* other);
 
   // implements Message ----------------------------------------------
@@ -115,12 +122,17 @@ class Product : public ::google::protobuf::Message /* @@protoc_insertion_point(c
   void SharedDtor();
   void SetCachedSize(int size) const PROTOBUF_FINAL;
   void InternalSwap(Product* other);
+  protected:
+  explicit Product(::google::protobuf::Arena* arena);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::google::protobuf::Arena* arena);
   private:
   inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
-    return NULL;
+    return _internal_metadata_.arena();
   }
   inline void* MaybeArenaPtr() const {
-    return NULL;
+    return _internal_metadata_.raw_arena_ptr();
   }
   public:
 
@@ -134,33 +146,61 @@ class Product : public ::google::protobuf::Message /* @@protoc_insertion_point(c
   bool has_key() const;
   void clear_key();
   static const int kKeyFieldNumber = 1;
+  private:
+  void _slow_mutable_key();
+  void _slow_set_allocated_key(
+      ::google::protobuf::Arena* message_arena, ::ProductKey** key);
+  ::ProductKey* _slow_release_key();
+  public:
   const ::ProductKey& key() const;
   ::ProductKey* mutable_key();
   ::ProductKey* release_key();
   void set_allocated_key(::ProductKey* key);
+  ::ProductKey* unsafe_arena_release_key();
+  void unsafe_arena_set_allocated_key(
+      ::ProductKey* key);
 
   // .ProductType type = 2;
   bool has_type() const;
   void clear_type();
   static const int kTypeFieldNumber = 2;
+  private:
+  void _slow_mutable_type();
+  void _slow_set_allocated_type(
+      ::google::protobuf::Arena* message_arena, ::ProductType** type);
+  ::ProductType* _slow_release_type();
+  public:
   const ::ProductType& type() const;
   ::ProductType* mutable_type();
   ::ProductType* release_type();
   void set_allocated_type(::ProductType* type);
+  ::ProductType* unsafe_arena_release_type();
+  void unsafe_arena_set_allocated_type(
+      ::ProductType* type);
 
   // .google.protobuf.Any data = 3;
   bool has_data() const;
   void clear_data();
   static const int kDataFieldNumber = 3;
+  private:
+  void _slow_mutable_data();
+  ::google::protobuf::Any* _slow_release_data();
+  public:
   const ::google::protobuf::Any& data() const;
   ::google::protobuf::Any* mutable_data();
   ::google::protobuf::Any* release_data();
   void set_allocated_data(::google::protobuf::Any* data);
+  ::google::protobuf::Any* unsafe_arena_release_data();
+  void unsafe_arena_set_allocated_data(
+      ::google::protobuf::Any* data);
 
   // @@protoc_insertion_point(class_scope:Product)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  friend class ::google::protobuf::Arena;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
   ::ProductKey* key_;
   ::ProductType* type_;
   ::google::protobuf::Any* data_;
@@ -191,7 +231,7 @@ inline const ::ProductKey& Product::key() const {
 inline ::ProductKey* Product::mutable_key() {
   
   if (key_ == NULL) {
-    key_ = new ::ProductKey;
+    _slow_mutable_key();
   }
   // @@protoc_insertion_point(field_mutable:Product.key)
   return key_;
@@ -199,12 +239,22 @@ inline ::ProductKey* Product::mutable_key() {
 inline ::ProductKey* Product::release_key() {
   // @@protoc_insertion_point(field_release:Product.key)
   
-  ::ProductKey* temp = key_;
-  key_ = NULL;
-  return temp;
+  if (GetArenaNoVirtual() != NULL) {
+    return _slow_release_key();
+  } else {
+    ::ProductKey* temp = key_;
+    key_ = NULL;
+    return temp;
+  }
 }
-inline void Product::set_allocated_key(::ProductKey* key) {
-  delete key_;
+inline  void Product::set_allocated_key(::ProductKey* key) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete key_;
+  }
+  if (key != NULL) {
+    _slow_set_allocated_key(message_arena, &key);
+  }
   key_ = key;
   if (key) {
     
@@ -230,7 +280,7 @@ inline const ::ProductType& Product::type() const {
 inline ::ProductType* Product::mutable_type() {
   
   if (type_ == NULL) {
-    type_ = new ::ProductType;
+    _slow_mutable_type();
   }
   // @@protoc_insertion_point(field_mutable:Product.type)
   return type_;
@@ -238,12 +288,22 @@ inline ::ProductType* Product::mutable_type() {
 inline ::ProductType* Product::release_type() {
   // @@protoc_insertion_point(field_release:Product.type)
   
-  ::ProductType* temp = type_;
-  type_ = NULL;
-  return temp;
+  if (GetArenaNoVirtual() != NULL) {
+    return _slow_release_type();
+  } else {
+    ::ProductType* temp = type_;
+    type_ = NULL;
+    return temp;
+  }
 }
-inline void Product::set_allocated_type(::ProductType* type) {
-  delete type_;
+inline  void Product::set_allocated_type(::ProductType* type) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete type_;
+  }
+  if (type != NULL) {
+    _slow_set_allocated_type(message_arena, &type);
+  }
   type_ = type;
   if (type) {
     
@@ -269,7 +329,7 @@ inline const ::google::protobuf::Any& Product::data() const {
 inline ::google::protobuf::Any* Product::mutable_data() {
   
   if (data_ == NULL) {
-    data_ = new ::google::protobuf::Any;
+    _slow_mutable_data();
   }
   // @@protoc_insertion_point(field_mutable:Product.data)
   return data_;
@@ -277,12 +337,24 @@ inline ::google::protobuf::Any* Product::mutable_data() {
 inline ::google::protobuf::Any* Product::release_data() {
   // @@protoc_insertion_point(field_release:Product.data)
   
-  ::google::protobuf::Any* temp = data_;
-  data_ = NULL;
-  return temp;
+  if (GetArenaNoVirtual() != NULL) {
+    return _slow_release_data();
+  } else {
+    ::google::protobuf::Any* temp = data_;
+    data_ = NULL;
+    return temp;
+  }
 }
-inline void Product::set_allocated_data(::google::protobuf::Any* data) {
-  delete data_;
+inline  void Product::set_allocated_data(::google::protobuf::Any* data) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete data_;
+  }
+  if (data != NULL) {
+    if (message_arena != NULL) {
+      message_arena->Own(data);
+    }
+  }
   data_ = data;
   if (data) {
     

@@ -1,7 +1,7 @@
 
 ### Description
 
-- Version: `1.0.0-beta2`
+- Version: `1.0.0-beta3`
 - Filed By: @sgammon
 - Linked Issue: `Bloombox/OpenCannabis#1`
 
@@ -15,11 +15,14 @@
 - [ ] C++
 - [ ] C#
 - [ ] Java
+- [ ] JavaNano
 - [ ] JavaScript
 - [ ] PHP
 - [ ] Python
 - [ ] Ruby
 - [ ] Swift
+- [ ] Obj-C
+- [ ] Go
 
 
 ### Steps to Reproduce

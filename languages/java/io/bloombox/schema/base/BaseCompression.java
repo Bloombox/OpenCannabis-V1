@@ -30,9 +30,9 @@ public final class BaseCompression {
     java.lang.String[] descriptorData = {
       "\n\026base/Compression.proto\"Q\n\013Compression\022" +
       "\017\n\007enabled\030\001 \001(\010\022\037\n\004type\030\002 \001(\0162\021.Compres" +
-      "sion.Type\"\020\n\004Type\022\010\n\004GZIP\020\000B,\n\027io.bloomb" +
-      "ox.schema.baseB\017BaseCompressionP\001b\006proto" +
-      "3"
+      "sion.Type\"\020\n\004Type\022\010\n\004GZIP\020\000B1\n\027io.bloomb" +
+      "ox.schema.baseB\017BaseCompressionH\001P\001\370\001\001b\006" +
+      "proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

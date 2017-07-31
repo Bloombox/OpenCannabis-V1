@@ -103,6 +103,12 @@ class Flower : public ::google::protobuf::Message /* @@protoc_insertion_point(cl
     return *this;
   }
 
+  inline ::google::protobuf::Arena* GetArena() const PROTOBUF_FINAL {
+    return GetArenaNoVirtual();
+  }
+  inline void* GetMaybeArenaPointer() const PROTOBUF_FINAL {
+    return MaybeArenaPtr();
+  }
   static const ::google::protobuf::Descriptor* descriptor();
   static const Flower& default_instance();
 
@@ -113,6 +119,7 @@ class Flower : public ::google::protobuf::Message /* @@protoc_insertion_point(cl
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
     0;
 
+  void UnsafeArenaSwap(Flower* other);
   void Swap(Flower* other);
 
   // implements Message ----------------------------------------------
@@ -140,12 +147,17 @@ class Flower : public ::google::protobuf::Message /* @@protoc_insertion_point(cl
   void SharedDtor();
   void SetCachedSize(int size) const PROTOBUF_FINAL;
   void InternalSwap(Flower* other);
+  protected:
+  explicit Flower(::google::protobuf::Arena* arena);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::google::protobuf::Arena* arena);
   private:
   inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
-    return NULL;
+    return _internal_metadata_.arena();
   }
   inline void* MaybeArenaPtr() const {
-    return NULL;
+    return _internal_metadata_.raw_arena_ptr();
   }
   public:
 
@@ -159,51 +171,99 @@ class Flower : public ::google::protobuf::Message /* @@protoc_insertion_point(cl
   bool has_key() const;
   void clear_key();
   static const int kKeyFieldNumber = 1;
+  private:
+  void _slow_mutable_key();
+  void _slow_set_allocated_key(
+      ::google::protobuf::Arena* message_arena, ::ProductKey** key);
+  ::ProductKey* _slow_release_key();
+  public:
   const ::ProductKey& key() const;
   ::ProductKey* mutable_key();
   ::ProductKey* release_key();
   void set_allocated_key(::ProductKey* key);
+  ::ProductKey* unsafe_arena_release_key();
+  void unsafe_arena_set_allocated_key(
+      ::ProductKey* key);
 
   // .ProductContent product_data = 20;
   bool has_product_data() const;
   void clear_product_data();
   static const int kProductDataFieldNumber = 20;
+  private:
+  void _slow_mutable_product_data();
+  void _slow_set_allocated_product_data(
+      ::google::protobuf::Arena* message_arena, ::ProductContent** product_data);
+  ::ProductContent* _slow_release_product_data();
+  public:
   const ::ProductContent& product_data() const;
   ::ProductContent* mutable_product_data();
   ::ProductContent* release_product_data();
   void set_allocated_product_data(::ProductContent* product_data);
+  ::ProductContent* unsafe_arena_release_product_data();
+  void unsafe_arena_set_allocated_product_data(
+      ::ProductContent* product_data);
 
   // .MaterialsData material_data = 21;
   bool has_material_data() const;
   void clear_material_data();
   static const int kMaterialDataFieldNumber = 21;
+  private:
+  void _slow_mutable_material_data();
+  void _slow_set_allocated_material_data(
+      ::google::protobuf::Arena* message_arena, ::MaterialsData** material_data);
+  ::MaterialsData* _slow_release_material_data();
+  public:
   const ::MaterialsData& material_data() const;
   ::MaterialsData* mutable_material_data();
   ::MaterialsData* release_material_data();
   void set_allocated_material_data(::MaterialsData* material_data);
+  ::MaterialsData* unsafe_arena_release_material_data();
+  void unsafe_arena_set_allocated_material_data(
+      ::MaterialsData* material_data);
 
   // .FlagsDescriptor flags = 22;
   bool has_flags() const;
   void clear_flags();
   static const int kFlagsFieldNumber = 22;
+  private:
+  void _slow_mutable_flags();
+  void _slow_set_allocated_flags(
+      ::google::protobuf::Arena* message_arena, ::FlagsDescriptor** flags);
+  ::FlagsDescriptor* _slow_release_flags();
+  public:
   const ::FlagsDescriptor& flags() const;
   ::FlagsDescriptor* mutable_flags();
   ::FlagsDescriptor* release_flags();
   void set_allocated_flags(::FlagsDescriptor* flags);
+  ::FlagsDescriptor* unsafe_arena_release_flags();
+  void unsafe_arena_set_allocated_flags(
+      ::FlagsDescriptor* flags);
 
   // .ProductPricing pricing = 23;
   bool has_pricing() const;
   void clear_pricing();
   static const int kPricingFieldNumber = 23;
+  private:
+  void _slow_mutable_pricing();
+  void _slow_set_allocated_pricing(
+      ::google::protobuf::Arena* message_arena, ::ProductPricing** pricing);
+  ::ProductPricing* _slow_release_pricing();
+  public:
   const ::ProductPricing& pricing() const;
   ::ProductPricing* mutable_pricing();
   ::ProductPricing* release_pricing();
   void set_allocated_pricing(::ProductPricing* pricing);
+  ::ProductPricing* unsafe_arena_release_pricing();
+  void unsafe_arena_set_allocated_pricing(
+      ::ProductPricing* pricing);
 
   // @@protoc_insertion_point(class_scope:Flower)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  friend class ::google::protobuf::Arena;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
   ::ProductKey* key_;
   ::ProductContent* product_data_;
   ::MaterialsData* material_data_;
@@ -236,7 +296,7 @@ inline const ::ProductKey& Flower::key() const {
 inline ::ProductKey* Flower::mutable_key() {
   
   if (key_ == NULL) {
-    key_ = new ::ProductKey;
+    _slow_mutable_key();
   }
   // @@protoc_insertion_point(field_mutable:Flower.key)
   return key_;
@@ -244,12 +304,22 @@ inline ::ProductKey* Flower::mutable_key() {
 inline ::ProductKey* Flower::release_key() {
   // @@protoc_insertion_point(field_release:Flower.key)
   
-  ::ProductKey* temp = key_;
-  key_ = NULL;
-  return temp;
+  if (GetArenaNoVirtual() != NULL) {
+    return _slow_release_key();
+  } else {
+    ::ProductKey* temp = key_;
+    key_ = NULL;
+    return temp;
+  }
 }
-inline void Flower::set_allocated_key(::ProductKey* key) {
-  delete key_;
+inline  void Flower::set_allocated_key(::ProductKey* key) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete key_;
+  }
+  if (key != NULL) {
+    _slow_set_allocated_key(message_arena, &key);
+  }
   key_ = key;
   if (key) {
     
@@ -275,7 +345,7 @@ inline const ::ProductContent& Flower::product_data() const {
 inline ::ProductContent* Flower::mutable_product_data() {
   
   if (product_data_ == NULL) {
-    product_data_ = new ::ProductContent;
+    _slow_mutable_product_data();
   }
   // @@protoc_insertion_point(field_mutable:Flower.product_data)
   return product_data_;
@@ -283,12 +353,22 @@ inline ::ProductContent* Flower::mutable_product_data() {
 inline ::ProductContent* Flower::release_product_data() {
   // @@protoc_insertion_point(field_release:Flower.product_data)
   
-  ::ProductContent* temp = product_data_;
-  product_data_ = NULL;
-  return temp;
+  if (GetArenaNoVirtual() != NULL) {
+    return _slow_release_product_data();
+  } else {
+    ::ProductContent* temp = product_data_;
+    product_data_ = NULL;
+    return temp;
+  }
 }
-inline void Flower::set_allocated_product_data(::ProductContent* product_data) {
-  delete product_data_;
+inline  void Flower::set_allocated_product_data(::ProductContent* product_data) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete product_data_;
+  }
+  if (product_data != NULL) {
+    _slow_set_allocated_product_data(message_arena, &product_data);
+  }
   product_data_ = product_data;
   if (product_data) {
     
@@ -314,7 +394,7 @@ inline const ::MaterialsData& Flower::material_data() const {
 inline ::MaterialsData* Flower::mutable_material_data() {
   
   if (material_data_ == NULL) {
-    material_data_ = new ::MaterialsData;
+    _slow_mutable_material_data();
   }
   // @@protoc_insertion_point(field_mutable:Flower.material_data)
   return material_data_;
@@ -322,12 +402,22 @@ inline ::MaterialsData* Flower::mutable_material_data() {
 inline ::MaterialsData* Flower::release_material_data() {
   // @@protoc_insertion_point(field_release:Flower.material_data)
   
-  ::MaterialsData* temp = material_data_;
-  material_data_ = NULL;
-  return temp;
+  if (GetArenaNoVirtual() != NULL) {
+    return _slow_release_material_data();
+  } else {
+    ::MaterialsData* temp = material_data_;
+    material_data_ = NULL;
+    return temp;
+  }
 }
-inline void Flower::set_allocated_material_data(::MaterialsData* material_data) {
-  delete material_data_;
+inline  void Flower::set_allocated_material_data(::MaterialsData* material_data) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete material_data_;
+  }
+  if (material_data != NULL) {
+    _slow_set_allocated_material_data(message_arena, &material_data);
+  }
   material_data_ = material_data;
   if (material_data) {
     
@@ -353,7 +443,7 @@ inline const ::FlagsDescriptor& Flower::flags() const {
 inline ::FlagsDescriptor* Flower::mutable_flags() {
   
   if (flags_ == NULL) {
-    flags_ = new ::FlagsDescriptor;
+    _slow_mutable_flags();
   }
   // @@protoc_insertion_point(field_mutable:Flower.flags)
   return flags_;
@@ -361,12 +451,22 @@ inline ::FlagsDescriptor* Flower::mutable_flags() {
 inline ::FlagsDescriptor* Flower::release_flags() {
   // @@protoc_insertion_point(field_release:Flower.flags)
   
-  ::FlagsDescriptor* temp = flags_;
-  flags_ = NULL;
-  return temp;
+  if (GetArenaNoVirtual() != NULL) {
+    return _slow_release_flags();
+  } else {
+    ::FlagsDescriptor* temp = flags_;
+    flags_ = NULL;
+    return temp;
+  }
 }
-inline void Flower::set_allocated_flags(::FlagsDescriptor* flags) {
-  delete flags_;
+inline  void Flower::set_allocated_flags(::FlagsDescriptor* flags) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete flags_;
+  }
+  if (flags != NULL) {
+    _slow_set_allocated_flags(message_arena, &flags);
+  }
   flags_ = flags;
   if (flags) {
     
@@ -392,7 +492,7 @@ inline const ::ProductPricing& Flower::pricing() const {
 inline ::ProductPricing* Flower::mutable_pricing() {
   
   if (pricing_ == NULL) {
-    pricing_ = new ::ProductPricing;
+    _slow_mutable_pricing();
   }
   // @@protoc_insertion_point(field_mutable:Flower.pricing)
   return pricing_;
@@ -400,12 +500,22 @@ inline ::ProductPricing* Flower::mutable_pricing() {
 inline ::ProductPricing* Flower::release_pricing() {
   // @@protoc_insertion_point(field_release:Flower.pricing)
   
-  ::ProductPricing* temp = pricing_;
-  pricing_ = NULL;
-  return temp;
+  if (GetArenaNoVirtual() != NULL) {
+    return _slow_release_pricing();
+  } else {
+    ::ProductPricing* temp = pricing_;
+    pricing_ = NULL;
+    return temp;
+  }
 }
-inline void Flower::set_allocated_pricing(::ProductPricing* pricing) {
-  delete pricing_;
+inline  void Flower::set_allocated_pricing(::ProductPricing* pricing) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete pricing_;
+  }
+  if (pricing != NULL) {
+    _slow_set_allocated_pricing(message_arena, &pricing);
+  }
   pricing_ = pricing;
   if (pricing) {
     

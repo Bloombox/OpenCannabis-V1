@@ -26,8 +26,8 @@ public final class MaterialSpecies {
       "\n\025structs/Species.proto*d\n\007Species\022\017\n\013UN" +
       "SPECIFIED\020\000\022\n\n\006SATIVA\020\001\022\021\n\rHYBRID_SATIVA" +
       "\020\002\022\n\n\006HYBRID\020\003\022\021\n\rHYBRID_INDICA\020\004\022\n\n\006IND" +
-      "ICA\020\005B6\n!io.bloombox.schema.product.stru" +
-      "ctB\017MaterialSpeciesP\001b\006proto3"
+      "ICA\020\005B;\n!io.bloombox.schema.product.stru" +
+      "ctB\017MaterialSpeciesH\001P\001\370\001\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

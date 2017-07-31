@@ -112,11 +112,12 @@ void AddDescriptorsImpl() {
       "\n\025media/MediaItem.proto\032\024media/MediaKey."
       "proto\032\025media/MediaType.proto\"K\n\tMediaIte"
       "m\022\026\n\003key\030\001 \001(\0132\t.MediaKey\022\030\n\004type\030\002 \001(\0132"
-      "\n.MediaType\022\014\n\004name\030\003 \001(\tB+\n\030io.bloombox"
-      ".schema.mediaB\rAttachedMediaP\001b\006proto3"
+      "\n.MediaType\022\014\n\004name\030\003 \001(\tB0\n\030io.bloombox"
+      ".schema.mediaB\rAttachedMediaH\001P\001\370\001\001b\006pro"
+      "to3"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 198);
+      descriptor, 203);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "media/MediaItem.proto", &protobuf_RegisterTypes);
   ::protobuf_media_2fMediaKey_2eproto::AddDescriptors();
@@ -140,6 +141,100 @@ struct StaticDescriptorInitializer {
 
 // ===================================================================
 
+void MediaItem::_slow_mutable_key() {
+  key_ = ::google::protobuf::Arena::CreateMessage< ::MediaKey >(
+      GetArenaNoVirtual());
+}
+::MediaKey* MediaItem::_slow_release_key() {
+  if (key_ == NULL) {
+    return NULL;
+  } else {
+    ::MediaKey* temp = new ::MediaKey(*key_);
+    key_ = NULL;
+    return temp;
+  }
+}
+::MediaKey* MediaItem::unsafe_arena_release_key() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:MediaItem.key)
+  
+  ::MediaKey* temp = key_;
+  key_ = NULL;
+  return temp;
+}
+void MediaItem::_slow_set_allocated_key(
+    ::google::protobuf::Arena* message_arena, ::MediaKey** key) {
+    if (message_arena != NULL && 
+        ::google::protobuf::Arena::GetArena(*key) == NULL) {
+      message_arena->Own(*key);
+    } else if (message_arena !=
+               ::google::protobuf::Arena::GetArena(*key)) {
+      ::MediaKey* new_key = 
+            ::google::protobuf::Arena::CreateMessage< ::MediaKey >(
+            message_arena);
+      new_key->CopyFrom(**key);
+      *key = new_key;
+    }
+}
+void MediaItem::unsafe_arena_set_allocated_key(
+    ::MediaKey* key) {
+  if (GetArenaNoVirtual() == NULL) {
+    delete key_;
+  }
+  key_ = key;
+  if (key) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:MediaItem.key)
+}
+void MediaItem::_slow_mutable_type() {
+  type_ = ::google::protobuf::Arena::CreateMessage< ::MediaType >(
+      GetArenaNoVirtual());
+}
+::MediaType* MediaItem::_slow_release_type() {
+  if (type_ == NULL) {
+    return NULL;
+  } else {
+    ::MediaType* temp = new ::MediaType(*type_);
+    type_ = NULL;
+    return temp;
+  }
+}
+::MediaType* MediaItem::unsafe_arena_release_type() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:MediaItem.type)
+  
+  ::MediaType* temp = type_;
+  type_ = NULL;
+  return temp;
+}
+void MediaItem::_slow_set_allocated_type(
+    ::google::protobuf::Arena* message_arena, ::MediaType** type) {
+    if (message_arena != NULL && 
+        ::google::protobuf::Arena::GetArena(*type) == NULL) {
+      message_arena->Own(*type);
+    } else if (message_arena !=
+               ::google::protobuf::Arena::GetArena(*type)) {
+      ::MediaType* new_type = 
+            ::google::protobuf::Arena::CreateMessage< ::MediaType >(
+            message_arena);
+      new_type->CopyFrom(**type);
+      *type = new_type;
+    }
+}
+void MediaItem::unsafe_arena_set_allocated_type(
+    ::MediaType* type) {
+  if (GetArenaNoVirtual() == NULL) {
+    delete type_;
+  }
+  type_ = type;
+  if (type) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:MediaItem.type)
+}
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int MediaItem::kKeyFieldNumber;
 const int MediaItem::kTypeFieldNumber;
@@ -154,6 +249,16 @@ MediaItem::MediaItem()
   SharedCtor();
   // @@protoc_insertion_point(constructor:MediaItem)
 }
+MediaItem::MediaItem(::google::protobuf::Arena* arena)
+  : ::google::protobuf::Message(),
+  _internal_metadata_(arena) {
+#ifdef GOOGLE_PROTOBUF_NO_STATIC_INITIALIZER
+  protobuf_media_2fMediaItem_2eproto::InitDefaults();
+#endif  // GOOGLE_PROTOBUF_NO_STATIC_INITIALIZER
+  SharedCtor();
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:MediaItem)
+}
 MediaItem::MediaItem(const MediaItem& from)
   : ::google::protobuf::Message(),
       _internal_metadata_(NULL),
@@ -161,7 +266,8 @@ MediaItem::MediaItem(const MediaItem& from)
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (from.name().size() > 0) {
-    name_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.name_);
+    name_.Set(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.name(),
+      GetArenaNoVirtual());
   }
   if (from.has_key()) {
     key_ = new ::MediaKey(*from.key_);
@@ -189,7 +295,12 @@ MediaItem::~MediaItem() {
 }
 
 void MediaItem::SharedDtor() {
-  name_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  ::google::protobuf::Arena* arena = GetArenaNoVirtual();
+  if (arena != NULL) {
+    return;
+  }
+
+  name_.Destroy(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), arena);
   if (this != internal_default_instance()) {
     delete key_;
   }
@@ -198,6 +309,12 @@ void MediaItem::SharedDtor() {
   }
 }
 
+void MediaItem::ArenaDtor(void* object) {
+  MediaItem* _this = reinterpret_cast< MediaItem* >(object);
+  (void)_this;
+}
+void MediaItem::RegisterArenaDtor(::google::protobuf::Arena* arena) {
+}
 void MediaItem::SetCachedSize(int size) const {
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
   _cached_size_ = size;
@@ -214,16 +331,12 @@ const MediaItem& MediaItem::default_instance() {
 }
 
 MediaItem* MediaItem::New(::google::protobuf::Arena* arena) const {
-  MediaItem* n = new MediaItem;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
+  return ::google::protobuf::Arena::CreateMessage<MediaItem>(arena);
 }
 
 void MediaItem::Clear() {
 // @@protoc_insertion_point(message_clear_start:MediaItem)
-  name_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  name_.ClearToEmpty(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
   if (GetArenaNoVirtual() == NULL && key_ != NULL) {
     delete key_;
   }
@@ -427,8 +540,7 @@ void MediaItem::MergeFrom(const MediaItem& from) {
   (void) cached_has_bits;
 
   if (from.name().size() > 0) {
-
-    name_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.name_);
+    set_name(from.name());
   }
   if (from.has_key()) {
     mutable_key()->::MediaKey::MergeFrom(from.key());
@@ -458,6 +570,21 @@ bool MediaItem::IsInitialized() const {
 
 void MediaItem::Swap(MediaItem* other) {
   if (other == this) return;
+  if (GetArenaNoVirtual() == other->GetArenaNoVirtual()) {
+    InternalSwap(other);
+  } else {
+    MediaItem* temp = New(GetArenaNoVirtual());
+    temp->MergeFrom(*other);
+    other->CopyFrom(*this);
+    InternalSwap(temp);
+    if (GetArenaNoVirtual() == NULL) {
+      delete temp;
+    }
+  }
+}
+void MediaItem::UnsafeArenaSwap(MediaItem* other) {
+  if (other == this) return;
+  GOOGLE_DCHECK(GetArenaNoVirtual() == other->GetArenaNoVirtual());
   InternalSwap(other);
 }
 void MediaItem::InternalSwap(MediaItem* other) {
@@ -491,7 +618,7 @@ const ::MediaKey& MediaItem::key() const {
 ::MediaKey* MediaItem::mutable_key() {
   
   if (key_ == NULL) {
-    key_ = new ::MediaKey;
+    _slow_mutable_key();
   }
   // @@protoc_insertion_point(field_mutable:MediaItem.key)
   return key_;
@@ -499,12 +626,22 @@ const ::MediaKey& MediaItem::key() const {
 ::MediaKey* MediaItem::release_key() {
   // @@protoc_insertion_point(field_release:MediaItem.key)
   
-  ::MediaKey* temp = key_;
-  key_ = NULL;
-  return temp;
+  if (GetArenaNoVirtual() != NULL) {
+    return _slow_release_key();
+  } else {
+    ::MediaKey* temp = key_;
+    key_ = NULL;
+    return temp;
+  }
 }
-void MediaItem::set_allocated_key(::MediaKey* key) {
-  delete key_;
+ void MediaItem::set_allocated_key(::MediaKey* key) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete key_;
+  }
+  if (key != NULL) {
+    _slow_set_allocated_key(message_arena, &key);
+  }
   key_ = key;
   if (key) {
     
@@ -530,7 +667,7 @@ const ::MediaType& MediaItem::type() const {
 ::MediaType* MediaItem::mutable_type() {
   
   if (type_ == NULL) {
-    type_ = new ::MediaType;
+    _slow_mutable_type();
   }
   // @@protoc_insertion_point(field_mutable:MediaItem.type)
   return type_;
@@ -538,12 +675,22 @@ const ::MediaType& MediaItem::type() const {
 ::MediaType* MediaItem::release_type() {
   // @@protoc_insertion_point(field_release:MediaItem.type)
   
-  ::MediaType* temp = type_;
-  type_ = NULL;
-  return temp;
+  if (GetArenaNoVirtual() != NULL) {
+    return _slow_release_type();
+  } else {
+    ::MediaType* temp = type_;
+    type_ = NULL;
+    return temp;
+  }
 }
-void MediaItem::set_allocated_type(::MediaType* type) {
-  delete type_;
+ void MediaItem::set_allocated_type(::MediaType* type) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete type_;
+  }
+  if (type != NULL) {
+    _slow_set_allocated_type(message_arena, &type);
+  }
   type_ = type;
   if (type) {
     
@@ -555,46 +702,47 @@ void MediaItem::set_allocated_type(::MediaType* type) {
 
 // string name = 3;
 void MediaItem::clear_name() {
-  name_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  name_.ClearToEmpty(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
 }
 const ::std::string& MediaItem::name() const {
   // @@protoc_insertion_point(field_get:MediaItem.name)
-  return name_.GetNoArena();
+  return name_.Get();
 }
 void MediaItem::set_name(const ::std::string& value) {
   
-  name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  name_.Set(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value, GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set:MediaItem.name)
 }
-#if LANG_CXX11
-void MediaItem::set_name(::std::string&& value) {
-  
-  name_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:MediaItem.name)
-}
-#endif
 void MediaItem::set_name(const char* value) {
   GOOGLE_DCHECK(value != NULL);
   
-  name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  name_.Set(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set_char:MediaItem.name)
 }
-void MediaItem::set_name(const char* value, size_t size) {
+void MediaItem::set_name(const char* value,
+    size_t size) {
   
-  name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(reinterpret_cast<const char*>(value), size));
+  name_.Set(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set_pointer:MediaItem.name)
 }
 ::std::string* MediaItem::mutable_name() {
   
   // @@protoc_insertion_point(field_mutable:MediaItem.name)
-  return name_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  return name_.Mutable(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
 }
 ::std::string* MediaItem::release_name() {
   // @@protoc_insertion_point(field_release:MediaItem.name)
   
-  return name_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  return name_.Release(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
+}
+::std::string* MediaItem::unsafe_arena_release_name() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:MediaItem.name)
+  GOOGLE_DCHECK(GetArenaNoVirtual() != NULL);
+  
+  return name_.UnsafeArenaRelease(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      GetArenaNoVirtual());
 }
 void MediaItem::set_allocated_name(::std::string* name) {
   if (name != NULL) {
@@ -602,8 +750,21 @@ void MediaItem::set_allocated_name(::std::string* name) {
   } else {
     
   }
-  name_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), name);
+  name_.SetAllocated(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), name,
+      GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set_allocated:MediaItem.name)
+}
+void MediaItem::unsafe_arena_set_allocated_name(
+    ::std::string* name) {
+  GOOGLE_DCHECK(GetArenaNoVirtual() != NULL);
+  if (name != NULL) {
+    
+  } else {
+    
+  }
+  name_.UnsafeArenaSetAllocated(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      name, GetArenaNoVirtual());
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:MediaItem.name)
 }
 
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS

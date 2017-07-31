@@ -93,6 +93,12 @@ class ProductFlagValue : public ::google::protobuf::Message /* @@protoc_insertio
     return *this;
   }
 
+  inline ::google::protobuf::Arena* GetArena() const PROTOBUF_FINAL {
+    return GetArenaNoVirtual();
+  }
+  inline void* GetMaybeArenaPointer() const PROTOBUF_FINAL {
+    return MaybeArenaPtr();
+  }
   static const ::google::protobuf::Descriptor* descriptor();
   static const ProductFlagValue& default_instance();
 
@@ -103,6 +109,7 @@ class ProductFlagValue : public ::google::protobuf::Message /* @@protoc_insertio
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
     0;
 
+  void UnsafeArenaSwap(ProductFlagValue* other);
   void Swap(ProductFlagValue* other);
 
   // implements Message ----------------------------------------------
@@ -130,12 +137,17 @@ class ProductFlagValue : public ::google::protobuf::Message /* @@protoc_insertio
   void SharedDtor();
   void SetCachedSize(int size) const PROTOBUF_FINAL;
   void InternalSwap(ProductFlagValue* other);
+  protected:
+  explicit ProductFlagValue(::google::protobuf::Arena* arena);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::google::protobuf::Arena* arena);
   private:
   inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
-    return NULL;
+    return _internal_metadata_.arena();
   }
   inline void* MaybeArenaPtr() const {
-    return NULL;
+    return _internal_metadata_.raw_arena_ptr();
   }
   public:
 
@@ -161,6 +173,9 @@ class ProductFlagValue : public ::google::protobuf::Message /* @@protoc_insertio
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  friend class ::google::protobuf::Arena;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
   int type_;
   bool value_;
   mutable int _cached_size_;
@@ -180,6 +195,12 @@ class ProductFlagset : public ::google::protobuf::Message /* @@protoc_insertion_
     return *this;
   }
 
+  inline ::google::protobuf::Arena* GetArena() const PROTOBUF_FINAL {
+    return GetArenaNoVirtual();
+  }
+  inline void* GetMaybeArenaPointer() const PROTOBUF_FINAL {
+    return MaybeArenaPtr();
+  }
   static const ::google::protobuf::Descriptor* descriptor();
   static const ProductFlagset& default_instance();
 
@@ -190,6 +211,7 @@ class ProductFlagset : public ::google::protobuf::Message /* @@protoc_insertion_
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
     1;
 
+  void UnsafeArenaSwap(ProductFlagset* other);
   void Swap(ProductFlagset* other);
 
   // implements Message ----------------------------------------------
@@ -217,12 +239,17 @@ class ProductFlagset : public ::google::protobuf::Message /* @@protoc_insertion_
   void SharedDtor();
   void SetCachedSize(int size) const PROTOBUF_FINAL;
   void InternalSwap(ProductFlagset* other);
+  protected:
+  explicit ProductFlagset(::google::protobuf::Arena* arena);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::google::protobuf::Arena* arena);
   private:
   inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
-    return NULL;
+    return _internal_metadata_.arena();
   }
   inline void* MaybeArenaPtr() const {
-    return NULL;
+    return _internal_metadata_.raw_arena_ptr();
   }
   public:
 
@@ -248,6 +275,9 @@ class ProductFlagset : public ::google::protobuf::Message /* @@protoc_insertion_
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  friend class ::google::protobuf::Arena;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
   ::google::protobuf::RepeatedPtrField< ::ProductFlagValue > flags_;
   mutable int _cached_size_;
   friend struct protobuf_structs_2fFlagsDescriptor_2eproto::TableStruct;
@@ -266,6 +296,12 @@ class FlagsDescriptor : public ::google::protobuf::Message /* @@protoc_insertion
     return *this;
   }
 
+  inline ::google::protobuf::Arena* GetArena() const PROTOBUF_FINAL {
+    return GetArenaNoVirtual();
+  }
+  inline void* GetMaybeArenaPointer() const PROTOBUF_FINAL {
+    return MaybeArenaPtr();
+  }
   static const ::google::protobuf::Descriptor* descriptor();
   static const FlagsDescriptor& default_instance();
 
@@ -276,6 +312,7 @@ class FlagsDescriptor : public ::google::protobuf::Message /* @@protoc_insertion
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
     2;
 
+  void UnsafeArenaSwap(FlagsDescriptor* other);
   void Swap(FlagsDescriptor* other);
 
   // implements Message ----------------------------------------------
@@ -303,12 +340,17 @@ class FlagsDescriptor : public ::google::protobuf::Message /* @@protoc_insertion
   void SharedDtor();
   void SetCachedSize(int size) const PROTOBUF_FINAL;
   void InternalSwap(FlagsDescriptor* other);
+  protected:
+  explicit FlagsDescriptor(::google::protobuf::Arena* arena);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::google::protobuf::Arena* arena);
   private:
   inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
-    return NULL;
+    return _internal_metadata_.arena();
   }
   inline void* MaybeArenaPtr() const {
-    return NULL;
+    return _internal_metadata_.raw_arena_ptr();
   }
   public:
 
@@ -352,6 +394,9 @@ class FlagsDescriptor : public ::google::protobuf::Message /* @@protoc_insertion
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  friend class ::google::protobuf::Arena;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
   bool visible_;
   bool premium_;
   bool featured_;

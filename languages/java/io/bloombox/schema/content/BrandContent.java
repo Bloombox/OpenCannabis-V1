@@ -32,9 +32,9 @@ public final class BrandContent {
       "o\032\025content/Content.proto\032\025media/MediaIte" +
       "m.proto\"j\n\005Brand\022\023\n\004name\030\001 \001(\0132\005.Name\022\026\n" +
       "\006parent\030\002 \001(\0132\006.Brand\022\031\n\007summary\030\003 \001(\0132\010" +
-      ".Content\022\031\n\005media\030\024 \003(\0132\n.MediaItemB,\n\032i" +
-      "o.bloombox.schema.contentB\014BrandContentP" +
-      "\001b\006proto3"
+      ".Content\022\031\n\005media\030\024 \003(\0132\n.MediaItemB1\n\032i" +
+      "o.bloombox.schema.contentB\014BrandContentH" +
+      "\001P\001\370\001\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

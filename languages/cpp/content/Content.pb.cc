@@ -117,11 +117,11 @@ void AddDescriptorsImpl() {
       "\001(\014\022\033\n\010language\030\004 \001(\0162\t.Language\022!\n\013comp"
       "ression\030\005 \001(\0132\014.Compression\"(\n\004Type\022\010\n\004T"
       "EXT\020\000\022\014\n\010MARKDOWN\020\001\022\010\n\004HTML\020\002\"\024\n\010Encodin"
-      "g\022\010\n\004UTF8\020\000B.\n\032io.bloombox.schema.conten"
-      "tB\016GenericContentP\001b\006proto3"
+      "g\022\010\n\004UTF8\020\000B3\n\032io.bloombox.schema.conten"
+      "tB\016GenericContentH\001P\001\370\001\001b\006proto3"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 347);
+      descriptor, 352);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "content/Content.proto", &protobuf_RegisterTypes);
   ::protobuf_base_2fLanguage_2eproto::AddDescriptors();
@@ -187,6 +187,53 @@ const int Content::Encoding_ARRAYSIZE;
 
 // ===================================================================
 
+void Content::_slow_mutable_compression() {
+  compression_ = ::google::protobuf::Arena::CreateMessage< ::Compression >(
+      GetArenaNoVirtual());
+}
+::Compression* Content::_slow_release_compression() {
+  if (compression_ == NULL) {
+    return NULL;
+  } else {
+    ::Compression* temp = new ::Compression(*compression_);
+    compression_ = NULL;
+    return temp;
+  }
+}
+::Compression* Content::unsafe_arena_release_compression() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:Content.compression)
+  
+  ::Compression* temp = compression_;
+  compression_ = NULL;
+  return temp;
+}
+void Content::_slow_set_allocated_compression(
+    ::google::protobuf::Arena* message_arena, ::Compression** compression) {
+    if (message_arena != NULL && 
+        ::google::protobuf::Arena::GetArena(*compression) == NULL) {
+      message_arena->Own(*compression);
+    } else if (message_arena !=
+               ::google::protobuf::Arena::GetArena(*compression)) {
+      ::Compression* new_compression = 
+            ::google::protobuf::Arena::CreateMessage< ::Compression >(
+            message_arena);
+      new_compression->CopyFrom(**compression);
+      *compression = new_compression;
+    }
+}
+void Content::unsafe_arena_set_allocated_compression(
+    ::Compression* compression) {
+  if (GetArenaNoVirtual() == NULL) {
+    delete compression_;
+  }
+  compression_ = compression;
+  if (compression) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:Content.compression)
+}
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int Content::kTypeFieldNumber;
 const int Content::kEncodingFieldNumber;
@@ -203,6 +250,16 @@ Content::Content()
   SharedCtor();
   // @@protoc_insertion_point(constructor:Content)
 }
+Content::Content(::google::protobuf::Arena* arena)
+  : ::google::protobuf::Message(),
+  _internal_metadata_(arena) {
+#ifdef GOOGLE_PROTOBUF_NO_STATIC_INITIALIZER
+  protobuf_content_2fContent_2eproto::InitDefaults();
+#endif  // GOOGLE_PROTOBUF_NO_STATIC_INITIALIZER
+  SharedCtor();
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:Content)
+}
 Content::Content(const Content& from)
   : ::google::protobuf::Message(),
       _internal_metadata_(NULL),
@@ -210,7 +267,8 @@ Content::Content(const Content& from)
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   content_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (from.content().size() > 0) {
-    content_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.content_);
+    content_.Set(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.content(),
+      GetArenaNoVirtual());
   }
   if (from.has_compression()) {
     compression_ = new ::Compression(*from.compression_);
@@ -236,12 +294,23 @@ Content::~Content() {
 }
 
 void Content::SharedDtor() {
-  content_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  ::google::protobuf::Arena* arena = GetArenaNoVirtual();
+  if (arena != NULL) {
+    return;
+  }
+
+  content_.Destroy(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), arena);
   if (this != internal_default_instance()) {
     delete compression_;
   }
 }
 
+void Content::ArenaDtor(void* object) {
+  Content* _this = reinterpret_cast< Content* >(object);
+  (void)_this;
+}
+void Content::RegisterArenaDtor(::google::protobuf::Arena* arena) {
+}
 void Content::SetCachedSize(int size) const {
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
   _cached_size_ = size;
@@ -258,16 +327,12 @@ const Content& Content::default_instance() {
 }
 
 Content* Content::New(::google::protobuf::Arena* arena) const {
-  Content* n = new Content;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
+  return ::google::protobuf::Arena::CreateMessage<Content>(arena);
 }
 
 void Content::Clear() {
 // @@protoc_insertion_point(message_clear_start:Content)
-  content_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  content_.ClearToEmpty(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
   if (GetArenaNoVirtual() == NULL && compression_ != NULL) {
     delete compression_;
   }
@@ -524,8 +589,7 @@ void Content::MergeFrom(const Content& from) {
   (void) cached_has_bits;
 
   if (from.content().size() > 0) {
-
-    content_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.content_);
+    set_content(from.content());
   }
   if (from.has_compression()) {
     mutable_compression()->::Compression::MergeFrom(from.compression());
@@ -561,6 +625,21 @@ bool Content::IsInitialized() const {
 
 void Content::Swap(Content* other) {
   if (other == this) return;
+  if (GetArenaNoVirtual() == other->GetArenaNoVirtual()) {
+    InternalSwap(other);
+  } else {
+    Content* temp = New(GetArenaNoVirtual());
+    temp->MergeFrom(*other);
+    other->CopyFrom(*this);
+    InternalSwap(temp);
+    if (GetArenaNoVirtual() == NULL) {
+      delete temp;
+    }
+  }
+}
+void Content::UnsafeArenaSwap(Content* other) {
+  if (other == this) return;
+  GOOGLE_DCHECK(GetArenaNoVirtual() == other->GetArenaNoVirtual());
   InternalSwap(other);
 }
 void Content::InternalSwap(Content* other) {
@@ -610,46 +689,47 @@ void Content::set_encoding(::Content_Encoding value) {
 
 // bytes content = 3;
 void Content::clear_content() {
-  content_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  content_.ClearToEmpty(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
 }
 const ::std::string& Content::content() const {
   // @@protoc_insertion_point(field_get:Content.content)
-  return content_.GetNoArena();
+  return content_.Get();
 }
 void Content::set_content(const ::std::string& value) {
   
-  content_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  content_.Set(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value, GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set:Content.content)
 }
-#if LANG_CXX11
-void Content::set_content(::std::string&& value) {
-  
-  content_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:Content.content)
-}
-#endif
 void Content::set_content(const char* value) {
   GOOGLE_DCHECK(value != NULL);
   
-  content_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  content_.Set(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set_char:Content.content)
 }
-void Content::set_content(const void* value, size_t size) {
+void Content::set_content(const void* value,
+    size_t size) {
   
-  content_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(reinterpret_cast<const char*>(value), size));
+  content_.Set(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set_pointer:Content.content)
 }
 ::std::string* Content::mutable_content() {
   
   // @@protoc_insertion_point(field_mutable:Content.content)
-  return content_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  return content_.Mutable(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
 }
 ::std::string* Content::release_content() {
   // @@protoc_insertion_point(field_release:Content.content)
   
-  return content_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  return content_.Release(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
+}
+::std::string* Content::unsafe_arena_release_content() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:Content.content)
+  GOOGLE_DCHECK(GetArenaNoVirtual() != NULL);
+  
+  return content_.UnsafeArenaRelease(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      GetArenaNoVirtual());
 }
 void Content::set_allocated_content(::std::string* content) {
   if (content != NULL) {
@@ -657,8 +737,21 @@ void Content::set_allocated_content(::std::string* content) {
   } else {
     
   }
-  content_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), content);
+  content_.SetAllocated(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), content,
+      GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set_allocated:Content.content)
+}
+void Content::unsafe_arena_set_allocated_content(
+    ::std::string* content) {
+  GOOGLE_DCHECK(GetArenaNoVirtual() != NULL);
+  if (content != NULL) {
+    
+  } else {
+    
+  }
+  content_.UnsafeArenaSetAllocated(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      content, GetArenaNoVirtual());
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:Content.content)
 }
 
 // .Language language = 4;
@@ -691,7 +784,7 @@ const ::Compression& Content::compression() const {
 ::Compression* Content::mutable_compression() {
   
   if (compression_ == NULL) {
-    compression_ = new ::Compression;
+    _slow_mutable_compression();
   }
   // @@protoc_insertion_point(field_mutable:Content.compression)
   return compression_;
@@ -699,12 +792,22 @@ const ::Compression& Content::compression() const {
 ::Compression* Content::release_compression() {
   // @@protoc_insertion_point(field_release:Content.compression)
   
-  ::Compression* temp = compression_;
-  compression_ = NULL;
-  return temp;
+  if (GetArenaNoVirtual() != NULL) {
+    return _slow_release_compression();
+  } else {
+    ::Compression* temp = compression_;
+    compression_ = NULL;
+    return temp;
+  }
 }
-void Content::set_allocated_compression(::Compression* compression) {
-  delete compression_;
+ void Content::set_allocated_compression(::Compression* compression) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete compression_;
+  }
+  if (compression != NULL) {
+    _slow_set_allocated_compression(message_arena, &compression);
+  }
   compression_ = compression;
   if (compression) {
     

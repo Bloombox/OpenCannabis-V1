@@ -102,11 +102,11 @@ void AddDescriptorsImpl() {
   InitDefaults();
   static const char descriptor[] = {
       "\n\025base/ProductKey.proto\"\030\n\nProductKey\022\n\n"
-      "\002id\030\001 \001(\tB+\n\027io.bloombox.schema.baseB\016Ba"
-      "seProductKeyP\001b\006proto3"
+      "\002id\030\001 \001(\tB0\n\027io.bloombox.schema.baseB\016Ba"
+      "seProductKeyH\001P\001\370\001\001b\006proto3"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 102);
+      descriptor, 107);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "base/ProductKey.proto", &protobuf_RegisterTypes);
   ::google::protobuf::internal::OnShutdown(&TableStruct::Shutdown);
@@ -140,6 +140,16 @@ ProductKey::ProductKey()
   SharedCtor();
   // @@protoc_insertion_point(constructor:ProductKey)
 }
+ProductKey::ProductKey(::google::protobuf::Arena* arena)
+  : ::google::protobuf::Message(),
+  _internal_metadata_(arena) {
+#ifdef GOOGLE_PROTOBUF_NO_STATIC_INITIALIZER
+  protobuf_base_2fProductKey_2eproto::InitDefaults();
+#endif  // GOOGLE_PROTOBUF_NO_STATIC_INITIALIZER
+  SharedCtor();
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:ProductKey)
+}
 ProductKey::ProductKey(const ProductKey& from)
   : ::google::protobuf::Message(),
       _internal_metadata_(NULL),
@@ -147,7 +157,8 @@ ProductKey::ProductKey(const ProductKey& from)
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (from.id().size() > 0) {
-    id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.id_);
+    id_.Set(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.id(),
+      GetArenaNoVirtual());
   }
   // @@protoc_insertion_point(copy_constructor:ProductKey)
 }
@@ -163,9 +174,20 @@ ProductKey::~ProductKey() {
 }
 
 void ProductKey::SharedDtor() {
-  id_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  ::google::protobuf::Arena* arena = GetArenaNoVirtual();
+  if (arena != NULL) {
+    return;
+  }
+
+  id_.Destroy(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), arena);
 }
 
+void ProductKey::ArenaDtor(void* object) {
+  ProductKey* _this = reinterpret_cast< ProductKey* >(object);
+  (void)_this;
+}
+void ProductKey::RegisterArenaDtor(::google::protobuf::Arena* arena) {
+}
 void ProductKey::SetCachedSize(int size) const {
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
   _cached_size_ = size;
@@ -182,16 +204,12 @@ const ProductKey& ProductKey::default_instance() {
 }
 
 ProductKey* ProductKey::New(::google::protobuf::Arena* arena) const {
-  ProductKey* n = new ProductKey;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
+  return ::google::protobuf::Arena::CreateMessage<ProductKey>(arena);
 }
 
 void ProductKey::Clear() {
 // @@protoc_insertion_point(message_clear_start:ProductKey)
-  id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  id_.ClearToEmpty(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
 }
 
 bool ProductKey::MergePartialFromCodedStream(
@@ -323,8 +341,7 @@ void ProductKey::MergeFrom(const ProductKey& from) {
   (void) cached_has_bits;
 
   if (from.id().size() > 0) {
-
-    id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.id_);
+    set_id(from.id());
   }
 }
 
@@ -348,6 +365,21 @@ bool ProductKey::IsInitialized() const {
 
 void ProductKey::Swap(ProductKey* other) {
   if (other == this) return;
+  if (GetArenaNoVirtual() == other->GetArenaNoVirtual()) {
+    InternalSwap(other);
+  } else {
+    ProductKey* temp = New(GetArenaNoVirtual());
+    temp->MergeFrom(*other);
+    other->CopyFrom(*this);
+    InternalSwap(temp);
+    if (GetArenaNoVirtual() == NULL) {
+      delete temp;
+    }
+  }
+}
+void ProductKey::UnsafeArenaSwap(ProductKey* other) {
+  if (other == this) return;
+  GOOGLE_DCHECK(GetArenaNoVirtual() == other->GetArenaNoVirtual());
   InternalSwap(other);
 }
 void ProductKey::InternalSwap(ProductKey* other) {
@@ -365,46 +397,47 @@ void ProductKey::InternalSwap(ProductKey* other) {
 
 // string id = 1;
 void ProductKey::clear_id() {
-  id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  id_.ClearToEmpty(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
 }
 const ::std::string& ProductKey::id() const {
   // @@protoc_insertion_point(field_get:ProductKey.id)
-  return id_.GetNoArena();
+  return id_.Get();
 }
 void ProductKey::set_id(const ::std::string& value) {
   
-  id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  id_.Set(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value, GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set:ProductKey.id)
 }
-#if LANG_CXX11
-void ProductKey::set_id(::std::string&& value) {
-  
-  id_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:ProductKey.id)
-}
-#endif
 void ProductKey::set_id(const char* value) {
   GOOGLE_DCHECK(value != NULL);
   
-  id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  id_.Set(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set_char:ProductKey.id)
 }
-void ProductKey::set_id(const char* value, size_t size) {
+void ProductKey::set_id(const char* value,
+    size_t size) {
   
-  id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(reinterpret_cast<const char*>(value), size));
+  id_.Set(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set_pointer:ProductKey.id)
 }
 ::std::string* ProductKey::mutable_id() {
   
   // @@protoc_insertion_point(field_mutable:ProductKey.id)
-  return id_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  return id_.Mutable(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
 }
 ::std::string* ProductKey::release_id() {
   // @@protoc_insertion_point(field_release:ProductKey.id)
   
-  return id_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  return id_.Release(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
+}
+::std::string* ProductKey::unsafe_arena_release_id() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:ProductKey.id)
+  GOOGLE_DCHECK(GetArenaNoVirtual() != NULL);
+  
+  return id_.UnsafeArenaRelease(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      GetArenaNoVirtual());
 }
 void ProductKey::set_allocated_id(::std::string* id) {
   if (id != NULL) {
@@ -412,8 +445,21 @@ void ProductKey::set_allocated_id(::std::string* id) {
   } else {
     
   }
-  id_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), id);
+  id_.SetAllocated(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), id,
+      GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set_allocated:ProductKey.id)
+}
+void ProductKey::unsafe_arena_set_allocated_id(
+    ::std::string* id) {
+  GOOGLE_DCHECK(GetArenaNoVirtual() != NULL);
+  if (id != NULL) {
+    
+  } else {
+    
+  }
+  id_.UnsafeArenaSetAllocated(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      id, GetArenaNoVirtual());
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:ProductKey.id)
 }
 
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS

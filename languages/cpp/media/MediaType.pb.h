@@ -164,6 +164,12 @@ class MediaType : public ::google::protobuf::Message /* @@protoc_insertion_point
     return *this;
   }
 
+  inline ::google::protobuf::Arena* GetArena() const PROTOBUF_FINAL {
+    return GetArenaNoVirtual();
+  }
+  inline void* GetMaybeArenaPointer() const PROTOBUF_FINAL {
+    return MaybeArenaPtr();
+  }
   static const ::google::protobuf::Descriptor* descriptor();
   static const MediaType& default_instance();
 
@@ -174,6 +180,7 @@ class MediaType : public ::google::protobuf::Message /* @@protoc_insertion_point
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
     0;
 
+  void UnsafeArenaSwap(MediaType* other);
   void Swap(MediaType* other);
 
   // implements Message ----------------------------------------------
@@ -201,12 +208,17 @@ class MediaType : public ::google::protobuf::Message /* @@protoc_insertion_point
   void SharedDtor();
   void SetCachedSize(int size) const PROTOBUF_FINAL;
   void InternalSwap(MediaType* other);
+  protected:
+  explicit MediaType(::google::protobuf::Arena* arena);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::google::protobuf::Arena* arena);
   private:
   inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
-    return NULL;
+    return _internal_metadata_.arena();
   }
   inline void* MaybeArenaPtr() const {
-    return NULL;
+    return _internal_metadata_.raw_arena_ptr();
   }
   public:
 
@@ -250,28 +262,55 @@ class MediaType : public ::google::protobuf::Message /* @@protoc_insertion_point
   bool has_image_type() const;
   void clear_image_type();
   static const int kImageTypeFieldNumber = 101;
+  private:
+  void _slow_mutable_image_type();
+  void _slow_set_allocated_image_type(
+      ::google::protobuf::Arena* message_arena, ::ImageType** image_type);
+  ::ImageType* _slow_release_image_type();
+  public:
   const ::ImageType& image_type() const;
   ::ImageType* mutable_image_type();
   ::ImageType* release_image_type();
   void set_allocated_image_type(::ImageType* image_type);
+  ::ImageType* unsafe_arena_release_image_type();
+  void unsafe_arena_set_allocated_image_type(
+      ::ImageType* image_type);
 
   // .DocumentType document_type = 201;
   bool has_document_type() const;
   void clear_document_type();
   static const int kDocumentTypeFieldNumber = 201;
+  private:
+  void _slow_mutable_document_type();
+  void _slow_set_allocated_document_type(
+      ::google::protobuf::Arena* message_arena, ::DocumentType** document_type);
+  ::DocumentType* _slow_release_document_type();
+  public:
   const ::DocumentType& document_type() const;
   ::DocumentType* mutable_document_type();
   ::DocumentType* release_document_type();
   void set_allocated_document_type(::DocumentType* document_type);
+  ::DocumentType* unsafe_arena_release_document_type();
+  void unsafe_arena_set_allocated_document_type(
+      ::DocumentType* document_type);
 
   // .VideoType video_type = 301;
   bool has_video_type() const;
   void clear_video_type();
   static const int kVideoTypeFieldNumber = 301;
+  private:
+  void _slow_mutable_video_type();
+  void _slow_set_allocated_video_type(
+      ::google::protobuf::Arena* message_arena, ::VideoType** video_type);
+  ::VideoType* _slow_release_video_type();
+  public:
   const ::VideoType& video_type() const;
   ::VideoType* mutable_video_type();
   ::VideoType* release_video_type();
   void set_allocated_video_type(::VideoType* video_type);
+  ::VideoType* unsafe_arena_release_video_type();
+  void unsafe_arena_set_allocated_video_type(
+      ::VideoType* video_type);
 
   // .MediaType.Kind kind = 1;
   void clear_kind();
@@ -283,6 +322,9 @@ class MediaType : public ::google::protobuf::Message /* @@protoc_insertion_point
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  friend class ::google::protobuf::Arena;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
   ::ImageType* image_type_;
   ::DocumentType* document_type_;
   ::VideoType* video_type_;
@@ -304,6 +346,12 @@ class ImageType : public ::google::protobuf::Message /* @@protoc_insertion_point
     return *this;
   }
 
+  inline ::google::protobuf::Arena* GetArena() const PROTOBUF_FINAL {
+    return GetArenaNoVirtual();
+  }
+  inline void* GetMaybeArenaPointer() const PROTOBUF_FINAL {
+    return MaybeArenaPtr();
+  }
   static const ::google::protobuf::Descriptor* descriptor();
   static const ImageType& default_instance();
 
@@ -314,6 +362,7 @@ class ImageType : public ::google::protobuf::Message /* @@protoc_insertion_point
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
     1;
 
+  void UnsafeArenaSwap(ImageType* other);
   void Swap(ImageType* other);
 
   // implements Message ----------------------------------------------
@@ -341,12 +390,17 @@ class ImageType : public ::google::protobuf::Message /* @@protoc_insertion_point
   void SharedDtor();
   void SetCachedSize(int size) const PROTOBUF_FINAL;
   void InternalSwap(ImageType* other);
+  protected:
+  explicit ImageType(::google::protobuf::Arena* arena);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::google::protobuf::Arena* arena);
   private:
   inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
-    return NULL;
+    return _internal_metadata_.arena();
   }
   inline void* MaybeArenaPtr() const {
-    return NULL;
+    return _internal_metadata_.raw_arena_ptr();
   }
   public:
 
@@ -398,6 +452,9 @@ class ImageType : public ::google::protobuf::Message /* @@protoc_insertion_point
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  friend class ::google::protobuf::Arena;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
   int kind_;
   mutable int _cached_size_;
   friend struct protobuf_media_2fMediaType_2eproto::TableStruct;
@@ -416,6 +473,12 @@ class DocumentType : public ::google::protobuf::Message /* @@protoc_insertion_po
     return *this;
   }
 
+  inline ::google::protobuf::Arena* GetArena() const PROTOBUF_FINAL {
+    return GetArenaNoVirtual();
+  }
+  inline void* GetMaybeArenaPointer() const PROTOBUF_FINAL {
+    return MaybeArenaPtr();
+  }
   static const ::google::protobuf::Descriptor* descriptor();
   static const DocumentType& default_instance();
 
@@ -426,6 +489,7 @@ class DocumentType : public ::google::protobuf::Message /* @@protoc_insertion_po
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
     2;
 
+  void UnsafeArenaSwap(DocumentType* other);
   void Swap(DocumentType* other);
 
   // implements Message ----------------------------------------------
@@ -453,12 +517,17 @@ class DocumentType : public ::google::protobuf::Message /* @@protoc_insertion_po
   void SharedDtor();
   void SetCachedSize(int size) const PROTOBUF_FINAL;
   void InternalSwap(DocumentType* other);
+  protected:
+  explicit DocumentType(::google::protobuf::Arena* arena);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::google::protobuf::Arena* arena);
   private:
   inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
-    return NULL;
+    return _internal_metadata_.arena();
   }
   inline void* MaybeArenaPtr() const {
-    return NULL;
+    return _internal_metadata_.raw_arena_ptr();
   }
   public:
 
@@ -514,6 +583,9 @@ class DocumentType : public ::google::protobuf::Message /* @@protoc_insertion_po
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  friend class ::google::protobuf::Arena;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
   int kind_;
   bool compressed_;
   mutable int _cached_size_;
@@ -533,6 +605,12 @@ class VideoType : public ::google::protobuf::Message /* @@protoc_insertion_point
     return *this;
   }
 
+  inline ::google::protobuf::Arena* GetArena() const PROTOBUF_FINAL {
+    return GetArenaNoVirtual();
+  }
+  inline void* GetMaybeArenaPointer() const PROTOBUF_FINAL {
+    return MaybeArenaPtr();
+  }
   static const ::google::protobuf::Descriptor* descriptor();
   static const VideoType& default_instance();
 
@@ -543,6 +621,7 @@ class VideoType : public ::google::protobuf::Message /* @@protoc_insertion_point
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
     3;
 
+  void UnsafeArenaSwap(VideoType* other);
   void Swap(VideoType* other);
 
   // implements Message ----------------------------------------------
@@ -570,12 +649,17 @@ class VideoType : public ::google::protobuf::Message /* @@protoc_insertion_point
   void SharedDtor();
   void SetCachedSize(int size) const PROTOBUF_FINAL;
   void InternalSwap(VideoType* other);
+  protected:
+  explicit VideoType(::google::protobuf::Arena* arena);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::google::protobuf::Arena* arena);
   private:
   inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
-    return NULL;
+    return _internal_metadata_.arena();
   }
   inline void* MaybeArenaPtr() const {
-    return NULL;
+    return _internal_metadata_.raw_arena_ptr();
   }
   public:
 
@@ -623,6 +707,9 @@ class VideoType : public ::google::protobuf::Message /* @@protoc_insertion_point
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  friend class ::google::protobuf::Arena;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
   int kind_;
   mutable int _cached_size_;
   friend struct protobuf_media_2fMediaType_2eproto::TableStruct;
@@ -665,7 +752,7 @@ inline const ::ImageType& MediaType::image_type() const {
 inline ::ImageType* MediaType::mutable_image_type() {
   
   if (image_type_ == NULL) {
-    image_type_ = new ::ImageType;
+    _slow_mutable_image_type();
   }
   // @@protoc_insertion_point(field_mutable:MediaType.image_type)
   return image_type_;
@@ -673,12 +760,22 @@ inline ::ImageType* MediaType::mutable_image_type() {
 inline ::ImageType* MediaType::release_image_type() {
   // @@protoc_insertion_point(field_release:MediaType.image_type)
   
-  ::ImageType* temp = image_type_;
-  image_type_ = NULL;
-  return temp;
+  if (GetArenaNoVirtual() != NULL) {
+    return _slow_release_image_type();
+  } else {
+    ::ImageType* temp = image_type_;
+    image_type_ = NULL;
+    return temp;
+  }
 }
-inline void MediaType::set_allocated_image_type(::ImageType* image_type) {
-  delete image_type_;
+inline  void MediaType::set_allocated_image_type(::ImageType* image_type) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete image_type_;
+  }
+  if (image_type != NULL) {
+    _slow_set_allocated_image_type(message_arena, &image_type);
+  }
   image_type_ = image_type;
   if (image_type) {
     
@@ -704,7 +801,7 @@ inline const ::DocumentType& MediaType::document_type() const {
 inline ::DocumentType* MediaType::mutable_document_type() {
   
   if (document_type_ == NULL) {
-    document_type_ = new ::DocumentType;
+    _slow_mutable_document_type();
   }
   // @@protoc_insertion_point(field_mutable:MediaType.document_type)
   return document_type_;
@@ -712,12 +809,22 @@ inline ::DocumentType* MediaType::mutable_document_type() {
 inline ::DocumentType* MediaType::release_document_type() {
   // @@protoc_insertion_point(field_release:MediaType.document_type)
   
-  ::DocumentType* temp = document_type_;
-  document_type_ = NULL;
-  return temp;
+  if (GetArenaNoVirtual() != NULL) {
+    return _slow_release_document_type();
+  } else {
+    ::DocumentType* temp = document_type_;
+    document_type_ = NULL;
+    return temp;
+  }
 }
-inline void MediaType::set_allocated_document_type(::DocumentType* document_type) {
-  delete document_type_;
+inline  void MediaType::set_allocated_document_type(::DocumentType* document_type) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete document_type_;
+  }
+  if (document_type != NULL) {
+    _slow_set_allocated_document_type(message_arena, &document_type);
+  }
   document_type_ = document_type;
   if (document_type) {
     
@@ -743,7 +850,7 @@ inline const ::VideoType& MediaType::video_type() const {
 inline ::VideoType* MediaType::mutable_video_type() {
   
   if (video_type_ == NULL) {
-    video_type_ = new ::VideoType;
+    _slow_mutable_video_type();
   }
   // @@protoc_insertion_point(field_mutable:MediaType.video_type)
   return video_type_;
@@ -751,12 +858,22 @@ inline ::VideoType* MediaType::mutable_video_type() {
 inline ::VideoType* MediaType::release_video_type() {
   // @@protoc_insertion_point(field_release:MediaType.video_type)
   
-  ::VideoType* temp = video_type_;
-  video_type_ = NULL;
-  return temp;
+  if (GetArenaNoVirtual() != NULL) {
+    return _slow_release_video_type();
+  } else {
+    ::VideoType* temp = video_type_;
+    video_type_ = NULL;
+    return temp;
+  }
 }
-inline void MediaType::set_allocated_video_type(::VideoType* video_type) {
-  delete video_type_;
+inline  void MediaType::set_allocated_video_type(::VideoType* video_type) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete video_type_;
+  }
+  if (video_type != NULL) {
+    _slow_set_allocated_video_type(message_arena, &video_type);
+  }
   video_type_ = video_type;
   if (video_type) {
     

@@ -168,11 +168,11 @@ void AddDescriptorsImpl() {
       "\n\004HTML\020\001\022\007\n\003PDF\020\002\022\014\n\010MARKDOWN\020\003\"W\n\tVideo"
       "Type\022\"\n\004kind\030\001 \001(\0162\024.VideoType.VideoKind"
       "\"&\n\tVideoKind\022\007\n\003MP4\020\000\022\007\n\003FLV\020\001\022\007\n\003HLS\020\002"
-      "B+\n\030io.bloombox.schema.mediaB\rMediaItemT"
-      "ypeP\001b\006proto3"
+      "B0\n\030io.bloombox.schema.mediaB\rMediaItemT"
+      "ypeH\001P\001\370\001\001b\006proto3"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 613);
+      descriptor, 618);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "media/MediaType.proto", &protobuf_RegisterTypes);
   ::google::protobuf::internal::OnShutdown(&TableStruct::Shutdown);
@@ -294,6 +294,147 @@ const int VideoType::VideoKind_ARRAYSIZE;
 
 // ===================================================================
 
+void MediaType::_slow_mutable_image_type() {
+  image_type_ = ::google::protobuf::Arena::CreateMessage< ::ImageType >(
+      GetArenaNoVirtual());
+}
+::ImageType* MediaType::_slow_release_image_type() {
+  if (image_type_ == NULL) {
+    return NULL;
+  } else {
+    ::ImageType* temp = new ::ImageType(*image_type_);
+    image_type_ = NULL;
+    return temp;
+  }
+}
+::ImageType* MediaType::unsafe_arena_release_image_type() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:MediaType.image_type)
+  
+  ::ImageType* temp = image_type_;
+  image_type_ = NULL;
+  return temp;
+}
+void MediaType::_slow_set_allocated_image_type(
+    ::google::protobuf::Arena* message_arena, ::ImageType** image_type) {
+    if (message_arena != NULL && 
+        ::google::protobuf::Arena::GetArena(*image_type) == NULL) {
+      message_arena->Own(*image_type);
+    } else if (message_arena !=
+               ::google::protobuf::Arena::GetArena(*image_type)) {
+      ::ImageType* new_image_type = 
+            ::google::protobuf::Arena::CreateMessage< ::ImageType >(
+            message_arena);
+      new_image_type->CopyFrom(**image_type);
+      *image_type = new_image_type;
+    }
+}
+void MediaType::unsafe_arena_set_allocated_image_type(
+    ::ImageType* image_type) {
+  if (GetArenaNoVirtual() == NULL) {
+    delete image_type_;
+  }
+  image_type_ = image_type;
+  if (image_type) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:MediaType.image_type)
+}
+void MediaType::_slow_mutable_document_type() {
+  document_type_ = ::google::protobuf::Arena::CreateMessage< ::DocumentType >(
+      GetArenaNoVirtual());
+}
+::DocumentType* MediaType::_slow_release_document_type() {
+  if (document_type_ == NULL) {
+    return NULL;
+  } else {
+    ::DocumentType* temp = new ::DocumentType(*document_type_);
+    document_type_ = NULL;
+    return temp;
+  }
+}
+::DocumentType* MediaType::unsafe_arena_release_document_type() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:MediaType.document_type)
+  
+  ::DocumentType* temp = document_type_;
+  document_type_ = NULL;
+  return temp;
+}
+void MediaType::_slow_set_allocated_document_type(
+    ::google::protobuf::Arena* message_arena, ::DocumentType** document_type) {
+    if (message_arena != NULL && 
+        ::google::protobuf::Arena::GetArena(*document_type) == NULL) {
+      message_arena->Own(*document_type);
+    } else if (message_arena !=
+               ::google::protobuf::Arena::GetArena(*document_type)) {
+      ::DocumentType* new_document_type = 
+            ::google::protobuf::Arena::CreateMessage< ::DocumentType >(
+            message_arena);
+      new_document_type->CopyFrom(**document_type);
+      *document_type = new_document_type;
+    }
+}
+void MediaType::unsafe_arena_set_allocated_document_type(
+    ::DocumentType* document_type) {
+  if (GetArenaNoVirtual() == NULL) {
+    delete document_type_;
+  }
+  document_type_ = document_type;
+  if (document_type) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:MediaType.document_type)
+}
+void MediaType::_slow_mutable_video_type() {
+  video_type_ = ::google::protobuf::Arena::CreateMessage< ::VideoType >(
+      GetArenaNoVirtual());
+}
+::VideoType* MediaType::_slow_release_video_type() {
+  if (video_type_ == NULL) {
+    return NULL;
+  } else {
+    ::VideoType* temp = new ::VideoType(*video_type_);
+    video_type_ = NULL;
+    return temp;
+  }
+}
+::VideoType* MediaType::unsafe_arena_release_video_type() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:MediaType.video_type)
+  
+  ::VideoType* temp = video_type_;
+  video_type_ = NULL;
+  return temp;
+}
+void MediaType::_slow_set_allocated_video_type(
+    ::google::protobuf::Arena* message_arena, ::VideoType** video_type) {
+    if (message_arena != NULL && 
+        ::google::protobuf::Arena::GetArena(*video_type) == NULL) {
+      message_arena->Own(*video_type);
+    } else if (message_arena !=
+               ::google::protobuf::Arena::GetArena(*video_type)) {
+      ::VideoType* new_video_type = 
+            ::google::protobuf::Arena::CreateMessage< ::VideoType >(
+            message_arena);
+      new_video_type->CopyFrom(**video_type);
+      *video_type = new_video_type;
+    }
+}
+void MediaType::unsafe_arena_set_allocated_video_type(
+    ::VideoType* video_type) {
+  if (GetArenaNoVirtual() == NULL) {
+    delete video_type_;
+  }
+  video_type_ = video_type;
+  if (video_type) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:MediaType.video_type)
+}
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int MediaType::kKindFieldNumber;
 const int MediaType::kImageTypeFieldNumber;
@@ -308,6 +449,16 @@ MediaType::MediaType()
   }
   SharedCtor();
   // @@protoc_insertion_point(constructor:MediaType)
+}
+MediaType::MediaType(::google::protobuf::Arena* arena)
+  : ::google::protobuf::Message(),
+  _internal_metadata_(arena) {
+#ifdef GOOGLE_PROTOBUF_NO_STATIC_INITIALIZER
+  protobuf_media_2fMediaType_2eproto::InitDefaults();
+#endif  // GOOGLE_PROTOBUF_NO_STATIC_INITIALIZER
+  SharedCtor();
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:MediaType)
 }
 MediaType::MediaType(const MediaType& from)
   : ::google::protobuf::Message(),
@@ -345,6 +496,11 @@ MediaType::~MediaType() {
 }
 
 void MediaType::SharedDtor() {
+  ::google::protobuf::Arena* arena = GetArenaNoVirtual();
+  if (arena != NULL) {
+    return;
+  }
+
   if (this != internal_default_instance()) {
     delete image_type_;
   }
@@ -356,6 +512,12 @@ void MediaType::SharedDtor() {
   }
 }
 
+void MediaType::ArenaDtor(void* object) {
+  MediaType* _this = reinterpret_cast< MediaType* >(object);
+  (void)_this;
+}
+void MediaType::RegisterArenaDtor(::google::protobuf::Arena* arena) {
+}
 void MediaType::SetCachedSize(int size) const {
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
   _cached_size_ = size;
@@ -372,11 +534,7 @@ const MediaType& MediaType::default_instance() {
 }
 
 MediaType* MediaType::New(::google::protobuf::Arena* arena) const {
-  MediaType* n = new MediaType;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
+  return ::google::protobuf::Arena::CreateMessage<MediaType>(arena);
 }
 
 void MediaType::Clear() {
@@ -643,6 +801,21 @@ bool MediaType::IsInitialized() const {
 
 void MediaType::Swap(MediaType* other) {
   if (other == this) return;
+  if (GetArenaNoVirtual() == other->GetArenaNoVirtual()) {
+    InternalSwap(other);
+  } else {
+    MediaType* temp = New(GetArenaNoVirtual());
+    temp->MergeFrom(*other);
+    other->CopyFrom(*this);
+    InternalSwap(temp);
+    if (GetArenaNoVirtual() == NULL) {
+      delete temp;
+    }
+  }
+}
+void MediaType::UnsafeArenaSwap(MediaType* other) {
+  if (other == this) return;
+  GOOGLE_DCHECK(GetArenaNoVirtual() == other->GetArenaNoVirtual());
   InternalSwap(other);
 }
 void MediaType::InternalSwap(MediaType* other) {
@@ -691,7 +864,7 @@ const ::ImageType& MediaType::image_type() const {
 ::ImageType* MediaType::mutable_image_type() {
   
   if (image_type_ == NULL) {
-    image_type_ = new ::ImageType;
+    _slow_mutable_image_type();
   }
   // @@protoc_insertion_point(field_mutable:MediaType.image_type)
   return image_type_;
@@ -699,12 +872,22 @@ const ::ImageType& MediaType::image_type() const {
 ::ImageType* MediaType::release_image_type() {
   // @@protoc_insertion_point(field_release:MediaType.image_type)
   
-  ::ImageType* temp = image_type_;
-  image_type_ = NULL;
-  return temp;
+  if (GetArenaNoVirtual() != NULL) {
+    return _slow_release_image_type();
+  } else {
+    ::ImageType* temp = image_type_;
+    image_type_ = NULL;
+    return temp;
+  }
 }
-void MediaType::set_allocated_image_type(::ImageType* image_type) {
-  delete image_type_;
+ void MediaType::set_allocated_image_type(::ImageType* image_type) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete image_type_;
+  }
+  if (image_type != NULL) {
+    _slow_set_allocated_image_type(message_arena, &image_type);
+  }
   image_type_ = image_type;
   if (image_type) {
     
@@ -730,7 +913,7 @@ const ::DocumentType& MediaType::document_type() const {
 ::DocumentType* MediaType::mutable_document_type() {
   
   if (document_type_ == NULL) {
-    document_type_ = new ::DocumentType;
+    _slow_mutable_document_type();
   }
   // @@protoc_insertion_point(field_mutable:MediaType.document_type)
   return document_type_;
@@ -738,12 +921,22 @@ const ::DocumentType& MediaType::document_type() const {
 ::DocumentType* MediaType::release_document_type() {
   // @@protoc_insertion_point(field_release:MediaType.document_type)
   
-  ::DocumentType* temp = document_type_;
-  document_type_ = NULL;
-  return temp;
+  if (GetArenaNoVirtual() != NULL) {
+    return _slow_release_document_type();
+  } else {
+    ::DocumentType* temp = document_type_;
+    document_type_ = NULL;
+    return temp;
+  }
 }
-void MediaType::set_allocated_document_type(::DocumentType* document_type) {
-  delete document_type_;
+ void MediaType::set_allocated_document_type(::DocumentType* document_type) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete document_type_;
+  }
+  if (document_type != NULL) {
+    _slow_set_allocated_document_type(message_arena, &document_type);
+  }
   document_type_ = document_type;
   if (document_type) {
     
@@ -769,7 +962,7 @@ const ::VideoType& MediaType::video_type() const {
 ::VideoType* MediaType::mutable_video_type() {
   
   if (video_type_ == NULL) {
-    video_type_ = new ::VideoType;
+    _slow_mutable_video_type();
   }
   // @@protoc_insertion_point(field_mutable:MediaType.video_type)
   return video_type_;
@@ -777,12 +970,22 @@ const ::VideoType& MediaType::video_type() const {
 ::VideoType* MediaType::release_video_type() {
   // @@protoc_insertion_point(field_release:MediaType.video_type)
   
-  ::VideoType* temp = video_type_;
-  video_type_ = NULL;
-  return temp;
+  if (GetArenaNoVirtual() != NULL) {
+    return _slow_release_video_type();
+  } else {
+    ::VideoType* temp = video_type_;
+    video_type_ = NULL;
+    return temp;
+  }
 }
-void MediaType::set_allocated_video_type(::VideoType* video_type) {
-  delete video_type_;
+ void MediaType::set_allocated_video_type(::VideoType* video_type) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete video_type_;
+  }
+  if (video_type != NULL) {
+    _slow_set_allocated_video_type(message_arena, &video_type);
+  }
   video_type_ = video_type;
   if (video_type) {
     
@@ -808,6 +1011,16 @@ ImageType::ImageType()
   SharedCtor();
   // @@protoc_insertion_point(constructor:ImageType)
 }
+ImageType::ImageType(::google::protobuf::Arena* arena)
+  : ::google::protobuf::Message(),
+  _internal_metadata_(arena) {
+#ifdef GOOGLE_PROTOBUF_NO_STATIC_INITIALIZER
+  protobuf_media_2fMediaType_2eproto::InitDefaults();
+#endif  // GOOGLE_PROTOBUF_NO_STATIC_INITIALIZER
+  SharedCtor();
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:ImageType)
+}
 ImageType::ImageType(const ImageType& from)
   : ::google::protobuf::Message(),
       _internal_metadata_(NULL),
@@ -828,8 +1041,19 @@ ImageType::~ImageType() {
 }
 
 void ImageType::SharedDtor() {
+  ::google::protobuf::Arena* arena = GetArenaNoVirtual();
+  if (arena != NULL) {
+    return;
+  }
+
 }
 
+void ImageType::ArenaDtor(void* object) {
+  ImageType* _this = reinterpret_cast< ImageType* >(object);
+  (void)_this;
+}
+void ImageType::RegisterArenaDtor(::google::protobuf::Arena* arena) {
+}
 void ImageType::SetCachedSize(int size) const {
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
   _cached_size_ = size;
@@ -846,11 +1070,7 @@ const ImageType& ImageType::default_instance() {
 }
 
 ImageType* ImageType::New(::google::protobuf::Arena* arena) const {
-  ImageType* n = new ImageType;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
+  return ::google::protobuf::Arena::CreateMessage<ImageType>(arena);
 }
 
 void ImageType::Clear() {
@@ -1000,6 +1220,21 @@ bool ImageType::IsInitialized() const {
 
 void ImageType::Swap(ImageType* other) {
   if (other == this) return;
+  if (GetArenaNoVirtual() == other->GetArenaNoVirtual()) {
+    InternalSwap(other);
+  } else {
+    ImageType* temp = New(GetArenaNoVirtual());
+    temp->MergeFrom(*other);
+    other->CopyFrom(*this);
+    InternalSwap(temp);
+    if (GetArenaNoVirtual() == NULL) {
+      delete temp;
+    }
+  }
+}
+void ImageType::UnsafeArenaSwap(ImageType* other) {
+  if (other == this) return;
+  GOOGLE_DCHECK(GetArenaNoVirtual() == other->GetArenaNoVirtual());
   InternalSwap(other);
 }
 void ImageType::InternalSwap(ImageType* other) {
@@ -1046,6 +1281,16 @@ DocumentType::DocumentType()
   SharedCtor();
   // @@protoc_insertion_point(constructor:DocumentType)
 }
+DocumentType::DocumentType(::google::protobuf::Arena* arena)
+  : ::google::protobuf::Message(),
+  _internal_metadata_(arena) {
+#ifdef GOOGLE_PROTOBUF_NO_STATIC_INITIALIZER
+  protobuf_media_2fMediaType_2eproto::InitDefaults();
+#endif  // GOOGLE_PROTOBUF_NO_STATIC_INITIALIZER
+  SharedCtor();
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:DocumentType)
+}
 DocumentType::DocumentType(const DocumentType& from)
   : ::google::protobuf::Message(),
       _internal_metadata_(NULL),
@@ -1069,8 +1314,19 @@ DocumentType::~DocumentType() {
 }
 
 void DocumentType::SharedDtor() {
+  ::google::protobuf::Arena* arena = GetArenaNoVirtual();
+  if (arena != NULL) {
+    return;
+  }
+
 }
 
+void DocumentType::ArenaDtor(void* object) {
+  DocumentType* _this = reinterpret_cast< DocumentType* >(object);
+  (void)_this;
+}
+void DocumentType::RegisterArenaDtor(::google::protobuf::Arena* arena) {
+}
 void DocumentType::SetCachedSize(int size) const {
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
   _cached_size_ = size;
@@ -1087,11 +1343,7 @@ const DocumentType& DocumentType::default_instance() {
 }
 
 DocumentType* DocumentType::New(::google::protobuf::Arena* arena) const {
-  DocumentType* n = new DocumentType;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
+  return ::google::protobuf::Arena::CreateMessage<DocumentType>(arena);
 }
 
 void DocumentType::Clear() {
@@ -1274,6 +1526,21 @@ bool DocumentType::IsInitialized() const {
 
 void DocumentType::Swap(DocumentType* other) {
   if (other == this) return;
+  if (GetArenaNoVirtual() == other->GetArenaNoVirtual()) {
+    InternalSwap(other);
+  } else {
+    DocumentType* temp = New(GetArenaNoVirtual());
+    temp->MergeFrom(*other);
+    other->CopyFrom(*this);
+    InternalSwap(temp);
+    if (GetArenaNoVirtual() == NULL) {
+      delete temp;
+    }
+  }
+}
+void DocumentType::UnsafeArenaSwap(DocumentType* other) {
+  if (other == this) return;
+  GOOGLE_DCHECK(GetArenaNoVirtual() == other->GetArenaNoVirtual());
   InternalSwap(other);
 }
 void DocumentType::InternalSwap(DocumentType* other) {
@@ -1334,6 +1601,16 @@ VideoType::VideoType()
   SharedCtor();
   // @@protoc_insertion_point(constructor:VideoType)
 }
+VideoType::VideoType(::google::protobuf::Arena* arena)
+  : ::google::protobuf::Message(),
+  _internal_metadata_(arena) {
+#ifdef GOOGLE_PROTOBUF_NO_STATIC_INITIALIZER
+  protobuf_media_2fMediaType_2eproto::InitDefaults();
+#endif  // GOOGLE_PROTOBUF_NO_STATIC_INITIALIZER
+  SharedCtor();
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:VideoType)
+}
 VideoType::VideoType(const VideoType& from)
   : ::google::protobuf::Message(),
       _internal_metadata_(NULL),
@@ -1354,8 +1631,19 @@ VideoType::~VideoType() {
 }
 
 void VideoType::SharedDtor() {
+  ::google::protobuf::Arena* arena = GetArenaNoVirtual();
+  if (arena != NULL) {
+    return;
+  }
+
 }
 
+void VideoType::ArenaDtor(void* object) {
+  VideoType* _this = reinterpret_cast< VideoType* >(object);
+  (void)_this;
+}
+void VideoType::RegisterArenaDtor(::google::protobuf::Arena* arena) {
+}
 void VideoType::SetCachedSize(int size) const {
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
   _cached_size_ = size;
@@ -1372,11 +1660,7 @@ const VideoType& VideoType::default_instance() {
 }
 
 VideoType* VideoType::New(::google::protobuf::Arena* arena) const {
-  VideoType* n = new VideoType;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
+  return ::google::protobuf::Arena::CreateMessage<VideoType>(arena);
 }
 
 void VideoType::Clear() {
@@ -1526,6 +1810,21 @@ bool VideoType::IsInitialized() const {
 
 void VideoType::Swap(VideoType* other) {
   if (other == this) return;
+  if (GetArenaNoVirtual() == other->GetArenaNoVirtual()) {
+    InternalSwap(other);
+  } else {
+    VideoType* temp = New(GetArenaNoVirtual());
+    temp->MergeFrom(*other);
+    other->CopyFrom(*this);
+    InternalSwap(temp);
+    if (GetArenaNoVirtual() == NULL) {
+      delete temp;
+    }
+  }
+}
+void VideoType::UnsafeArenaSwap(VideoType* other) {
+  if (other == this) return;
+  GOOGLE_DCHECK(GetArenaNoVirtual() == other->GetArenaNoVirtual());
   InternalSwap(other);
 }
 void VideoType::InternalSwap(VideoType* other) {

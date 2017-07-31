@@ -143,11 +143,12 @@ void AddDescriptorsImpl() {
       "\020\n\010featured\030\003 \001(\010\022\022\n\nlastchance\030\004 \001(\010\022\017\n"
       "\007inhouse\030\005 \001(\010*R\n\013ProductFlag\022\013\n\007VISIBLE"
       "\020\000\022\013\n\007PREMIUM\020\001\022\014\n\010FEATURED\020\002\022\016\n\nLASTCHA"
-      "NCE\020\003\022\013\n\007INHOUSE\020\004B2\n!io.bloombox.schema"
-      ".product.structB\013BaseStructsP\001b\006proto3"
+      "NCE\020\003\022\013\n\007INHOUSE\020\004B7\n!io.bloombox.schema"
+      ".product.structB\013BaseStructsH\001P\001\370\001\001b\006pro"
+      "to3"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 398);
+      descriptor, 403);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "structs/FlagsDescriptor.proto", &protobuf_RegisterTypes);
   ::google::protobuf::internal::OnShutdown(&TableStruct::Shutdown);
@@ -199,6 +200,16 @@ ProductFlagValue::ProductFlagValue()
   SharedCtor();
   // @@protoc_insertion_point(constructor:ProductFlagValue)
 }
+ProductFlagValue::ProductFlagValue(::google::protobuf::Arena* arena)
+  : ::google::protobuf::Message(),
+  _internal_metadata_(arena) {
+#ifdef GOOGLE_PROTOBUF_NO_STATIC_INITIALIZER
+  protobuf_structs_2fFlagsDescriptor_2eproto::InitDefaults();
+#endif  // GOOGLE_PROTOBUF_NO_STATIC_INITIALIZER
+  SharedCtor();
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:ProductFlagValue)
+}
 ProductFlagValue::ProductFlagValue(const ProductFlagValue& from)
   : ::google::protobuf::Message(),
       _internal_metadata_(NULL),
@@ -222,8 +233,19 @@ ProductFlagValue::~ProductFlagValue() {
 }
 
 void ProductFlagValue::SharedDtor() {
+  ::google::protobuf::Arena* arena = GetArenaNoVirtual();
+  if (arena != NULL) {
+    return;
+  }
+
 }
 
+void ProductFlagValue::ArenaDtor(void* object) {
+  ProductFlagValue* _this = reinterpret_cast< ProductFlagValue* >(object);
+  (void)_this;
+}
+void ProductFlagValue::RegisterArenaDtor(::google::protobuf::Arena* arena) {
+}
 void ProductFlagValue::SetCachedSize(int size) const {
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
   _cached_size_ = size;
@@ -240,11 +262,7 @@ const ProductFlagValue& ProductFlagValue::default_instance() {
 }
 
 ProductFlagValue* ProductFlagValue::New(::google::protobuf::Arena* arena) const {
-  ProductFlagValue* n = new ProductFlagValue;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
+  return ::google::protobuf::Arena::CreateMessage<ProductFlagValue>(arena);
 }
 
 void ProductFlagValue::Clear() {
@@ -427,6 +445,21 @@ bool ProductFlagValue::IsInitialized() const {
 
 void ProductFlagValue::Swap(ProductFlagValue* other) {
   if (other == this) return;
+  if (GetArenaNoVirtual() == other->GetArenaNoVirtual()) {
+    InternalSwap(other);
+  } else {
+    ProductFlagValue* temp = New(GetArenaNoVirtual());
+    temp->MergeFrom(*other);
+    other->CopyFrom(*this);
+    InternalSwap(temp);
+    if (GetArenaNoVirtual() == NULL) {
+      delete temp;
+    }
+  }
+}
+void ProductFlagValue::UnsafeArenaSwap(ProductFlagValue* other) {
+  if (other == this) return;
+  GOOGLE_DCHECK(GetArenaNoVirtual() == other->GetArenaNoVirtual());
   InternalSwap(other);
 }
 void ProductFlagValue::InternalSwap(ProductFlagValue* other) {
@@ -487,6 +520,17 @@ ProductFlagset::ProductFlagset()
   SharedCtor();
   // @@protoc_insertion_point(constructor:ProductFlagset)
 }
+ProductFlagset::ProductFlagset(::google::protobuf::Arena* arena)
+  : ::google::protobuf::Message(),
+  _internal_metadata_(arena),
+  flags_(arena) {
+#ifdef GOOGLE_PROTOBUF_NO_STATIC_INITIALIZER
+  protobuf_structs_2fFlagsDescriptor_2eproto::InitDefaults();
+#endif  // GOOGLE_PROTOBUF_NO_STATIC_INITIALIZER
+  SharedCtor();
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:ProductFlagset)
+}
 ProductFlagset::ProductFlagset(const ProductFlagset& from)
   : ::google::protobuf::Message(),
       _internal_metadata_(NULL),
@@ -506,8 +550,19 @@ ProductFlagset::~ProductFlagset() {
 }
 
 void ProductFlagset::SharedDtor() {
+  ::google::protobuf::Arena* arena = GetArenaNoVirtual();
+  if (arena != NULL) {
+    return;
+  }
+
 }
 
+void ProductFlagset::ArenaDtor(void* object) {
+  ProductFlagset* _this = reinterpret_cast< ProductFlagset* >(object);
+  (void)_this;
+}
+void ProductFlagset::RegisterArenaDtor(::google::protobuf::Arena* arena) {
+}
 void ProductFlagset::SetCachedSize(int size) const {
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
   _cached_size_ = size;
@@ -524,11 +579,7 @@ const ProductFlagset& ProductFlagset::default_instance() {
 }
 
 ProductFlagset* ProductFlagset::New(::google::protobuf::Arena* arena) const {
-  ProductFlagset* n = new ProductFlagset;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
+  return ::google::protobuf::Arena::CreateMessage<ProductFlagset>(arena);
 }
 
 void ProductFlagset::Clear() {
@@ -679,6 +730,21 @@ bool ProductFlagset::IsInitialized() const {
 
 void ProductFlagset::Swap(ProductFlagset* other) {
   if (other == this) return;
+  if (GetArenaNoVirtual() == other->GetArenaNoVirtual()) {
+    InternalSwap(other);
+  } else {
+    ProductFlagset* temp = New(GetArenaNoVirtual());
+    temp->MergeFrom(*other);
+    other->CopyFrom(*this);
+    InternalSwap(temp);
+    if (GetArenaNoVirtual() == NULL) {
+      delete temp;
+    }
+  }
+}
+void ProductFlagset::UnsafeArenaSwap(ProductFlagset* other) {
+  if (other == this) return;
+  GOOGLE_DCHECK(GetArenaNoVirtual() == other->GetArenaNoVirtual());
   InternalSwap(other);
 }
 void ProductFlagset::InternalSwap(ProductFlagset* other) {
@@ -744,6 +810,16 @@ FlagsDescriptor::FlagsDescriptor()
   SharedCtor();
   // @@protoc_insertion_point(constructor:FlagsDescriptor)
 }
+FlagsDescriptor::FlagsDescriptor(::google::protobuf::Arena* arena)
+  : ::google::protobuf::Message(),
+  _internal_metadata_(arena) {
+#ifdef GOOGLE_PROTOBUF_NO_STATIC_INITIALIZER
+  protobuf_structs_2fFlagsDescriptor_2eproto::InitDefaults();
+#endif  // GOOGLE_PROTOBUF_NO_STATIC_INITIALIZER
+  SharedCtor();
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:FlagsDescriptor)
+}
 FlagsDescriptor::FlagsDescriptor(const FlagsDescriptor& from)
   : ::google::protobuf::Message(),
       _internal_metadata_(NULL),
@@ -767,8 +843,19 @@ FlagsDescriptor::~FlagsDescriptor() {
 }
 
 void FlagsDescriptor::SharedDtor() {
+  ::google::protobuf::Arena* arena = GetArenaNoVirtual();
+  if (arena != NULL) {
+    return;
+  }
+
 }
 
+void FlagsDescriptor::ArenaDtor(void* object) {
+  FlagsDescriptor* _this = reinterpret_cast< FlagsDescriptor* >(object);
+  (void)_this;
+}
+void FlagsDescriptor::RegisterArenaDtor(::google::protobuf::Arena* arena) {
+}
 void FlagsDescriptor::SetCachedSize(int size) const {
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
   _cached_size_ = size;
@@ -785,11 +872,7 @@ const FlagsDescriptor& FlagsDescriptor::default_instance() {
 }
 
 FlagsDescriptor* FlagsDescriptor::New(::google::protobuf::Arena* arena) const {
-  FlagsDescriptor* n = new FlagsDescriptor;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
+  return ::google::protobuf::Arena::CreateMessage<FlagsDescriptor>(arena);
 }
 
 void FlagsDescriptor::Clear() {
@@ -1064,6 +1147,21 @@ bool FlagsDescriptor::IsInitialized() const {
 
 void FlagsDescriptor::Swap(FlagsDescriptor* other) {
   if (other == this) return;
+  if (GetArenaNoVirtual() == other->GetArenaNoVirtual()) {
+    InternalSwap(other);
+  } else {
+    FlagsDescriptor* temp = New(GetArenaNoVirtual());
+    temp->MergeFrom(*other);
+    other->CopyFrom(*this);
+    InternalSwap(temp);
+    if (GetArenaNoVirtual() == NULL) {
+      delete temp;
+    }
+  }
+}
+void FlagsDescriptor::UnsafeArenaSwap(FlagsDescriptor* other) {
+  if (other == this) return;
+  GOOGLE_DCHECK(GetArenaNoVirtual() == other->GetArenaNoVirtual());
   InternalSwap(other);
 }
 void FlagsDescriptor::InternalSwap(FlagsDescriptor* other) {

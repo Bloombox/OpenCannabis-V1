@@ -105,12 +105,12 @@ void AddDescriptorsImpl() {
   static const char descriptor[] = {
       "\n\026base/Compression.proto\"Q\n\013Compression\022"
       "\017\n\007enabled\030\001 \001(\010\022\037\n\004type\030\002 \001(\0162\021.Compres"
-      "sion.Type\"\020\n\004Type\022\010\n\004GZIP\020\000B,\n\027io.bloomb"
-      "ox.schema.baseB\017BaseCompressionP\001b\006proto"
-      "3"
+      "sion.Type\"\020\n\004Type\022\010\n\004GZIP\020\000B1\n\027io.bloomb"
+      "ox.schema.baseB\017BaseCompressionH\001P\001\370\001\001b\006"
+      "proto3"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 161);
+      descriptor, 166);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "base/Compression.proto", &protobuf_RegisterTypes);
   ::google::protobuf::internal::OnShutdown(&TableStruct::Shutdown);
@@ -164,6 +164,16 @@ Compression::Compression()
   SharedCtor();
   // @@protoc_insertion_point(constructor:Compression)
 }
+Compression::Compression(::google::protobuf::Arena* arena)
+  : ::google::protobuf::Message(),
+  _internal_metadata_(arena) {
+#ifdef GOOGLE_PROTOBUF_NO_STATIC_INITIALIZER
+  protobuf_base_2fCompression_2eproto::InitDefaults();
+#endif  // GOOGLE_PROTOBUF_NO_STATIC_INITIALIZER
+  SharedCtor();
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:Compression)
+}
 Compression::Compression(const Compression& from)
   : ::google::protobuf::Message(),
       _internal_metadata_(NULL),
@@ -187,8 +197,19 @@ Compression::~Compression() {
 }
 
 void Compression::SharedDtor() {
+  ::google::protobuf::Arena* arena = GetArenaNoVirtual();
+  if (arena != NULL) {
+    return;
+  }
+
 }
 
+void Compression::ArenaDtor(void* object) {
+  Compression* _this = reinterpret_cast< Compression* >(object);
+  (void)_this;
+}
+void Compression::RegisterArenaDtor(::google::protobuf::Arena* arena) {
+}
 void Compression::SetCachedSize(int size) const {
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
   _cached_size_ = size;
@@ -205,11 +226,7 @@ const Compression& Compression::default_instance() {
 }
 
 Compression* Compression::New(::google::protobuf::Arena* arena) const {
-  Compression* n = new Compression;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
+  return ::google::protobuf::Arena::CreateMessage<Compression>(arena);
 }
 
 void Compression::Clear() {
@@ -392,6 +409,21 @@ bool Compression::IsInitialized() const {
 
 void Compression::Swap(Compression* other) {
   if (other == this) return;
+  if (GetArenaNoVirtual() == other->GetArenaNoVirtual()) {
+    InternalSwap(other);
+  } else {
+    Compression* temp = New(GetArenaNoVirtual());
+    temp->MergeFrom(*other);
+    other->CopyFrom(*this);
+    InternalSwap(temp);
+    if (GetArenaNoVirtual() == NULL) {
+      delete temp;
+    }
+  }
+}
+void Compression::UnsafeArenaSwap(Compression* other) {
+  if (other == this) return;
+  GOOGLE_DCHECK(GetArenaNoVirtual() == other->GetArenaNoVirtual());
   InternalSwap(other);
 }
 void Compression::InternalSwap(Compression* other) {

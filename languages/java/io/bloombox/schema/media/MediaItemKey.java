@@ -29,8 +29,8 @@ public final class MediaItemKey {
   static {
     java.lang.String[] descriptorData = {
       "\n\024media/MediaKey.proto\"\026\n\010MediaKey\022\n\n\002id" +
-      "\030\001 \001(\tB*\n\030io.bloombox.schema.mediaB\014Medi" +
-      "aItemKeyP\001b\006proto3"
+      "\030\001 \001(\tB/\n\030io.bloombox.schema.mediaB\014Medi" +
+      "aItemKeyH\001P\001\370\001\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

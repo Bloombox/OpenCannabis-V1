@@ -26,9 +26,9 @@ public final class BaseProductKind {
       "\n\026base/ProductKind.proto*\200\001\n\013ProductKind" +
       "\022\013\n\007FLOWERS\020\000\022\013\n\007EDIBLES\020\001\022\014\n\010EXTRACTS\020\002" +
       "\022\014\n\010PREROLLS\020\003\022\016\n\nAPOTHECARY\020\004\022\016\n\nCARTRI" +
-      "DGES\020\005\022\n\n\006PLANTS\020\006\022\017\n\013MERCHANDISE\020\007B,\n\027i" +
-      "o.bloombox.schema.baseB\017BaseProductKindP" +
-      "\001b\006proto3"
+      "DGES\020\005\022\n\n\006PLANTS\020\006\022\017\n\013MERCHANDISE\020\007B1\n\027i" +
+      "o.bloombox.schema.baseB\017BaseProductKindH" +
+      "\001P\001\370\001\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

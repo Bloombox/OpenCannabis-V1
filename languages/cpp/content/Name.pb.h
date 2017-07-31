@@ -62,6 +62,12 @@ class Name : public ::google::protobuf::Message /* @@protoc_insertion_point(clas
     return *this;
   }
 
+  inline ::google::protobuf::Arena* GetArena() const PROTOBUF_FINAL {
+    return GetArenaNoVirtual();
+  }
+  inline void* GetMaybeArenaPointer() const PROTOBUF_FINAL {
+    return MaybeArenaPtr();
+  }
   static const ::google::protobuf::Descriptor* descriptor();
   static const Name& default_instance();
 
@@ -72,6 +78,7 @@ class Name : public ::google::protobuf::Message /* @@protoc_insertion_point(clas
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
     0;
 
+  void UnsafeArenaSwap(Name* other);
   void Swap(Name* other);
 
   // implements Message ----------------------------------------------
@@ -99,12 +106,17 @@ class Name : public ::google::protobuf::Message /* @@protoc_insertion_point(clas
   void SharedDtor();
   void SetCachedSize(int size) const PROTOBUF_FINAL;
   void InternalSwap(Name* other);
+  protected:
+  explicit Name(::google::protobuf::Arena* arena);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::google::protobuf::Arena* arena);
   private:
   inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
-    return NULL;
+    return _internal_metadata_.arena();
   }
   inline void* MaybeArenaPtr() const {
-    return NULL;
+    return _internal_metadata_.raw_arena_ptr();
   }
   public:
 
@@ -119,33 +131,36 @@ class Name : public ::google::protobuf::Message /* @@protoc_insertion_point(clas
   static const int kPrimaryFieldNumber = 1;
   const ::std::string& primary() const;
   void set_primary(const ::std::string& value);
-  #if LANG_CXX11
-  void set_primary(::std::string&& value);
-  #endif
   void set_primary(const char* value);
   void set_primary(const char* value, size_t size);
   ::std::string* mutable_primary();
   ::std::string* release_primary();
   void set_allocated_primary(::std::string* primary);
+  ::std::string* unsafe_arena_release_primary();
+  void unsafe_arena_set_allocated_primary(
+      ::std::string* primary);
 
   // string display = 2;
   void clear_display();
   static const int kDisplayFieldNumber = 2;
   const ::std::string& display() const;
   void set_display(const ::std::string& value);
-  #if LANG_CXX11
-  void set_display(::std::string&& value);
-  #endif
   void set_display(const char* value);
   void set_display(const char* value, size_t size);
   ::std::string* mutable_display();
   ::std::string* release_display();
   void set_allocated_display(::std::string* display);
+  ::std::string* unsafe_arena_release_display();
+  void unsafe_arena_set_allocated_display(
+      ::std::string* display);
 
   // @@protoc_insertion_point(class_scope:Name)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  friend class ::google::protobuf::Arena;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
   ::google::protobuf::internal::ArenaStringPtr primary_;
   ::google::protobuf::internal::ArenaStringPtr display_;
   mutable int _cached_size_;
@@ -161,46 +176,47 @@ class Name : public ::google::protobuf::Message /* @@protoc_insertion_point(clas
 
 // string primary = 1;
 inline void Name::clear_primary() {
-  primary_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  primary_.ClearToEmpty(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
 }
 inline const ::std::string& Name::primary() const {
   // @@protoc_insertion_point(field_get:Name.primary)
-  return primary_.GetNoArena();
+  return primary_.Get();
 }
 inline void Name::set_primary(const ::std::string& value) {
   
-  primary_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  primary_.Set(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value, GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set:Name.primary)
 }
-#if LANG_CXX11
-inline void Name::set_primary(::std::string&& value) {
-  
-  primary_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:Name.primary)
-}
-#endif
 inline void Name::set_primary(const char* value) {
   GOOGLE_DCHECK(value != NULL);
   
-  primary_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  primary_.Set(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set_char:Name.primary)
 }
-inline void Name::set_primary(const char* value, size_t size) {
+inline void Name::set_primary(const char* value,
+    size_t size) {
   
-  primary_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(reinterpret_cast<const char*>(value), size));
+  primary_.Set(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set_pointer:Name.primary)
 }
 inline ::std::string* Name::mutable_primary() {
   
   // @@protoc_insertion_point(field_mutable:Name.primary)
-  return primary_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  return primary_.Mutable(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
 }
 inline ::std::string* Name::release_primary() {
   // @@protoc_insertion_point(field_release:Name.primary)
   
-  return primary_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  return primary_.Release(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
+}
+inline ::std::string* Name::unsafe_arena_release_primary() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:Name.primary)
+  GOOGLE_DCHECK(GetArenaNoVirtual() != NULL);
+  
+  return primary_.UnsafeArenaRelease(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      GetArenaNoVirtual());
 }
 inline void Name::set_allocated_primary(::std::string* primary) {
   if (primary != NULL) {
@@ -208,52 +224,66 @@ inline void Name::set_allocated_primary(::std::string* primary) {
   } else {
     
   }
-  primary_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), primary);
+  primary_.SetAllocated(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), primary,
+      GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set_allocated:Name.primary)
+}
+inline void Name::unsafe_arena_set_allocated_primary(
+    ::std::string* primary) {
+  GOOGLE_DCHECK(GetArenaNoVirtual() != NULL);
+  if (primary != NULL) {
+    
+  } else {
+    
+  }
+  primary_.UnsafeArenaSetAllocated(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      primary, GetArenaNoVirtual());
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:Name.primary)
 }
 
 // string display = 2;
 inline void Name::clear_display() {
-  display_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  display_.ClearToEmpty(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
 }
 inline const ::std::string& Name::display() const {
   // @@protoc_insertion_point(field_get:Name.display)
-  return display_.GetNoArena();
+  return display_.Get();
 }
 inline void Name::set_display(const ::std::string& value) {
   
-  display_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  display_.Set(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value, GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set:Name.display)
 }
-#if LANG_CXX11
-inline void Name::set_display(::std::string&& value) {
-  
-  display_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:Name.display)
-}
-#endif
 inline void Name::set_display(const char* value) {
   GOOGLE_DCHECK(value != NULL);
   
-  display_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  display_.Set(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set_char:Name.display)
 }
-inline void Name::set_display(const char* value, size_t size) {
+inline void Name::set_display(const char* value,
+    size_t size) {
   
-  display_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(reinterpret_cast<const char*>(value), size));
+  display_.Set(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set_pointer:Name.display)
 }
 inline ::std::string* Name::mutable_display() {
   
   // @@protoc_insertion_point(field_mutable:Name.display)
-  return display_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  return display_.Mutable(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
 }
 inline ::std::string* Name::release_display() {
   // @@protoc_insertion_point(field_release:Name.display)
   
-  return display_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  return display_.Release(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
+}
+inline ::std::string* Name::unsafe_arena_release_display() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:Name.display)
+  GOOGLE_DCHECK(GetArenaNoVirtual() != NULL);
+  
+  return display_.UnsafeArenaRelease(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      GetArenaNoVirtual());
 }
 inline void Name::set_allocated_display(::std::string* display) {
   if (display != NULL) {
@@ -261,8 +291,21 @@ inline void Name::set_allocated_display(::std::string* display) {
   } else {
     
   }
-  display_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), display);
+  display_.SetAllocated(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), display,
+      GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set_allocated:Name.display)
+}
+inline void Name::unsafe_arena_set_allocated_display(
+    ::std::string* display) {
+  GOOGLE_DCHECK(GetArenaNoVirtual() != NULL);
+  if (display != NULL) {
+    
+  } else {
+    
+  }
+  display_.UnsafeArenaSetAllocated(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      display, GetArenaNoVirtual());
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:Name.display)
 }
 
 #endif  // !PROTOBUF_INLINE_NOT_IN_HEADERS

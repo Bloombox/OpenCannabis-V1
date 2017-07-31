@@ -46,8 +46,9 @@ public final class BaseStructs {
       "\020\n\010featured\030\003 \001(\010\022\022\n\nlastchance\030\004 \001(\010\022\017\n" +
       "\007inhouse\030\005 \001(\010*R\n\013ProductFlag\022\013\n\007VISIBLE" +
       "\020\000\022\013\n\007PREMIUM\020\001\022\014\n\010FEATURED\020\002\022\016\n\nLASTCHA" +
-      "NCE\020\003\022\013\n\007INHOUSE\020\004B2\n!io.bloombox.schema" +
-      ".product.structB\013BaseStructsP\001b\006proto3"
+      "NCE\020\003\022\013\n\007INHOUSE\020\004B7\n!io.bloombox.schema" +
+      ".product.structB\013BaseStructsH\001P\001\370\001\001b\006pro",
+      "to3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {

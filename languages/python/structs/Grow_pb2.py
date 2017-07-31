@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='structs/Grow.proto',
   package='',
   syntax='proto3',
-  serialized_pb=_b('\n\x12structs/Grow.proto*<\n\x04Grow\x12\x0b\n\x07GENERIC\x10\x00\x12\n\n\x06INDOOR\x10\x01\x12\x0e\n\nGREENHOUSE\x10\x02\x12\x0b\n\x07OUTDOOR\x10\x03\x42\x33\n!io.bloombox.schema.product.structB\x0cMaterialGrowP\x01\x62\x06proto3')
+  serialized_pb=_b('\n\x12structs/Grow.proto*<\n\x04Grow\x12\x0b\n\x07GENERIC\x10\x00\x12\n\n\x06INDOOR\x10\x01\x12\x0e\n\nGREENHOUSE\x10\x02\x12\x0b\n\x07OUTDOOR\x10\x03\x42\x38\n!io.bloombox.schema.product.structB\x0cMaterialGrowH\x01P\x01\xf8\x01\x01\x62\x06proto3')
 )
 
 _GROW = _descriptor.EnumDescriptor(
@@ -65,5 +65,5 @@ _sym_db.RegisterFileDescriptor(DESCRIPTOR)
 
 
 DESCRIPTOR.has_options = True
-DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n!io.bloombox.schema.product.structB\014MaterialGrowP\001'))
+DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n!io.bloombox.schema.product.structB\014MaterialGrowH\001P\001\370\001\001'))
 # @@protoc_insertion_point(module_scope)

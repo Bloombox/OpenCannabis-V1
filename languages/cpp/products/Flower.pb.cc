@@ -129,11 +129,11 @@ void AddDescriptorsImpl() {
       "roductContent\022%\n\rmaterial_data\030\025 \001(\0132\016.M"
       "aterialsData\022\037\n\005flags\030\026 \001(\0132\020.FlagsDescr"
       "iptor\022 \n\007pricing\030\027 \001(\0132\017.ProductPricingB"
-      "-\n\032io.bloombox.schema.productB\rFlowerPro"
-      "ductP\000b\006proto3"
+      "2\n\032io.bloombox.schema.productB\rFlowerPro"
+      "ductH\001P\000\370\001\001b\006proto3"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 414);
+      descriptor, 419);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "products/Flower.proto", &protobuf_RegisterTypes);
   ::protobuf_base_2fProductKey_2eproto::AddDescriptors();
@@ -160,6 +160,241 @@ struct StaticDescriptorInitializer {
 
 // ===================================================================
 
+void Flower::_slow_mutable_key() {
+  key_ = ::google::protobuf::Arena::CreateMessage< ::ProductKey >(
+      GetArenaNoVirtual());
+}
+::ProductKey* Flower::_slow_release_key() {
+  if (key_ == NULL) {
+    return NULL;
+  } else {
+    ::ProductKey* temp = new ::ProductKey(*key_);
+    key_ = NULL;
+    return temp;
+  }
+}
+::ProductKey* Flower::unsafe_arena_release_key() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:Flower.key)
+  
+  ::ProductKey* temp = key_;
+  key_ = NULL;
+  return temp;
+}
+void Flower::_slow_set_allocated_key(
+    ::google::protobuf::Arena* message_arena, ::ProductKey** key) {
+    if (message_arena != NULL && 
+        ::google::protobuf::Arena::GetArena(*key) == NULL) {
+      message_arena->Own(*key);
+    } else if (message_arena !=
+               ::google::protobuf::Arena::GetArena(*key)) {
+      ::ProductKey* new_key = 
+            ::google::protobuf::Arena::CreateMessage< ::ProductKey >(
+            message_arena);
+      new_key->CopyFrom(**key);
+      *key = new_key;
+    }
+}
+void Flower::unsafe_arena_set_allocated_key(
+    ::ProductKey* key) {
+  if (GetArenaNoVirtual() == NULL) {
+    delete key_;
+  }
+  key_ = key;
+  if (key) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:Flower.key)
+}
+void Flower::_slow_mutable_product_data() {
+  product_data_ = ::google::protobuf::Arena::CreateMessage< ::ProductContent >(
+      GetArenaNoVirtual());
+}
+::ProductContent* Flower::_slow_release_product_data() {
+  if (product_data_ == NULL) {
+    return NULL;
+  } else {
+    ::ProductContent* temp = new ::ProductContent(*product_data_);
+    product_data_ = NULL;
+    return temp;
+  }
+}
+::ProductContent* Flower::unsafe_arena_release_product_data() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:Flower.product_data)
+  
+  ::ProductContent* temp = product_data_;
+  product_data_ = NULL;
+  return temp;
+}
+void Flower::_slow_set_allocated_product_data(
+    ::google::protobuf::Arena* message_arena, ::ProductContent** product_data) {
+    if (message_arena != NULL && 
+        ::google::protobuf::Arena::GetArena(*product_data) == NULL) {
+      message_arena->Own(*product_data);
+    } else if (message_arena !=
+               ::google::protobuf::Arena::GetArena(*product_data)) {
+      ::ProductContent* new_product_data = 
+            ::google::protobuf::Arena::CreateMessage< ::ProductContent >(
+            message_arena);
+      new_product_data->CopyFrom(**product_data);
+      *product_data = new_product_data;
+    }
+}
+void Flower::unsafe_arena_set_allocated_product_data(
+    ::ProductContent* product_data) {
+  if (GetArenaNoVirtual() == NULL) {
+    delete product_data_;
+  }
+  product_data_ = product_data;
+  if (product_data) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:Flower.product_data)
+}
+void Flower::_slow_mutable_material_data() {
+  material_data_ = ::google::protobuf::Arena::CreateMessage< ::MaterialsData >(
+      GetArenaNoVirtual());
+}
+::MaterialsData* Flower::_slow_release_material_data() {
+  if (material_data_ == NULL) {
+    return NULL;
+  } else {
+    ::MaterialsData* temp = new ::MaterialsData(*material_data_);
+    material_data_ = NULL;
+    return temp;
+  }
+}
+::MaterialsData* Flower::unsafe_arena_release_material_data() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:Flower.material_data)
+  
+  ::MaterialsData* temp = material_data_;
+  material_data_ = NULL;
+  return temp;
+}
+void Flower::_slow_set_allocated_material_data(
+    ::google::protobuf::Arena* message_arena, ::MaterialsData** material_data) {
+    if (message_arena != NULL && 
+        ::google::protobuf::Arena::GetArena(*material_data) == NULL) {
+      message_arena->Own(*material_data);
+    } else if (message_arena !=
+               ::google::protobuf::Arena::GetArena(*material_data)) {
+      ::MaterialsData* new_material_data = 
+            ::google::protobuf::Arena::CreateMessage< ::MaterialsData >(
+            message_arena);
+      new_material_data->CopyFrom(**material_data);
+      *material_data = new_material_data;
+    }
+}
+void Flower::unsafe_arena_set_allocated_material_data(
+    ::MaterialsData* material_data) {
+  if (GetArenaNoVirtual() == NULL) {
+    delete material_data_;
+  }
+  material_data_ = material_data;
+  if (material_data) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:Flower.material_data)
+}
+void Flower::_slow_mutable_flags() {
+  flags_ = ::google::protobuf::Arena::CreateMessage< ::FlagsDescriptor >(
+      GetArenaNoVirtual());
+}
+::FlagsDescriptor* Flower::_slow_release_flags() {
+  if (flags_ == NULL) {
+    return NULL;
+  } else {
+    ::FlagsDescriptor* temp = new ::FlagsDescriptor(*flags_);
+    flags_ = NULL;
+    return temp;
+  }
+}
+::FlagsDescriptor* Flower::unsafe_arena_release_flags() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:Flower.flags)
+  
+  ::FlagsDescriptor* temp = flags_;
+  flags_ = NULL;
+  return temp;
+}
+void Flower::_slow_set_allocated_flags(
+    ::google::protobuf::Arena* message_arena, ::FlagsDescriptor** flags) {
+    if (message_arena != NULL && 
+        ::google::protobuf::Arena::GetArena(*flags) == NULL) {
+      message_arena->Own(*flags);
+    } else if (message_arena !=
+               ::google::protobuf::Arena::GetArena(*flags)) {
+      ::FlagsDescriptor* new_flags = 
+            ::google::protobuf::Arena::CreateMessage< ::FlagsDescriptor >(
+            message_arena);
+      new_flags->CopyFrom(**flags);
+      *flags = new_flags;
+    }
+}
+void Flower::unsafe_arena_set_allocated_flags(
+    ::FlagsDescriptor* flags) {
+  if (GetArenaNoVirtual() == NULL) {
+    delete flags_;
+  }
+  flags_ = flags;
+  if (flags) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:Flower.flags)
+}
+void Flower::_slow_mutable_pricing() {
+  pricing_ = ::google::protobuf::Arena::CreateMessage< ::ProductPricing >(
+      GetArenaNoVirtual());
+}
+::ProductPricing* Flower::_slow_release_pricing() {
+  if (pricing_ == NULL) {
+    return NULL;
+  } else {
+    ::ProductPricing* temp = new ::ProductPricing(*pricing_);
+    pricing_ = NULL;
+    return temp;
+  }
+}
+::ProductPricing* Flower::unsafe_arena_release_pricing() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:Flower.pricing)
+  
+  ::ProductPricing* temp = pricing_;
+  pricing_ = NULL;
+  return temp;
+}
+void Flower::_slow_set_allocated_pricing(
+    ::google::protobuf::Arena* message_arena, ::ProductPricing** pricing) {
+    if (message_arena != NULL && 
+        ::google::protobuf::Arena::GetArena(*pricing) == NULL) {
+      message_arena->Own(*pricing);
+    } else if (message_arena !=
+               ::google::protobuf::Arena::GetArena(*pricing)) {
+      ::ProductPricing* new_pricing = 
+            ::google::protobuf::Arena::CreateMessage< ::ProductPricing >(
+            message_arena);
+      new_pricing->CopyFrom(**pricing);
+      *pricing = new_pricing;
+    }
+}
+void Flower::unsafe_arena_set_allocated_pricing(
+    ::ProductPricing* pricing) {
+  if (GetArenaNoVirtual() == NULL) {
+    delete pricing_;
+  }
+  pricing_ = pricing;
+  if (pricing) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:Flower.pricing)
+}
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int Flower::kKeyFieldNumber;
 const int Flower::kProductDataFieldNumber;
@@ -175,6 +410,16 @@ Flower::Flower()
   }
   SharedCtor();
   // @@protoc_insertion_point(constructor:Flower)
+}
+Flower::Flower(::google::protobuf::Arena* arena)
+  : ::google::protobuf::Message(),
+  _internal_metadata_(arena) {
+#ifdef GOOGLE_PROTOBUF_NO_STATIC_INITIALIZER
+  protobuf_products_2fFlower_2eproto::InitDefaults();
+#endif  // GOOGLE_PROTOBUF_NO_STATIC_INITIALIZER
+  SharedCtor();
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:Flower)
 }
 Flower::Flower(const Flower& from)
   : ::google::protobuf::Message(),
@@ -221,6 +466,11 @@ Flower::~Flower() {
 }
 
 void Flower::SharedDtor() {
+  ::google::protobuf::Arena* arena = GetArenaNoVirtual();
+  if (arena != NULL) {
+    return;
+  }
+
   if (this != internal_default_instance()) {
     delete key_;
   }
@@ -238,6 +488,12 @@ void Flower::SharedDtor() {
   }
 }
 
+void Flower::ArenaDtor(void* object) {
+  Flower* _this = reinterpret_cast< Flower* >(object);
+  (void)_this;
+}
+void Flower::RegisterArenaDtor(::google::protobuf::Arena* arena) {
+}
 void Flower::SetCachedSize(int size) const {
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
   _cached_size_ = size;
@@ -254,11 +510,7 @@ const Flower& Flower::default_instance() {
 }
 
 Flower* Flower::New(::google::protobuf::Arena* arena) const {
-  Flower* n = new Flower;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
+  return ::google::protobuf::Arena::CreateMessage<Flower>(arena);
 }
 
 void Flower::Clear() {
@@ -566,6 +818,21 @@ bool Flower::IsInitialized() const {
 
 void Flower::Swap(Flower* other) {
   if (other == this) return;
+  if (GetArenaNoVirtual() == other->GetArenaNoVirtual()) {
+    InternalSwap(other);
+  } else {
+    Flower* temp = New(GetArenaNoVirtual());
+    temp->MergeFrom(*other);
+    other->CopyFrom(*this);
+    InternalSwap(temp);
+    if (GetArenaNoVirtual() == NULL) {
+      delete temp;
+    }
+  }
+}
+void Flower::UnsafeArenaSwap(Flower* other) {
+  if (other == this) return;
+  GOOGLE_DCHECK(GetArenaNoVirtual() == other->GetArenaNoVirtual());
   InternalSwap(other);
 }
 void Flower::InternalSwap(Flower* other) {
@@ -601,7 +868,7 @@ const ::ProductKey& Flower::key() const {
 ::ProductKey* Flower::mutable_key() {
   
   if (key_ == NULL) {
-    key_ = new ::ProductKey;
+    _slow_mutable_key();
   }
   // @@protoc_insertion_point(field_mutable:Flower.key)
   return key_;
@@ -609,12 +876,22 @@ const ::ProductKey& Flower::key() const {
 ::ProductKey* Flower::release_key() {
   // @@protoc_insertion_point(field_release:Flower.key)
   
-  ::ProductKey* temp = key_;
-  key_ = NULL;
-  return temp;
+  if (GetArenaNoVirtual() != NULL) {
+    return _slow_release_key();
+  } else {
+    ::ProductKey* temp = key_;
+    key_ = NULL;
+    return temp;
+  }
 }
-void Flower::set_allocated_key(::ProductKey* key) {
-  delete key_;
+ void Flower::set_allocated_key(::ProductKey* key) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete key_;
+  }
+  if (key != NULL) {
+    _slow_set_allocated_key(message_arena, &key);
+  }
   key_ = key;
   if (key) {
     
@@ -640,7 +917,7 @@ const ::ProductContent& Flower::product_data() const {
 ::ProductContent* Flower::mutable_product_data() {
   
   if (product_data_ == NULL) {
-    product_data_ = new ::ProductContent;
+    _slow_mutable_product_data();
   }
   // @@protoc_insertion_point(field_mutable:Flower.product_data)
   return product_data_;
@@ -648,12 +925,22 @@ const ::ProductContent& Flower::product_data() const {
 ::ProductContent* Flower::release_product_data() {
   // @@protoc_insertion_point(field_release:Flower.product_data)
   
-  ::ProductContent* temp = product_data_;
-  product_data_ = NULL;
-  return temp;
+  if (GetArenaNoVirtual() != NULL) {
+    return _slow_release_product_data();
+  } else {
+    ::ProductContent* temp = product_data_;
+    product_data_ = NULL;
+    return temp;
+  }
 }
-void Flower::set_allocated_product_data(::ProductContent* product_data) {
-  delete product_data_;
+ void Flower::set_allocated_product_data(::ProductContent* product_data) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete product_data_;
+  }
+  if (product_data != NULL) {
+    _slow_set_allocated_product_data(message_arena, &product_data);
+  }
   product_data_ = product_data;
   if (product_data) {
     
@@ -679,7 +966,7 @@ const ::MaterialsData& Flower::material_data() const {
 ::MaterialsData* Flower::mutable_material_data() {
   
   if (material_data_ == NULL) {
-    material_data_ = new ::MaterialsData;
+    _slow_mutable_material_data();
   }
   // @@protoc_insertion_point(field_mutable:Flower.material_data)
   return material_data_;
@@ -687,12 +974,22 @@ const ::MaterialsData& Flower::material_data() const {
 ::MaterialsData* Flower::release_material_data() {
   // @@protoc_insertion_point(field_release:Flower.material_data)
   
-  ::MaterialsData* temp = material_data_;
-  material_data_ = NULL;
-  return temp;
+  if (GetArenaNoVirtual() != NULL) {
+    return _slow_release_material_data();
+  } else {
+    ::MaterialsData* temp = material_data_;
+    material_data_ = NULL;
+    return temp;
+  }
 }
-void Flower::set_allocated_material_data(::MaterialsData* material_data) {
-  delete material_data_;
+ void Flower::set_allocated_material_data(::MaterialsData* material_data) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete material_data_;
+  }
+  if (material_data != NULL) {
+    _slow_set_allocated_material_data(message_arena, &material_data);
+  }
   material_data_ = material_data;
   if (material_data) {
     
@@ -718,7 +1015,7 @@ const ::FlagsDescriptor& Flower::flags() const {
 ::FlagsDescriptor* Flower::mutable_flags() {
   
   if (flags_ == NULL) {
-    flags_ = new ::FlagsDescriptor;
+    _slow_mutable_flags();
   }
   // @@protoc_insertion_point(field_mutable:Flower.flags)
   return flags_;
@@ -726,12 +1023,22 @@ const ::FlagsDescriptor& Flower::flags() const {
 ::FlagsDescriptor* Flower::release_flags() {
   // @@protoc_insertion_point(field_release:Flower.flags)
   
-  ::FlagsDescriptor* temp = flags_;
-  flags_ = NULL;
-  return temp;
+  if (GetArenaNoVirtual() != NULL) {
+    return _slow_release_flags();
+  } else {
+    ::FlagsDescriptor* temp = flags_;
+    flags_ = NULL;
+    return temp;
+  }
 }
-void Flower::set_allocated_flags(::FlagsDescriptor* flags) {
-  delete flags_;
+ void Flower::set_allocated_flags(::FlagsDescriptor* flags) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete flags_;
+  }
+  if (flags != NULL) {
+    _slow_set_allocated_flags(message_arena, &flags);
+  }
   flags_ = flags;
   if (flags) {
     
@@ -757,7 +1064,7 @@ const ::ProductPricing& Flower::pricing() const {
 ::ProductPricing* Flower::mutable_pricing() {
   
   if (pricing_ == NULL) {
-    pricing_ = new ::ProductPricing;
+    _slow_mutable_pricing();
   }
   // @@protoc_insertion_point(field_mutable:Flower.pricing)
   return pricing_;
@@ -765,12 +1072,22 @@ const ::ProductPricing& Flower::pricing() const {
 ::ProductPricing* Flower::release_pricing() {
   // @@protoc_insertion_point(field_release:Flower.pricing)
   
-  ::ProductPricing* temp = pricing_;
-  pricing_ = NULL;
-  return temp;
+  if (GetArenaNoVirtual() != NULL) {
+    return _slow_release_pricing();
+  } else {
+    ::ProductPricing* temp = pricing_;
+    pricing_ = NULL;
+    return temp;
+  }
 }
-void Flower::set_allocated_pricing(::ProductPricing* pricing) {
-  delete pricing_;
+ void Flower::set_allocated_pricing(::ProductPricing* pricing) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete pricing_;
+  }
+  if (pricing != NULL) {
+    _slow_set_allocated_pricing(message_arena, &pricing);
+  }
   pricing_ = pricing;
   if (pricing) {
     

@@ -116,11 +116,12 @@ void AddDescriptorsImpl() {
       "base/ProductType.proto\032\031google/protobuf/"
       "any.proto\"c\n\007Product\022\030\n\003key\030\001 \001(\0132\013.Prod"
       "uctKey\022\032\n\004type\030\002 \001(\0132\014.ProductType\022\"\n\004da"
-      "ta\030\003 \001(\0132\024.google.protobuf.AnyB(\n\027io.blo"
-      "ombox.schema.baseB\013BaseProductP\001b\006proto3"
+      "ta\030\003 \001(\0132\024.google.protobuf.AnyB-\n\027io.blo"
+      "ombox.schema.baseB\013BaseProductH\001P\001\370\001\001b\006p"
+      "roto3"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 240);
+      descriptor, 245);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "Product.proto", &protobuf_RegisterTypes);
   ::protobuf_base_2fProductKey_2eproto::AddDescriptors();
@@ -145,6 +146,133 @@ struct StaticDescriptorInitializer {
 
 // ===================================================================
 
+void Product::_slow_mutable_key() {
+  key_ = ::google::protobuf::Arena::CreateMessage< ::ProductKey >(
+      GetArenaNoVirtual());
+}
+::ProductKey* Product::_slow_release_key() {
+  if (key_ == NULL) {
+    return NULL;
+  } else {
+    ::ProductKey* temp = new ::ProductKey(*key_);
+    key_ = NULL;
+    return temp;
+  }
+}
+::ProductKey* Product::unsafe_arena_release_key() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:Product.key)
+  
+  ::ProductKey* temp = key_;
+  key_ = NULL;
+  return temp;
+}
+void Product::_slow_set_allocated_key(
+    ::google::protobuf::Arena* message_arena, ::ProductKey** key) {
+    if (message_arena != NULL && 
+        ::google::protobuf::Arena::GetArena(*key) == NULL) {
+      message_arena->Own(*key);
+    } else if (message_arena !=
+               ::google::protobuf::Arena::GetArena(*key)) {
+      ::ProductKey* new_key = 
+            ::google::protobuf::Arena::CreateMessage< ::ProductKey >(
+            message_arena);
+      new_key->CopyFrom(**key);
+      *key = new_key;
+    }
+}
+void Product::unsafe_arena_set_allocated_key(
+    ::ProductKey* key) {
+  if (GetArenaNoVirtual() == NULL) {
+    delete key_;
+  }
+  key_ = key;
+  if (key) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:Product.key)
+}
+void Product::_slow_mutable_type() {
+  type_ = ::google::protobuf::Arena::CreateMessage< ::ProductType >(
+      GetArenaNoVirtual());
+}
+::ProductType* Product::_slow_release_type() {
+  if (type_ == NULL) {
+    return NULL;
+  } else {
+    ::ProductType* temp = new ::ProductType(*type_);
+    type_ = NULL;
+    return temp;
+  }
+}
+::ProductType* Product::unsafe_arena_release_type() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:Product.type)
+  
+  ::ProductType* temp = type_;
+  type_ = NULL;
+  return temp;
+}
+void Product::_slow_set_allocated_type(
+    ::google::protobuf::Arena* message_arena, ::ProductType** type) {
+    if (message_arena != NULL && 
+        ::google::protobuf::Arena::GetArena(*type) == NULL) {
+      message_arena->Own(*type);
+    } else if (message_arena !=
+               ::google::protobuf::Arena::GetArena(*type)) {
+      ::ProductType* new_type = 
+            ::google::protobuf::Arena::CreateMessage< ::ProductType >(
+            message_arena);
+      new_type->CopyFrom(**type);
+      *type = new_type;
+    }
+}
+void Product::unsafe_arena_set_allocated_type(
+    ::ProductType* type) {
+  if (GetArenaNoVirtual() == NULL) {
+    delete type_;
+  }
+  type_ = type;
+  if (type) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:Product.type)
+}
+void Product::_slow_mutable_data() {
+  data_ = ::google::protobuf::Arena::Create< ::google::protobuf::Any >(
+      GetArenaNoVirtual());
+}
+::google::protobuf::Any* Product::_slow_release_data() {
+  if (data_ == NULL) {
+    return NULL;
+  } else {
+    ::google::protobuf::Any* temp = new ::google::protobuf::Any(*data_);
+    data_ = NULL;
+    return temp;
+  }
+}
+::google::protobuf::Any* Product::unsafe_arena_release_data() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:Product.data)
+  
+  ::google::protobuf::Any* temp = data_;
+  data_ = NULL;
+  return temp;
+}
+void Product::unsafe_arena_set_allocated_data(
+    ::google::protobuf::Any* data) {
+  if (GetArenaNoVirtual() == NULL) {
+    delete data_;
+  }
+  data_ = data;
+  if (data) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:Product.data)
+}
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int Product::kKeyFieldNumber;
 const int Product::kTypeFieldNumber;
@@ -158,6 +286,16 @@ Product::Product()
   }
   SharedCtor();
   // @@protoc_insertion_point(constructor:Product)
+}
+Product::Product(::google::protobuf::Arena* arena)
+  : ::google::protobuf::Message(),
+  _internal_metadata_(arena) {
+#ifdef GOOGLE_PROTOBUF_NO_STATIC_INITIALIZER
+  protobuf_Product_2eproto::InitDefaults();
+#endif  // GOOGLE_PROTOBUF_NO_STATIC_INITIALIZER
+  SharedCtor();
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:Product)
 }
 Product::Product(const Product& from)
   : ::google::protobuf::Message(),
@@ -194,6 +332,11 @@ Product::~Product() {
 }
 
 void Product::SharedDtor() {
+  ::google::protobuf::Arena* arena = GetArenaNoVirtual();
+  if (arena != NULL) {
+    return;
+  }
+
   if (this != internal_default_instance()) {
     delete key_;
   }
@@ -205,6 +348,12 @@ void Product::SharedDtor() {
   }
 }
 
+void Product::ArenaDtor(void* object) {
+  Product* _this = reinterpret_cast< Product* >(object);
+  (void)_this;
+}
+void Product::RegisterArenaDtor(::google::protobuf::Arena* arena) {
+}
 void Product::SetCachedSize(int size) const {
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
   _cached_size_ = size;
@@ -221,11 +370,7 @@ const Product& Product::default_instance() {
 }
 
 Product* Product::New(::google::protobuf::Arena* arena) const {
-  Product* n = new Product;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
+  return ::google::protobuf::Arena::CreateMessage<Product>(arena);
 }
 
 void Product::Clear() {
@@ -455,6 +600,21 @@ bool Product::IsInitialized() const {
 
 void Product::Swap(Product* other) {
   if (other == this) return;
+  if (GetArenaNoVirtual() == other->GetArenaNoVirtual()) {
+    InternalSwap(other);
+  } else {
+    Product* temp = New(GetArenaNoVirtual());
+    temp->MergeFrom(*other);
+    other->CopyFrom(*this);
+    InternalSwap(temp);
+    if (GetArenaNoVirtual() == NULL) {
+      delete temp;
+    }
+  }
+}
+void Product::UnsafeArenaSwap(Product* other) {
+  if (other == this) return;
+  GOOGLE_DCHECK(GetArenaNoVirtual() == other->GetArenaNoVirtual());
   InternalSwap(other);
 }
 void Product::InternalSwap(Product* other) {
@@ -488,7 +648,7 @@ const ::ProductKey& Product::key() const {
 ::ProductKey* Product::mutable_key() {
   
   if (key_ == NULL) {
-    key_ = new ::ProductKey;
+    _slow_mutable_key();
   }
   // @@protoc_insertion_point(field_mutable:Product.key)
   return key_;
@@ -496,12 +656,22 @@ const ::ProductKey& Product::key() const {
 ::ProductKey* Product::release_key() {
   // @@protoc_insertion_point(field_release:Product.key)
   
-  ::ProductKey* temp = key_;
-  key_ = NULL;
-  return temp;
+  if (GetArenaNoVirtual() != NULL) {
+    return _slow_release_key();
+  } else {
+    ::ProductKey* temp = key_;
+    key_ = NULL;
+    return temp;
+  }
 }
-void Product::set_allocated_key(::ProductKey* key) {
-  delete key_;
+ void Product::set_allocated_key(::ProductKey* key) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete key_;
+  }
+  if (key != NULL) {
+    _slow_set_allocated_key(message_arena, &key);
+  }
   key_ = key;
   if (key) {
     
@@ -527,7 +697,7 @@ const ::ProductType& Product::type() const {
 ::ProductType* Product::mutable_type() {
   
   if (type_ == NULL) {
-    type_ = new ::ProductType;
+    _slow_mutable_type();
   }
   // @@protoc_insertion_point(field_mutable:Product.type)
   return type_;
@@ -535,12 +705,22 @@ const ::ProductType& Product::type() const {
 ::ProductType* Product::release_type() {
   // @@protoc_insertion_point(field_release:Product.type)
   
-  ::ProductType* temp = type_;
-  type_ = NULL;
-  return temp;
+  if (GetArenaNoVirtual() != NULL) {
+    return _slow_release_type();
+  } else {
+    ::ProductType* temp = type_;
+    type_ = NULL;
+    return temp;
+  }
 }
-void Product::set_allocated_type(::ProductType* type) {
-  delete type_;
+ void Product::set_allocated_type(::ProductType* type) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete type_;
+  }
+  if (type != NULL) {
+    _slow_set_allocated_type(message_arena, &type);
+  }
   type_ = type;
   if (type) {
     
@@ -566,7 +746,7 @@ const ::google::protobuf::Any& Product::data() const {
 ::google::protobuf::Any* Product::mutable_data() {
   
   if (data_ == NULL) {
-    data_ = new ::google::protobuf::Any;
+    _slow_mutable_data();
   }
   // @@protoc_insertion_point(field_mutable:Product.data)
   return data_;
@@ -574,12 +754,24 @@ const ::google::protobuf::Any& Product::data() const {
 ::google::protobuf::Any* Product::release_data() {
   // @@protoc_insertion_point(field_release:Product.data)
   
-  ::google::protobuf::Any* temp = data_;
-  data_ = NULL;
-  return temp;
+  if (GetArenaNoVirtual() != NULL) {
+    return _slow_release_data();
+  } else {
+    ::google::protobuf::Any* temp = data_;
+    data_ = NULL;
+    return temp;
+  }
 }
-void Product::set_allocated_data(::google::protobuf::Any* data) {
-  delete data_;
+ void Product::set_allocated_data(::google::protobuf::Any* data) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete data_;
+  }
+  if (data != NULL) {
+    if (message_arena != NULL) {
+      message_arena->Own(data);
+    }
+  }
   data_ = data;
   if (data) {
     

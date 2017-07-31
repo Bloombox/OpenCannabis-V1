@@ -74,6 +74,12 @@ class Brand : public ::google::protobuf::Message /* @@protoc_insertion_point(cla
     return *this;
   }
 
+  inline ::google::protobuf::Arena* GetArena() const PROTOBUF_FINAL {
+    return GetArenaNoVirtual();
+  }
+  inline void* GetMaybeArenaPointer() const PROTOBUF_FINAL {
+    return MaybeArenaPtr();
+  }
   static const ::google::protobuf::Descriptor* descriptor();
   static const Brand& default_instance();
 
@@ -84,6 +90,7 @@ class Brand : public ::google::protobuf::Message /* @@protoc_insertion_point(cla
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
     0;
 
+  void UnsafeArenaSwap(Brand* other);
   void Swap(Brand* other);
 
   // implements Message ----------------------------------------------
@@ -111,12 +118,17 @@ class Brand : public ::google::protobuf::Message /* @@protoc_insertion_point(cla
   void SharedDtor();
   void SetCachedSize(int size) const PROTOBUF_FINAL;
   void InternalSwap(Brand* other);
+  protected:
+  explicit Brand(::google::protobuf::Arena* arena);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::google::protobuf::Arena* arena);
   private:
   inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
-    return NULL;
+    return _internal_metadata_.arena();
   }
   inline void* MaybeArenaPtr() const {
-    return NULL;
+    return _internal_metadata_.raw_arena_ptr();
   }
   public:
 
@@ -142,33 +154,63 @@ class Brand : public ::google::protobuf::Message /* @@protoc_insertion_point(cla
   bool has_name() const;
   void clear_name();
   static const int kNameFieldNumber = 1;
+  private:
+  void _slow_mutable_name();
+  void _slow_set_allocated_name(
+      ::google::protobuf::Arena* message_arena, ::Name** name);
+  ::Name* _slow_release_name();
+  public:
   const ::Name& name() const;
   ::Name* mutable_name();
   ::Name* release_name();
   void set_allocated_name(::Name* name);
+  ::Name* unsafe_arena_release_name();
+  void unsafe_arena_set_allocated_name(
+      ::Name* name);
 
   // .Brand parent = 2;
   bool has_parent() const;
   void clear_parent();
   static const int kParentFieldNumber = 2;
+  private:
+  void _slow_mutable_parent();
+  void _slow_set_allocated_parent(
+      ::google::protobuf::Arena* message_arena, ::Brand** parent);
+  ::Brand* _slow_release_parent();
+  public:
   const ::Brand& parent() const;
   ::Brand* mutable_parent();
   ::Brand* release_parent();
   void set_allocated_parent(::Brand* parent);
+  ::Brand* unsafe_arena_release_parent();
+  void unsafe_arena_set_allocated_parent(
+      ::Brand* parent);
 
   // .Content summary = 3;
   bool has_summary() const;
   void clear_summary();
   static const int kSummaryFieldNumber = 3;
+  private:
+  void _slow_mutable_summary();
+  void _slow_set_allocated_summary(
+      ::google::protobuf::Arena* message_arena, ::Content** summary);
+  ::Content* _slow_release_summary();
+  public:
   const ::Content& summary() const;
   ::Content* mutable_summary();
   ::Content* release_summary();
   void set_allocated_summary(::Content* summary);
+  ::Content* unsafe_arena_release_summary();
+  void unsafe_arena_set_allocated_summary(
+      ::Content* summary);
 
   // @@protoc_insertion_point(class_scope:Brand)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  friend class ::google::protobuf::Arena;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
   ::google::protobuf::RepeatedPtrField< ::MediaItem > media_;
   ::Name* name_;
   ::Brand* parent_;
@@ -200,7 +242,7 @@ inline const ::Name& Brand::name() const {
 inline ::Name* Brand::mutable_name() {
   
   if (name_ == NULL) {
-    name_ = new ::Name;
+    _slow_mutable_name();
   }
   // @@protoc_insertion_point(field_mutable:Brand.name)
   return name_;
@@ -208,12 +250,22 @@ inline ::Name* Brand::mutable_name() {
 inline ::Name* Brand::release_name() {
   // @@protoc_insertion_point(field_release:Brand.name)
   
-  ::Name* temp = name_;
-  name_ = NULL;
-  return temp;
+  if (GetArenaNoVirtual() != NULL) {
+    return _slow_release_name();
+  } else {
+    ::Name* temp = name_;
+    name_ = NULL;
+    return temp;
+  }
 }
-inline void Brand::set_allocated_name(::Name* name) {
-  delete name_;
+inline  void Brand::set_allocated_name(::Name* name) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete name_;
+  }
+  if (name != NULL) {
+    _slow_set_allocated_name(message_arena, &name);
+  }
   name_ = name;
   if (name) {
     
@@ -239,7 +291,7 @@ inline const ::Brand& Brand::parent() const {
 inline ::Brand* Brand::mutable_parent() {
   
   if (parent_ == NULL) {
-    parent_ = new ::Brand;
+    _slow_mutable_parent();
   }
   // @@protoc_insertion_point(field_mutable:Brand.parent)
   return parent_;
@@ -247,12 +299,22 @@ inline ::Brand* Brand::mutable_parent() {
 inline ::Brand* Brand::release_parent() {
   // @@protoc_insertion_point(field_release:Brand.parent)
   
-  ::Brand* temp = parent_;
-  parent_ = NULL;
-  return temp;
+  if (GetArenaNoVirtual() != NULL) {
+    return _slow_release_parent();
+  } else {
+    ::Brand* temp = parent_;
+    parent_ = NULL;
+    return temp;
+  }
 }
-inline void Brand::set_allocated_parent(::Brand* parent) {
-  delete parent_;
+inline  void Brand::set_allocated_parent(::Brand* parent) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete parent_;
+  }
+  if (parent != NULL) {
+    _slow_set_allocated_parent(message_arena, &parent);
+  }
   parent_ = parent;
   if (parent) {
     
@@ -278,7 +340,7 @@ inline const ::Content& Brand::summary() const {
 inline ::Content* Brand::mutable_summary() {
   
   if (summary_ == NULL) {
-    summary_ = new ::Content;
+    _slow_mutable_summary();
   }
   // @@protoc_insertion_point(field_mutable:Brand.summary)
   return summary_;
@@ -286,12 +348,22 @@ inline ::Content* Brand::mutable_summary() {
 inline ::Content* Brand::release_summary() {
   // @@protoc_insertion_point(field_release:Brand.summary)
   
-  ::Content* temp = summary_;
-  summary_ = NULL;
-  return temp;
+  if (GetArenaNoVirtual() != NULL) {
+    return _slow_release_summary();
+  } else {
+    ::Content* temp = summary_;
+    summary_ = NULL;
+    return temp;
+  }
 }
-inline void Brand::set_allocated_summary(::Content* summary) {
-  delete summary_;
+inline  void Brand::set_allocated_summary(::Content* summary) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete summary_;
+  }
+  if (summary != NULL) {
+    _slow_set_allocated_summary(message_arena, &summary);
+  }
   summary_ = summary;
   if (summary) {
     

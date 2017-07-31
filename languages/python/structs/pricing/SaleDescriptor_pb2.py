@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='structs/pricing/SaleDescriptor.proto',
   package='',
   syntax='proto3',
-  serialized_pb=_b('\n$structs/pricing/SaleDescriptor.proto\"\xc7\x01\n\x0eSaleDescriptor\x12\x17\n\x04type\x18\x01 \x01(\x0e\x32\t.SaleType\x12\x11\n\teffective\x18\x02 \x01(\x04\x12\x12\n\nexpiration\x18\x03 \x01(\x04\x12\x19\n\x11percentage_amount\x18\x14 \x01(\r\x12\x14\n\x0c\x62ogo_trigger\x18\x15 \x01(\r\x12\x13\n\x0b\x62ogo_reward\x18\x16 \x01(\r\x12\x17\n\x0floyalty_trigger\x18\x17 \x01(\r\x12\x16\n\x0eloyalty_reward\x18\x18 \x01(\r*1\n\x08SaleType\x12\x0e\n\nPERCENTAGE\x10\x00\x12\x08\n\x04\x42OGO\x10\x01\x12\x0b\n\x07LOYALTY\x10\x02\x42\x36\n!io.bloombox.schema.product.structB\x0fProductDiscountP\x01\x62\x06proto3')
+  serialized_pb=_b('\n$structs/pricing/SaleDescriptor.proto\"\xc7\x01\n\x0eSaleDescriptor\x12\x17\n\x04type\x18\x01 \x01(\x0e\x32\t.SaleType\x12\x11\n\teffective\x18\x02 \x01(\x04\x12\x12\n\nexpiration\x18\x03 \x01(\x04\x12\x19\n\x11percentage_amount\x18\x14 \x01(\r\x12\x14\n\x0c\x62ogo_trigger\x18\x15 \x01(\r\x12\x13\n\x0b\x62ogo_reward\x18\x16 \x01(\r\x12\x17\n\x0floyalty_trigger\x18\x17 \x01(\r\x12\x16\n\x0eloyalty_reward\x18\x18 \x01(\r*1\n\x08SaleType\x12\x0e\n\nPERCENTAGE\x10\x00\x12\x08\n\x04\x42OGO\x10\x01\x12\x0b\n\x07LOYALTY\x10\x02\x42;\n!io.bloombox.schema.product.structB\x0fProductDiscountH\x01P\x01\xf8\x01\x01\x62\x06proto3')
 )
 
 _SALETYPE = _descriptor.EnumDescriptor(
@@ -149,5 +149,5 @@ _sym_db.RegisterMessage(SaleDescriptor)
 
 
 DESCRIPTOR.has_options = True
-DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n!io.bloombox.schema.product.structB\017ProductDiscountP\001'))
+DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n!io.bloombox.schema.product.structB\017ProductDiscountH\001P\001\370\001\001'))
 # @@protoc_insertion_point(module_scope)

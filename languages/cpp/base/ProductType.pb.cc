@@ -104,11 +104,11 @@ void AddDescriptorsImpl() {
   static const char descriptor[] = {
       "\n\026base/ProductType.proto\032\026base/ProductKi"
       "nd.proto\")\n\013ProductType\022\032\n\004kind\030\001 \001(\0162\014."
-      "ProductKindB,\n\027io.bloombox.schema.baseB\017"
-      "BaseProductTypeP\001b\006proto3"
+      "ProductKindB1\n\027io.bloombox.schema.baseB\017"
+      "BaseProductTypeH\001P\001\370\001\001b\006proto3"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 145);
+      descriptor, 150);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "base/ProductType.proto", &protobuf_RegisterTypes);
   ::protobuf_base_2fProductKind_2eproto::AddDescriptors();
@@ -143,6 +143,16 @@ ProductType::ProductType()
   SharedCtor();
   // @@protoc_insertion_point(constructor:ProductType)
 }
+ProductType::ProductType(::google::protobuf::Arena* arena)
+  : ::google::protobuf::Message(),
+  _internal_metadata_(arena) {
+#ifdef GOOGLE_PROTOBUF_NO_STATIC_INITIALIZER
+  protobuf_base_2fProductType_2eproto::InitDefaults();
+#endif  // GOOGLE_PROTOBUF_NO_STATIC_INITIALIZER
+  SharedCtor();
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:ProductType)
+}
 ProductType::ProductType(const ProductType& from)
   : ::google::protobuf::Message(),
       _internal_metadata_(NULL),
@@ -163,8 +173,19 @@ ProductType::~ProductType() {
 }
 
 void ProductType::SharedDtor() {
+  ::google::protobuf::Arena* arena = GetArenaNoVirtual();
+  if (arena != NULL) {
+    return;
+  }
+
 }
 
+void ProductType::ArenaDtor(void* object) {
+  ProductType* _this = reinterpret_cast< ProductType* >(object);
+  (void)_this;
+}
+void ProductType::RegisterArenaDtor(::google::protobuf::Arena* arena) {
+}
 void ProductType::SetCachedSize(int size) const {
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
   _cached_size_ = size;
@@ -181,11 +202,7 @@ const ProductType& ProductType::default_instance() {
 }
 
 ProductType* ProductType::New(::google::protobuf::Arena* arena) const {
-  ProductType* n = new ProductType;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
+  return ::google::protobuf::Arena::CreateMessage<ProductType>(arena);
 }
 
 void ProductType::Clear() {
@@ -335,6 +352,21 @@ bool ProductType::IsInitialized() const {
 
 void ProductType::Swap(ProductType* other) {
   if (other == this) return;
+  if (GetArenaNoVirtual() == other->GetArenaNoVirtual()) {
+    InternalSwap(other);
+  } else {
+    ProductType* temp = New(GetArenaNoVirtual());
+    temp->MergeFrom(*other);
+    other->CopyFrom(*this);
+    InternalSwap(temp);
+    if (GetArenaNoVirtual() == NULL) {
+      delete temp;
+    }
+  }
+}
+void ProductType::UnsafeArenaSwap(ProductType* other) {
+  if (other == this) return;
+  GOOGLE_DCHECK(GetArenaNoVirtual() == other->GetArenaNoVirtual());
   InternalSwap(other);
 }
 void ProductType::InternalSwap(ProductType* other) {

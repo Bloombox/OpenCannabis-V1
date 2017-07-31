@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='media/MediaKey.proto',
   package='',
   syntax='proto3',
-  serialized_pb=_b('\n\x14media/MediaKey.proto\"\x16\n\x08MediaKey\x12\n\n\x02id\x18\x01 \x01(\tB*\n\x18io.bloombox.schema.mediaB\x0cMediaItemKeyP\x01\x62\x06proto3')
+  serialized_pb=_b('\n\x14media/MediaKey.proto\"\x16\n\x08MediaKey\x12\n\n\x02id\x18\x01 \x01(\tB/\n\x18io.bloombox.schema.mediaB\x0cMediaItemKeyH\x01P\x01\xf8\x01\x01\x62\x06proto3')
 )
 
 
@@ -67,5 +67,5 @@ _sym_db.RegisterMessage(MediaKey)
 
 
 DESCRIPTOR.has_options = True
-DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\030io.bloombox.schema.mediaB\014MediaItemKeyP\001'))
+DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\030io.bloombox.schema.mediaB\014MediaItemKeyH\001P\001\370\001\001'))
 # @@protoc_insertion_point(module_scope)

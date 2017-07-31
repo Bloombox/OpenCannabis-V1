@@ -114,11 +114,11 @@ void AddDescriptorsImpl() {
       "s/Genetics.proto\"q\n\rMaterialsData\022\023\n\013ing"
       "redients\030\001 \003(\t\022\023\n\004grow\030\002 \001(\0162\005.Grow\022\031\n\007s"
       "pecies\030\003 \001(\0162\010.Species\022\033\n\010genetics\030\004 \001(\013"
-      "2\t.GeneticsB0\n\032io.bloombox.schema.conten"
-      "tB\020MaterialsContentP\001b\006proto3"
+      "2\t.GeneticsB5\n\032io.bloombox.schema.conten"
+      "tB\020MaterialsContentH\001P\001\370\001\001b\006proto3"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 269);
+      descriptor, 274);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "content/MaterialsData.proto", &protobuf_RegisterTypes);
   ::protobuf_structs_2fGrow_2eproto::AddDescriptors();
@@ -143,6 +143,53 @@ struct StaticDescriptorInitializer {
 
 // ===================================================================
 
+void MaterialsData::_slow_mutable_genetics() {
+  genetics_ = ::google::protobuf::Arena::CreateMessage< ::Genetics >(
+      GetArenaNoVirtual());
+}
+::Genetics* MaterialsData::_slow_release_genetics() {
+  if (genetics_ == NULL) {
+    return NULL;
+  } else {
+    ::Genetics* temp = new ::Genetics(*genetics_);
+    genetics_ = NULL;
+    return temp;
+  }
+}
+::Genetics* MaterialsData::unsafe_arena_release_genetics() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:MaterialsData.genetics)
+  
+  ::Genetics* temp = genetics_;
+  genetics_ = NULL;
+  return temp;
+}
+void MaterialsData::_slow_set_allocated_genetics(
+    ::google::protobuf::Arena* message_arena, ::Genetics** genetics) {
+    if (message_arena != NULL && 
+        ::google::protobuf::Arena::GetArena(*genetics) == NULL) {
+      message_arena->Own(*genetics);
+    } else if (message_arena !=
+               ::google::protobuf::Arena::GetArena(*genetics)) {
+      ::Genetics* new_genetics = 
+            ::google::protobuf::Arena::CreateMessage< ::Genetics >(
+            message_arena);
+      new_genetics->CopyFrom(**genetics);
+      *genetics = new_genetics;
+    }
+}
+void MaterialsData::unsafe_arena_set_allocated_genetics(
+    ::Genetics* genetics) {
+  if (GetArenaNoVirtual() == NULL) {
+    delete genetics_;
+  }
+  genetics_ = genetics;
+  if (genetics) {
+    
+  } else {
+    
+  }
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:MaterialsData.genetics)
+}
 #if !defined(_MSC_VER) || _MSC_VER >= 1900
 const int MaterialsData::kIngredientsFieldNumber;
 const int MaterialsData::kGrowFieldNumber;
@@ -157,6 +204,17 @@ MaterialsData::MaterialsData()
   }
   SharedCtor();
   // @@protoc_insertion_point(constructor:MaterialsData)
+}
+MaterialsData::MaterialsData(::google::protobuf::Arena* arena)
+  : ::google::protobuf::Message(),
+  _internal_metadata_(arena),
+  ingredients_(arena) {
+#ifdef GOOGLE_PROTOBUF_NO_STATIC_INITIALIZER
+  protobuf_content_2fMaterialsData_2eproto::InitDefaults();
+#endif  // GOOGLE_PROTOBUF_NO_STATIC_INITIALIZER
+  SharedCtor();
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:MaterialsData)
 }
 MaterialsData::MaterialsData(const MaterialsData& from)
   : ::google::protobuf::Message(),
@@ -187,11 +245,22 @@ MaterialsData::~MaterialsData() {
 }
 
 void MaterialsData::SharedDtor() {
+  ::google::protobuf::Arena* arena = GetArenaNoVirtual();
+  if (arena != NULL) {
+    return;
+  }
+
   if (this != internal_default_instance()) {
     delete genetics_;
   }
 }
 
+void MaterialsData::ArenaDtor(void* object) {
+  MaterialsData* _this = reinterpret_cast< MaterialsData* >(object);
+  (void)_this;
+}
+void MaterialsData::RegisterArenaDtor(::google::protobuf::Arena* arena) {
+}
 void MaterialsData::SetCachedSize(int size) const {
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
   _cached_size_ = size;
@@ -208,11 +277,7 @@ const MaterialsData& MaterialsData::default_instance() {
 }
 
 MaterialsData* MaterialsData::New(::google::protobuf::Arena* arena) const {
-  MaterialsData* n = new MaterialsData;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
+  return ::google::protobuf::Arena::CreateMessage<MaterialsData>(arena);
 }
 
 void MaterialsData::Clear() {
@@ -485,6 +550,21 @@ bool MaterialsData::IsInitialized() const {
 
 void MaterialsData::Swap(MaterialsData* other) {
   if (other == this) return;
+  if (GetArenaNoVirtual() == other->GetArenaNoVirtual()) {
+    InternalSwap(other);
+  } else {
+    MaterialsData* temp = New(GetArenaNoVirtual());
+    temp->MergeFrom(*other);
+    other->CopyFrom(*this);
+    InternalSwap(temp);
+    if (GetArenaNoVirtual() == NULL) {
+      delete temp;
+    }
+  }
+}
+void MaterialsData::UnsafeArenaSwap(MaterialsData* other) {
+  if (other == this) return;
+  GOOGLE_DCHECK(GetArenaNoVirtual() == other->GetArenaNoVirtual());
   InternalSwap(other);
 }
 void MaterialsData::InternalSwap(MaterialsData* other) {
@@ -616,7 +696,7 @@ const ::Genetics& MaterialsData::genetics() const {
 ::Genetics* MaterialsData::mutable_genetics() {
   
   if (genetics_ == NULL) {
-    genetics_ = new ::Genetics;
+    _slow_mutable_genetics();
   }
   // @@protoc_insertion_point(field_mutable:MaterialsData.genetics)
   return genetics_;
@@ -624,12 +704,22 @@ const ::Genetics& MaterialsData::genetics() const {
 ::Genetics* MaterialsData::release_genetics() {
   // @@protoc_insertion_point(field_release:MaterialsData.genetics)
   
-  ::Genetics* temp = genetics_;
-  genetics_ = NULL;
-  return temp;
+  if (GetArenaNoVirtual() != NULL) {
+    return _slow_release_genetics();
+  } else {
+    ::Genetics* temp = genetics_;
+    genetics_ = NULL;
+    return temp;
+  }
 }
-void MaterialsData::set_allocated_genetics(::Genetics* genetics) {
-  delete genetics_;
+ void MaterialsData::set_allocated_genetics(::Genetics* genetics) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete genetics_;
+  }
+  if (genetics != NULL) {
+    _slow_set_allocated_genetics(message_arena, &genetics);
+  }
   genetics_ = genetics;
   if (genetics) {
     

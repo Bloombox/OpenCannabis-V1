@@ -79,6 +79,12 @@ class MediaItem : public ::google::protobuf::Message /* @@protoc_insertion_point
     return *this;
   }
 
+  inline ::google::protobuf::Arena* GetArena() const PROTOBUF_FINAL {
+    return GetArenaNoVirtual();
+  }
+  inline void* GetMaybeArenaPointer() const PROTOBUF_FINAL {
+    return MaybeArenaPtr();
+  }
   static const ::google::protobuf::Descriptor* descriptor();
   static const MediaItem& default_instance();
 
@@ -89,6 +95,7 @@ class MediaItem : public ::google::protobuf::Message /* @@protoc_insertion_point
   static PROTOBUF_CONSTEXPR int const kIndexInFileMessages =
     0;
 
+  void UnsafeArenaSwap(MediaItem* other);
   void Swap(MediaItem* other);
 
   // implements Message ----------------------------------------------
@@ -116,12 +123,17 @@ class MediaItem : public ::google::protobuf::Message /* @@protoc_insertion_point
   void SharedDtor();
   void SetCachedSize(int size) const PROTOBUF_FINAL;
   void InternalSwap(MediaItem* other);
+  protected:
+  explicit MediaItem(::google::protobuf::Arena* arena);
+  private:
+  static void ArenaDtor(void* object);
+  inline void RegisterArenaDtor(::google::protobuf::Arena* arena);
   private:
   inline ::google::protobuf::Arena* GetArenaNoVirtual() const {
-    return NULL;
+    return _internal_metadata_.arena();
   }
   inline void* MaybeArenaPtr() const {
-    return NULL;
+    return _internal_metadata_.raw_arena_ptr();
   }
   public:
 
@@ -136,37 +148,58 @@ class MediaItem : public ::google::protobuf::Message /* @@protoc_insertion_point
   static const int kNameFieldNumber = 3;
   const ::std::string& name() const;
   void set_name(const ::std::string& value);
-  #if LANG_CXX11
-  void set_name(::std::string&& value);
-  #endif
   void set_name(const char* value);
   void set_name(const char* value, size_t size);
   ::std::string* mutable_name();
   ::std::string* release_name();
   void set_allocated_name(::std::string* name);
+  ::std::string* unsafe_arena_release_name();
+  void unsafe_arena_set_allocated_name(
+      ::std::string* name);
 
   // .MediaKey key = 1;
   bool has_key() const;
   void clear_key();
   static const int kKeyFieldNumber = 1;
+  private:
+  void _slow_mutable_key();
+  void _slow_set_allocated_key(
+      ::google::protobuf::Arena* message_arena, ::MediaKey** key);
+  ::MediaKey* _slow_release_key();
+  public:
   const ::MediaKey& key() const;
   ::MediaKey* mutable_key();
   ::MediaKey* release_key();
   void set_allocated_key(::MediaKey* key);
+  ::MediaKey* unsafe_arena_release_key();
+  void unsafe_arena_set_allocated_key(
+      ::MediaKey* key);
 
   // .MediaType type = 2;
   bool has_type() const;
   void clear_type();
   static const int kTypeFieldNumber = 2;
+  private:
+  void _slow_mutable_type();
+  void _slow_set_allocated_type(
+      ::google::protobuf::Arena* message_arena, ::MediaType** type);
+  ::MediaType* _slow_release_type();
+  public:
   const ::MediaType& type() const;
   ::MediaType* mutable_type();
   ::MediaType* release_type();
   void set_allocated_type(::MediaType* type);
+  ::MediaType* unsafe_arena_release_type();
+  void unsafe_arena_set_allocated_type(
+      ::MediaType* type);
 
   // @@protoc_insertion_point(class_scope:MediaItem)
  private:
 
   ::google::protobuf::internal::InternalMetadataWithArena _internal_metadata_;
+  friend class ::google::protobuf::Arena;
+  typedef void InternalArenaConstructable_;
+  typedef void DestructorSkippable_;
   ::google::protobuf::internal::ArenaStringPtr name_;
   ::MediaKey* key_;
   ::MediaType* type_;
@@ -197,7 +230,7 @@ inline const ::MediaKey& MediaItem::key() const {
 inline ::MediaKey* MediaItem::mutable_key() {
   
   if (key_ == NULL) {
-    key_ = new ::MediaKey;
+    _slow_mutable_key();
   }
   // @@protoc_insertion_point(field_mutable:MediaItem.key)
   return key_;
@@ -205,12 +238,22 @@ inline ::MediaKey* MediaItem::mutable_key() {
 inline ::MediaKey* MediaItem::release_key() {
   // @@protoc_insertion_point(field_release:MediaItem.key)
   
-  ::MediaKey* temp = key_;
-  key_ = NULL;
-  return temp;
+  if (GetArenaNoVirtual() != NULL) {
+    return _slow_release_key();
+  } else {
+    ::MediaKey* temp = key_;
+    key_ = NULL;
+    return temp;
+  }
 }
-inline void MediaItem::set_allocated_key(::MediaKey* key) {
-  delete key_;
+inline  void MediaItem::set_allocated_key(::MediaKey* key) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete key_;
+  }
+  if (key != NULL) {
+    _slow_set_allocated_key(message_arena, &key);
+  }
   key_ = key;
   if (key) {
     
@@ -236,7 +279,7 @@ inline const ::MediaType& MediaItem::type() const {
 inline ::MediaType* MediaItem::mutable_type() {
   
   if (type_ == NULL) {
-    type_ = new ::MediaType;
+    _slow_mutable_type();
   }
   // @@protoc_insertion_point(field_mutable:MediaItem.type)
   return type_;
@@ -244,12 +287,22 @@ inline ::MediaType* MediaItem::mutable_type() {
 inline ::MediaType* MediaItem::release_type() {
   // @@protoc_insertion_point(field_release:MediaItem.type)
   
-  ::MediaType* temp = type_;
-  type_ = NULL;
-  return temp;
+  if (GetArenaNoVirtual() != NULL) {
+    return _slow_release_type();
+  } else {
+    ::MediaType* temp = type_;
+    type_ = NULL;
+    return temp;
+  }
 }
-inline void MediaItem::set_allocated_type(::MediaType* type) {
-  delete type_;
+inline  void MediaItem::set_allocated_type(::MediaType* type) {
+  ::google::protobuf::Arena* message_arena = GetArenaNoVirtual();
+  if (message_arena == NULL) {
+    delete type_;
+  }
+  if (type != NULL) {
+    _slow_set_allocated_type(message_arena, &type);
+  }
   type_ = type;
   if (type) {
     
@@ -261,46 +314,47 @@ inline void MediaItem::set_allocated_type(::MediaType* type) {
 
 // string name = 3;
 inline void MediaItem::clear_name() {
-  name_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  name_.ClearToEmpty(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
 }
 inline const ::std::string& MediaItem::name() const {
   // @@protoc_insertion_point(field_get:MediaItem.name)
-  return name_.GetNoArena();
+  return name_.Get();
 }
 inline void MediaItem::set_name(const ::std::string& value) {
   
-  name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  name_.Set(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value, GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set:MediaItem.name)
 }
-#if LANG_CXX11
-inline void MediaItem::set_name(::std::string&& value) {
-  
-  name_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:MediaItem.name)
-}
-#endif
 inline void MediaItem::set_name(const char* value) {
   GOOGLE_DCHECK(value != NULL);
   
-  name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  name_.Set(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set_char:MediaItem.name)
 }
-inline void MediaItem::set_name(const char* value, size_t size) {
+inline void MediaItem::set_name(const char* value,
+    size_t size) {
   
-  name_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(reinterpret_cast<const char*>(value), size));
+  name_.Set(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set_pointer:MediaItem.name)
 }
 inline ::std::string* MediaItem::mutable_name() {
   
   // @@protoc_insertion_point(field_mutable:MediaItem.name)
-  return name_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  return name_.Mutable(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
 }
 inline ::std::string* MediaItem::release_name() {
   // @@protoc_insertion_point(field_release:MediaItem.name)
   
-  return name_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  return name_.Release(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
+}
+inline ::std::string* MediaItem::unsafe_arena_release_name() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:MediaItem.name)
+  GOOGLE_DCHECK(GetArenaNoVirtual() != NULL);
+  
+  return name_.UnsafeArenaRelease(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      GetArenaNoVirtual());
 }
 inline void MediaItem::set_allocated_name(::std::string* name) {
   if (name != NULL) {
@@ -308,8 +362,21 @@ inline void MediaItem::set_allocated_name(::std::string* name) {
   } else {
     
   }
-  name_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), name);
+  name_.SetAllocated(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), name,
+      GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set_allocated:MediaItem.name)
+}
+inline void MediaItem::unsafe_arena_set_allocated_name(
+    ::std::string* name) {
+  GOOGLE_DCHECK(GetArenaNoVirtual() != NULL);
+  if (name != NULL) {
+    
+  } else {
+    
+  }
+  name_.UnsafeArenaSetAllocated(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      name, GetArenaNoVirtual());
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:MediaItem.name)
 }
 
 #endif  // !PROTOBUF_INLINE_NOT_IN_HEADERS

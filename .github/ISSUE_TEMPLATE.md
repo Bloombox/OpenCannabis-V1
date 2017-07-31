@@ -1,7 +1,7 @@
 
 ### Description
 
-Version: `1.0.0-beta2`
+Version: `1.0.0-beta3`
 
 <!-- Describe what happened. Include as much detail as necessary. -->
 
@@ -13,11 +13,14 @@ Version: `1.0.0-beta2`
 - [ ] C++
 - [ ] C#
 - [ ] Java
+- [ ] JavaNano
 - [ ] JavaScript
 - [ ] PHP
 - [ ] Python
 - [ ] Ruby
 - [ ] Swift
+- [ ] Obj-C
+- [ ] Go
 
 
 ### Steps to Reproduce

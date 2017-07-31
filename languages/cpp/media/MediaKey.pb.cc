@@ -102,11 +102,11 @@ void AddDescriptorsImpl() {
   InitDefaults();
   static const char descriptor[] = {
       "\n\024media/MediaKey.proto\"\026\n\010MediaKey\022\n\n\002id"
-      "\030\001 \001(\tB*\n\030io.bloombox.schema.mediaB\014Medi"
-      "aItemKeyP\001b\006proto3"
+      "\030\001 \001(\tB/\n\030io.bloombox.schema.mediaB\014Medi"
+      "aItemKeyH\001P\001\370\001\001b\006proto3"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 98);
+      descriptor, 103);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "media/MediaKey.proto", &protobuf_RegisterTypes);
   ::google::protobuf::internal::OnShutdown(&TableStruct::Shutdown);
@@ -140,6 +140,16 @@ MediaKey::MediaKey()
   SharedCtor();
   // @@protoc_insertion_point(constructor:MediaKey)
 }
+MediaKey::MediaKey(::google::protobuf::Arena* arena)
+  : ::google::protobuf::Message(),
+  _internal_metadata_(arena) {
+#ifdef GOOGLE_PROTOBUF_NO_STATIC_INITIALIZER
+  protobuf_media_2fMediaKey_2eproto::InitDefaults();
+#endif  // GOOGLE_PROTOBUF_NO_STATIC_INITIALIZER
+  SharedCtor();
+  RegisterArenaDtor(arena);
+  // @@protoc_insertion_point(arena_constructor:MediaKey)
+}
 MediaKey::MediaKey(const MediaKey& from)
   : ::google::protobuf::Message(),
       _internal_metadata_(NULL),
@@ -147,7 +157,8 @@ MediaKey::MediaKey(const MediaKey& from)
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   id_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
   if (from.id().size() > 0) {
-    id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.id_);
+    id_.Set(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.id(),
+      GetArenaNoVirtual());
   }
   // @@protoc_insertion_point(copy_constructor:MediaKey)
 }
@@ -163,9 +174,20 @@ MediaKey::~MediaKey() {
 }
 
 void MediaKey::SharedDtor() {
-  id_.DestroyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  ::google::protobuf::Arena* arena = GetArenaNoVirtual();
+  if (arena != NULL) {
+    return;
+  }
+
+  id_.Destroy(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), arena);
 }
 
+void MediaKey::ArenaDtor(void* object) {
+  MediaKey* _this = reinterpret_cast< MediaKey* >(object);
+  (void)_this;
+}
+void MediaKey::RegisterArenaDtor(::google::protobuf::Arena* arena) {
+}
 void MediaKey::SetCachedSize(int size) const {
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
   _cached_size_ = size;
@@ -182,16 +204,12 @@ const MediaKey& MediaKey::default_instance() {
 }
 
 MediaKey* MediaKey::New(::google::protobuf::Arena* arena) const {
-  MediaKey* n = new MediaKey;
-  if (arena != NULL) {
-    arena->Own(n);
-  }
-  return n;
+  return ::google::protobuf::Arena::CreateMessage<MediaKey>(arena);
 }
 
 void MediaKey::Clear() {
 // @@protoc_insertion_point(message_clear_start:MediaKey)
-  id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  id_.ClearToEmpty(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
 }
 
 bool MediaKey::MergePartialFromCodedStream(
@@ -323,8 +341,7 @@ void MediaKey::MergeFrom(const MediaKey& from) {
   (void) cached_has_bits;
 
   if (from.id().size() > 0) {
-
-    id_.AssignWithDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), from.id_);
+    set_id(from.id());
   }
 }
 
@@ -348,6 +365,21 @@ bool MediaKey::IsInitialized() const {
 
 void MediaKey::Swap(MediaKey* other) {
   if (other == this) return;
+  if (GetArenaNoVirtual() == other->GetArenaNoVirtual()) {
+    InternalSwap(other);
+  } else {
+    MediaKey* temp = New(GetArenaNoVirtual());
+    temp->MergeFrom(*other);
+    other->CopyFrom(*this);
+    InternalSwap(temp);
+    if (GetArenaNoVirtual() == NULL) {
+      delete temp;
+    }
+  }
+}
+void MediaKey::UnsafeArenaSwap(MediaKey* other) {
+  if (other == this) return;
+  GOOGLE_DCHECK(GetArenaNoVirtual() == other->GetArenaNoVirtual());
   InternalSwap(other);
 }
 void MediaKey::InternalSwap(MediaKey* other) {
@@ -365,46 +397,47 @@ void MediaKey::InternalSwap(MediaKey* other) {
 
 // string id = 1;
 void MediaKey::clear_id() {
-  id_.ClearToEmptyNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  id_.ClearToEmpty(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
 }
 const ::std::string& MediaKey::id() const {
   // @@protoc_insertion_point(field_get:MediaKey.id)
-  return id_.GetNoArena();
+  return id_.Get();
 }
 void MediaKey::set_id(const ::std::string& value) {
   
-  id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value);
+  id_.Set(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value, GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set:MediaKey.id)
 }
-#if LANG_CXX11
-void MediaKey::set_id(::std::string&& value) {
-  
-  id_.SetNoArena(
-    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value));
-  // @@protoc_insertion_point(field_set_rvalue:MediaKey.id)
-}
-#endif
 void MediaKey::set_id(const char* value) {
   GOOGLE_DCHECK(value != NULL);
   
-  id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value));
+  id_.Set(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(value),
+              GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set_char:MediaKey.id)
 }
-void MediaKey::set_id(const char* value, size_t size) {
+void MediaKey::set_id(const char* value,
+    size_t size) {
   
-  id_.SetNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
-      ::std::string(reinterpret_cast<const char*>(value), size));
+  id_.Set(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::string(
+      reinterpret_cast<const char*>(value), size), GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set_pointer:MediaKey.id)
 }
 ::std::string* MediaKey::mutable_id() {
   
   // @@protoc_insertion_point(field_mutable:MediaKey.id)
-  return id_.MutableNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  return id_.Mutable(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
 }
 ::std::string* MediaKey::release_id() {
   // @@protoc_insertion_point(field_release:MediaKey.id)
   
-  return id_.ReleaseNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
+  return id_.Release(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
+}
+::std::string* MediaKey::unsafe_arena_release_id() {
+  // @@protoc_insertion_point(field_unsafe_arena_release:MediaKey.id)
+  GOOGLE_DCHECK(GetArenaNoVirtual() != NULL);
+  
+  return id_.UnsafeArenaRelease(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      GetArenaNoVirtual());
 }
 void MediaKey::set_allocated_id(::std::string* id) {
   if (id != NULL) {
@@ -412,8 +445,21 @@ void MediaKey::set_allocated_id(::std::string* id) {
   } else {
     
   }
-  id_.SetAllocatedNoArena(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), id);
+  id_.SetAllocated(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), id,
+      GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set_allocated:MediaKey.id)
+}
+void MediaKey::unsafe_arena_set_allocated_id(
+    ::std::string* id) {
+  GOOGLE_DCHECK(GetArenaNoVirtual() != NULL);
+  if (id != NULL) {
+    
+  } else {
+    
+  }
+  id_.UnsafeArenaSetAllocated(&::google::protobuf::internal::GetEmptyStringAlreadyInited(),
+      id, GetArenaNoVirtual());
+  // @@protoc_insertion_point(field_unsafe_arena_set_allocated:MediaKey.id)
 }
 
 #endif  // PROTOBUF_INLINE_NOT_IN_HEADERS

@@ -83,11 +83,11 @@ void AddDescriptorsImpl() {
   static const char descriptor[] = {
       "\n\022structs/Grow.proto*<\n\004Grow\022\013\n\007GENERIC\020"
       "\000\022\n\n\006INDOOR\020\001\022\016\n\nGREENHOUSE\020\002\022\013\n\007OUTDOOR"
-      "\020\003B3\n!io.bloombox.schema.product.structB"
-      "\014MaterialGrowP\001b\006proto3"
+      "\020\003B8\n!io.bloombox.schema.product.structB"
+      "\014MaterialGrowH\001P\001\370\001\001b\006proto3"
   };
   ::google::protobuf::DescriptorPool::InternalAddGeneratedFile(
-      descriptor, 143);
+      descriptor, 148);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "structs/Grow.proto", &protobuf_RegisterTypes);
   ::google::protobuf::internal::OnShutdown(&TableStruct::Shutdown);

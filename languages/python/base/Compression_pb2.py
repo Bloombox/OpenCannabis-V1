@@ -19,7 +19,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   name='base/Compression.proto',
   package='',
   syntax='proto3',
-  serialized_pb=_b('\n\x16\x62\x61se/Compression.proto\"Q\n\x0b\x43ompression\x12\x0f\n\x07\x65nabled\x18\x01 \x01(\x08\x12\x1f\n\x04type\x18\x02 \x01(\x0e\x32\x11.Compression.Type\"\x10\n\x04Type\x12\x08\n\x04GZIP\x10\x00\x42,\n\x17io.bloombox.schema.baseB\x0f\x42\x61seCompressionP\x01\x62\x06proto3')
+  serialized_pb=_b('\n\x16\x62\x61se/Compression.proto\"Q\n\x0b\x43ompression\x12\x0f\n\x07\x65nabled\x18\x01 \x01(\x08\x12\x1f\n\x04type\x18\x02 \x01(\x0e\x32\x11.Compression.Type\"\x10\n\x04Type\x12\x08\n\x04GZIP\x10\x00\x42\x31\n\x17io.bloombox.schema.baseB\x0f\x42\x61seCompressionH\x01P\x01\xf8\x01\x01\x62\x06proto3')
 )
 
 
@@ -95,5 +95,5 @@ _sym_db.RegisterMessage(Compression)
 
 
 DESCRIPTOR.has_options = True
-DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\027io.bloombox.schema.baseB\017BaseCompressionP\001'))
+DESCRIPTOR._options = _descriptor._ParseOptions(descriptor_pb2.FileOptions(), _b('\n\027io.bloombox.schema.baseB\017BaseCompressionH\001P\001\370\001\001'))
 # @@protoc_insertion_point(module_scope)

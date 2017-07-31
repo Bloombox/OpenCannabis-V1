@@ -35,9 +35,9 @@ public final class AttachedContent {
       "\007summary\030\002 \001(\0132\010.Content\022\025\n\005brand\030\003 \001(\0132" +
       "\006.Brand\022\031\n\005media\030\024 \003(\0132\n.MediaItem\022\027\n\005us" +
       "age\030\036 \001(\0132\010.Content\022\030\n\006dosage\030\037 \001(\0132\010.Co" +
-      "ntent\022\030\n\006advice\030  \001(\0132\010.ContentB/\n\032io.bl" +
-      "oombox.schema.contentB\017AttachedContentP\001" +
-      "b\006proto3"
+      "ntent\022\030\n\006advice\030  \001(\0132\010.ContentB4\n\032io.bl" +
+      "oombox.schema.contentB\017AttachedContentH\001" +
+      "P\001\370\001\001b\006proto3"
     };
     com.google.protobuf.Descriptors.FileDescriptor.InternalDescriptorAssigner assigner =
         new com.google.protobuf.Descriptors.FileDescriptor.    InternalDescriptorAssigner() {
