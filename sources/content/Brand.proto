@@ -1,0 +1,23 @@
+
+syntax = "proto3";
+
+option optimize_for = SPEED;
+option cc_enable_arenas = true;
+option java_package = "io.bloombox.schema.content";
+option java_multiple_files = true;
+option java_outer_classname = "BrandContent";
+
+import "content/Name.proto";
+import "content/Content.proto";
+import "media/MediaItem.proto";
+
+
+message Brand {
+  // -- Basic Properties
+  Name name = 1;
+  Brand parent = 2;
+  Content summary = 3;
+
+  // -- Media
+  repeated MediaItem media = 20;
+}

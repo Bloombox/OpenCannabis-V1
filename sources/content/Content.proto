@@ -1,0 +1,31 @@
+
+syntax = "proto3";
+
+option optimize_for = SPEED;
+option cc_enable_arenas = true;
+option java_package = "io.bloombox.schema.content";
+option java_multiple_files = true;
+option java_outer_classname = "GenericContent";
+
+import "base/Language.proto";
+import "base/Compression.proto";
+
+
+message Content {
+  enum Type {
+    TEXT = 0;
+    MARKDOWN = 1;
+    HTML = 2;
+  }
+
+  enum Encoding {
+    UTF8 = 0;
+  }
+
+  Type type = 1;
+  Encoding encoding = 2;
+  bytes content = 3;
+
+  Language language = 4;
+  Compression compression = 5;
+}

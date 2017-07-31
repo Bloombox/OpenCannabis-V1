@@ -1,0 +1,69 @@
+
+syntax = "proto3";
+
+option optimize_for = SPEED;
+option cc_enable_arenas = true;
+option java_package = "io.bloombox.schema.product.struct";
+option java_multiple_files = true;
+option java_outer_classname = "ProductPricingSpec";
+
+import "structs/pricing/SaleDescriptor.proto";
+
+
+// -- Pricing: Objects
+enum PricingType {
+  UNIT = 0;
+  WEIGHTED = 1;
+  FREEBIE = 2;
+}
+
+enum PricingWeightTier {
+  OTHER = 0;
+  GRAM = 1;
+  HALFGRAM = 2;
+  QUARTERGRAM = 3;
+  DUB = 4;
+  EIGHTH = 5;
+  QUARTER = 6;
+  HALF = 7;
+  OUNCE = 8;
+  POUND = 9;
+}
+
+message PricingTierAvailability {
+  bool offered = 1;
+  bool available = 2;
+}
+
+// -- Pricing: Typed Descriptors
+message UnitPricingDescriptor {
+  float price_value = 1;
+  PricingTierAvailability status = 2;
+  repeated SaleDescriptor discounts = 3;
+}
+
+message WeightedPricingDescriptor {
+  PricingWeightTier weight = 1;
+  UnitPricingDescriptor tier = 2;
+  float weightInGrams = 3;
+}
+
+message FreebiePricingDescriptor {
+
+}
+
+// -- Pricing: Main Descriptor
+message PricingDescriptor {
+  PricingType type = 1;
+
+  // -- descriptors
+  UnitPricingDescriptor unit = 20;
+  WeightedPricingDescriptor weighted = 21;
+  FreebiePricingDescriptor freebie = 22;
+}
+
+// -- Pricing: Product-level Object
+message ProductPricing {
+  repeated SaleDescriptor discounts = 1;
+  repeated PricingDescriptor manifest = 2;
+}

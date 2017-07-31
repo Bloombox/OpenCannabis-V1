@@ -1,0 +1,29 @@
+
+syntax = "proto3";
+
+option optimize_for = SPEED;
+option cc_enable_arenas = true;
+option java_package = "io.bloombox.schema.content";
+option java_multiple_files = true;
+option java_outer_classname = "AttachedContent";
+
+import "content/Name.proto";
+import "content/Content.proto";
+import "content/Brand.proto";
+import "media/MediaItem.proto";
+
+
+message ProductContent {
+  // -- Basic Properties
+  Name name = 1;  // product name
+  Content summary = 2; // narrative summary
+  Brand brand = 3;  // product's brand
+
+  // -- Media
+  repeated MediaItem media = 20;  // images, videos, etc
+
+  // -- Extended Attributes
+  Content usage = 30;  // usage advice
+  Content dosage = 31;  // dosage advice
+  Content advice = 32;  // internal advice
+}

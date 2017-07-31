@@ -1,0 +1,29 @@
+
+syntax = "proto3";
+
+option optimize_for = SPEED;
+option cc_enable_arenas = true;
+option java_package = "io.bloombox.schema.product.struct";
+option java_multiple_files = true;
+option java_outer_classname = "ProductDiscount";
+
+
+enum SaleType {
+  PERCENTAGE = 0;
+  BOGO = 1;
+  LOYALTY = 2;
+}
+
+message SaleDescriptor {
+  // sale metadata
+  SaleType type = 1;
+  uint64 effective = 2;
+  uint64 expiration = 3;
+
+  // sale amount and trigger properties
+  uint32 percentage_amount = 20;
+  uint32 bogo_trigger = 21;
+  uint32 bogo_reward = 22;
+  uint32 loyalty_trigger = 23;
+  uint32 loyalty_reward = 24;
+}

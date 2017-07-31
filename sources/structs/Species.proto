@@ -1,0 +1,18 @@
+
+syntax = "proto3";
+
+option optimize_for = SPEED;
+option cc_enable_arenas = true;
+option java_package = "io.bloombox.schema.product.struct";
+option java_multiple_files = true;
+option java_outer_classname = "MaterialSpecies";
+
+
+enum Species {
+  UNSPECIFIED = 0;
+  SATIVA = 1;
+  HYBRID_SATIVA = 2;
+  HYBRID = 3;
+  HYBRID_INDICA = 4;
+  INDICA = 5;
+}

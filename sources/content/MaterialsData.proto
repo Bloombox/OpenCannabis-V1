@@ -1,0 +1,20 @@
+
+syntax = "proto3";
+
+option optimize_for = SPEED;
+option cc_enable_arenas = true;
+option java_package = "io.bloombox.schema.content";
+option java_multiple_files = true;
+option java_outer_classname = "MaterialsContent";
+
+import "structs/Grow.proto";
+import "structs/Species.proto";
+import "structs/Genetics.proto";
+
+
+message MaterialsData {
+  repeated string ingredients = 1;
+  Grow grow = 2;
+  Species species = 3;
+  Genetics genetics = 4;
+}

@@ -1,0 +1,20 @@
+
+syntax = "proto3";
+
+option optimize_for = SPEED;
+option cc_enable_arenas = true;
+option java_package = "io.bloombox.schema.base";
+option java_multiple_files = true;
+option java_outer_classname = "BaseProductKind";
+
+
+enum ProductKind {
+  FLOWERS = 0;
+  EDIBLES = 1;
+  EXTRACTS = 2;
+  PREROLLS = 3;
+  APOTHECARY = 4;
+  CARTRIDGES = 5;
+  PLANTS = 6;
+  MERCHANDISE = 7;
+}

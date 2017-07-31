@@ -1,0 +1,16 @@
+
+syntax = "proto3";
+
+option optimize_for = SPEED;
+option cc_enable_arenas = true;
+option java_package = "io.bloombox.schema.product.struct";
+option java_multiple_files = true;
+option java_outer_classname = "MaterialGrow";
+
+
+enum Grow {
+  GENERIC = 0;
+  INDOOR = 1;
+  GREENHOUSE = 2;
+  OUTDOOR = 3;
+}

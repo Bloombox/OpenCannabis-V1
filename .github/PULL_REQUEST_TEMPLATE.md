@@ -1,7 +1,7 @@
 
 ### Description
 
-- Version: `1.0.0-beta3`
+- Version: `1.0.0-beta4`
 - Filed By: @sgammon
 - Linked Issue: `Bloombox/OpenCannabis#1`
 

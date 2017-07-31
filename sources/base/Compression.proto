@@ -1,0 +1,18 @@
+
+syntax = "proto3";
+
+option optimize_for = SPEED;
+option cc_enable_arenas = true;
+option java_package = "io.bloombox.schema.base";
+option java_multiple_files = true;
+option java_outer_classname = "BaseCompression";
+
+
+message Compression {
+  enum Type {
+    GZIP = 0;
+  }
+
+  bool enabled = 1;
+  Type type = 2;
+}
