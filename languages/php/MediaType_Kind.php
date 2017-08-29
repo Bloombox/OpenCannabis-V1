@@ -3,24 +3,24 @@
 # source: media/MediaType.proto
 
 /**
- * Protobuf enum <code>MediaType.Kind</code>
+ * Protobuf enum <code>MediaType\Kind</code>
  */
 class MediaType_Kind
 {
     /**
-     * <code>LINK = 0;</code>
+     * Generated from protobuf enum <code>LINK = 0;</code>
      */
     const LINK = 0;
     /**
-     * <code>IMAGE = 1;</code>
+     * Generated from protobuf enum <code>IMAGE = 1;</code>
      */
     const IMAGE = 1;
     /**
-     * <code>DOCUMENT = 2;</code>
+     * Generated from protobuf enum <code>DOCUMENT = 2;</code>
      */
     const DOCUMENT = 2;
     /**
-     * <code>VIDEO = 3;</code>
+     * Generated from protobuf enum <code>VIDEO = 3;</code>
      */
     const VIDEO = 3;
 }

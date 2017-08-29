@@ -7,20 +7,18 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * <pre>
  * -- Pricing: Product-level Object
- * </pre>
  *
- * Protobuf type <code>ProductPricing</code>
+ * Generated from protobuf message <code>ProductPricing</code>
  */
 class ProductPricing extends \Google\Protobuf\Internal\Message
 {
     /**
-     * <code>repeated .SaleDescriptor discounts = 1;</code>
+     * Generated from protobuf field <code>repeated .SaleDescriptor discounts = 1;</code>
      */
     private $discounts;
     /**
-     * <code>repeated .PricingDescriptor manifest = 2;</code>
+     * Generated from protobuf field <code>repeated .PricingDescriptor manifest = 2;</code>
      */
     private $manifest;
 
@@ -30,7 +28,8 @@ class ProductPricing extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>repeated .SaleDescriptor discounts = 1;</code>
+     * Generated from protobuf field <code>repeated .SaleDescriptor discounts = 1;</code>
+     * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getDiscounts()
     {
@@ -38,16 +37,21 @@ class ProductPricing extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>repeated .SaleDescriptor discounts = 1;</code>
+     * Generated from protobuf field <code>repeated .SaleDescriptor discounts = 1;</code>
+     * @param \SaleDescriptor[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @return $this
      */
-    public function setDiscounts(&$var)
+    public function setDiscounts($var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \SaleDescriptor::class);
         $this->discounts = $arr;
+
+        return $this;
     }
 
     /**
-     * <code>repeated .PricingDescriptor manifest = 2;</code>
+     * Generated from protobuf field <code>repeated .PricingDescriptor manifest = 2;</code>
+     * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getManifest()
     {
@@ -55,12 +59,16 @@ class ProductPricing extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>repeated .PricingDescriptor manifest = 2;</code>
+     * Generated from protobuf field <code>repeated .PricingDescriptor manifest = 2;</code>
+     * @param \PricingDescriptor[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @return $this
      */
-    public function setManifest(&$var)
+    public function setManifest($var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \PricingDescriptor::class);
         $this->manifest = $arr;
+
+        return $this;
     }
 
 }

@@ -1,15 +1,17 @@
 /**
  * @fileoverview
  * @enhanceable
+ * @suppress {messageConventions} JS Compiler reports an error if a variable or
+ *     field starts with 'MSG_' and isn't a translatable message.
  * @public
  */
 // GENERATED CODE -- DO NOT EDIT!
 
 goog.provide('proto.MediaKey');
 
-goog.require('jspb.Message');
 goog.require('jspb.BinaryReader');
 goog.require('jspb.BinaryWriter');
+goog.require('jspb.Message');
 
 
 /**
@@ -54,6 +56,7 @@ proto.MediaKey.prototype.toObject = function(opt_includeInstance) {
  *     http://goto/soy-param-migration
  * @param {!proto.MediaKey} msg The msg instance to transform.
  * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.MediaKey.toObject = function(includeInstance, msg) {
   var f, obj = {
@@ -123,6 +126,7 @@ proto.MediaKey.prototype.serializeBinary = function() {
  * format), writing to the given BinaryWriter.
  * @param {!proto.MediaKey} message
  * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.MediaKey.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;

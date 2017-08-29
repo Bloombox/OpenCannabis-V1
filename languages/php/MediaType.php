@@ -7,28 +7,26 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * <pre>
  * -- Media Type: Top-level -- //
- * </pre>
  *
- * Protobuf type <code>MediaType</code>
+ * Generated from protobuf message <code>MediaType</code>
  */
 class MediaType extends \Google\Protobuf\Internal\Message
 {
     /**
-     * <code>.MediaType.Kind kind = 1;</code>
+     * Generated from protobuf field <code>.MediaType.Kind kind = 1;</code>
      */
     private $kind = 0;
     /**
-     * <code>.ImageType image_type = 101;</code>
+     * Generated from protobuf field <code>.ImageType image_type = 101;</code>
      */
     private $image_type = null;
     /**
-     * <code>.DocumentType document_type = 201;</code>
+     * Generated from protobuf field <code>.DocumentType document_type = 201;</code>
      */
     private $document_type = null;
     /**
-     * <code>.VideoType video_type = 301;</code>
+     * Generated from protobuf field <code>.VideoType video_type = 301;</code>
      */
     private $video_type = null;
 
@@ -38,7 +36,8 @@ class MediaType extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>.MediaType.Kind kind = 1;</code>
+     * Generated from protobuf field <code>.MediaType.Kind kind = 1;</code>
+     * @return int
      */
     public function getKind()
     {
@@ -46,16 +45,21 @@ class MediaType extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>.MediaType.Kind kind = 1;</code>
+     * Generated from protobuf field <code>.MediaType.Kind kind = 1;</code>
+     * @param int $var
+     * @return $this
      */
     public function setKind($var)
     {
         GPBUtil::checkEnum($var, \MediaType_Kind::class);
         $this->kind = $var;
+
+        return $this;
     }
 
     /**
-     * <code>.ImageType image_type = 101;</code>
+     * Generated from protobuf field <code>.ImageType image_type = 101;</code>
+     * @return \ImageType
      */
     public function getImageType()
     {
@@ -63,16 +67,21 @@ class MediaType extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>.ImageType image_type = 101;</code>
+     * Generated from protobuf field <code>.ImageType image_type = 101;</code>
+     * @param \ImageType $var
+     * @return $this
      */
-    public function setImageType(&$var)
+    public function setImageType($var)
     {
         GPBUtil::checkMessage($var, \ImageType::class);
         $this->image_type = $var;
+
+        return $this;
     }
 
     /**
-     * <code>.DocumentType document_type = 201;</code>
+     * Generated from protobuf field <code>.DocumentType document_type = 201;</code>
+     * @return \DocumentType
      */
     public function getDocumentType()
     {
@@ -80,16 +89,21 @@ class MediaType extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>.DocumentType document_type = 201;</code>
+     * Generated from protobuf field <code>.DocumentType document_type = 201;</code>
+     * @param \DocumentType $var
+     * @return $this
      */
-    public function setDocumentType(&$var)
+    public function setDocumentType($var)
     {
         GPBUtil::checkMessage($var, \DocumentType::class);
         $this->document_type = $var;
+
+        return $this;
     }
 
     /**
-     * <code>.VideoType video_type = 301;</code>
+     * Generated from protobuf field <code>.VideoType video_type = 301;</code>
+     * @return \VideoType
      */
     public function getVideoType()
     {
@@ -97,12 +111,16 @@ class MediaType extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>.VideoType video_type = 301;</code>
+     * Generated from protobuf field <code>.VideoType video_type = 301;</code>
+     * @param \VideoType $var
+     * @return $this
      */
-    public function setVideoType(&$var)
+    public function setVideoType($var)
     {
         GPBUtil::checkMessage($var, \VideoType::class);
         $this->video_type = $var;
+
+        return $this;
     }
 
 }

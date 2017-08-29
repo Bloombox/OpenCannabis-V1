@@ -3,24 +3,22 @@
 # source: structs/pricing/PricingDescriptor.proto
 
 /**
- * <pre>
  * -- Pricing: Objects
- * </pre>
  *
  * Protobuf enum <code>PricingType</code>
  */
 class PricingType
 {
     /**
-     * <code>UNIT = 0;</code>
+     * Generated from protobuf enum <code>UNIT = 0;</code>
      */
     const UNIT = 0;
     /**
-     * <code>WEIGHTED = 1;</code>
+     * Generated from protobuf enum <code>WEIGHTED = 1;</code>
      */
     const WEIGHTED = 1;
     /**
-     * <code>FREEBIE = 2;</code>
+     * Generated from protobuf enum <code>FREEBIE = 2;</code>
      */
     const FREEBIE = 2;
 }

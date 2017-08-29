@@ -40,7 +40,7 @@ var ProductFlag_value = map[string]int32{
 func (x ProductFlag) String() string {
 	return proto.EnumName(ProductFlag_name, int32(x))
 }
-func (ProductFlag) EnumDescriptor() ([]byte, []int) { return fileDescriptor15, []int{0} }
+func (ProductFlag) EnumDescriptor() ([]byte, []int) { return fileDescriptor16, []int{0} }
 
 type ProductFlagValue struct {
 	Type  ProductFlag `protobuf:"varint,1,opt,name=type,enum=ProductFlag" json:"type,omitempty"`
@@ -50,7 +50,7 @@ type ProductFlagValue struct {
 func (m *ProductFlagValue) Reset()                    { *m = ProductFlagValue{} }
 func (m *ProductFlagValue) String() string            { return proto.CompactTextString(m) }
 func (*ProductFlagValue) ProtoMessage()               {}
-func (*ProductFlagValue) Descriptor() ([]byte, []int) { return fileDescriptor15, []int{0} }
+func (*ProductFlagValue) Descriptor() ([]byte, []int) { return fileDescriptor16, []int{0} }
 
 func (m *ProductFlagValue) GetType() ProductFlag {
 	if m != nil {
@@ -73,7 +73,7 @@ type ProductFlagset struct {
 func (m *ProductFlagset) Reset()                    { *m = ProductFlagset{} }
 func (m *ProductFlagset) String() string            { return proto.CompactTextString(m) }
 func (*ProductFlagset) ProtoMessage()               {}
-func (*ProductFlagset) Descriptor() ([]byte, []int) { return fileDescriptor15, []int{1} }
+func (*ProductFlagset) Descriptor() ([]byte, []int) { return fileDescriptor16, []int{1} }
 
 func (m *ProductFlagset) GetFlags() []*ProductFlagValue {
 	if m != nil {
@@ -93,7 +93,7 @@ type FlagsDescriptor struct {
 func (m *FlagsDescriptor) Reset()                    { *m = FlagsDescriptor{} }
 func (m *FlagsDescriptor) String() string            { return proto.CompactTextString(m) }
 func (*FlagsDescriptor) ProtoMessage()               {}
-func (*FlagsDescriptor) Descriptor() ([]byte, []int) { return fileDescriptor15, []int{2} }
+func (*FlagsDescriptor) Descriptor() ([]byte, []int) { return fileDescriptor16, []int{2} }
 
 func (m *FlagsDescriptor) GetVisible() bool {
 	if m != nil {
@@ -137,9 +137,9 @@ func init() {
 	proto.RegisterEnum("ProductFlag", ProductFlag_name, ProductFlag_value)
 }
 
-func init() { proto.RegisterFile("structs/FlagsDescriptor.proto", fileDescriptor15) }
+func init() { proto.RegisterFile("structs/FlagsDescriptor.proto", fileDescriptor16) }
 
-var fileDescriptor15 = []byte{
+var fileDescriptor16 = []byte{
 	// 333 bytes of a gzipped FileDescriptorProto
 	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0x5c, 0x91, 0x4f, 0x4f, 0xc2, 0x30,
 	0x18, 0xc6, 0x2d, 0x7f, 0x64, 0x79, 0x47, 0x70, 0x36, 0x1e, 0x16, 0x13, 0xcd, 0xe4, 0x22, 0xf1,

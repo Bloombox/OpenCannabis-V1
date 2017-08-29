@@ -7,24 +7,20 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Protobuf type <code>Name</code>
+ * Generated from protobuf message <code>Name</code>
  */
 class Name extends \Google\Protobuf\Internal\Message
 {
     /**
-     * <pre>
      * basic name
-     * </pre>
      *
-     * <code>string primary = 1;</code>
+     * Generated from protobuf field <code>string primary = 1;</code>
      */
     private $primary = '';
     /**
-     * <pre>
      * display name
-     * </pre>
      *
-     * <code>string display = 2;</code>
+     * Generated from protobuf field <code>string display = 2;</code>
      */
     private $display = '';
 
@@ -34,11 +30,10 @@ class Name extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <pre>
      * basic name
-     * </pre>
      *
-     * <code>string primary = 1;</code>
+     * Generated from protobuf field <code>string primary = 1;</code>
+     * @return string
      */
     public function getPrimary()
     {
@@ -46,24 +41,25 @@ class Name extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <pre>
      * basic name
-     * </pre>
      *
-     * <code>string primary = 1;</code>
+     * Generated from protobuf field <code>string primary = 1;</code>
+     * @param string $var
+     * @return $this
      */
     public function setPrimary($var)
     {
         GPBUtil::checkString($var, True);
         $this->primary = $var;
+
+        return $this;
     }
 
     /**
-     * <pre>
      * display name
-     * </pre>
      *
-     * <code>string display = 2;</code>
+     * Generated from protobuf field <code>string display = 2;</code>
+     * @return string
      */
     public function getDisplay()
     {
@@ -71,16 +67,18 @@ class Name extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <pre>
      * display name
-     * </pre>
      *
-     * <code>string display = 2;</code>
+     * Generated from protobuf field <code>string display = 2;</code>
+     * @param string $var
+     * @return $this
      */
     public function setDisplay($var)
     {
         GPBUtil::checkString($var, True);
         $this->display = $var;
+
+        return $this;
     }
 
 }

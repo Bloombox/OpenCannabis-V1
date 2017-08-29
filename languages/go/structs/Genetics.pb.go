@@ -20,7 +20,7 @@ type Genetics struct {
 func (m *Genetics) Reset()                    { *m = Genetics{} }
 func (m *Genetics) String() string            { return proto.CompactTextString(m) }
 func (*Genetics) ProtoMessage()               {}
-func (*Genetics) Descriptor() ([]byte, []int) { return fileDescriptor16, []int{0} }
+func (*Genetics) Descriptor() ([]byte, []int) { return fileDescriptor17, []int{0} }
 
 func (m *Genetics) GetMale() *Name {
 	if m != nil {
@@ -40,9 +40,9 @@ func init() {
 	proto.RegisterType((*Genetics)(nil), "Genetics")
 }
 
-func init() { proto.RegisterFile("structs/Genetics.proto", fileDescriptor16) }
+func init() { proto.RegisterFile("structs/Genetics.proto", fileDescriptor17) }
 
-var fileDescriptor16 = []byte{
+var fileDescriptor17 = []byte{
 	// 156 bytes of a gzipped FileDescriptorProto
 	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0xe2, 0x12, 0x2b, 0x2e, 0x29, 0x2a,
 	0x4d, 0x2e, 0x29, 0xd6, 0x77, 0x4f, 0xcd, 0x4b, 0x2d, 0xc9, 0x4c, 0x2e, 0xd6, 0x2b, 0x28, 0xca,

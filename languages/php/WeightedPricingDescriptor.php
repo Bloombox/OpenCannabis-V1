@@ -7,20 +7,20 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Protobuf type <code>WeightedPricingDescriptor</code>
+ * Generated from protobuf message <code>WeightedPricingDescriptor</code>
  */
 class WeightedPricingDescriptor extends \Google\Protobuf\Internal\Message
 {
     /**
-     * <code>.PricingWeightTier weight = 1;</code>
+     * Generated from protobuf field <code>.PricingWeightTier weight = 1;</code>
      */
     private $weight = 0;
     /**
-     * <code>.UnitPricingDescriptor tier = 2;</code>
+     * Generated from protobuf field <code>.UnitPricingDescriptor tier = 2;</code>
      */
     private $tier = null;
     /**
-     * <code>float weightInGrams = 3;</code>
+     * Generated from protobuf field <code>float weightInGrams = 3;</code>
      */
     private $weightInGrams = 0.0;
 
@@ -30,7 +30,8 @@ class WeightedPricingDescriptor extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>.PricingWeightTier weight = 1;</code>
+     * Generated from protobuf field <code>.PricingWeightTier weight = 1;</code>
+     * @return int
      */
     public function getWeight()
     {
@@ -38,16 +39,21 @@ class WeightedPricingDescriptor extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>.PricingWeightTier weight = 1;</code>
+     * Generated from protobuf field <code>.PricingWeightTier weight = 1;</code>
+     * @param int $var
+     * @return $this
      */
     public function setWeight($var)
     {
         GPBUtil::checkEnum($var, \PricingWeightTier::class);
         $this->weight = $var;
+
+        return $this;
     }
 
     /**
-     * <code>.UnitPricingDescriptor tier = 2;</code>
+     * Generated from protobuf field <code>.UnitPricingDescriptor tier = 2;</code>
+     * @return \UnitPricingDescriptor
      */
     public function getTier()
     {
@@ -55,16 +61,21 @@ class WeightedPricingDescriptor extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>.UnitPricingDescriptor tier = 2;</code>
+     * Generated from protobuf field <code>.UnitPricingDescriptor tier = 2;</code>
+     * @param \UnitPricingDescriptor $var
+     * @return $this
      */
-    public function setTier(&$var)
+    public function setTier($var)
     {
         GPBUtil::checkMessage($var, \UnitPricingDescriptor::class);
         $this->tier = $var;
+
+        return $this;
     }
 
     /**
-     * <code>float weightInGrams = 3;</code>
+     * Generated from protobuf field <code>float weightInGrams = 3;</code>
+     * @return float
      */
     public function getWeightInGrams()
     {
@@ -72,12 +83,16 @@ class WeightedPricingDescriptor extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>float weightInGrams = 3;</code>
+     * Generated from protobuf field <code>float weightInGrams = 3;</code>
+     * @param float $var
+     * @return $this
      */
     public function setWeightInGrams($var)
     {
         GPBUtil::checkFloat($var);
         $this->weightInGrams = $var;
+
+        return $this;
     }
 
 }

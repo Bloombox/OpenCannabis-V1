@@ -34,7 +34,7 @@ var SaleType_value = map[string]int32{
 func (x SaleType) String() string {
 	return proto.EnumName(SaleType_name, int32(x))
 }
-func (SaleType) EnumDescriptor() ([]byte, []int) { return fileDescriptor20, []int{0} }
+func (SaleType) EnumDescriptor() ([]byte, []int) { return fileDescriptor21, []int{0} }
 
 type SaleDescriptor struct {
 	// sale metadata
@@ -52,7 +52,7 @@ type SaleDescriptor struct {
 func (m *SaleDescriptor) Reset()                    { *m = SaleDescriptor{} }
 func (m *SaleDescriptor) String() string            { return proto.CompactTextString(m) }
 func (*SaleDescriptor) ProtoMessage()               {}
-func (*SaleDescriptor) Descriptor() ([]byte, []int) { return fileDescriptor20, []int{0} }
+func (*SaleDescriptor) Descriptor() ([]byte, []int) { return fileDescriptor21, []int{0} }
 
 func (m *SaleDescriptor) GetType() SaleType {
 	if m != nil {
@@ -115,9 +115,9 @@ func init() {
 	proto.RegisterEnum("SaleType", SaleType_name, SaleType_value)
 }
 
-func init() { proto.RegisterFile("structs/pricing/SaleDescriptor.proto", fileDescriptor20) }
+func init() { proto.RegisterFile("structs/pricing/SaleDescriptor.proto", fileDescriptor21) }
 
-var fileDescriptor20 = []byte{
+var fileDescriptor21 = []byte{
 	// 333 bytes of a gzipped FileDescriptorProto
 	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0x54, 0xd1, 0x4f, 0x4f, 0xfa, 0x30,
 	0x1c, 0x06, 0xf0, 0x5f, 0xf9, 0x11, 0x85, 0x2f, 0x32, 0x66, 0xe3, 0x9f, 0x1d, 0xfc, 0x03, 0x46,

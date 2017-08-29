@@ -16,7 +16,10 @@
 #include <google/protobuf/reflection_ops.h>
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
-class FlowerDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<Flower> {
+class FlowerDefaultTypeInternal {
+public:
+ ::google::protobuf::internal::ExplicitlyConstructed<Flower>
+     _instance;
 } _Flower_default_instance_;
 
 namespace protobuf_products_2fFlower_2eproto {
@@ -29,20 +32,20 @@ namespace {
 }  // namespace
 
 PROTOBUF_CONSTEXPR_VAR ::google::protobuf::internal::ParseTableField
-    const TableStruct::entries[] = {
+    const TableStruct::entries[] GOOGLE_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
   {0, 0, 0, ::google::protobuf::internal::kInvalidMask, 0, 0},
 };
 
 PROTOBUF_CONSTEXPR_VAR ::google::protobuf::internal::AuxillaryParseTableField
-    const TableStruct::aux[] = {
+    const TableStruct::aux[] GOOGLE_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
   ::google::protobuf::internal::AuxillaryParseTableField(),
 };
 PROTOBUF_CONSTEXPR_VAR ::google::protobuf::internal::ParseTable const
-    TableStruct::schema[] = {
-  { NULL, NULL, 0, -1, -1, false },
+    TableStruct::schema[] GOOGLE_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
+  { NULL, NULL, 0, -1, -1, -1, -1, NULL, false },
 };
 
-const ::google::protobuf::uint32 TableStruct::offsets[] = {
+const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
   ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Flower, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -54,8 +57,7 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Flower, flags_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Flower, pricing_),
 };
-
-static const ::google::protobuf::internal::MigrationSchema schemas[] = {
+static const ::google::protobuf::internal::MigrationSchema schemas[] GOOGLE_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, sizeof(Flower)},
 };
 
@@ -85,12 +87,6 @@ void protobuf_RegisterTypes(const ::std::string&) {
 }
 
 }  // namespace
-
-void TableStruct::Shutdown() {
-  _Flower_default_instance_.Shutdown();
-  delete file_level_metadata[0].reflection;
-}
-
 void TableStruct::InitDefaultsImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
@@ -100,16 +96,17 @@ void TableStruct::InitDefaultsImpl() {
   ::protobuf_content_2fProductContent_2eproto::InitDefaults();
   ::protobuf_structs_2fFlagsDescriptor_2eproto::InitDefaults();
   ::protobuf_structs_2fpricing_2fPricingDescriptor_2eproto::InitDefaults();
-  _Flower_default_instance_.DefaultConstruct();
-  _Flower_default_instance_.get_mutable()->key_ = const_cast< ::ProductKey*>(
+  _Flower_default_instance_._instance.DefaultConstruct();
+  ::google::protobuf::internal::OnShutdownDestroyMessage(
+      &_Flower_default_instance_);_Flower_default_instance_._instance.get_mutable()->key_ = const_cast< ::ProductKey*>(
       ::ProductKey::internal_default_instance());
-  _Flower_default_instance_.get_mutable()->product_data_ = const_cast< ::ProductContent*>(
+  _Flower_default_instance_._instance.get_mutable()->product_data_ = const_cast< ::ProductContent*>(
       ::ProductContent::internal_default_instance());
-  _Flower_default_instance_.get_mutable()->material_data_ = const_cast< ::MaterialsData*>(
+  _Flower_default_instance_._instance.get_mutable()->material_data_ = const_cast< ::MaterialsData*>(
       ::MaterialsData::internal_default_instance());
-  _Flower_default_instance_.get_mutable()->flags_ = const_cast< ::FlagsDescriptor*>(
+  _Flower_default_instance_._instance.get_mutable()->flags_ = const_cast< ::FlagsDescriptor*>(
       ::FlagsDescriptor::internal_default_instance());
-  _Flower_default_instance_.get_mutable()->pricing_ = const_cast< ::ProductPricing*>(
+  _Flower_default_instance_._instance.get_mutable()->pricing_ = const_cast< ::ProductPricing*>(
       ::ProductPricing::internal_default_instance());
 }
 
@@ -117,9 +114,10 @@ void InitDefaults() {
   static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
   ::google::protobuf::GoogleOnceInit(&once, &TableStruct::InitDefaultsImpl);
 }
+namespace {
 void AddDescriptorsImpl() {
   InitDefaults();
-  static const char descriptor[] = {
+  static const char descriptor[] GOOGLE_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
       "\n\025products/Flower.proto\032\025base/ProductKey"
       ".proto\032\033content/MaterialsData.proto\032\034con"
       "tent/ProductContent.proto\032\035structs/Flags"
@@ -141,14 +139,14 @@ void AddDescriptorsImpl() {
   ::protobuf_content_2fProductContent_2eproto::AddDescriptors();
   ::protobuf_structs_2fFlagsDescriptor_2eproto::AddDescriptors();
   ::protobuf_structs_2fpricing_2fPricingDescriptor_2eproto::AddDescriptors();
-  ::google::protobuf::internal::OnShutdown(&TableStruct::Shutdown);
 }
+} // anonymous namespace
 
 void AddDescriptors() {
   static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
   ::google::protobuf::GoogleOnceInit(&once, &AddDescriptorsImpl);
 }
-// Force AddDescriptors() to be called at static initialization time.
+// Force AddDescriptors() to be called at dynamic initialization time.
 struct StaticDescriptorInitializer {
   StaticDescriptorInitializer() {
     AddDescriptors();
@@ -414,9 +412,7 @@ Flower::Flower()
 Flower::Flower(::google::protobuf::Arena* arena)
   : ::google::protobuf::Message(),
   _internal_metadata_(arena) {
-#ifdef GOOGLE_PROTOBUF_NO_STATIC_INITIALIZER
   protobuf_products_2fFlower_2eproto::InitDefaults();
-#endif  // GOOGLE_PROTOBUF_NO_STATIC_INITIALIZER
   SharedCtor();
   RegisterArenaDtor(arena);
   // @@protoc_insertion_point(arena_constructor:Flower)
@@ -455,8 +451,9 @@ Flower::Flower(const Flower& from)
 }
 
 void Flower::SharedCtor() {
-  ::memset(&key_, 0, reinterpret_cast<char*>(&pricing_) -
-    reinterpret_cast<char*>(&key_) + sizeof(pricing_));
+  ::memset(&key_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&pricing_) -
+      reinterpret_cast<char*>(&key_)) + sizeof(pricing_));
   _cached_size_ = 0;
 }
 
@@ -467,25 +464,16 @@ Flower::~Flower() {
 
 void Flower::SharedDtor() {
   ::google::protobuf::Arena* arena = GetArenaNoVirtual();
+  GOOGLE_DCHECK(arena == NULL);
   if (arena != NULL) {
     return;
   }
 
-  if (this != internal_default_instance()) {
-    delete key_;
-  }
-  if (this != internal_default_instance()) {
-    delete product_data_;
-  }
-  if (this != internal_default_instance()) {
-    delete material_data_;
-  }
-  if (this != internal_default_instance()) {
-    delete flags_;
-  }
-  if (this != internal_default_instance()) {
-    delete pricing_;
-  }
+  if (this != internal_default_instance()) delete key_;
+  if (this != internal_default_instance()) delete product_data_;
+  if (this != internal_default_instance()) delete material_data_;
+  if (this != internal_default_instance()) delete flags_;
+  if (this != internal_default_instance()) delete pricing_;
 }
 
 void Flower::ArenaDtor(void* object) {
@@ -515,6 +503,10 @@ Flower* Flower::New(::google::protobuf::Arena* arena) const {
 
 void Flower::Clear() {
 // @@protoc_insertion_point(message_clear_start:Flower)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
   if (GetArenaNoVirtual() == NULL && key_ != NULL) {
     delete key_;
   }
@@ -535,6 +527,7 @@ void Flower::Clear() {
     delete pricing_;
   }
   pricing_ = NULL;
+  _internal_metadata_.Clear();
 }
 
 bool Flower::MergePartialFromCodedStream(
@@ -550,7 +543,7 @@ bool Flower::MergePartialFromCodedStream(
       // .ProductKey key = 1;
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(10u)) {
+            static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_key()));
         } else {
@@ -562,7 +555,7 @@ bool Flower::MergePartialFromCodedStream(
       // .ProductContent product_data = 20;
       case 20: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(162u)) {
+            static_cast< ::google::protobuf::uint8>(162u /* 162 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_product_data()));
         } else {
@@ -574,7 +567,7 @@ bool Flower::MergePartialFromCodedStream(
       // .MaterialsData material_data = 21;
       case 21: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(170u)) {
+            static_cast< ::google::protobuf::uint8>(170u /* 170 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_material_data()));
         } else {
@@ -586,7 +579,7 @@ bool Flower::MergePartialFromCodedStream(
       // .FlagsDescriptor flags = 22;
       case 22: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(178u)) {
+            static_cast< ::google::protobuf::uint8>(178u /* 178 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_flags()));
         } else {
@@ -598,7 +591,7 @@ bool Flower::MergePartialFromCodedStream(
       // .ProductPricing pricing = 23;
       case 23: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(186u)) {
+            static_cast< ::google::protobuf::uint8>(186u /* 186 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_pricing()));
         } else {
@@ -609,12 +602,11 @@ bool Flower::MergePartialFromCodedStream(
 
       default: {
       handle_unusual:
-        if (tag == 0 ||
-            ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+        if (tag == 0) {
           goto success;
         }
-        DO_(::google::protobuf::internal::WireFormatLite::SkipField(input, tag));
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
         break;
       }
     }
@@ -664,6 +656,10 @@ void Flower::SerializeWithCachedSizes(
       23, *this->pricing_, output);
   }
 
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
+  }
   // @@protoc_insertion_point(serialize_end:Flower)
 }
 
@@ -709,6 +705,10 @@ void Flower::SerializeWithCachedSizes(
         23, *this->pricing_, deterministic, target);
   }
 
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
+  }
   // @@protoc_insertion_point(serialize_to_array_end:Flower)
   return target;
 }
@@ -717,6 +717,11 @@ size_t Flower::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:Flower)
   size_t total_size = 0;
 
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
+  }
   // .ProductKey key = 1;
   if (this->has_key()) {
     total_size += 1 +
@@ -836,12 +841,14 @@ void Flower::UnsafeArenaSwap(Flower* other) {
   InternalSwap(other);
 }
 void Flower::InternalSwap(Flower* other) {
-  std::swap(key_, other->key_);
-  std::swap(product_data_, other->product_data_);
-  std::swap(material_data_, other->material_data_);
-  std::swap(flags_, other->flags_);
-  std::swap(pricing_, other->pricing_);
-  std::swap(_cached_size_, other->_cached_size_);
+  using std::swap;
+  swap(key_, other->key_);
+  swap(product_data_, other->product_data_);
+  swap(material_data_, other->material_data_);
+  swap(flags_, other->flags_);
+  swap(pricing_, other->pricing_);
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata Flower::GetMetadata() const {
@@ -861,9 +868,10 @@ void Flower::clear_key() {
   key_ = NULL;
 }
 const ::ProductKey& Flower::key() const {
+  const ::ProductKey* p = key_;
   // @@protoc_insertion_point(field_get:Flower.key)
-  return key_ != NULL ? *key_
-                         : *::ProductKey::internal_default_instance();
+  return p != NULL ? *p : *reinterpret_cast<const ::ProductKey*>(
+      &::_ProductKey_default_instance_);
 }
 ::ProductKey* Flower::mutable_key() {
   
@@ -910,9 +918,10 @@ void Flower::clear_product_data() {
   product_data_ = NULL;
 }
 const ::ProductContent& Flower::product_data() const {
+  const ::ProductContent* p = product_data_;
   // @@protoc_insertion_point(field_get:Flower.product_data)
-  return product_data_ != NULL ? *product_data_
-                         : *::ProductContent::internal_default_instance();
+  return p != NULL ? *p : *reinterpret_cast<const ::ProductContent*>(
+      &::_ProductContent_default_instance_);
 }
 ::ProductContent* Flower::mutable_product_data() {
   
@@ -959,9 +968,10 @@ void Flower::clear_material_data() {
   material_data_ = NULL;
 }
 const ::MaterialsData& Flower::material_data() const {
+  const ::MaterialsData* p = material_data_;
   // @@protoc_insertion_point(field_get:Flower.material_data)
-  return material_data_ != NULL ? *material_data_
-                         : *::MaterialsData::internal_default_instance();
+  return p != NULL ? *p : *reinterpret_cast<const ::MaterialsData*>(
+      &::_MaterialsData_default_instance_);
 }
 ::MaterialsData* Flower::mutable_material_data() {
   
@@ -1008,9 +1018,10 @@ void Flower::clear_flags() {
   flags_ = NULL;
 }
 const ::FlagsDescriptor& Flower::flags() const {
+  const ::FlagsDescriptor* p = flags_;
   // @@protoc_insertion_point(field_get:Flower.flags)
-  return flags_ != NULL ? *flags_
-                         : *::FlagsDescriptor::internal_default_instance();
+  return p != NULL ? *p : *reinterpret_cast<const ::FlagsDescriptor*>(
+      &::_FlagsDescriptor_default_instance_);
 }
 ::FlagsDescriptor* Flower::mutable_flags() {
   
@@ -1057,9 +1068,10 @@ void Flower::clear_pricing() {
   pricing_ = NULL;
 }
 const ::ProductPricing& Flower::pricing() const {
+  const ::ProductPricing* p = pricing_;
   // @@protoc_insertion_point(field_get:Flower.pricing)
-  return pricing_ != NULL ? *pricing_
-                         : *::ProductPricing::internal_default_instance();
+  return p != NULL ? *p : *reinterpret_cast<const ::ProductPricing*>(
+      &::_ProductPricing_default_instance_);
 }
 ::ProductPricing* Flower::mutable_pricing() {
   

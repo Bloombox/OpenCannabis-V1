@@ -7,28 +7,28 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Protobuf type <code>Content</code>
+ * Generated from protobuf message <code>Content</code>
  */
 class Content extends \Google\Protobuf\Internal\Message
 {
     /**
-     * <code>.Content.Type type = 1;</code>
+     * Generated from protobuf field <code>.Content.Type type = 1;</code>
      */
     private $type = 0;
     /**
-     * <code>.Content.Encoding encoding = 2;</code>
+     * Generated from protobuf field <code>.Content.Encoding encoding = 2;</code>
      */
     private $encoding = 0;
     /**
-     * <code>bytes content = 3;</code>
+     * Generated from protobuf field <code>bytes content = 3;</code>
      */
     private $content = '';
     /**
-     * <code>.Language language = 4;</code>
+     * Generated from protobuf field <code>.Language language = 4;</code>
      */
     private $language = 0;
     /**
-     * <code>.Compression compression = 5;</code>
+     * Generated from protobuf field <code>.Compression compression = 5;</code>
      */
     private $compression = null;
 
@@ -38,7 +38,8 @@ class Content extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>.Content.Type type = 1;</code>
+     * Generated from protobuf field <code>.Content.Type type = 1;</code>
+     * @return int
      */
     public function getType()
     {
@@ -46,16 +47,21 @@ class Content extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>.Content.Type type = 1;</code>
+     * Generated from protobuf field <code>.Content.Type type = 1;</code>
+     * @param int $var
+     * @return $this
      */
     public function setType($var)
     {
         GPBUtil::checkEnum($var, \Content_Type::class);
         $this->type = $var;
+
+        return $this;
     }
 
     /**
-     * <code>.Content.Encoding encoding = 2;</code>
+     * Generated from protobuf field <code>.Content.Encoding encoding = 2;</code>
+     * @return int
      */
     public function getEncoding()
     {
@@ -63,16 +69,21 @@ class Content extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>.Content.Encoding encoding = 2;</code>
+     * Generated from protobuf field <code>.Content.Encoding encoding = 2;</code>
+     * @param int $var
+     * @return $this
      */
     public function setEncoding($var)
     {
         GPBUtil::checkEnum($var, \Content_Encoding::class);
         $this->encoding = $var;
+
+        return $this;
     }
 
     /**
-     * <code>bytes content = 3;</code>
+     * Generated from protobuf field <code>bytes content = 3;</code>
+     * @return string
      */
     public function getContent()
     {
@@ -80,16 +91,21 @@ class Content extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>bytes content = 3;</code>
+     * Generated from protobuf field <code>bytes content = 3;</code>
+     * @param string $var
+     * @return $this
      */
     public function setContent($var)
     {
         GPBUtil::checkString($var, False);
         $this->content = $var;
+
+        return $this;
     }
 
     /**
-     * <code>.Language language = 4;</code>
+     * Generated from protobuf field <code>.Language language = 4;</code>
+     * @return int
      */
     public function getLanguage()
     {
@@ -97,16 +113,21 @@ class Content extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>.Language language = 4;</code>
+     * Generated from protobuf field <code>.Language language = 4;</code>
+     * @param int $var
+     * @return $this
      */
     public function setLanguage($var)
     {
         GPBUtil::checkEnum($var, \Language::class);
         $this->language = $var;
+
+        return $this;
     }
 
     /**
-     * <code>.Compression compression = 5;</code>
+     * Generated from protobuf field <code>.Compression compression = 5;</code>
+     * @return \Compression
      */
     public function getCompression()
     {
@@ -114,12 +135,16 @@ class Content extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>.Compression compression = 5;</code>
+     * Generated from protobuf field <code>.Compression compression = 5;</code>
+     * @param \Compression $var
+     * @return $this
      */
-    public function setCompression(&$var)
+    public function setCompression($var)
     {
         GPBUtil::checkMessage($var, \Compression::class);
         $this->compression = $var;
+
+        return $this;
     }
 
 }

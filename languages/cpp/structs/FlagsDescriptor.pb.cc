@@ -16,11 +16,20 @@
 #include <google/protobuf/reflection_ops.h>
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
-class ProductFlagValueDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<ProductFlagValue> {
+class ProductFlagValueDefaultTypeInternal {
+public:
+ ::google::protobuf::internal::ExplicitlyConstructed<ProductFlagValue>
+     _instance;
 } _ProductFlagValue_default_instance_;
-class ProductFlagsetDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<ProductFlagset> {
+class ProductFlagsetDefaultTypeInternal {
+public:
+ ::google::protobuf::internal::ExplicitlyConstructed<ProductFlagset>
+     _instance;
 } _ProductFlagset_default_instance_;
-class FlagsDescriptorDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<FlagsDescriptor> {
+class FlagsDescriptorDefaultTypeInternal {
+public:
+ ::google::protobuf::internal::ExplicitlyConstructed<FlagsDescriptor>
+     _instance;
 } _FlagsDescriptor_default_instance_;
 
 namespace protobuf_structs_2fFlagsDescriptor_2eproto {
@@ -34,22 +43,22 @@ const ::google::protobuf::EnumDescriptor* file_level_enum_descriptors[1];
 }  // namespace
 
 PROTOBUF_CONSTEXPR_VAR ::google::protobuf::internal::ParseTableField
-    const TableStruct::entries[] = {
+    const TableStruct::entries[] GOOGLE_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
   {0, 0, 0, ::google::protobuf::internal::kInvalidMask, 0, 0},
 };
 
 PROTOBUF_CONSTEXPR_VAR ::google::protobuf::internal::AuxillaryParseTableField
-    const TableStruct::aux[] = {
+    const TableStruct::aux[] GOOGLE_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
   ::google::protobuf::internal::AuxillaryParseTableField(),
 };
 PROTOBUF_CONSTEXPR_VAR ::google::protobuf::internal::ParseTable const
-    TableStruct::schema[] = {
-  { NULL, NULL, 0, -1, -1, false },
-  { NULL, NULL, 0, -1, -1, false },
-  { NULL, NULL, 0, -1, -1, false },
+    TableStruct::schema[] GOOGLE_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
+  { NULL, NULL, 0, -1, -1, -1, -1, NULL, false },
+  { NULL, NULL, 0, -1, -1, -1, -1, NULL, false },
+  { NULL, NULL, 0, -1, -1, -1, -1, NULL, false },
 };
 
-const ::google::protobuf::uint32 TableStruct::offsets[] = {
+const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
   ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ProductFlagValue, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -74,8 +83,7 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(FlagsDescriptor, lastchance_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(FlagsDescriptor, inhouse_),
 };
-
-static const ::google::protobuf::internal::MigrationSchema schemas[] = {
+static const ::google::protobuf::internal::MigrationSchema schemas[] GOOGLE_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, sizeof(ProductFlagValue)},
   { 7, -1, sizeof(ProductFlagset)},
   { 13, -1, sizeof(FlagsDescriptor)},
@@ -109,32 +117,26 @@ void protobuf_RegisterTypes(const ::std::string&) {
 }
 
 }  // namespace
-
-void TableStruct::Shutdown() {
-  _ProductFlagValue_default_instance_.Shutdown();
-  delete file_level_metadata[0].reflection;
-  _ProductFlagset_default_instance_.Shutdown();
-  delete file_level_metadata[1].reflection;
-  _FlagsDescriptor_default_instance_.Shutdown();
-  delete file_level_metadata[2].reflection;
-}
-
 void TableStruct::InitDefaultsImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   ::google::protobuf::internal::InitProtobufDefaults();
-  _ProductFlagValue_default_instance_.DefaultConstruct();
-  _ProductFlagset_default_instance_.DefaultConstruct();
-  _FlagsDescriptor_default_instance_.DefaultConstruct();
-}
+  _ProductFlagValue_default_instance_._instance.DefaultConstruct();
+  ::google::protobuf::internal::OnShutdownDestroyMessage(
+      &_ProductFlagValue_default_instance_);_ProductFlagset_default_instance_._instance.DefaultConstruct();
+  ::google::protobuf::internal::OnShutdownDestroyMessage(
+      &_ProductFlagset_default_instance_);_FlagsDescriptor_default_instance_._instance.DefaultConstruct();
+  ::google::protobuf::internal::OnShutdownDestroyMessage(
+      &_FlagsDescriptor_default_instance_);}
 
 void InitDefaults() {
   static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
   ::google::protobuf::GoogleOnceInit(&once, &TableStruct::InitDefaultsImpl);
 }
+namespace {
 void AddDescriptorsImpl() {
   InitDefaults();
-  static const char descriptor[] = {
+  static const char descriptor[] GOOGLE_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
       "\n\035structs/FlagsDescriptor.proto\"=\n\020Produ"
       "ctFlagValue\022\032\n\004type\030\001 \001(\0162\014.ProductFlag\022"
       "\r\n\005value\030\002 \001(\010\"2\n\016ProductFlagset\022 \n\005flag"
@@ -151,14 +153,14 @@ void AddDescriptorsImpl() {
       descriptor, 403);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "structs/FlagsDescriptor.proto", &protobuf_RegisterTypes);
-  ::google::protobuf::internal::OnShutdown(&TableStruct::Shutdown);
 }
+} // anonymous namespace
 
 void AddDescriptors() {
   static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
   ::google::protobuf::GoogleOnceInit(&once, &AddDescriptorsImpl);
 }
-// Force AddDescriptors() to be called at static initialization time.
+// Force AddDescriptors() to be called at dynamic initialization time.
 struct StaticDescriptorInitializer {
   StaticDescriptorInitializer() {
     AddDescriptors();
@@ -203,9 +205,7 @@ ProductFlagValue::ProductFlagValue()
 ProductFlagValue::ProductFlagValue(::google::protobuf::Arena* arena)
   : ::google::protobuf::Message(),
   _internal_metadata_(arena) {
-#ifdef GOOGLE_PROTOBUF_NO_STATIC_INITIALIZER
   protobuf_structs_2fFlagsDescriptor_2eproto::InitDefaults();
-#endif  // GOOGLE_PROTOBUF_NO_STATIC_INITIALIZER
   SharedCtor();
   RegisterArenaDtor(arena);
   // @@protoc_insertion_point(arena_constructor:ProductFlagValue)
@@ -216,14 +216,15 @@ ProductFlagValue::ProductFlagValue(const ProductFlagValue& from)
       _cached_size_(0) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   ::memcpy(&type_, &from.type_,
-    reinterpret_cast<char*>(&value_) -
-    reinterpret_cast<char*>(&type_) + sizeof(value_));
+    static_cast<size_t>(reinterpret_cast<char*>(&value_) -
+    reinterpret_cast<char*>(&type_)) + sizeof(value_));
   // @@protoc_insertion_point(copy_constructor:ProductFlagValue)
 }
 
 void ProductFlagValue::SharedCtor() {
-  ::memset(&type_, 0, reinterpret_cast<char*>(&value_) -
-    reinterpret_cast<char*>(&type_) + sizeof(value_));
+  ::memset(&type_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&value_) -
+      reinterpret_cast<char*>(&type_)) + sizeof(value_));
   _cached_size_ = 0;
 }
 
@@ -234,6 +235,7 @@ ProductFlagValue::~ProductFlagValue() {
 
 void ProductFlagValue::SharedDtor() {
   ::google::protobuf::Arena* arena = GetArenaNoVirtual();
+  GOOGLE_DCHECK(arena == NULL);
   if (arena != NULL) {
     return;
   }
@@ -267,8 +269,14 @@ ProductFlagValue* ProductFlagValue::New(::google::protobuf::Arena* arena) const 
 
 void ProductFlagValue::Clear() {
 // @@protoc_insertion_point(message_clear_start:ProductFlagValue)
-  ::memset(&type_, 0, reinterpret_cast<char*>(&value_) -
-    reinterpret_cast<char*>(&type_) + sizeof(value_));
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  ::memset(&type_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&value_) -
+      reinterpret_cast<char*>(&type_)) + sizeof(value_));
+  _internal_metadata_.Clear();
 }
 
 bool ProductFlagValue::MergePartialFromCodedStream(
@@ -284,7 +292,7 @@ bool ProductFlagValue::MergePartialFromCodedStream(
       // .ProductFlag type = 1;
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(8u)) {
+            static_cast< ::google::protobuf::uint8>(8u /* 8 & 0xFF */)) {
           int value;
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
@@ -299,7 +307,7 @@ bool ProductFlagValue::MergePartialFromCodedStream(
       // bool value = 2;
       case 2: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(16u)) {
+            static_cast< ::google::protobuf::uint8>(16u /* 16 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
@@ -312,12 +320,11 @@ bool ProductFlagValue::MergePartialFromCodedStream(
 
       default: {
       handle_unusual:
-        if (tag == 0 ||
-            ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+        if (tag == 0) {
           goto success;
         }
-        DO_(::google::protobuf::internal::WireFormatLite::SkipField(input, tag));
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
         break;
       }
     }
@@ -348,6 +355,10 @@ void ProductFlagValue::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::WriteBool(2, this->value(), output);
   }
 
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
+  }
   // @@protoc_insertion_point(serialize_end:ProductFlagValue)
 }
 
@@ -369,6 +380,10 @@ void ProductFlagValue::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(2, this->value(), target);
   }
 
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
+  }
   // @@protoc_insertion_point(serialize_to_array_end:ProductFlagValue)
   return target;
 }
@@ -377,6 +392,11 @@ size_t ProductFlagValue::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:ProductFlagValue)
   size_t total_size = 0;
 
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
+  }
   // .ProductFlag type = 1;
   if (this->type() != 0) {
     total_size += 1 +
@@ -463,9 +483,11 @@ void ProductFlagValue::UnsafeArenaSwap(ProductFlagValue* other) {
   InternalSwap(other);
 }
 void ProductFlagValue::InternalSwap(ProductFlagValue* other) {
-  std::swap(type_, other->type_);
-  std::swap(value_, other->value_);
-  std::swap(_cached_size_, other->_cached_size_);
+  using std::swap;
+  swap(type_, other->type_);
+  swap(value_, other->value_);
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata ProductFlagValue::GetMetadata() const {
@@ -524,9 +546,7 @@ ProductFlagset::ProductFlagset(::google::protobuf::Arena* arena)
   : ::google::protobuf::Message(),
   _internal_metadata_(arena),
   flags_(arena) {
-#ifdef GOOGLE_PROTOBUF_NO_STATIC_INITIALIZER
   protobuf_structs_2fFlagsDescriptor_2eproto::InitDefaults();
-#endif  // GOOGLE_PROTOBUF_NO_STATIC_INITIALIZER
   SharedCtor();
   RegisterArenaDtor(arena);
   // @@protoc_insertion_point(arena_constructor:ProductFlagset)
@@ -551,6 +571,7 @@ ProductFlagset::~ProductFlagset() {
 
 void ProductFlagset::SharedDtor() {
   ::google::protobuf::Arena* arena = GetArenaNoVirtual();
+  GOOGLE_DCHECK(arena == NULL);
   if (arena != NULL) {
     return;
   }
@@ -584,7 +605,12 @@ ProductFlagset* ProductFlagset::New(::google::protobuf::Arena* arena) const {
 
 void ProductFlagset::Clear() {
 // @@protoc_insertion_point(message_clear_start:ProductFlagset)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
   flags_.Clear();
+  _internal_metadata_.Clear();
 }
 
 bool ProductFlagset::MergePartialFromCodedStream(
@@ -600,7 +626,7 @@ bool ProductFlagset::MergePartialFromCodedStream(
       // repeated .ProductFlagValue flags = 1;
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(10u)) {
+            static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                 input, add_flags()));
         } else {
@@ -611,12 +637,11 @@ bool ProductFlagset::MergePartialFromCodedStream(
 
       default: {
       handle_unusual:
-        if (tag == 0 ||
-            ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+        if (tag == 0) {
           goto success;
         }
-        DO_(::google::protobuf::internal::WireFormatLite::SkipField(input, tag));
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
         break;
       }
     }
@@ -637,11 +662,16 @@ void ProductFlagset::SerializeWithCachedSizes(
   (void) cached_has_bits;
 
   // repeated .ProductFlagValue flags = 1;
-  for (unsigned int i = 0, n = this->flags_size(); i < n; i++) {
+  for (unsigned int i = 0,
+      n = static_cast<unsigned int>(this->flags_size()); i < n; i++) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, this->flags(i), output);
+      1, this->flags(static_cast<int>(i)), output);
   }
 
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
+  }
   // @@protoc_insertion_point(serialize_end:ProductFlagset)
 }
 
@@ -653,12 +683,17 @@ void ProductFlagset::SerializeWithCachedSizes(
   (void) cached_has_bits;
 
   // repeated .ProductFlagValue flags = 1;
-  for (unsigned int i = 0, n = this->flags_size(); i < n; i++) {
+  for (unsigned int i = 0,
+      n = static_cast<unsigned int>(this->flags_size()); i < n; i++) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        1, this->flags(i), deterministic, target);
+        1, this->flags(static_cast<int>(i)), deterministic, target);
   }
 
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
+  }
   // @@protoc_insertion_point(serialize_to_array_end:ProductFlagset)
   return target;
 }
@@ -667,14 +702,19 @@ size_t ProductFlagset::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:ProductFlagset)
   size_t total_size = 0;
 
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
+  }
   // repeated .ProductFlagValue flags = 1;
   {
-    unsigned int count = this->flags_size();
+    unsigned int count = static_cast<unsigned int>(this->flags_size());
     total_size += 1UL * count;
     for (unsigned int i = 0; i < count; i++) {
       total_size +=
         ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
-          this->flags(i));
+          this->flags(static_cast<int>(i)));
     }
   }
 
@@ -748,8 +788,10 @@ void ProductFlagset::UnsafeArenaSwap(ProductFlagset* other) {
   InternalSwap(other);
 }
 void ProductFlagset::InternalSwap(ProductFlagset* other) {
+  using std::swap;
   flags_.InternalSwap(&other->flags_);
-  std::swap(_cached_size_, other->_cached_size_);
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata ProductFlagset::GetMetadata() const {
@@ -813,9 +855,7 @@ FlagsDescriptor::FlagsDescriptor()
 FlagsDescriptor::FlagsDescriptor(::google::protobuf::Arena* arena)
   : ::google::protobuf::Message(),
   _internal_metadata_(arena) {
-#ifdef GOOGLE_PROTOBUF_NO_STATIC_INITIALIZER
   protobuf_structs_2fFlagsDescriptor_2eproto::InitDefaults();
-#endif  // GOOGLE_PROTOBUF_NO_STATIC_INITIALIZER
   SharedCtor();
   RegisterArenaDtor(arena);
   // @@protoc_insertion_point(arena_constructor:FlagsDescriptor)
@@ -826,14 +866,15 @@ FlagsDescriptor::FlagsDescriptor(const FlagsDescriptor& from)
       _cached_size_(0) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   ::memcpy(&visible_, &from.visible_,
-    reinterpret_cast<char*>(&inhouse_) -
-    reinterpret_cast<char*>(&visible_) + sizeof(inhouse_));
+    static_cast<size_t>(reinterpret_cast<char*>(&inhouse_) -
+    reinterpret_cast<char*>(&visible_)) + sizeof(inhouse_));
   // @@protoc_insertion_point(copy_constructor:FlagsDescriptor)
 }
 
 void FlagsDescriptor::SharedCtor() {
-  ::memset(&visible_, 0, reinterpret_cast<char*>(&inhouse_) -
-    reinterpret_cast<char*>(&visible_) + sizeof(inhouse_));
+  ::memset(&visible_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&inhouse_) -
+      reinterpret_cast<char*>(&visible_)) + sizeof(inhouse_));
   _cached_size_ = 0;
 }
 
@@ -844,6 +885,7 @@ FlagsDescriptor::~FlagsDescriptor() {
 
 void FlagsDescriptor::SharedDtor() {
   ::google::protobuf::Arena* arena = GetArenaNoVirtual();
+  GOOGLE_DCHECK(arena == NULL);
   if (arena != NULL) {
     return;
   }
@@ -877,8 +919,14 @@ FlagsDescriptor* FlagsDescriptor::New(::google::protobuf::Arena* arena) const {
 
 void FlagsDescriptor::Clear() {
 // @@protoc_insertion_point(message_clear_start:FlagsDescriptor)
-  ::memset(&visible_, 0, reinterpret_cast<char*>(&inhouse_) -
-    reinterpret_cast<char*>(&visible_) + sizeof(inhouse_));
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  ::memset(&visible_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&inhouse_) -
+      reinterpret_cast<char*>(&visible_)) + sizeof(inhouse_));
+  _internal_metadata_.Clear();
 }
 
 bool FlagsDescriptor::MergePartialFromCodedStream(
@@ -894,7 +942,7 @@ bool FlagsDescriptor::MergePartialFromCodedStream(
       // bool visible = 1;
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(8u)) {
+            static_cast< ::google::protobuf::uint8>(8u /* 8 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
@@ -908,7 +956,7 @@ bool FlagsDescriptor::MergePartialFromCodedStream(
       // bool premium = 2;
       case 2: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(16u)) {
+            static_cast< ::google::protobuf::uint8>(16u /* 16 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
@@ -922,7 +970,7 @@ bool FlagsDescriptor::MergePartialFromCodedStream(
       // bool featured = 3;
       case 3: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(24u)) {
+            static_cast< ::google::protobuf::uint8>(24u /* 24 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
@@ -936,7 +984,7 @@ bool FlagsDescriptor::MergePartialFromCodedStream(
       // bool lastchance = 4;
       case 4: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(32u)) {
+            static_cast< ::google::protobuf::uint8>(32u /* 32 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
@@ -950,7 +998,7 @@ bool FlagsDescriptor::MergePartialFromCodedStream(
       // bool inhouse = 5;
       case 5: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(40u)) {
+            static_cast< ::google::protobuf::uint8>(40u /* 40 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
@@ -963,12 +1011,11 @@ bool FlagsDescriptor::MergePartialFromCodedStream(
 
       default: {
       handle_unusual:
-        if (tag == 0 ||
-            ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+        if (tag == 0) {
           goto success;
         }
-        DO_(::google::protobuf::internal::WireFormatLite::SkipField(input, tag));
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
         break;
       }
     }
@@ -1013,6 +1060,10 @@ void FlagsDescriptor::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::WriteBool(5, this->inhouse(), output);
   }
 
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
+  }
   // @@protoc_insertion_point(serialize_end:FlagsDescriptor)
 }
 
@@ -1048,6 +1099,10 @@ void FlagsDescriptor::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(5, this->inhouse(), target);
   }
 
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
+  }
   // @@protoc_insertion_point(serialize_to_array_end:FlagsDescriptor)
   return target;
 }
@@ -1056,6 +1111,11 @@ size_t FlagsDescriptor::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:FlagsDescriptor)
   size_t total_size = 0;
 
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
+  }
   // bool visible = 1;
   if (this->visible() != 0) {
     total_size += 1 + 1;
@@ -1165,12 +1225,14 @@ void FlagsDescriptor::UnsafeArenaSwap(FlagsDescriptor* other) {
   InternalSwap(other);
 }
 void FlagsDescriptor::InternalSwap(FlagsDescriptor* other) {
-  std::swap(visible_, other->visible_);
-  std::swap(premium_, other->premium_);
-  std::swap(featured_, other->featured_);
-  std::swap(lastchance_, other->lastchance_);
-  std::swap(inhouse_, other->inhouse_);
-  std::swap(_cached_size_, other->_cached_size_);
+  using std::swap;
+  swap(visible_, other->visible_);
+  swap(premium_, other->premium_);
+  swap(featured_, other->featured_);
+  swap(lastchance_, other->lastchance_);
+  swap(inhouse_, other->inhouse_);
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata FlagsDescriptor::GetMetadata() const {

@@ -7,32 +7,28 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Protobuf type <code>Brand</code>
+ * Generated from protobuf message <code>Brand</code>
  */
 class Brand extends \Google\Protobuf\Internal\Message
 {
     /**
-     * <pre>
      * -- Basic Properties
-     * </pre>
      *
-     * <code>.Name name = 1;</code>
+     * Generated from protobuf field <code>.Name name = 1;</code>
      */
     private $name = null;
     /**
-     * <code>.Brand parent = 2;</code>
+     * Generated from protobuf field <code>.Brand parent = 2;</code>
      */
     private $parent = null;
     /**
-     * <code>.Content summary = 3;</code>
+     * Generated from protobuf field <code>.Content summary = 3;</code>
      */
     private $summary = null;
     /**
-     * <pre>
      * -- Media
-     * </pre>
      *
-     * <code>repeated .MediaItem media = 20;</code>
+     * Generated from protobuf field <code>repeated .MediaItem media = 20;</code>
      */
     private $media;
 
@@ -42,11 +38,10 @@ class Brand extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <pre>
      * -- Basic Properties
-     * </pre>
      *
-     * <code>.Name name = 1;</code>
+     * Generated from protobuf field <code>.Name name = 1;</code>
+     * @return \Name
      */
     public function getName()
     {
@@ -54,20 +49,23 @@ class Brand extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <pre>
      * -- Basic Properties
-     * </pre>
      *
-     * <code>.Name name = 1;</code>
+     * Generated from protobuf field <code>.Name name = 1;</code>
+     * @param \Name $var
+     * @return $this
      */
-    public function setName(&$var)
+    public function setName($var)
     {
         GPBUtil::checkMessage($var, \Name::class);
         $this->name = $var;
+
+        return $this;
     }
 
     /**
-     * <code>.Brand parent = 2;</code>
+     * Generated from protobuf field <code>.Brand parent = 2;</code>
+     * @return \Brand
      */
     public function getParent()
     {
@@ -75,16 +73,21 @@ class Brand extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>.Brand parent = 2;</code>
+     * Generated from protobuf field <code>.Brand parent = 2;</code>
+     * @param \Brand $var
+     * @return $this
      */
-    public function setParent(&$var)
+    public function setParent($var)
     {
         GPBUtil::checkMessage($var, \Brand::class);
         $this->parent = $var;
+
+        return $this;
     }
 
     /**
-     * <code>.Content summary = 3;</code>
+     * Generated from protobuf field <code>.Content summary = 3;</code>
+     * @return \Content
      */
     public function getSummary()
     {
@@ -92,20 +95,23 @@ class Brand extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>.Content summary = 3;</code>
+     * Generated from protobuf field <code>.Content summary = 3;</code>
+     * @param \Content $var
+     * @return $this
      */
-    public function setSummary(&$var)
+    public function setSummary($var)
     {
         GPBUtil::checkMessage($var, \Content::class);
         $this->summary = $var;
+
+        return $this;
     }
 
     /**
-     * <pre>
      * -- Media
-     * </pre>
      *
-     * <code>repeated .MediaItem media = 20;</code>
+     * Generated from protobuf field <code>repeated .MediaItem media = 20;</code>
+     * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getMedia()
     {
@@ -113,16 +119,18 @@ class Brand extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <pre>
      * -- Media
-     * </pre>
      *
-     * <code>repeated .MediaItem media = 20;</code>
+     * Generated from protobuf field <code>repeated .MediaItem media = 20;</code>
+     * @param \MediaItem[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @return $this
      */
-    public function setMedia(&$var)
+    public function setMedia($var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \MediaItem::class);
         $this->media = $arr;
+
+        return $this;
     }
 
 }

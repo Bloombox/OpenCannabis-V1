@@ -7,24 +7,22 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * <pre>
  * -- Product Type: Top-level -- //
- * </pre>
  *
- * Protobuf type <code>Product</code>
+ * Generated from protobuf message <code>Product</code>
  */
 class Product extends \Google\Protobuf\Internal\Message
 {
     /**
-     * <code>.ProductKey key = 1;</code>
+     * Generated from protobuf field <code>.ProductKey key = 1;</code>
      */
     private $key = null;
     /**
-     * <code>.ProductType type = 2;</code>
+     * Generated from protobuf field <code>.ProductType type = 2;</code>
      */
     private $type = null;
     /**
-     * <code>.google.protobuf.Any data = 3;</code>
+     * Generated from protobuf field <code>.google.protobuf.Any data = 3;</code>
      */
     private $data = null;
 
@@ -34,7 +32,8 @@ class Product extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>.ProductKey key = 1;</code>
+     * Generated from protobuf field <code>.ProductKey key = 1;</code>
+     * @return \ProductKey
      */
     public function getKey()
     {
@@ -42,16 +41,21 @@ class Product extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>.ProductKey key = 1;</code>
+     * Generated from protobuf field <code>.ProductKey key = 1;</code>
+     * @param \ProductKey $var
+     * @return $this
      */
-    public function setKey(&$var)
+    public function setKey($var)
     {
         GPBUtil::checkMessage($var, \ProductKey::class);
         $this->key = $var;
+
+        return $this;
     }
 
     /**
-     * <code>.ProductType type = 2;</code>
+     * Generated from protobuf field <code>.ProductType type = 2;</code>
+     * @return \ProductType
      */
     public function getType()
     {
@@ -59,16 +63,21 @@ class Product extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>.ProductType type = 2;</code>
+     * Generated from protobuf field <code>.ProductType type = 2;</code>
+     * @param \ProductType $var
+     * @return $this
      */
-    public function setType(&$var)
+    public function setType($var)
     {
         GPBUtil::checkMessage($var, \ProductType::class);
         $this->type = $var;
+
+        return $this;
     }
 
     /**
-     * <code>.google.protobuf.Any data = 3;</code>
+     * Generated from protobuf field <code>.google.protobuf.Any data = 3;</code>
+     * @return \Google\Protobuf\Any
      */
     public function getData()
     {
@@ -76,12 +85,16 @@ class Product extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>.google.protobuf.Any data = 3;</code>
+     * Generated from protobuf field <code>.google.protobuf.Any data = 3;</code>
+     * @param \Google\Protobuf\Any $var
+     * @return $this
      */
-    public function setData(&$var)
+    public function setData($var)
     {
         GPBUtil::checkMessage($var, \Google\Protobuf\Any::class);
         $this->data = $var;
+
+        return $this;
     }
 
 }

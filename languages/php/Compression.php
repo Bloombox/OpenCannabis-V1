@@ -7,16 +7,16 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Protobuf type <code>Compression</code>
+ * Generated from protobuf message <code>Compression</code>
  */
 class Compression extends \Google\Protobuf\Internal\Message
 {
     /**
-     * <code>bool enabled = 1;</code>
+     * Generated from protobuf field <code>bool enabled = 1;</code>
      */
     private $enabled = false;
     /**
-     * <code>.Compression.Type type = 2;</code>
+     * Generated from protobuf field <code>.Compression.Type type = 2;</code>
      */
     private $type = 0;
 
@@ -26,7 +26,8 @@ class Compression extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>bool enabled = 1;</code>
+     * Generated from protobuf field <code>bool enabled = 1;</code>
+     * @return bool
      */
     public function getEnabled()
     {
@@ -34,16 +35,21 @@ class Compression extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>bool enabled = 1;</code>
+     * Generated from protobuf field <code>bool enabled = 1;</code>
+     * @param bool $var
+     * @return $this
      */
     public function setEnabled($var)
     {
         GPBUtil::checkBool($var);
         $this->enabled = $var;
+
+        return $this;
     }
 
     /**
-     * <code>.Compression.Type type = 2;</code>
+     * Generated from protobuf field <code>.Compression.Type type = 2;</code>
+     * @return int
      */
     public function getType()
     {
@@ -51,12 +57,16 @@ class Compression extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>.Compression.Type type = 2;</code>
+     * Generated from protobuf field <code>.Compression.Type type = 2;</code>
+     * @param int $var
+     * @return $this
      */
     public function setType($var)
     {
         GPBUtil::checkEnum($var, \Compression_Type::class);
         $this->type = $var;
+
+        return $this;
     }
 
 }

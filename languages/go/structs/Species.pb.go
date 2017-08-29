@@ -43,15 +43,15 @@ var Species_value = map[string]int32{
 func (x Species) String() string {
 	return proto.EnumName(Species_name, int32(x))
 }
-func (Species) EnumDescriptor() ([]byte, []int) { return fileDescriptor18, []int{0} }
+func (Species) EnumDescriptor() ([]byte, []int) { return fileDescriptor19, []int{0} }
 
 func init() {
 	proto.RegisterEnum("Species", Species_name, Species_value)
 }
 
-func init() { proto.RegisterFile("structs/Species.proto", fileDescriptor18) }
+func init() { proto.RegisterFile("structs/Species.proto", fileDescriptor19) }
 
-var fileDescriptor18 = []byte{
+var fileDescriptor19 = []byte{
 	// 172 bytes of a gzipped FileDescriptorProto
 	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0xe2, 0x12, 0x2d, 0x2e, 0x29, 0x2a,
 	0x4d, 0x2e, 0x29, 0xd6, 0x0f, 0x2e, 0x48, 0x4d, 0xce, 0x4c, 0x2d, 0xd6, 0x2b, 0x28, 0xca, 0x2f,

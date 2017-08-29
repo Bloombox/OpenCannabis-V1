@@ -7,28 +7,28 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Protobuf type <code>FlagsDescriptor</code>
+ * Generated from protobuf message <code>FlagsDescriptor</code>
  */
 class FlagsDescriptor extends \Google\Protobuf\Internal\Message
 {
     /**
-     * <code>bool visible = 1;</code>
+     * Generated from protobuf field <code>bool visible = 1;</code>
      */
     private $visible = false;
     /**
-     * <code>bool premium = 2;</code>
+     * Generated from protobuf field <code>bool premium = 2;</code>
      */
     private $premium = false;
     /**
-     * <code>bool featured = 3;</code>
+     * Generated from protobuf field <code>bool featured = 3;</code>
      */
     private $featured = false;
     /**
-     * <code>bool lastchance = 4;</code>
+     * Generated from protobuf field <code>bool lastchance = 4;</code>
      */
     private $lastchance = false;
     /**
-     * <code>bool inhouse = 5;</code>
+     * Generated from protobuf field <code>bool inhouse = 5;</code>
      */
     private $inhouse = false;
 
@@ -38,7 +38,8 @@ class FlagsDescriptor extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>bool visible = 1;</code>
+     * Generated from protobuf field <code>bool visible = 1;</code>
+     * @return bool
      */
     public function getVisible()
     {
@@ -46,16 +47,21 @@ class FlagsDescriptor extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>bool visible = 1;</code>
+     * Generated from protobuf field <code>bool visible = 1;</code>
+     * @param bool $var
+     * @return $this
      */
     public function setVisible($var)
     {
         GPBUtil::checkBool($var);
         $this->visible = $var;
+
+        return $this;
     }
 
     /**
-     * <code>bool premium = 2;</code>
+     * Generated from protobuf field <code>bool premium = 2;</code>
+     * @return bool
      */
     public function getPremium()
     {
@@ -63,16 +69,21 @@ class FlagsDescriptor extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>bool premium = 2;</code>
+     * Generated from protobuf field <code>bool premium = 2;</code>
+     * @param bool $var
+     * @return $this
      */
     public function setPremium($var)
     {
         GPBUtil::checkBool($var);
         $this->premium = $var;
+
+        return $this;
     }
 
     /**
-     * <code>bool featured = 3;</code>
+     * Generated from protobuf field <code>bool featured = 3;</code>
+     * @return bool
      */
     public function getFeatured()
     {
@@ -80,16 +91,21 @@ class FlagsDescriptor extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>bool featured = 3;</code>
+     * Generated from protobuf field <code>bool featured = 3;</code>
+     * @param bool $var
+     * @return $this
      */
     public function setFeatured($var)
     {
         GPBUtil::checkBool($var);
         $this->featured = $var;
+
+        return $this;
     }
 
     /**
-     * <code>bool lastchance = 4;</code>
+     * Generated from protobuf field <code>bool lastchance = 4;</code>
+     * @return bool
      */
     public function getLastchance()
     {
@@ -97,16 +113,21 @@ class FlagsDescriptor extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>bool lastchance = 4;</code>
+     * Generated from protobuf field <code>bool lastchance = 4;</code>
+     * @param bool $var
+     * @return $this
      */
     public function setLastchance($var)
     {
         GPBUtil::checkBool($var);
         $this->lastchance = $var;
+
+        return $this;
     }
 
     /**
-     * <code>bool inhouse = 5;</code>
+     * Generated from protobuf field <code>bool inhouse = 5;</code>
+     * @return bool
      */
     public function getInhouse()
     {
@@ -114,12 +135,16 @@ class FlagsDescriptor extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>bool inhouse = 5;</code>
+     * Generated from protobuf field <code>bool inhouse = 5;</code>
+     * @param bool $var
+     * @return $this
      */
     public function setInhouse($var)
     {
         GPBUtil::checkBool($var);
         $this->inhouse = $var;
+
+        return $this;
     }
 
 }

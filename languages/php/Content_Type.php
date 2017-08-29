@@ -3,20 +3,20 @@
 # source: content/Content.proto
 
 /**
- * Protobuf enum <code>Content.Type</code>
+ * Protobuf enum <code>Content\Type</code>
  */
 class Content_Type
 {
     /**
-     * <code>TEXT = 0;</code>
+     * Generated from protobuf enum <code>TEXT = 0;</code>
      */
     const TEXT = 0;
     /**
-     * <code>MARKDOWN = 1;</code>
+     * Generated from protobuf enum <code>MARKDOWN = 1;</code>
      */
     const MARKDOWN = 1;
     /**
-     * <code>HTML = 2;</code>
+     * Generated from protobuf enum <code>HTML = 2;</code>
      */
     const HTML = 2;
 }

@@ -1,7 +1,7 @@
 
 ### Description
 
-Version: `1.0.0-beta4`
+Version: `1.0.3`
 
 <!-- Describe what happened. Include as much detail as necessary. -->
 

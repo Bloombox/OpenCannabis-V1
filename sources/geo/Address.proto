@@ -1,0 +1,16 @@
+
+syntax = "proto3";
+
+option optimize_for = SPEED;
+option java_package = "io.bloombox.schema.geo";
+option java_multiple_files = true;
+
+
+message Address {
+  string first_line = 1;
+  string second_line = 2;
+  string city = 3;
+  string state = 4;
+  string zipcode = 5;
+  string country = 6;
+}

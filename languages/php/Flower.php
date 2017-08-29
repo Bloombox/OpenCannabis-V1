@@ -7,40 +7,34 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Protobuf type <code>Flower</code>
+ * Generated from protobuf message <code>Flower</code>
  */
 class Flower extends \Google\Protobuf\Internal\Message
 {
     /**
-     * <pre>
      * -- Object Key
-     * </pre>
      *
-     * <code>.ProductKey key = 1;</code>
+     * Generated from protobuf field <code>.ProductKey key = 1;</code>
      */
     private $key = null;
     /**
-     * <pre>
-     * -- Basic Product &amp; Materials Data
-     * </pre>
+     * -- Basic Product & Materials Data
      *
-     * <code>.ProductContent product_data = 20;</code>
+     * Generated from protobuf field <code>.ProductContent product_data = 20;</code>
      */
     private $product_data = null;
     /**
-     * <code>.MaterialsData material_data = 21;</code>
+     * Generated from protobuf field <code>.MaterialsData material_data = 21;</code>
      */
     private $material_data = null;
     /**
-     * <pre>
      * -- Flags and Pricing
-     * </pre>
      *
-     * <code>.FlagsDescriptor flags = 22;</code>
+     * Generated from protobuf field <code>.FlagsDescriptor flags = 22;</code>
      */
     private $flags = null;
     /**
-     * <code>.ProductPricing pricing = 23;</code>
+     * Generated from protobuf field <code>.ProductPricing pricing = 23;</code>
      */
     private $pricing = null;
 
@@ -50,11 +44,10 @@ class Flower extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <pre>
      * -- Object Key
-     * </pre>
      *
-     * <code>.ProductKey key = 1;</code>
+     * Generated from protobuf field <code>.ProductKey key = 1;</code>
+     * @return \ProductKey
      */
     public function getKey()
     {
@@ -62,24 +55,25 @@ class Flower extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <pre>
      * -- Object Key
-     * </pre>
      *
-     * <code>.ProductKey key = 1;</code>
+     * Generated from protobuf field <code>.ProductKey key = 1;</code>
+     * @param \ProductKey $var
+     * @return $this
      */
-    public function setKey(&$var)
+    public function setKey($var)
     {
         GPBUtil::checkMessage($var, \ProductKey::class);
         $this->key = $var;
+
+        return $this;
     }
 
     /**
-     * <pre>
-     * -- Basic Product &amp; Materials Data
-     * </pre>
+     * -- Basic Product & Materials Data
      *
-     * <code>.ProductContent product_data = 20;</code>
+     * Generated from protobuf field <code>.ProductContent product_data = 20;</code>
+     * @return \ProductContent
      */
     public function getProductData()
     {
@@ -87,20 +81,23 @@ class Flower extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <pre>
-     * -- Basic Product &amp; Materials Data
-     * </pre>
+     * -- Basic Product & Materials Data
      *
-     * <code>.ProductContent product_data = 20;</code>
+     * Generated from protobuf field <code>.ProductContent product_data = 20;</code>
+     * @param \ProductContent $var
+     * @return $this
      */
-    public function setProductData(&$var)
+    public function setProductData($var)
     {
         GPBUtil::checkMessage($var, \ProductContent::class);
         $this->product_data = $var;
+
+        return $this;
     }
 
     /**
-     * <code>.MaterialsData material_data = 21;</code>
+     * Generated from protobuf field <code>.MaterialsData material_data = 21;</code>
+     * @return \MaterialsData
      */
     public function getMaterialData()
     {
@@ -108,20 +105,23 @@ class Flower extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>.MaterialsData material_data = 21;</code>
+     * Generated from protobuf field <code>.MaterialsData material_data = 21;</code>
+     * @param \MaterialsData $var
+     * @return $this
      */
-    public function setMaterialData(&$var)
+    public function setMaterialData($var)
     {
         GPBUtil::checkMessage($var, \MaterialsData::class);
         $this->material_data = $var;
+
+        return $this;
     }
 
     /**
-     * <pre>
      * -- Flags and Pricing
-     * </pre>
      *
-     * <code>.FlagsDescriptor flags = 22;</code>
+     * Generated from protobuf field <code>.FlagsDescriptor flags = 22;</code>
+     * @return \FlagsDescriptor
      */
     public function getFlags()
     {
@@ -129,20 +129,23 @@ class Flower extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <pre>
      * -- Flags and Pricing
-     * </pre>
      *
-     * <code>.FlagsDescriptor flags = 22;</code>
+     * Generated from protobuf field <code>.FlagsDescriptor flags = 22;</code>
+     * @param \FlagsDescriptor $var
+     * @return $this
      */
-    public function setFlags(&$var)
+    public function setFlags($var)
     {
         GPBUtil::checkMessage($var, \FlagsDescriptor::class);
         $this->flags = $var;
+
+        return $this;
     }
 
     /**
-     * <code>.ProductPricing pricing = 23;</code>
+     * Generated from protobuf field <code>.ProductPricing pricing = 23;</code>
+     * @return \ProductPricing
      */
     public function getPricing()
     {
@@ -150,12 +153,16 @@ class Flower extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>.ProductPricing pricing = 23;</code>
+     * Generated from protobuf field <code>.ProductPricing pricing = 23;</code>
+     * @param \ProductPricing $var
+     * @return $this
      */
-    public function setPricing(&$var)
+    public function setPricing($var)
     {
         GPBUtil::checkMessage($var, \ProductPricing::class);
         $this->pricing = $var;
+
+        return $this;
     }
 
 }

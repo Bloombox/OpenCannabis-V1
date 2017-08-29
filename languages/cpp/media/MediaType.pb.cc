@@ -16,13 +16,25 @@
 #include <google/protobuf/reflection_ops.h>
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
-class MediaTypeDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<MediaType> {
+class MediaTypeDefaultTypeInternal {
+public:
+ ::google::protobuf::internal::ExplicitlyConstructed<MediaType>
+     _instance;
 } _MediaType_default_instance_;
-class ImageTypeDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<ImageType> {
+class ImageTypeDefaultTypeInternal {
+public:
+ ::google::protobuf::internal::ExplicitlyConstructed<ImageType>
+     _instance;
 } _ImageType_default_instance_;
-class DocumentTypeDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<DocumentType> {
+class DocumentTypeDefaultTypeInternal {
+public:
+ ::google::protobuf::internal::ExplicitlyConstructed<DocumentType>
+     _instance;
 } _DocumentType_default_instance_;
-class VideoTypeDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<VideoType> {
+class VideoTypeDefaultTypeInternal {
+public:
+ ::google::protobuf::internal::ExplicitlyConstructed<VideoType>
+     _instance;
 } _VideoType_default_instance_;
 
 namespace protobuf_media_2fMediaType_2eproto {
@@ -36,23 +48,23 @@ const ::google::protobuf::EnumDescriptor* file_level_enum_descriptors[4];
 }  // namespace
 
 PROTOBUF_CONSTEXPR_VAR ::google::protobuf::internal::ParseTableField
-    const TableStruct::entries[] = {
+    const TableStruct::entries[] GOOGLE_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
   {0, 0, 0, ::google::protobuf::internal::kInvalidMask, 0, 0},
 };
 
 PROTOBUF_CONSTEXPR_VAR ::google::protobuf::internal::AuxillaryParseTableField
-    const TableStruct::aux[] = {
+    const TableStruct::aux[] GOOGLE_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
   ::google::protobuf::internal::AuxillaryParseTableField(),
 };
 PROTOBUF_CONSTEXPR_VAR ::google::protobuf::internal::ParseTable const
-    TableStruct::schema[] = {
-  { NULL, NULL, 0, -1, -1, false },
-  { NULL, NULL, 0, -1, -1, false },
-  { NULL, NULL, 0, -1, -1, false },
-  { NULL, NULL, 0, -1, -1, false },
+    TableStruct::schema[] GOOGLE_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
+  { NULL, NULL, 0, -1, -1, -1, -1, NULL, false },
+  { NULL, NULL, 0, -1, -1, -1, -1, NULL, false },
+  { NULL, NULL, 0, -1, -1, -1, -1, NULL, false },
+  { NULL, NULL, 0, -1, -1, -1, -1, NULL, false },
 };
 
-const ::google::protobuf::uint32 TableStruct::offsets[] = {
+const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
   ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MediaType, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -82,8 +94,7 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
   ~0u,  // no _weak_field_map_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(VideoType, kind_),
 };
-
-static const ::google::protobuf::internal::MigrationSchema schemas[] = {
+static const ::google::protobuf::internal::MigrationSchema schemas[] GOOGLE_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, sizeof(MediaType)},
   { 9, -1, sizeof(ImageType)},
   { 15, -1, sizeof(DocumentType)},
@@ -119,31 +130,23 @@ void protobuf_RegisterTypes(const ::std::string&) {
 }
 
 }  // namespace
-
-void TableStruct::Shutdown() {
-  _MediaType_default_instance_.Shutdown();
-  delete file_level_metadata[0].reflection;
-  _ImageType_default_instance_.Shutdown();
-  delete file_level_metadata[1].reflection;
-  _DocumentType_default_instance_.Shutdown();
-  delete file_level_metadata[2].reflection;
-  _VideoType_default_instance_.Shutdown();
-  delete file_level_metadata[3].reflection;
-}
-
 void TableStruct::InitDefaultsImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   ::google::protobuf::internal::InitProtobufDefaults();
-  _MediaType_default_instance_.DefaultConstruct();
-  _ImageType_default_instance_.DefaultConstruct();
-  _DocumentType_default_instance_.DefaultConstruct();
-  _VideoType_default_instance_.DefaultConstruct();
-  _MediaType_default_instance_.get_mutable()->image_type_ = const_cast< ::ImageType*>(
+  _MediaType_default_instance_._instance.DefaultConstruct();
+  ::google::protobuf::internal::OnShutdownDestroyMessage(
+      &_MediaType_default_instance_);_ImageType_default_instance_._instance.DefaultConstruct();
+  ::google::protobuf::internal::OnShutdownDestroyMessage(
+      &_ImageType_default_instance_);_DocumentType_default_instance_._instance.DefaultConstruct();
+  ::google::protobuf::internal::OnShutdownDestroyMessage(
+      &_DocumentType_default_instance_);_VideoType_default_instance_._instance.DefaultConstruct();
+  ::google::protobuf::internal::OnShutdownDestroyMessage(
+      &_VideoType_default_instance_);_MediaType_default_instance_._instance.get_mutable()->image_type_ = const_cast< ::ImageType*>(
       ::ImageType::internal_default_instance());
-  _MediaType_default_instance_.get_mutable()->document_type_ = const_cast< ::DocumentType*>(
+  _MediaType_default_instance_._instance.get_mutable()->document_type_ = const_cast< ::DocumentType*>(
       ::DocumentType::internal_default_instance());
-  _MediaType_default_instance_.get_mutable()->video_type_ = const_cast< ::VideoType*>(
+  _MediaType_default_instance_._instance.get_mutable()->video_type_ = const_cast< ::VideoType*>(
       ::VideoType::internal_default_instance());
 }
 
@@ -151,9 +154,10 @@ void InitDefaults() {
   static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
   ::google::protobuf::GoogleOnceInit(&once, &TableStruct::InitDefaultsImpl);
 }
+namespace {
 void AddDescriptorsImpl() {
   InitDefaults();
-  static const char descriptor[] = {
+  static const char descriptor[] GOOGLE_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
       "\n\025media/MediaType.proto\"\310\001\n\tMediaType\022\035\n"
       "\004kind\030\001 \001(\0162\017.MediaType.Kind\022\036\n\nimage_ty"
       "pe\030e \001(\0132\n.ImageType\022%\n\rdocument_type\030\311\001"
@@ -175,14 +179,14 @@ void AddDescriptorsImpl() {
       descriptor, 618);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "media/MediaType.proto", &protobuf_RegisterTypes);
-  ::google::protobuf::internal::OnShutdown(&TableStruct::Shutdown);
 }
+} // anonymous namespace
 
 void AddDescriptors() {
   static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
   ::google::protobuf::GoogleOnceInit(&once, &AddDescriptorsImpl);
 }
-// Force AddDescriptors() to be called at static initialization time.
+// Force AddDescriptors() to be called at dynamic initialization time.
 struct StaticDescriptorInitializer {
   StaticDescriptorInitializer() {
     AddDescriptors();
@@ -453,9 +457,7 @@ MediaType::MediaType()
 MediaType::MediaType(::google::protobuf::Arena* arena)
   : ::google::protobuf::Message(),
   _internal_metadata_(arena) {
-#ifdef GOOGLE_PROTOBUF_NO_STATIC_INITIALIZER
   protobuf_media_2fMediaType_2eproto::InitDefaults();
-#endif  // GOOGLE_PROTOBUF_NO_STATIC_INITIALIZER
   SharedCtor();
   RegisterArenaDtor(arena);
   // @@protoc_insertion_point(arena_constructor:MediaType)
@@ -485,8 +487,9 @@ MediaType::MediaType(const MediaType& from)
 }
 
 void MediaType::SharedCtor() {
-  ::memset(&image_type_, 0, reinterpret_cast<char*>(&kind_) -
-    reinterpret_cast<char*>(&image_type_) + sizeof(kind_));
+  ::memset(&image_type_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&kind_) -
+      reinterpret_cast<char*>(&image_type_)) + sizeof(kind_));
   _cached_size_ = 0;
 }
 
@@ -497,19 +500,14 @@ MediaType::~MediaType() {
 
 void MediaType::SharedDtor() {
   ::google::protobuf::Arena* arena = GetArenaNoVirtual();
+  GOOGLE_DCHECK(arena == NULL);
   if (arena != NULL) {
     return;
   }
 
-  if (this != internal_default_instance()) {
-    delete image_type_;
-  }
-  if (this != internal_default_instance()) {
-    delete document_type_;
-  }
-  if (this != internal_default_instance()) {
-    delete video_type_;
-  }
+  if (this != internal_default_instance()) delete image_type_;
+  if (this != internal_default_instance()) delete document_type_;
+  if (this != internal_default_instance()) delete video_type_;
 }
 
 void MediaType::ArenaDtor(void* object) {
@@ -539,6 +537,10 @@ MediaType* MediaType::New(::google::protobuf::Arena* arena) const {
 
 void MediaType::Clear() {
 // @@protoc_insertion_point(message_clear_start:MediaType)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
   if (GetArenaNoVirtual() == NULL && image_type_ != NULL) {
     delete image_type_;
   }
@@ -552,6 +554,7 @@ void MediaType::Clear() {
   }
   video_type_ = NULL;
   kind_ = 0;
+  _internal_metadata_.Clear();
 }
 
 bool MediaType::MergePartialFromCodedStream(
@@ -567,7 +570,7 @@ bool MediaType::MergePartialFromCodedStream(
       // .MediaType.Kind kind = 1;
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(8u)) {
+            static_cast< ::google::protobuf::uint8>(8u /* 8 & 0xFF */)) {
           int value;
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
@@ -582,7 +585,7 @@ bool MediaType::MergePartialFromCodedStream(
       // .ImageType image_type = 101;
       case 101: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(810u)) {
+            static_cast< ::google::protobuf::uint8>(42u /* 810 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_image_type()));
         } else {
@@ -594,7 +597,7 @@ bool MediaType::MergePartialFromCodedStream(
       // .DocumentType document_type = 201;
       case 201: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(1610u)) {
+            static_cast< ::google::protobuf::uint8>(74u /* 1610 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_document_type()));
         } else {
@@ -606,7 +609,7 @@ bool MediaType::MergePartialFromCodedStream(
       // .VideoType video_type = 301;
       case 301: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(2410u)) {
+            static_cast< ::google::protobuf::uint8>(106u /* 2410 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_video_type()));
         } else {
@@ -617,12 +620,11 @@ bool MediaType::MergePartialFromCodedStream(
 
       default: {
       handle_unusual:
-        if (tag == 0 ||
-            ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+        if (tag == 0) {
           goto success;
         }
-        DO_(::google::protobuf::internal::WireFormatLite::SkipField(input, tag));
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
         break;
       }
     }
@@ -666,6 +668,10 @@ void MediaType::SerializeWithCachedSizes(
       301, *this->video_type_, output);
   }
 
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
+  }
   // @@protoc_insertion_point(serialize_end:MediaType)
 }
 
@@ -703,6 +709,10 @@ void MediaType::SerializeWithCachedSizes(
         301, *this->video_type_, deterministic, target);
   }
 
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
+  }
   // @@protoc_insertion_point(serialize_to_array_end:MediaType)
   return target;
 }
@@ -711,6 +721,11 @@ size_t MediaType::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:MediaType)
   size_t total_size = 0;
 
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
+  }
   // .ImageType image_type = 101;
   if (this->has_image_type()) {
     total_size += 2 +
@@ -819,11 +834,13 @@ void MediaType::UnsafeArenaSwap(MediaType* other) {
   InternalSwap(other);
 }
 void MediaType::InternalSwap(MediaType* other) {
-  std::swap(image_type_, other->image_type_);
-  std::swap(document_type_, other->document_type_);
-  std::swap(video_type_, other->video_type_);
-  std::swap(kind_, other->kind_);
-  std::swap(_cached_size_, other->_cached_size_);
+  using std::swap;
+  swap(image_type_, other->image_type_);
+  swap(document_type_, other->document_type_);
+  swap(video_type_, other->video_type_);
+  swap(kind_, other->kind_);
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata MediaType::GetMetadata() const {
@@ -857,9 +874,10 @@ void MediaType::clear_image_type() {
   image_type_ = NULL;
 }
 const ::ImageType& MediaType::image_type() const {
+  const ::ImageType* p = image_type_;
   // @@protoc_insertion_point(field_get:MediaType.image_type)
-  return image_type_ != NULL ? *image_type_
-                         : *::ImageType::internal_default_instance();
+  return p != NULL ? *p : *reinterpret_cast<const ::ImageType*>(
+      &::_ImageType_default_instance_);
 }
 ::ImageType* MediaType::mutable_image_type() {
   
@@ -906,9 +924,10 @@ void MediaType::clear_document_type() {
   document_type_ = NULL;
 }
 const ::DocumentType& MediaType::document_type() const {
+  const ::DocumentType* p = document_type_;
   // @@protoc_insertion_point(field_get:MediaType.document_type)
-  return document_type_ != NULL ? *document_type_
-                         : *::DocumentType::internal_default_instance();
+  return p != NULL ? *p : *reinterpret_cast<const ::DocumentType*>(
+      &::_DocumentType_default_instance_);
 }
 ::DocumentType* MediaType::mutable_document_type() {
   
@@ -955,9 +974,10 @@ void MediaType::clear_video_type() {
   video_type_ = NULL;
 }
 const ::VideoType& MediaType::video_type() const {
+  const ::VideoType* p = video_type_;
   // @@protoc_insertion_point(field_get:MediaType.video_type)
-  return video_type_ != NULL ? *video_type_
-                         : *::VideoType::internal_default_instance();
+  return p != NULL ? *p : *reinterpret_cast<const ::VideoType*>(
+      &::_VideoType_default_instance_);
 }
 ::VideoType* MediaType::mutable_video_type() {
   
@@ -1014,9 +1034,7 @@ ImageType::ImageType()
 ImageType::ImageType(::google::protobuf::Arena* arena)
   : ::google::protobuf::Message(),
   _internal_metadata_(arena) {
-#ifdef GOOGLE_PROTOBUF_NO_STATIC_INITIALIZER
   protobuf_media_2fMediaType_2eproto::InitDefaults();
-#endif  // GOOGLE_PROTOBUF_NO_STATIC_INITIALIZER
   SharedCtor();
   RegisterArenaDtor(arena);
   // @@protoc_insertion_point(arena_constructor:ImageType)
@@ -1042,6 +1060,7 @@ ImageType::~ImageType() {
 
 void ImageType::SharedDtor() {
   ::google::protobuf::Arena* arena = GetArenaNoVirtual();
+  GOOGLE_DCHECK(arena == NULL);
   if (arena != NULL) {
     return;
   }
@@ -1075,7 +1094,12 @@ ImageType* ImageType::New(::google::protobuf::Arena* arena) const {
 
 void ImageType::Clear() {
 // @@protoc_insertion_point(message_clear_start:ImageType)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
   kind_ = 0;
+  _internal_metadata_.Clear();
 }
 
 bool ImageType::MergePartialFromCodedStream(
@@ -1091,7 +1115,7 @@ bool ImageType::MergePartialFromCodedStream(
       // .ImageType.ImageKind kind = 1;
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(8u)) {
+            static_cast< ::google::protobuf::uint8>(8u /* 8 & 0xFF */)) {
           int value;
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
@@ -1105,12 +1129,11 @@ bool ImageType::MergePartialFromCodedStream(
 
       default: {
       handle_unusual:
-        if (tag == 0 ||
-            ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+        if (tag == 0) {
           goto success;
         }
-        DO_(::google::protobuf::internal::WireFormatLite::SkipField(input, tag));
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
         break;
       }
     }
@@ -1136,6 +1159,10 @@ void ImageType::SerializeWithCachedSizes(
       1, this->kind(), output);
   }
 
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
+  }
   // @@protoc_insertion_point(serialize_end:ImageType)
 }
 
@@ -1152,6 +1179,10 @@ void ImageType::SerializeWithCachedSizes(
       1, this->kind(), target);
   }
 
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
+  }
   // @@protoc_insertion_point(serialize_to_array_end:ImageType)
   return target;
 }
@@ -1160,6 +1191,11 @@ size_t ImageType::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:ImageType)
   size_t total_size = 0;
 
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
+  }
   // .ImageType.ImageKind kind = 1;
   if (this->kind() != 0) {
     total_size += 1 +
@@ -1238,8 +1274,10 @@ void ImageType::UnsafeArenaSwap(ImageType* other) {
   InternalSwap(other);
 }
 void ImageType::InternalSwap(ImageType* other) {
-  std::swap(kind_, other->kind_);
-  std::swap(_cached_size_, other->_cached_size_);
+  using std::swap;
+  swap(kind_, other->kind_);
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata ImageType::GetMetadata() const {
@@ -1284,9 +1322,7 @@ DocumentType::DocumentType()
 DocumentType::DocumentType(::google::protobuf::Arena* arena)
   : ::google::protobuf::Message(),
   _internal_metadata_(arena) {
-#ifdef GOOGLE_PROTOBUF_NO_STATIC_INITIALIZER
   protobuf_media_2fMediaType_2eproto::InitDefaults();
-#endif  // GOOGLE_PROTOBUF_NO_STATIC_INITIALIZER
   SharedCtor();
   RegisterArenaDtor(arena);
   // @@protoc_insertion_point(arena_constructor:DocumentType)
@@ -1297,14 +1333,15 @@ DocumentType::DocumentType(const DocumentType& from)
       _cached_size_(0) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   ::memcpy(&kind_, &from.kind_,
-    reinterpret_cast<char*>(&compressed_) -
-    reinterpret_cast<char*>(&kind_) + sizeof(compressed_));
+    static_cast<size_t>(reinterpret_cast<char*>(&compressed_) -
+    reinterpret_cast<char*>(&kind_)) + sizeof(compressed_));
   // @@protoc_insertion_point(copy_constructor:DocumentType)
 }
 
 void DocumentType::SharedCtor() {
-  ::memset(&kind_, 0, reinterpret_cast<char*>(&compressed_) -
-    reinterpret_cast<char*>(&kind_) + sizeof(compressed_));
+  ::memset(&kind_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&compressed_) -
+      reinterpret_cast<char*>(&kind_)) + sizeof(compressed_));
   _cached_size_ = 0;
 }
 
@@ -1315,6 +1352,7 @@ DocumentType::~DocumentType() {
 
 void DocumentType::SharedDtor() {
   ::google::protobuf::Arena* arena = GetArenaNoVirtual();
+  GOOGLE_DCHECK(arena == NULL);
   if (arena != NULL) {
     return;
   }
@@ -1348,8 +1386,14 @@ DocumentType* DocumentType::New(::google::protobuf::Arena* arena) const {
 
 void DocumentType::Clear() {
 // @@protoc_insertion_point(message_clear_start:DocumentType)
-  ::memset(&kind_, 0, reinterpret_cast<char*>(&compressed_) -
-    reinterpret_cast<char*>(&kind_) + sizeof(compressed_));
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  ::memset(&kind_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&compressed_) -
+      reinterpret_cast<char*>(&kind_)) + sizeof(compressed_));
+  _internal_metadata_.Clear();
 }
 
 bool DocumentType::MergePartialFromCodedStream(
@@ -1365,7 +1409,7 @@ bool DocumentType::MergePartialFromCodedStream(
       // .DocumentType.DocumentKind kind = 1;
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(8u)) {
+            static_cast< ::google::protobuf::uint8>(8u /* 8 & 0xFF */)) {
           int value;
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
@@ -1380,7 +1424,7 @@ bool DocumentType::MergePartialFromCodedStream(
       // bool compressed = 2;
       case 2: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(16u)) {
+            static_cast< ::google::protobuf::uint8>(16u /* 16 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
@@ -1393,12 +1437,11 @@ bool DocumentType::MergePartialFromCodedStream(
 
       default: {
       handle_unusual:
-        if (tag == 0 ||
-            ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+        if (tag == 0) {
           goto success;
         }
-        DO_(::google::protobuf::internal::WireFormatLite::SkipField(input, tag));
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
         break;
       }
     }
@@ -1429,6 +1472,10 @@ void DocumentType::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::WriteBool(2, this->compressed(), output);
   }
 
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
+  }
   // @@protoc_insertion_point(serialize_end:DocumentType)
 }
 
@@ -1450,6 +1497,10 @@ void DocumentType::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(2, this->compressed(), target);
   }
 
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
+  }
   // @@protoc_insertion_point(serialize_to_array_end:DocumentType)
   return target;
 }
@@ -1458,6 +1509,11 @@ size_t DocumentType::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:DocumentType)
   size_t total_size = 0;
 
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
+  }
   // .DocumentType.DocumentKind kind = 1;
   if (this->kind() != 0) {
     total_size += 1 +
@@ -1544,9 +1600,11 @@ void DocumentType::UnsafeArenaSwap(DocumentType* other) {
   InternalSwap(other);
 }
 void DocumentType::InternalSwap(DocumentType* other) {
-  std::swap(kind_, other->kind_);
-  std::swap(compressed_, other->compressed_);
-  std::swap(_cached_size_, other->_cached_size_);
+  using std::swap;
+  swap(kind_, other->kind_);
+  swap(compressed_, other->compressed_);
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata DocumentType::GetMetadata() const {
@@ -1604,9 +1662,7 @@ VideoType::VideoType()
 VideoType::VideoType(::google::protobuf::Arena* arena)
   : ::google::protobuf::Message(),
   _internal_metadata_(arena) {
-#ifdef GOOGLE_PROTOBUF_NO_STATIC_INITIALIZER
   protobuf_media_2fMediaType_2eproto::InitDefaults();
-#endif  // GOOGLE_PROTOBUF_NO_STATIC_INITIALIZER
   SharedCtor();
   RegisterArenaDtor(arena);
   // @@protoc_insertion_point(arena_constructor:VideoType)
@@ -1632,6 +1688,7 @@ VideoType::~VideoType() {
 
 void VideoType::SharedDtor() {
   ::google::protobuf::Arena* arena = GetArenaNoVirtual();
+  GOOGLE_DCHECK(arena == NULL);
   if (arena != NULL) {
     return;
   }
@@ -1665,7 +1722,12 @@ VideoType* VideoType::New(::google::protobuf::Arena* arena) const {
 
 void VideoType::Clear() {
 // @@protoc_insertion_point(message_clear_start:VideoType)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
   kind_ = 0;
+  _internal_metadata_.Clear();
 }
 
 bool VideoType::MergePartialFromCodedStream(
@@ -1681,7 +1743,7 @@ bool VideoType::MergePartialFromCodedStream(
       // .VideoType.VideoKind kind = 1;
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(8u)) {
+            static_cast< ::google::protobuf::uint8>(8u /* 8 & 0xFF */)) {
           int value;
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
@@ -1695,12 +1757,11 @@ bool VideoType::MergePartialFromCodedStream(
 
       default: {
       handle_unusual:
-        if (tag == 0 ||
-            ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+        if (tag == 0) {
           goto success;
         }
-        DO_(::google::protobuf::internal::WireFormatLite::SkipField(input, tag));
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
         break;
       }
     }
@@ -1726,6 +1787,10 @@ void VideoType::SerializeWithCachedSizes(
       1, this->kind(), output);
   }
 
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
+  }
   // @@protoc_insertion_point(serialize_end:VideoType)
 }
 
@@ -1742,6 +1807,10 @@ void VideoType::SerializeWithCachedSizes(
       1, this->kind(), target);
   }
 
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
+  }
   // @@protoc_insertion_point(serialize_to_array_end:VideoType)
   return target;
 }
@@ -1750,6 +1819,11 @@ size_t VideoType::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:VideoType)
   size_t total_size = 0;
 
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
+  }
   // .VideoType.VideoKind kind = 1;
   if (this->kind() != 0) {
     total_size += 1 +
@@ -1828,8 +1902,10 @@ void VideoType::UnsafeArenaSwap(VideoType* other) {
   InternalSwap(other);
 }
 void VideoType::InternalSwap(VideoType* other) {
-  std::swap(kind_, other->kind_);
-  std::swap(_cached_size_, other->_cached_size_);
+  using std::swap;
+  swap(kind_, other->kind_);
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata VideoType::GetMetadata() const {

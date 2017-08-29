@@ -3,28 +3,28 @@
 # source: media/MediaType.proto
 
 /**
- * Protobuf enum <code>ImageType.ImageKind</code>
+ * Protobuf enum <code>ImageType\ImageKind</code>
  */
 class ImageType_ImageKind
 {
     /**
-     * <code>PNG = 0;</code>
+     * Generated from protobuf enum <code>PNG = 0;</code>
      */
     const PNG = 0;
     /**
-     * <code>JPG = 1;</code>
+     * Generated from protobuf enum <code>JPG = 1;</code>
      */
     const JPG = 1;
     /**
-     * <code>GIF = 2;</code>
+     * Generated from protobuf enum <code>GIF = 2;</code>
      */
     const GIF = 2;
     /**
-     * <code>SVG = 3;</code>
+     * Generated from protobuf enum <code>SVG = 3;</code>
      */
     const SVG = 3;
     /**
-     * <code>WEBP = 4;</code>
+     * Generated from protobuf enum <code>WEBP = 4;</code>
      */
     const WEBP = 4;
 }

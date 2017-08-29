@@ -3,20 +3,20 @@
 # source: media/MediaType.proto
 
 /**
- * Protobuf enum <code>VideoType.VideoKind</code>
+ * Protobuf enum <code>VideoType\VideoKind</code>
  */
 class VideoType_VideoKind
 {
     /**
-     * <code>MP4 = 0;</code>
+     * Generated from protobuf enum <code>MP4 = 0;</code>
      */
     const MP4 = 0;
     /**
-     * <code>FLV = 1;</code>
+     * Generated from protobuf enum <code>FLV = 1;</code>
      */
     const FLV = 1;
     /**
-     * <code>HLS = 2;</code>
+     * Generated from protobuf enum <code>HLS = 2;</code>
      */
     const HLS = 2;
 }

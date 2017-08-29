@@ -7,16 +7,16 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Protobuf type <code>Genetics</code>
+ * Generated from protobuf message <code>Genetics</code>
  */
 class Genetics extends \Google\Protobuf\Internal\Message
 {
     /**
-     * <code>.Name male = 1;</code>
+     * Generated from protobuf field <code>.Name male = 1;</code>
      */
     private $male = null;
     /**
-     * <code>.Name female = 2;</code>
+     * Generated from protobuf field <code>.Name female = 2;</code>
      */
     private $female = null;
 
@@ -26,7 +26,8 @@ class Genetics extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>.Name male = 1;</code>
+     * Generated from protobuf field <code>.Name male = 1;</code>
+     * @return \Name
      */
     public function getMale()
     {
@@ -34,16 +35,21 @@ class Genetics extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>.Name male = 1;</code>
+     * Generated from protobuf field <code>.Name male = 1;</code>
+     * @param \Name $var
+     * @return $this
      */
-    public function setMale(&$var)
+    public function setMale($var)
     {
         GPBUtil::checkMessage($var, \Name::class);
         $this->male = $var;
+
+        return $this;
     }
 
     /**
-     * <code>.Name female = 2;</code>
+     * Generated from protobuf field <code>.Name female = 2;</code>
+     * @return \Name
      */
     public function getFemale()
     {
@@ -51,12 +57,16 @@ class Genetics extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>.Name female = 2;</code>
+     * Generated from protobuf field <code>.Name female = 2;</code>
+     * @param \Name $var
+     * @return $this
      */
-    public function setFemale(&$var)
+    public function setFemale($var)
     {
         GPBUtil::checkMessage($var, \Name::class);
         $this->female = $var;
+
+        return $this;
     }
 
 }

@@ -1,15 +1,17 @@
 /**
  * @fileoverview
  * @enhanceable
+ * @suppress {messageConventions} JS Compiler reports an error if a variable or
+ *     field starts with 'MSG_' and isn't a translatable message.
  * @public
  */
 // GENERATED CODE -- DO NOT EDIT!
 
 goog.provide('proto.PricingDescriptor');
 
-goog.require('jspb.Message');
 goog.require('jspb.BinaryReader');
 goog.require('jspb.BinaryWriter');
+goog.require('jspb.Message');
 goog.require('proto.FreebiePricingDescriptor');
 goog.require('proto.UnitPricingDescriptor');
 goog.require('proto.WeightedPricingDescriptor');
@@ -58,6 +60,7 @@ proto.PricingDescriptor.prototype.toObject = function(opt_includeInstance) {
  *     http://goto/soy-param-migration
  * @param {!proto.PricingDescriptor} msg The msg instance to transform.
  * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.PricingDescriptor.toObject = function(includeInstance, msg) {
   var f, obj = {
@@ -145,6 +148,7 @@ proto.PricingDescriptor.prototype.serializeBinary = function() {
  * format), writing to the given BinaryWriter.
  * @param {!proto.PricingDescriptor} message
  * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.PricingDescriptor.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;

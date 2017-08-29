@@ -1,15 +1,17 @@
 /**
  * @fileoverview
  * @enhanceable
+ * @suppress {messageConventions} JS Compiler reports an error if a variable or
+ *     field starts with 'MSG_' and isn't a translatable message.
  * @public
  */
 // GENERATED CODE -- DO NOT EDIT!
 
 goog.provide('proto.Name');
 
-goog.require('jspb.Message');
 goog.require('jspb.BinaryReader');
 goog.require('jspb.BinaryWriter');
+goog.require('jspb.Message');
 
 
 /**
@@ -54,6 +56,7 @@ proto.Name.prototype.toObject = function(opt_includeInstance) {
  *     http://goto/soy-param-migration
  * @param {!proto.Name} msg The msg instance to transform.
  * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.Name.toObject = function(includeInstance, msg) {
   var f, obj = {
@@ -128,6 +131,7 @@ proto.Name.prototype.serializeBinary = function() {
  * format), writing to the given BinaryWriter.
  * @param {!proto.Name} message
  * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.Name.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;

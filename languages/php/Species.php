@@ -8,27 +8,27 @@
 class Species
 {
     /**
-     * <code>UNSPECIFIED = 0;</code>
+     * Generated from protobuf enum <code>UNSPECIFIED = 0;</code>
      */
     const UNSPECIFIED = 0;
     /**
-     * <code>SATIVA = 1;</code>
+     * Generated from protobuf enum <code>SATIVA = 1;</code>
      */
     const SATIVA = 1;
     /**
-     * <code>HYBRID_SATIVA = 2;</code>
+     * Generated from protobuf enum <code>HYBRID_SATIVA = 2;</code>
      */
     const HYBRID_SATIVA = 2;
     /**
-     * <code>HYBRID = 3;</code>
+     * Generated from protobuf enum <code>HYBRID = 3;</code>
      */
     const HYBRID = 3;
     /**
-     * <code>HYBRID_INDICA = 4;</code>
+     * Generated from protobuf enum <code>HYBRID_INDICA = 4;</code>
      */
     const HYBRID_INDICA = 4;
     /**
-     * <code>INDICA = 5;</code>
+     * Generated from protobuf enum <code>INDICA = 5;</code>
      */
     const INDICA = 5;
 }

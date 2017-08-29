@@ -8,23 +8,23 @@
 class ProductFlag
 {
     /**
-     * <code>VISIBLE = 0;</code>
+     * Generated from protobuf enum <code>VISIBLE = 0;</code>
      */
     const VISIBLE = 0;
     /**
-     * <code>PREMIUM = 1;</code>
+     * Generated from protobuf enum <code>PREMIUM = 1;</code>
      */
     const PREMIUM = 1;
     /**
-     * <code>FEATURED = 2;</code>
+     * Generated from protobuf enum <code>FEATURED = 2;</code>
      */
     const FEATURED = 2;
     /**
-     * <code>LASTCHANCE = 3;</code>
+     * Generated from protobuf enum <code>LASTCHANCE = 3;</code>
      */
     const LASTCHANCE = 3;
     /**
-     * <code>INHOUSE = 4;</code>
+     * Generated from protobuf enum <code>INHOUSE = 4;</code>
      */
     const INHOUSE = 4;
 }

@@ -3,12 +3,12 @@
 # source: content/Content.proto
 
 /**
- * Protobuf enum <code>Content.Encoding</code>
+ * Protobuf enum <code>Content\Encoding</code>
  */
 class Content_Encoding
 {
     /**
-     * <code>UTF8 = 0;</code>
+     * Generated from protobuf enum <code>UTF8 = 0;</code>
      */
     const UTF8 = 0;
 }

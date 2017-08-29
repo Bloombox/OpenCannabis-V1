@@ -16,7 +16,10 @@
 #include <google/protobuf/reflection_ops.h>
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
-class ContentDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<Content> {
+class ContentDefaultTypeInternal {
+public:
+ ::google::protobuf::internal::ExplicitlyConstructed<Content>
+     _instance;
 } _Content_default_instance_;
 
 namespace protobuf_content_2fContent_2eproto {
@@ -30,20 +33,20 @@ const ::google::protobuf::EnumDescriptor* file_level_enum_descriptors[2];
 }  // namespace
 
 PROTOBUF_CONSTEXPR_VAR ::google::protobuf::internal::ParseTableField
-    const TableStruct::entries[] = {
+    const TableStruct::entries[] GOOGLE_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
   {0, 0, 0, ::google::protobuf::internal::kInvalidMask, 0, 0},
 };
 
 PROTOBUF_CONSTEXPR_VAR ::google::protobuf::internal::AuxillaryParseTableField
-    const TableStruct::aux[] = {
+    const TableStruct::aux[] GOOGLE_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
   ::google::protobuf::internal::AuxillaryParseTableField(),
 };
 PROTOBUF_CONSTEXPR_VAR ::google::protobuf::internal::ParseTable const
-    TableStruct::schema[] = {
-  { NULL, NULL, 0, -1, -1, false },
+    TableStruct::schema[] GOOGLE_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
+  { NULL, NULL, 0, -1, -1, -1, -1, NULL, false },
 };
 
-const ::google::protobuf::uint32 TableStruct::offsets[] = {
+const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
   ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Content, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -55,8 +58,7 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Content, language_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Content, compression_),
 };
-
-static const ::google::protobuf::internal::MigrationSchema schemas[] = {
+static const ::google::protobuf::internal::MigrationSchema schemas[] GOOGLE_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, sizeof(Content)},
 };
 
@@ -86,20 +88,15 @@ void protobuf_RegisterTypes(const ::std::string&) {
 }
 
 }  // namespace
-
-void TableStruct::Shutdown() {
-  _Content_default_instance_.Shutdown();
-  delete file_level_metadata[0].reflection;
-}
-
 void TableStruct::InitDefaultsImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   ::google::protobuf::internal::InitProtobufDefaults();
   ::protobuf_base_2fLanguage_2eproto::InitDefaults();
   ::protobuf_base_2fCompression_2eproto::InitDefaults();
-  _Content_default_instance_.DefaultConstruct();
-  _Content_default_instance_.get_mutable()->compression_ = const_cast< ::Compression*>(
+  _Content_default_instance_._instance.DefaultConstruct();
+  ::google::protobuf::internal::OnShutdownDestroyMessage(
+      &_Content_default_instance_);_Content_default_instance_._instance.get_mutable()->compression_ = const_cast< ::Compression*>(
       ::Compression::internal_default_instance());
 }
 
@@ -107,9 +104,10 @@ void InitDefaults() {
   static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
   ::google::protobuf::GoogleOnceInit(&once, &TableStruct::InitDefaultsImpl);
 }
+namespace {
 void AddDescriptorsImpl() {
   InitDefaults();
-  static const char descriptor[] = {
+  static const char descriptor[] GOOGLE_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
       "\n\025content/Content.proto\032\023base/Language.p"
       "roto\032\026base/Compression.proto\"\334\001\n\007Content"
       "\022\033\n\004type\030\001 \001(\0162\r.Content.Type\022#\n\010encodin"
@@ -126,14 +124,14 @@ void AddDescriptorsImpl() {
     "content/Content.proto", &protobuf_RegisterTypes);
   ::protobuf_base_2fLanguage_2eproto::AddDescriptors();
   ::protobuf_base_2fCompression_2eproto::AddDescriptors();
-  ::google::protobuf::internal::OnShutdown(&TableStruct::Shutdown);
 }
+} // anonymous namespace
 
 void AddDescriptors() {
   static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
   ::google::protobuf::GoogleOnceInit(&once, &AddDescriptorsImpl);
 }
-// Force AddDescriptors() to be called at static initialization time.
+// Force AddDescriptors() to be called at dynamic initialization time.
 struct StaticDescriptorInitializer {
   StaticDescriptorInitializer() {
     AddDescriptors();
@@ -253,9 +251,7 @@ Content::Content()
 Content::Content(::google::protobuf::Arena* arena)
   : ::google::protobuf::Message(),
   _internal_metadata_(arena) {
-#ifdef GOOGLE_PROTOBUF_NO_STATIC_INITIALIZER
   protobuf_content_2fContent_2eproto::InitDefaults();
-#endif  // GOOGLE_PROTOBUF_NO_STATIC_INITIALIZER
   SharedCtor();
   RegisterArenaDtor(arena);
   // @@protoc_insertion_point(arena_constructor:Content)
@@ -276,15 +272,16 @@ Content::Content(const Content& from)
     compression_ = NULL;
   }
   ::memcpy(&type_, &from.type_,
-    reinterpret_cast<char*>(&language_) -
-    reinterpret_cast<char*>(&type_) + sizeof(language_));
+    static_cast<size_t>(reinterpret_cast<char*>(&language_) -
+    reinterpret_cast<char*>(&type_)) + sizeof(language_));
   // @@protoc_insertion_point(copy_constructor:Content)
 }
 
 void Content::SharedCtor() {
   content_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  ::memset(&compression_, 0, reinterpret_cast<char*>(&language_) -
-    reinterpret_cast<char*>(&compression_) + sizeof(language_));
+  ::memset(&compression_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&language_) -
+      reinterpret_cast<char*>(&compression_)) + sizeof(language_));
   _cached_size_ = 0;
 }
 
@@ -295,14 +292,13 @@ Content::~Content() {
 
 void Content::SharedDtor() {
   ::google::protobuf::Arena* arena = GetArenaNoVirtual();
+  GOOGLE_DCHECK(arena == NULL);
   if (arena != NULL) {
     return;
   }
 
   content_.Destroy(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), arena);
-  if (this != internal_default_instance()) {
-    delete compression_;
-  }
+  if (this != internal_default_instance()) delete compression_;
 }
 
 void Content::ArenaDtor(void* object) {
@@ -332,13 +328,19 @@ Content* Content::New(::google::protobuf::Arena* arena) const {
 
 void Content::Clear() {
 // @@protoc_insertion_point(message_clear_start:Content)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
   content_.ClearToEmpty(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
   if (GetArenaNoVirtual() == NULL && compression_ != NULL) {
     delete compression_;
   }
   compression_ = NULL;
-  ::memset(&type_, 0, reinterpret_cast<char*>(&language_) -
-    reinterpret_cast<char*>(&type_) + sizeof(language_));
+  ::memset(&type_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&language_) -
+      reinterpret_cast<char*>(&type_)) + sizeof(language_));
+  _internal_metadata_.Clear();
 }
 
 bool Content::MergePartialFromCodedStream(
@@ -354,7 +356,7 @@ bool Content::MergePartialFromCodedStream(
       // .Content.Type type = 1;
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(8u)) {
+            static_cast< ::google::protobuf::uint8>(8u /* 8 & 0xFF */)) {
           int value;
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
@@ -369,7 +371,7 @@ bool Content::MergePartialFromCodedStream(
       // .Content.Encoding encoding = 2;
       case 2: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(16u)) {
+            static_cast< ::google::protobuf::uint8>(16u /* 16 & 0xFF */)) {
           int value;
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
@@ -384,7 +386,7 @@ bool Content::MergePartialFromCodedStream(
       // bytes content = 3;
       case 3: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(26u)) {
+            static_cast< ::google::protobuf::uint8>(26u /* 26 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadBytes(
                 input, this->mutable_content()));
         } else {
@@ -396,7 +398,7 @@ bool Content::MergePartialFromCodedStream(
       // .Language language = 4;
       case 4: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(32u)) {
+            static_cast< ::google::protobuf::uint8>(32u /* 32 & 0xFF */)) {
           int value;
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
@@ -411,7 +413,7 @@ bool Content::MergePartialFromCodedStream(
       // .Compression compression = 5;
       case 5: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(42u)) {
+            static_cast< ::google::protobuf::uint8>(42u /* 42 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_compression()));
         } else {
@@ -422,12 +424,11 @@ bool Content::MergePartialFromCodedStream(
 
       default: {
       handle_unusual:
-        if (tag == 0 ||
-            ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+        if (tag == 0) {
           goto success;
         }
-        DO_(::google::protobuf::internal::WireFormatLite::SkipField(input, tag));
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
         break;
       }
     }
@@ -477,6 +478,10 @@ void Content::SerializeWithCachedSizes(
       5, *this->compression_, output);
   }
 
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
+  }
   // @@protoc_insertion_point(serialize_end:Content)
 }
 
@@ -519,6 +524,10 @@ void Content::SerializeWithCachedSizes(
         5, *this->compression_, deterministic, target);
   }
 
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
+  }
   // @@protoc_insertion_point(serialize_to_array_end:Content)
   return target;
 }
@@ -527,6 +536,11 @@ size_t Content::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:Content)
   size_t total_size = 0;
 
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
+  }
   // bytes content = 3;
   if (this->content().size() > 0) {
     total_size += 1 +
@@ -643,12 +657,14 @@ void Content::UnsafeArenaSwap(Content* other) {
   InternalSwap(other);
 }
 void Content::InternalSwap(Content* other) {
+  using std::swap;
   content_.Swap(&other->content_);
-  std::swap(compression_, other->compression_);
-  std::swap(type_, other->type_);
-  std::swap(encoding_, other->encoding_);
-  std::swap(language_, other->language_);
-  std::swap(_cached_size_, other->_cached_size_);
+  swap(compression_, other->compression_);
+  swap(type_, other->type_);
+  swap(encoding_, other->encoding_);
+  swap(language_, other->language_);
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata Content::GetMetadata() const {
@@ -700,6 +716,14 @@ void Content::set_content(const ::std::string& value) {
   content_.Set(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value, GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set:Content.content)
 }
+#if LANG_CXX11
+void Content::set_content(::std::string&& value) {
+  
+  content_.Set(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArenaNoVirtual());
+  // @@protoc_insertion_point(field_set_rvalue:Content.content)
+}
+#endif
 void Content::set_content(const char* value) {
   GOOGLE_DCHECK(value != NULL);
   
@@ -777,9 +801,10 @@ void Content::clear_compression() {
   compression_ = NULL;
 }
 const ::Compression& Content::compression() const {
+  const ::Compression* p = compression_;
   // @@protoc_insertion_point(field_get:Content.compression)
-  return compression_ != NULL ? *compression_
-                         : *::Compression::internal_default_instance();
+  return p != NULL ? *p : *reinterpret_cast<const ::Compression*>(
+      &::_Compression_default_instance_);
 }
 ::Compression* Content::mutable_compression() {
   

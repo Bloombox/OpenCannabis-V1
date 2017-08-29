@@ -7,48 +7,44 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Protobuf type <code>SaleDescriptor</code>
+ * Generated from protobuf message <code>SaleDescriptor</code>
  */
 class SaleDescriptor extends \Google\Protobuf\Internal\Message
 {
     /**
-     * <pre>
      * sale metadata
-     * </pre>
      *
-     * <code>.SaleType type = 1;</code>
+     * Generated from protobuf field <code>.SaleType type = 1;</code>
      */
     private $type = 0;
     /**
-     * <code>uint64 effective = 2;</code>
+     * Generated from protobuf field <code>uint64 effective = 2;</code>
      */
     private $effective = 0;
     /**
-     * <code>uint64 expiration = 3;</code>
+     * Generated from protobuf field <code>uint64 expiration = 3;</code>
      */
     private $expiration = 0;
     /**
-     * <pre>
      * sale amount and trigger properties
-     * </pre>
      *
-     * <code>uint32 percentage_amount = 20;</code>
+     * Generated from protobuf field <code>uint32 percentage_amount = 20;</code>
      */
     private $percentage_amount = 0;
     /**
-     * <code>uint32 bogo_trigger = 21;</code>
+     * Generated from protobuf field <code>uint32 bogo_trigger = 21;</code>
      */
     private $bogo_trigger = 0;
     /**
-     * <code>uint32 bogo_reward = 22;</code>
+     * Generated from protobuf field <code>uint32 bogo_reward = 22;</code>
      */
     private $bogo_reward = 0;
     /**
-     * <code>uint32 loyalty_trigger = 23;</code>
+     * Generated from protobuf field <code>uint32 loyalty_trigger = 23;</code>
      */
     private $loyalty_trigger = 0;
     /**
-     * <code>uint32 loyalty_reward = 24;</code>
+     * Generated from protobuf field <code>uint32 loyalty_reward = 24;</code>
      */
     private $loyalty_reward = 0;
 
@@ -58,11 +54,10 @@ class SaleDescriptor extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <pre>
      * sale metadata
-     * </pre>
      *
-     * <code>.SaleType type = 1;</code>
+     * Generated from protobuf field <code>.SaleType type = 1;</code>
+     * @return int
      */
     public function getType()
     {
@@ -70,20 +65,23 @@ class SaleDescriptor extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <pre>
      * sale metadata
-     * </pre>
      *
-     * <code>.SaleType type = 1;</code>
+     * Generated from protobuf field <code>.SaleType type = 1;</code>
+     * @param int $var
+     * @return $this
      */
     public function setType($var)
     {
         GPBUtil::checkEnum($var, \SaleType::class);
         $this->type = $var;
+
+        return $this;
     }
 
     /**
-     * <code>uint64 effective = 2;</code>
+     * Generated from protobuf field <code>uint64 effective = 2;</code>
+     * @return int|string
      */
     public function getEffective()
     {
@@ -91,16 +89,21 @@ class SaleDescriptor extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>uint64 effective = 2;</code>
+     * Generated from protobuf field <code>uint64 effective = 2;</code>
+     * @param int|string $var
+     * @return $this
      */
     public function setEffective($var)
     {
         GPBUtil::checkUint64($var);
         $this->effective = $var;
+
+        return $this;
     }
 
     /**
-     * <code>uint64 expiration = 3;</code>
+     * Generated from protobuf field <code>uint64 expiration = 3;</code>
+     * @return int|string
      */
     public function getExpiration()
     {
@@ -108,20 +111,23 @@ class SaleDescriptor extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>uint64 expiration = 3;</code>
+     * Generated from protobuf field <code>uint64 expiration = 3;</code>
+     * @param int|string $var
+     * @return $this
      */
     public function setExpiration($var)
     {
         GPBUtil::checkUint64($var);
         $this->expiration = $var;
+
+        return $this;
     }
 
     /**
-     * <pre>
      * sale amount and trigger properties
-     * </pre>
      *
-     * <code>uint32 percentage_amount = 20;</code>
+     * Generated from protobuf field <code>uint32 percentage_amount = 20;</code>
+     * @return int
      */
     public function getPercentageAmount()
     {
@@ -129,20 +135,23 @@ class SaleDescriptor extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <pre>
      * sale amount and trigger properties
-     * </pre>
      *
-     * <code>uint32 percentage_amount = 20;</code>
+     * Generated from protobuf field <code>uint32 percentage_amount = 20;</code>
+     * @param int $var
+     * @return $this
      */
     public function setPercentageAmount($var)
     {
         GPBUtil::checkUint32($var);
         $this->percentage_amount = $var;
+
+        return $this;
     }
 
     /**
-     * <code>uint32 bogo_trigger = 21;</code>
+     * Generated from protobuf field <code>uint32 bogo_trigger = 21;</code>
+     * @return int
      */
     public function getBogoTrigger()
     {
@@ -150,16 +159,21 @@ class SaleDescriptor extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>uint32 bogo_trigger = 21;</code>
+     * Generated from protobuf field <code>uint32 bogo_trigger = 21;</code>
+     * @param int $var
+     * @return $this
      */
     public function setBogoTrigger($var)
     {
         GPBUtil::checkUint32($var);
         $this->bogo_trigger = $var;
+
+        return $this;
     }
 
     /**
-     * <code>uint32 bogo_reward = 22;</code>
+     * Generated from protobuf field <code>uint32 bogo_reward = 22;</code>
+     * @return int
      */
     public function getBogoReward()
     {
@@ -167,16 +181,21 @@ class SaleDescriptor extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>uint32 bogo_reward = 22;</code>
+     * Generated from protobuf field <code>uint32 bogo_reward = 22;</code>
+     * @param int $var
+     * @return $this
      */
     public function setBogoReward($var)
     {
         GPBUtil::checkUint32($var);
         $this->bogo_reward = $var;
+
+        return $this;
     }
 
     /**
-     * <code>uint32 loyalty_trigger = 23;</code>
+     * Generated from protobuf field <code>uint32 loyalty_trigger = 23;</code>
+     * @return int
      */
     public function getLoyaltyTrigger()
     {
@@ -184,16 +203,21 @@ class SaleDescriptor extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>uint32 loyalty_trigger = 23;</code>
+     * Generated from protobuf field <code>uint32 loyalty_trigger = 23;</code>
+     * @param int $var
+     * @return $this
      */
     public function setLoyaltyTrigger($var)
     {
         GPBUtil::checkUint32($var);
         $this->loyalty_trigger = $var;
+
+        return $this;
     }
 
     /**
-     * <code>uint32 loyalty_reward = 24;</code>
+     * Generated from protobuf field <code>uint32 loyalty_reward = 24;</code>
+     * @return int
      */
     public function getLoyaltyReward()
     {
@@ -201,12 +225,16 @@ class SaleDescriptor extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>uint32 loyalty_reward = 24;</code>
+     * Generated from protobuf field <code>uint32 loyalty_reward = 24;</code>
+     * @param int $var
+     * @return $this
      */
     public function setLoyaltyReward($var)
     {
         GPBUtil::checkUint32($var);
         $this->loyalty_reward = $var;
+
+        return $this;
     }
 
 }

@@ -37,7 +37,7 @@ var MediaType_Kind_value = map[string]int32{
 func (x MediaType_Kind) String() string {
 	return proto.EnumName(MediaType_Kind_name, int32(x))
 }
-func (MediaType_Kind) EnumDescriptor() ([]byte, []int) { return fileDescriptor13, []int{0, 0} }
+func (MediaType_Kind) EnumDescriptor() ([]byte, []int) { return fileDescriptor14, []int{0, 0} }
 
 type ImageType_ImageKind int32
 
@@ -67,7 +67,7 @@ var ImageType_ImageKind_value = map[string]int32{
 func (x ImageType_ImageKind) String() string {
 	return proto.EnumName(ImageType_ImageKind_name, int32(x))
 }
-func (ImageType_ImageKind) EnumDescriptor() ([]byte, []int) { return fileDescriptor13, []int{1, 0} }
+func (ImageType_ImageKind) EnumDescriptor() ([]byte, []int) { return fileDescriptor14, []int{1, 0} }
 
 type DocumentType_DocumentKind int32
 
@@ -95,7 +95,7 @@ func (x DocumentType_DocumentKind) String() string {
 	return proto.EnumName(DocumentType_DocumentKind_name, int32(x))
 }
 func (DocumentType_DocumentKind) EnumDescriptor() ([]byte, []int) {
-	return fileDescriptor13, []int{2, 0}
+	return fileDescriptor14, []int{2, 0}
 }
 
 type VideoType_VideoKind int32
@@ -120,7 +120,7 @@ var VideoType_VideoKind_value = map[string]int32{
 func (x VideoType_VideoKind) String() string {
 	return proto.EnumName(VideoType_VideoKind_name, int32(x))
 }
-func (VideoType_VideoKind) EnumDescriptor() ([]byte, []int) { return fileDescriptor13, []int{3, 0} }
+func (VideoType_VideoKind) EnumDescriptor() ([]byte, []int) { return fileDescriptor14, []int{3, 0} }
 
 // -- Media Type: Top-level -- //
 type MediaType struct {
@@ -133,7 +133,7 @@ type MediaType struct {
 func (m *MediaType) Reset()                    { *m = MediaType{} }
 func (m *MediaType) String() string            { return proto.CompactTextString(m) }
 func (*MediaType) ProtoMessage()               {}
-func (*MediaType) Descriptor() ([]byte, []int) { return fileDescriptor13, []int{0} }
+func (*MediaType) Descriptor() ([]byte, []int) { return fileDescriptor14, []int{0} }
 
 func (m *MediaType) GetKind() MediaType_Kind {
 	if m != nil {
@@ -171,7 +171,7 @@ type ImageType struct {
 func (m *ImageType) Reset()                    { *m = ImageType{} }
 func (m *ImageType) String() string            { return proto.CompactTextString(m) }
 func (*ImageType) ProtoMessage()               {}
-func (*ImageType) Descriptor() ([]byte, []int) { return fileDescriptor13, []int{1} }
+func (*ImageType) Descriptor() ([]byte, []int) { return fileDescriptor14, []int{1} }
 
 func (m *ImageType) GetKind() ImageType_ImageKind {
 	if m != nil {
@@ -189,7 +189,7 @@ type DocumentType struct {
 func (m *DocumentType) Reset()                    { *m = DocumentType{} }
 func (m *DocumentType) String() string            { return proto.CompactTextString(m) }
 func (*DocumentType) ProtoMessage()               {}
-func (*DocumentType) Descriptor() ([]byte, []int) { return fileDescriptor13, []int{2} }
+func (*DocumentType) Descriptor() ([]byte, []int) { return fileDescriptor14, []int{2} }
 
 func (m *DocumentType) GetKind() DocumentType_DocumentKind {
 	if m != nil {
@@ -213,7 +213,7 @@ type VideoType struct {
 func (m *VideoType) Reset()                    { *m = VideoType{} }
 func (m *VideoType) String() string            { return proto.CompactTextString(m) }
 func (*VideoType) ProtoMessage()               {}
-func (*VideoType) Descriptor() ([]byte, []int) { return fileDescriptor13, []int{3} }
+func (*VideoType) Descriptor() ([]byte, []int) { return fileDescriptor14, []int{3} }
 
 func (m *VideoType) GetKind() VideoType_VideoKind {
 	if m != nil {
@@ -233,9 +233,9 @@ func init() {
 	proto.RegisterEnum("VideoType_VideoKind", VideoType_VideoKind_name, VideoType_VideoKind_value)
 }
 
-func init() { proto.RegisterFile("media/MediaType.proto", fileDescriptor13) }
+func init() { proto.RegisterFile("media/MediaType.proto", fileDescriptor14) }
 
-var fileDescriptor13 = []byte{
+var fileDescriptor14 = []byte{
 	// 420 bytes of a gzipped FileDescriptorProto
 	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0x64, 0x52, 0x4d, 0x8f, 0x94, 0x40,
 	0x10, 0x9d, 0x06, 0x54, 0x28, 0x19, 0xed, 0x74, 0x34, 0x21, 0x1e, 0xcc, 0x06, 0x13, 0x33, 0x7a,

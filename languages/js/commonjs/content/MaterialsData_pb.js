@@ -1,6 +1,8 @@
 /**
  * @fileoverview
  * @enhanceable
+ * @suppress {messageConventions} JS Compiler reports an error if a variable or
+ *     field starts with 'MSG_' and isn't a translatable message.
  * @public
  */
 // GENERATED CODE -- DO NOT EDIT!
@@ -63,10 +65,11 @@ proto.MaterialsData.prototype.toObject = function(opt_includeInstance) {
  *     http://goto/soy-param-migration
  * @param {!proto.MaterialsData} msg The msg instance to transform.
  * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.MaterialsData.toObject = function(includeInstance, msg) {
   var f, obj = {
-    ingredientsList: jspb.Message.getField(msg, 1),
+    ingredientsList: jspb.Message.getRepeatedField(msg, 1),
     grow: jspb.Message.getFieldWithDefault(msg, 2, 0),
     species: jspb.Message.getFieldWithDefault(msg, 3, 0),
     genetics: (f = msg.getGenetics()) && structs_Genetics_pb.Genetics.toObject(includeInstance, f)
@@ -148,6 +151,7 @@ proto.MaterialsData.prototype.serializeBinary = function() {
  * format), writing to the given BinaryWriter.
  * @param {!proto.MaterialsData} message
  * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.MaterialsData.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
@@ -185,12 +189,10 @@ proto.MaterialsData.serializeBinaryToWriter = function(message, writer) {
 
 /**
  * repeated string ingredients = 1;
- * If you change this array by adding, removing or replacing elements, or if you
- * replace the array itself, then you must call the setter to update it.
  * @return {!Array.<string>}
  */
 proto.MaterialsData.prototype.getIngredientsList = function() {
-  return /** @type {!Array.<string>} */ (jspb.Message.getField(this, 1));
+  return /** @type {!Array.<string>} */ (jspb.Message.getRepeatedField(this, 1));
 };
 
 

@@ -35,7 +35,7 @@ var PricingType_value = map[string]int32{
 func (x PricingType) String() string {
 	return proto.EnumName(PricingType_name, int32(x))
 }
-func (PricingType) EnumDescriptor() ([]byte, []int) { return fileDescriptor19, []int{0} }
+func (PricingType) EnumDescriptor() ([]byte, []int) { return fileDescriptor20, []int{0} }
 
 type PricingWeightTier int32
 
@@ -80,7 +80,7 @@ var PricingWeightTier_value = map[string]int32{
 func (x PricingWeightTier) String() string {
 	return proto.EnumName(PricingWeightTier_name, int32(x))
 }
-func (PricingWeightTier) EnumDescriptor() ([]byte, []int) { return fileDescriptor19, []int{1} }
+func (PricingWeightTier) EnumDescriptor() ([]byte, []int) { return fileDescriptor20, []int{1} }
 
 type PricingTierAvailability struct {
 	Offered   bool `protobuf:"varint,1,opt,name=offered" json:"offered,omitempty"`
@@ -90,7 +90,7 @@ type PricingTierAvailability struct {
 func (m *PricingTierAvailability) Reset()                    { *m = PricingTierAvailability{} }
 func (m *PricingTierAvailability) String() string            { return proto.CompactTextString(m) }
 func (*PricingTierAvailability) ProtoMessage()               {}
-func (*PricingTierAvailability) Descriptor() ([]byte, []int) { return fileDescriptor19, []int{0} }
+func (*PricingTierAvailability) Descriptor() ([]byte, []int) { return fileDescriptor20, []int{0} }
 
 func (m *PricingTierAvailability) GetOffered() bool {
 	if m != nil {
@@ -116,7 +116,7 @@ type UnitPricingDescriptor struct {
 func (m *UnitPricingDescriptor) Reset()                    { *m = UnitPricingDescriptor{} }
 func (m *UnitPricingDescriptor) String() string            { return proto.CompactTextString(m) }
 func (*UnitPricingDescriptor) ProtoMessage()               {}
-func (*UnitPricingDescriptor) Descriptor() ([]byte, []int) { return fileDescriptor19, []int{1} }
+func (*UnitPricingDescriptor) Descriptor() ([]byte, []int) { return fileDescriptor20, []int{1} }
 
 func (m *UnitPricingDescriptor) GetPriceValue() float32 {
 	if m != nil {
@@ -148,7 +148,7 @@ type WeightedPricingDescriptor struct {
 func (m *WeightedPricingDescriptor) Reset()                    { *m = WeightedPricingDescriptor{} }
 func (m *WeightedPricingDescriptor) String() string            { return proto.CompactTextString(m) }
 func (*WeightedPricingDescriptor) ProtoMessage()               {}
-func (*WeightedPricingDescriptor) Descriptor() ([]byte, []int) { return fileDescriptor19, []int{2} }
+func (*WeightedPricingDescriptor) Descriptor() ([]byte, []int) { return fileDescriptor20, []int{2} }
 
 func (m *WeightedPricingDescriptor) GetWeight() PricingWeightTier {
 	if m != nil {
@@ -177,7 +177,7 @@ type FreebiePricingDescriptor struct {
 func (m *FreebiePricingDescriptor) Reset()                    { *m = FreebiePricingDescriptor{} }
 func (m *FreebiePricingDescriptor) String() string            { return proto.CompactTextString(m) }
 func (*FreebiePricingDescriptor) ProtoMessage()               {}
-func (*FreebiePricingDescriptor) Descriptor() ([]byte, []int) { return fileDescriptor19, []int{3} }
+func (*FreebiePricingDescriptor) Descriptor() ([]byte, []int) { return fileDescriptor20, []int{3} }
 
 // -- Pricing: Main Descriptor
 type PricingDescriptor struct {
@@ -191,7 +191,7 @@ type PricingDescriptor struct {
 func (m *PricingDescriptor) Reset()                    { *m = PricingDescriptor{} }
 func (m *PricingDescriptor) String() string            { return proto.CompactTextString(m) }
 func (*PricingDescriptor) ProtoMessage()               {}
-func (*PricingDescriptor) Descriptor() ([]byte, []int) { return fileDescriptor19, []int{4} }
+func (*PricingDescriptor) Descriptor() ([]byte, []int) { return fileDescriptor20, []int{4} }
 
 func (m *PricingDescriptor) GetType() PricingType {
 	if m != nil {
@@ -230,7 +230,7 @@ type ProductPricing struct {
 func (m *ProductPricing) Reset()                    { *m = ProductPricing{} }
 func (m *ProductPricing) String() string            { return proto.CompactTextString(m) }
 func (*ProductPricing) ProtoMessage()               {}
-func (*ProductPricing) Descriptor() ([]byte, []int) { return fileDescriptor19, []int{5} }
+func (*ProductPricing) Descriptor() ([]byte, []int) { return fileDescriptor20, []int{5} }
 
 func (m *ProductPricing) GetDiscounts() []*SaleDescriptor {
 	if m != nil {
@@ -257,9 +257,9 @@ func init() {
 	proto.RegisterEnum("PricingWeightTier", PricingWeightTier_name, PricingWeightTier_value)
 }
 
-func init() { proto.RegisterFile("structs/pricing/PricingDescriptor.proto", fileDescriptor19) }
+func init() { proto.RegisterFile("structs/pricing/PricingDescriptor.proto", fileDescriptor20) }
 
-var fileDescriptor19 = []byte{
+var fileDescriptor20 = []byte{
 	// 557 bytes of a gzipped FileDescriptorProto
 	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0x84, 0x93, 0xd1, 0x6e, 0xda, 0x30,
 	0x14, 0x86, 0x1b, 0xa0, 0x10, 0x4e, 0xba, 0xd6, 0xb3, 0xd6, 0x2e, 0xad, 0x26, 0xad, 0x43, 0x95,

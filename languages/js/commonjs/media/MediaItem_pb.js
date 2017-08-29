@@ -1,6 +1,8 @@
 /**
  * @fileoverview
  * @enhanceable
+ * @suppress {messageConventions} JS Compiler reports an error if a variable or
+ *     field starts with 'MSG_' and isn't a translatable message.
  * @public
  */
 // GENERATED CODE -- DO NOT EDIT!
@@ -55,6 +57,7 @@ proto.MediaItem.prototype.toObject = function(opt_includeInstance) {
  *     http://goto/soy-param-migration
  * @param {!proto.MediaItem} msg The msg instance to transform.
  * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.MediaItem.toObject = function(includeInstance, msg) {
   var f, obj = {
@@ -136,6 +139,7 @@ proto.MediaItem.prototype.serializeBinary = function() {
  * format), writing to the given BinaryWriter.
  * @param {!proto.MediaItem} message
  * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.MediaItem.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;

@@ -7,24 +7,24 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Protobuf type <code>MaterialsData</code>
+ * Generated from protobuf message <code>MaterialsData</code>
  */
 class MaterialsData extends \Google\Protobuf\Internal\Message
 {
     /**
-     * <code>repeated string ingredients = 1;</code>
+     * Generated from protobuf field <code>repeated string ingredients = 1;</code>
      */
     private $ingredients;
     /**
-     * <code>.Grow grow = 2;</code>
+     * Generated from protobuf field <code>.Grow grow = 2;</code>
      */
     private $grow = 0;
     /**
-     * <code>.Species species = 3;</code>
+     * Generated from protobuf field <code>.Species species = 3;</code>
      */
     private $species = 0;
     /**
-     * <code>.Genetics genetics = 4;</code>
+     * Generated from protobuf field <code>.Genetics genetics = 4;</code>
      */
     private $genetics = null;
 
@@ -34,7 +34,8 @@ class MaterialsData extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>repeated string ingredients = 1;</code>
+     * Generated from protobuf field <code>repeated string ingredients = 1;</code>
+     * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getIngredients()
     {
@@ -42,16 +43,21 @@ class MaterialsData extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>repeated string ingredients = 1;</code>
+     * Generated from protobuf field <code>repeated string ingredients = 1;</code>
+     * @param string[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @return $this
      */
-    public function setIngredients(&$var)
+    public function setIngredients($var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::STRING);
         $this->ingredients = $arr;
+
+        return $this;
     }
 
     /**
-     * <code>.Grow grow = 2;</code>
+     * Generated from protobuf field <code>.Grow grow = 2;</code>
+     * @return int
      */
     public function getGrow()
     {
@@ -59,16 +65,21 @@ class MaterialsData extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>.Grow grow = 2;</code>
+     * Generated from protobuf field <code>.Grow grow = 2;</code>
+     * @param int $var
+     * @return $this
      */
     public function setGrow($var)
     {
         GPBUtil::checkEnum($var, \Grow::class);
         $this->grow = $var;
+
+        return $this;
     }
 
     /**
-     * <code>.Species species = 3;</code>
+     * Generated from protobuf field <code>.Species species = 3;</code>
+     * @return int
      */
     public function getSpecies()
     {
@@ -76,16 +87,21 @@ class MaterialsData extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>.Species species = 3;</code>
+     * Generated from protobuf field <code>.Species species = 3;</code>
+     * @param int $var
+     * @return $this
      */
     public function setSpecies($var)
     {
         GPBUtil::checkEnum($var, \Species::class);
         $this->species = $var;
+
+        return $this;
     }
 
     /**
-     * <code>.Genetics genetics = 4;</code>
+     * Generated from protobuf field <code>.Genetics genetics = 4;</code>
+     * @return \Genetics
      */
     public function getGenetics()
     {
@@ -93,12 +109,16 @@ class MaterialsData extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>.Genetics genetics = 4;</code>
+     * Generated from protobuf field <code>.Genetics genetics = 4;</code>
+     * @param \Genetics $var
+     * @return $this
      */
-    public function setGenetics(&$var)
+    public function setGenetics($var)
     {
         GPBUtil::checkMessage($var, \Genetics::class);
         $this->genetics = $var;
+
+        return $this;
     }
 
 }

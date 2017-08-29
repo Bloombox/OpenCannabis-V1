@@ -8,43 +8,43 @@
 class PricingWeightTier
 {
     /**
-     * <code>OTHER = 0;</code>
+     * Generated from protobuf enum <code>OTHER = 0;</code>
      */
     const OTHER = 0;
     /**
-     * <code>GRAM = 1;</code>
+     * Generated from protobuf enum <code>GRAM = 1;</code>
      */
     const GRAM = 1;
     /**
-     * <code>HALFGRAM = 2;</code>
+     * Generated from protobuf enum <code>HALFGRAM = 2;</code>
      */
     const HALFGRAM = 2;
     /**
-     * <code>QUARTERGRAM = 3;</code>
+     * Generated from protobuf enum <code>QUARTERGRAM = 3;</code>
      */
     const QUARTERGRAM = 3;
     /**
-     * <code>DUB = 4;</code>
+     * Generated from protobuf enum <code>DUB = 4;</code>
      */
     const DUB = 4;
     /**
-     * <code>EIGHTH = 5;</code>
+     * Generated from protobuf enum <code>EIGHTH = 5;</code>
      */
     const EIGHTH = 5;
     /**
-     * <code>QUARTER = 6;</code>
+     * Generated from protobuf enum <code>QUARTER = 6;</code>
      */
     const QUARTER = 6;
     /**
-     * <code>HALF = 7;</code>
+     * Generated from protobuf enum <code>HALF = 7;</code>
      */
     const HALF = 7;
     /**
-     * <code>OUNCE = 8;</code>
+     * Generated from protobuf enum <code>OUNCE = 8;</code>
      */
     const OUNCE = 8;
     /**
-     * <code>POUND = 9;</code>
+     * Generated from protobuf enum <code>POUND = 9;</code>
      */
     const POUND = 9;
 }

@@ -3,24 +3,24 @@
 # source: media/MediaType.proto
 
 /**
- * Protobuf enum <code>DocumentType.DocumentKind</code>
+ * Protobuf enum <code>DocumentType\DocumentKind</code>
  */
 class DocumentType_DocumentKind
 {
     /**
-     * <code>TXT = 0;</code>
+     * Generated from protobuf enum <code>TXT = 0;</code>
      */
     const TXT = 0;
     /**
-     * <code>HTML = 1;</code>
+     * Generated from protobuf enum <code>HTML = 1;</code>
      */
     const HTML = 1;
     /**
-     * <code>PDF = 2;</code>
+     * Generated from protobuf enum <code>PDF = 2;</code>
      */
     const PDF = 2;
     /**
-     * <code>MARKDOWN = 3;</code>
+     * Generated from protobuf enum <code>MARKDOWN = 3;</code>
      */
     const MARKDOWN = 3;
 }

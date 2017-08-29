@@ -8,15 +8,15 @@
 class SaleType
 {
     /**
-     * <code>PERCENTAGE = 0;</code>
+     * Generated from protobuf enum <code>PERCENTAGE = 0;</code>
      */
     const PERCENTAGE = 0;
     /**
-     * <code>BOGO = 1;</code>
+     * Generated from protobuf enum <code>BOGO = 1;</code>
      */
     const BOGO = 1;
     /**
-     * <code>LOYALTY = 2;</code>
+     * Generated from protobuf enum <code>LOYALTY = 2;</code>
      */
     const LOYALTY = 2;
 }

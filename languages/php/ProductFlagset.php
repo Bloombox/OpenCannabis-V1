@@ -7,12 +7,12 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Protobuf type <code>ProductFlagset</code>
+ * Generated from protobuf message <code>ProductFlagset</code>
  */
 class ProductFlagset extends \Google\Protobuf\Internal\Message
 {
     /**
-     * <code>repeated .ProductFlagValue flags = 1;</code>
+     * Generated from protobuf field <code>repeated .ProductFlagValue flags = 1;</code>
      */
     private $flags;
 
@@ -22,7 +22,8 @@ class ProductFlagset extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>repeated .ProductFlagValue flags = 1;</code>
+     * Generated from protobuf field <code>repeated .ProductFlagValue flags = 1;</code>
+     * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getFlags()
     {
@@ -30,12 +31,16 @@ class ProductFlagset extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>repeated .ProductFlagValue flags = 1;</code>
+     * Generated from protobuf field <code>repeated .ProductFlagValue flags = 1;</code>
+     * @param \ProductFlagValue[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @return $this
      */
-    public function setFlags(&$var)
+    public function setFlags($var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \ProductFlagValue::class);
         $this->flags = $arr;
+
+        return $this;
     }
 
 }

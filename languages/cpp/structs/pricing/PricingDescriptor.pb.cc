@@ -16,17 +16,35 @@
 #include <google/protobuf/reflection_ops.h>
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
-class PricingTierAvailabilityDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<PricingTierAvailability> {
+class PricingTierAvailabilityDefaultTypeInternal {
+public:
+ ::google::protobuf::internal::ExplicitlyConstructed<PricingTierAvailability>
+     _instance;
 } _PricingTierAvailability_default_instance_;
-class UnitPricingDescriptorDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<UnitPricingDescriptor> {
+class UnitPricingDescriptorDefaultTypeInternal {
+public:
+ ::google::protobuf::internal::ExplicitlyConstructed<UnitPricingDescriptor>
+     _instance;
 } _UnitPricingDescriptor_default_instance_;
-class WeightedPricingDescriptorDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<WeightedPricingDescriptor> {
+class WeightedPricingDescriptorDefaultTypeInternal {
+public:
+ ::google::protobuf::internal::ExplicitlyConstructed<WeightedPricingDescriptor>
+     _instance;
 } _WeightedPricingDescriptor_default_instance_;
-class FreebiePricingDescriptorDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<FreebiePricingDescriptor> {
+class FreebiePricingDescriptorDefaultTypeInternal {
+public:
+ ::google::protobuf::internal::ExplicitlyConstructed<FreebiePricingDescriptor>
+     _instance;
 } _FreebiePricingDescriptor_default_instance_;
-class PricingDescriptorDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<PricingDescriptor> {
+class PricingDescriptorDefaultTypeInternal {
+public:
+ ::google::protobuf::internal::ExplicitlyConstructed<PricingDescriptor>
+     _instance;
 } _PricingDescriptor_default_instance_;
-class ProductPricingDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<ProductPricing> {
+class ProductPricingDefaultTypeInternal {
+public:
+ ::google::protobuf::internal::ExplicitlyConstructed<ProductPricing>
+     _instance;
 } _ProductPricing_default_instance_;
 
 namespace protobuf_structs_2fpricing_2fPricingDescriptor_2eproto {
@@ -40,25 +58,25 @@ const ::google::protobuf::EnumDescriptor* file_level_enum_descriptors[2];
 }  // namespace
 
 PROTOBUF_CONSTEXPR_VAR ::google::protobuf::internal::ParseTableField
-    const TableStruct::entries[] = {
+    const TableStruct::entries[] GOOGLE_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
   {0, 0, 0, ::google::protobuf::internal::kInvalidMask, 0, 0},
 };
 
 PROTOBUF_CONSTEXPR_VAR ::google::protobuf::internal::AuxillaryParseTableField
-    const TableStruct::aux[] = {
+    const TableStruct::aux[] GOOGLE_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
   ::google::protobuf::internal::AuxillaryParseTableField(),
 };
 PROTOBUF_CONSTEXPR_VAR ::google::protobuf::internal::ParseTable const
-    TableStruct::schema[] = {
-  { NULL, NULL, 0, -1, -1, false },
-  { NULL, NULL, 0, -1, -1, false },
-  { NULL, NULL, 0, -1, -1, false },
-  { NULL, NULL, 0, -1, -1, false },
-  { NULL, NULL, 0, -1, -1, false },
-  { NULL, NULL, 0, -1, -1, false },
+    TableStruct::schema[] GOOGLE_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
+  { NULL, NULL, 0, -1, -1, -1, -1, NULL, false },
+  { NULL, NULL, 0, -1, -1, -1, -1, NULL, false },
+  { NULL, NULL, 0, -1, -1, -1, -1, NULL, false },
+  { NULL, NULL, 0, -1, -1, -1, -1, NULL, false },
+  { NULL, NULL, 0, -1, -1, -1, -1, NULL, false },
+  { NULL, NULL, 0, -1, -1, -1, -1, NULL, false },
 };
 
-const ::google::protobuf::uint32 TableStruct::offsets[] = {
+const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
   ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(PricingTierAvailability, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -104,8 +122,7 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ProductPricing, discounts_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(ProductPricing, manifest_),
 };
-
-static const ::google::protobuf::internal::MigrationSchema schemas[] = {
+static const ::google::protobuf::internal::MigrationSchema schemas[] GOOGLE_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, sizeof(PricingTierAvailability)},
   { 7, -1, sizeof(UnitPricingDescriptor)},
   { 15, -1, sizeof(WeightedPricingDescriptor)},
@@ -145,42 +162,32 @@ void protobuf_RegisterTypes(const ::std::string&) {
 }
 
 }  // namespace
-
-void TableStruct::Shutdown() {
-  _PricingTierAvailability_default_instance_.Shutdown();
-  delete file_level_metadata[0].reflection;
-  _UnitPricingDescriptor_default_instance_.Shutdown();
-  delete file_level_metadata[1].reflection;
-  _WeightedPricingDescriptor_default_instance_.Shutdown();
-  delete file_level_metadata[2].reflection;
-  _FreebiePricingDescriptor_default_instance_.Shutdown();
-  delete file_level_metadata[3].reflection;
-  _PricingDescriptor_default_instance_.Shutdown();
-  delete file_level_metadata[4].reflection;
-  _ProductPricing_default_instance_.Shutdown();
-  delete file_level_metadata[5].reflection;
-}
-
 void TableStruct::InitDefaultsImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   ::google::protobuf::internal::InitProtobufDefaults();
   ::protobuf_structs_2fpricing_2fSaleDescriptor_2eproto::InitDefaults();
-  _PricingTierAvailability_default_instance_.DefaultConstruct();
-  _UnitPricingDescriptor_default_instance_.DefaultConstruct();
-  _WeightedPricingDescriptor_default_instance_.DefaultConstruct();
-  _FreebiePricingDescriptor_default_instance_.DefaultConstruct();
-  _PricingDescriptor_default_instance_.DefaultConstruct();
-  _ProductPricing_default_instance_.DefaultConstruct();
-  _UnitPricingDescriptor_default_instance_.get_mutable()->status_ = const_cast< ::PricingTierAvailability*>(
+  _PricingTierAvailability_default_instance_._instance.DefaultConstruct();
+  ::google::protobuf::internal::OnShutdownDestroyMessage(
+      &_PricingTierAvailability_default_instance_);_UnitPricingDescriptor_default_instance_._instance.DefaultConstruct();
+  ::google::protobuf::internal::OnShutdownDestroyMessage(
+      &_UnitPricingDescriptor_default_instance_);_WeightedPricingDescriptor_default_instance_._instance.DefaultConstruct();
+  ::google::protobuf::internal::OnShutdownDestroyMessage(
+      &_WeightedPricingDescriptor_default_instance_);_FreebiePricingDescriptor_default_instance_._instance.DefaultConstruct();
+  ::google::protobuf::internal::OnShutdownDestroyMessage(
+      &_FreebiePricingDescriptor_default_instance_);_PricingDescriptor_default_instance_._instance.DefaultConstruct();
+  ::google::protobuf::internal::OnShutdownDestroyMessage(
+      &_PricingDescriptor_default_instance_);_ProductPricing_default_instance_._instance.DefaultConstruct();
+  ::google::protobuf::internal::OnShutdownDestroyMessage(
+      &_ProductPricing_default_instance_);_UnitPricingDescriptor_default_instance_._instance.get_mutable()->status_ = const_cast< ::PricingTierAvailability*>(
       ::PricingTierAvailability::internal_default_instance());
-  _WeightedPricingDescriptor_default_instance_.get_mutable()->tier_ = const_cast< ::UnitPricingDescriptor*>(
+  _WeightedPricingDescriptor_default_instance_._instance.get_mutable()->tier_ = const_cast< ::UnitPricingDescriptor*>(
       ::UnitPricingDescriptor::internal_default_instance());
-  _PricingDescriptor_default_instance_.get_mutable()->unit_ = const_cast< ::UnitPricingDescriptor*>(
+  _PricingDescriptor_default_instance_._instance.get_mutable()->unit_ = const_cast< ::UnitPricingDescriptor*>(
       ::UnitPricingDescriptor::internal_default_instance());
-  _PricingDescriptor_default_instance_.get_mutable()->weighted_ = const_cast< ::WeightedPricingDescriptor*>(
+  _PricingDescriptor_default_instance_._instance.get_mutable()->weighted_ = const_cast< ::WeightedPricingDescriptor*>(
       ::WeightedPricingDescriptor::internal_default_instance());
-  _PricingDescriptor_default_instance_.get_mutable()->freebie_ = const_cast< ::FreebiePricingDescriptor*>(
+  _PricingDescriptor_default_instance_._instance.get_mutable()->freebie_ = const_cast< ::FreebiePricingDescriptor*>(
       ::FreebiePricingDescriptor::internal_default_instance());
 }
 
@@ -188,9 +195,10 @@ void InitDefaults() {
   static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
   ::google::protobuf::GoogleOnceInit(&once, &TableStruct::InitDefaultsImpl);
 }
+namespace {
 void AddDescriptorsImpl() {
   InitDefaults();
-  static const char descriptor[] = {
+  static const char descriptor[] GOOGLE_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
       "\n\'structs/pricing/PricingDescriptor.prot"
       "o\032$structs/pricing/SaleDescriptor.proto\""
       "=\n\027PricingTierAvailability\022\017\n\007offered\030\001 "
@@ -221,14 +229,14 @@ void AddDescriptorsImpl() {
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "structs/pricing/PricingDescriptor.proto", &protobuf_RegisterTypes);
   ::protobuf_structs_2fpricing_2fSaleDescriptor_2eproto::AddDescriptors();
-  ::google::protobuf::internal::OnShutdown(&TableStruct::Shutdown);
 }
+} // anonymous namespace
 
 void AddDescriptors() {
   static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
   ::google::protobuf::GoogleOnceInit(&once, &AddDescriptorsImpl);
 }
-// Force AddDescriptors() to be called at static initialization time.
+// Force AddDescriptors() to be called at dynamic initialization time.
 struct StaticDescriptorInitializer {
   StaticDescriptorInitializer() {
     AddDescriptors();
@@ -293,9 +301,7 @@ PricingTierAvailability::PricingTierAvailability()
 PricingTierAvailability::PricingTierAvailability(::google::protobuf::Arena* arena)
   : ::google::protobuf::Message(),
   _internal_metadata_(arena) {
-#ifdef GOOGLE_PROTOBUF_NO_STATIC_INITIALIZER
   protobuf_structs_2fpricing_2fPricingDescriptor_2eproto::InitDefaults();
-#endif  // GOOGLE_PROTOBUF_NO_STATIC_INITIALIZER
   SharedCtor();
   RegisterArenaDtor(arena);
   // @@protoc_insertion_point(arena_constructor:PricingTierAvailability)
@@ -306,14 +312,15 @@ PricingTierAvailability::PricingTierAvailability(const PricingTierAvailability& 
       _cached_size_(0) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   ::memcpy(&offered_, &from.offered_,
-    reinterpret_cast<char*>(&available_) -
-    reinterpret_cast<char*>(&offered_) + sizeof(available_));
+    static_cast<size_t>(reinterpret_cast<char*>(&available_) -
+    reinterpret_cast<char*>(&offered_)) + sizeof(available_));
   // @@protoc_insertion_point(copy_constructor:PricingTierAvailability)
 }
 
 void PricingTierAvailability::SharedCtor() {
-  ::memset(&offered_, 0, reinterpret_cast<char*>(&available_) -
-    reinterpret_cast<char*>(&offered_) + sizeof(available_));
+  ::memset(&offered_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&available_) -
+      reinterpret_cast<char*>(&offered_)) + sizeof(available_));
   _cached_size_ = 0;
 }
 
@@ -324,6 +331,7 @@ PricingTierAvailability::~PricingTierAvailability() {
 
 void PricingTierAvailability::SharedDtor() {
   ::google::protobuf::Arena* arena = GetArenaNoVirtual();
+  GOOGLE_DCHECK(arena == NULL);
   if (arena != NULL) {
     return;
   }
@@ -357,8 +365,14 @@ PricingTierAvailability* PricingTierAvailability::New(::google::protobuf::Arena*
 
 void PricingTierAvailability::Clear() {
 // @@protoc_insertion_point(message_clear_start:PricingTierAvailability)
-  ::memset(&offered_, 0, reinterpret_cast<char*>(&available_) -
-    reinterpret_cast<char*>(&offered_) + sizeof(available_));
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  ::memset(&offered_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&available_) -
+      reinterpret_cast<char*>(&offered_)) + sizeof(available_));
+  _internal_metadata_.Clear();
 }
 
 bool PricingTierAvailability::MergePartialFromCodedStream(
@@ -374,7 +388,7 @@ bool PricingTierAvailability::MergePartialFromCodedStream(
       // bool offered = 1;
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(8u)) {
+            static_cast< ::google::protobuf::uint8>(8u /* 8 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
@@ -388,7 +402,7 @@ bool PricingTierAvailability::MergePartialFromCodedStream(
       // bool available = 2;
       case 2: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(16u)) {
+            static_cast< ::google::protobuf::uint8>(16u /* 16 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    bool, ::google::protobuf::internal::WireFormatLite::TYPE_BOOL>(
@@ -401,12 +415,11 @@ bool PricingTierAvailability::MergePartialFromCodedStream(
 
       default: {
       handle_unusual:
-        if (tag == 0 ||
-            ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+        if (tag == 0) {
           goto success;
         }
-        DO_(::google::protobuf::internal::WireFormatLite::SkipField(input, tag));
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
         break;
       }
     }
@@ -436,6 +449,10 @@ void PricingTierAvailability::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::WriteBool(2, this->available(), output);
   }
 
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
+  }
   // @@protoc_insertion_point(serialize_end:PricingTierAvailability)
 }
 
@@ -456,6 +473,10 @@ void PricingTierAvailability::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormatLite::WriteBoolToArray(2, this->available(), target);
   }
 
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
+  }
   // @@protoc_insertion_point(serialize_to_array_end:PricingTierAvailability)
   return target;
 }
@@ -464,6 +485,11 @@ size_t PricingTierAvailability::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:PricingTierAvailability)
   size_t total_size = 0;
 
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
+  }
   // bool offered = 1;
   if (this->offered() != 0) {
     total_size += 1 + 1;
@@ -549,9 +575,11 @@ void PricingTierAvailability::UnsafeArenaSwap(PricingTierAvailability* other) {
   InternalSwap(other);
 }
 void PricingTierAvailability::InternalSwap(PricingTierAvailability* other) {
-  std::swap(offered_, other->offered_);
-  std::swap(available_, other->available_);
-  std::swap(_cached_size_, other->_cached_size_);
+  using std::swap;
+  swap(offered_, other->offered_);
+  swap(available_, other->available_);
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata PricingTierAvailability::GetMetadata() const {
@@ -659,9 +687,7 @@ UnitPricingDescriptor::UnitPricingDescriptor(::google::protobuf::Arena* arena)
   : ::google::protobuf::Message(),
   _internal_metadata_(arena),
   discounts_(arena) {
-#ifdef GOOGLE_PROTOBUF_NO_STATIC_INITIALIZER
   protobuf_structs_2fpricing_2fPricingDescriptor_2eproto::InitDefaults();
-#endif  // GOOGLE_PROTOBUF_NO_STATIC_INITIALIZER
   SharedCtor();
   RegisterArenaDtor(arena);
   // @@protoc_insertion_point(arena_constructor:UnitPricingDescriptor)
@@ -682,8 +708,9 @@ UnitPricingDescriptor::UnitPricingDescriptor(const UnitPricingDescriptor& from)
 }
 
 void UnitPricingDescriptor::SharedCtor() {
-  ::memset(&status_, 0, reinterpret_cast<char*>(&price_value_) -
-    reinterpret_cast<char*>(&status_) + sizeof(price_value_));
+  ::memset(&status_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&price_value_) -
+      reinterpret_cast<char*>(&status_)) + sizeof(price_value_));
   _cached_size_ = 0;
 }
 
@@ -694,13 +721,12 @@ UnitPricingDescriptor::~UnitPricingDescriptor() {
 
 void UnitPricingDescriptor::SharedDtor() {
   ::google::protobuf::Arena* arena = GetArenaNoVirtual();
+  GOOGLE_DCHECK(arena == NULL);
   if (arena != NULL) {
     return;
   }
 
-  if (this != internal_default_instance()) {
-    delete status_;
-  }
+  if (this != internal_default_instance()) delete status_;
 }
 
 void UnitPricingDescriptor::ArenaDtor(void* object) {
@@ -730,12 +756,17 @@ UnitPricingDescriptor* UnitPricingDescriptor::New(::google::protobuf::Arena* are
 
 void UnitPricingDescriptor::Clear() {
 // @@protoc_insertion_point(message_clear_start:UnitPricingDescriptor)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
   discounts_.Clear();
   if (GetArenaNoVirtual() == NULL && status_ != NULL) {
     delete status_;
   }
   status_ = NULL;
   price_value_ = 0;
+  _internal_metadata_.Clear();
 }
 
 bool UnitPricingDescriptor::MergePartialFromCodedStream(
@@ -751,7 +782,7 @@ bool UnitPricingDescriptor::MergePartialFromCodedStream(
       // float price_value = 1;
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(13u)) {
+            static_cast< ::google::protobuf::uint8>(13u /* 13 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
@@ -765,7 +796,7 @@ bool UnitPricingDescriptor::MergePartialFromCodedStream(
       // .PricingTierAvailability status = 2;
       case 2: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(18u)) {
+            static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_status()));
         } else {
@@ -777,7 +808,7 @@ bool UnitPricingDescriptor::MergePartialFromCodedStream(
       // repeated .SaleDescriptor discounts = 3;
       case 3: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(26u)) {
+            static_cast< ::google::protobuf::uint8>(26u /* 26 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                 input, add_discounts()));
         } else {
@@ -788,12 +819,11 @@ bool UnitPricingDescriptor::MergePartialFromCodedStream(
 
       default: {
       handle_unusual:
-        if (tag == 0 ||
-            ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+        if (tag == 0) {
           goto success;
         }
-        DO_(::google::protobuf::internal::WireFormatLite::SkipField(input, tag));
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
         break;
       }
     }
@@ -825,11 +855,16 @@ void UnitPricingDescriptor::SerializeWithCachedSizes(
   }
 
   // repeated .SaleDescriptor discounts = 3;
-  for (unsigned int i = 0, n = this->discounts_size(); i < n; i++) {
+  for (unsigned int i = 0,
+      n = static_cast<unsigned int>(this->discounts_size()); i < n; i++) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      3, this->discounts(i), output);
+      3, this->discounts(static_cast<int>(i)), output);
   }
 
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
+  }
   // @@protoc_insertion_point(serialize_end:UnitPricingDescriptor)
 }
 
@@ -853,12 +888,17 @@ void UnitPricingDescriptor::SerializeWithCachedSizes(
   }
 
   // repeated .SaleDescriptor discounts = 3;
-  for (unsigned int i = 0, n = this->discounts_size(); i < n; i++) {
+  for (unsigned int i = 0,
+      n = static_cast<unsigned int>(this->discounts_size()); i < n; i++) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        3, this->discounts(i), deterministic, target);
+        3, this->discounts(static_cast<int>(i)), deterministic, target);
   }
 
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
+  }
   // @@protoc_insertion_point(serialize_to_array_end:UnitPricingDescriptor)
   return target;
 }
@@ -867,14 +907,19 @@ size_t UnitPricingDescriptor::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:UnitPricingDescriptor)
   size_t total_size = 0;
 
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
+  }
   // repeated .SaleDescriptor discounts = 3;
   {
-    unsigned int count = this->discounts_size();
+    unsigned int count = static_cast<unsigned int>(this->discounts_size());
     total_size += 1UL * count;
     for (unsigned int i = 0; i < count; i++) {
       total_size +=
         ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
-          this->discounts(i));
+          this->discounts(static_cast<int>(i)));
     }
   }
 
@@ -966,10 +1011,12 @@ void UnitPricingDescriptor::UnsafeArenaSwap(UnitPricingDescriptor* other) {
   InternalSwap(other);
 }
 void UnitPricingDescriptor::InternalSwap(UnitPricingDescriptor* other) {
+  using std::swap;
   discounts_.InternalSwap(&other->discounts_);
-  std::swap(status_, other->status_);
-  std::swap(price_value_, other->price_value_);
-  std::swap(_cached_size_, other->_cached_size_);
+  swap(status_, other->status_);
+  swap(price_value_, other->price_value_);
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata UnitPricingDescriptor::GetMetadata() const {
@@ -1003,9 +1050,10 @@ void UnitPricingDescriptor::clear_status() {
   status_ = NULL;
 }
 const ::PricingTierAvailability& UnitPricingDescriptor::status() const {
+  const ::PricingTierAvailability* p = status_;
   // @@protoc_insertion_point(field_get:UnitPricingDescriptor.status)
-  return status_ != NULL ? *status_
-                         : *::PricingTierAvailability::internal_default_instance();
+  return p != NULL ? *p : *reinterpret_cast<const ::PricingTierAvailability*>(
+      &::_PricingTierAvailability_default_instance_);
 }
 ::PricingTierAvailability* UnitPricingDescriptor::mutable_status() {
   
@@ -1141,9 +1189,7 @@ WeightedPricingDescriptor::WeightedPricingDescriptor()
 WeightedPricingDescriptor::WeightedPricingDescriptor(::google::protobuf::Arena* arena)
   : ::google::protobuf::Message(),
   _internal_metadata_(arena) {
-#ifdef GOOGLE_PROTOBUF_NO_STATIC_INITIALIZER
   protobuf_structs_2fpricing_2fPricingDescriptor_2eproto::InitDefaults();
-#endif  // GOOGLE_PROTOBUF_NO_STATIC_INITIALIZER
   SharedCtor();
   RegisterArenaDtor(arena);
   // @@protoc_insertion_point(arena_constructor:WeightedPricingDescriptor)
@@ -1159,14 +1205,15 @@ WeightedPricingDescriptor::WeightedPricingDescriptor(const WeightedPricingDescri
     tier_ = NULL;
   }
   ::memcpy(&weight_, &from.weight_,
-    reinterpret_cast<char*>(&weightingrams_) -
-    reinterpret_cast<char*>(&weight_) + sizeof(weightingrams_));
+    static_cast<size_t>(reinterpret_cast<char*>(&weightingrams_) -
+    reinterpret_cast<char*>(&weight_)) + sizeof(weightingrams_));
   // @@protoc_insertion_point(copy_constructor:WeightedPricingDescriptor)
 }
 
 void WeightedPricingDescriptor::SharedCtor() {
-  ::memset(&tier_, 0, reinterpret_cast<char*>(&weightingrams_) -
-    reinterpret_cast<char*>(&tier_) + sizeof(weightingrams_));
+  ::memset(&tier_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&weightingrams_) -
+      reinterpret_cast<char*>(&tier_)) + sizeof(weightingrams_));
   _cached_size_ = 0;
 }
 
@@ -1177,13 +1224,12 @@ WeightedPricingDescriptor::~WeightedPricingDescriptor() {
 
 void WeightedPricingDescriptor::SharedDtor() {
   ::google::protobuf::Arena* arena = GetArenaNoVirtual();
+  GOOGLE_DCHECK(arena == NULL);
   if (arena != NULL) {
     return;
   }
 
-  if (this != internal_default_instance()) {
-    delete tier_;
-  }
+  if (this != internal_default_instance()) delete tier_;
 }
 
 void WeightedPricingDescriptor::ArenaDtor(void* object) {
@@ -1213,12 +1259,18 @@ WeightedPricingDescriptor* WeightedPricingDescriptor::New(::google::protobuf::Ar
 
 void WeightedPricingDescriptor::Clear() {
 // @@protoc_insertion_point(message_clear_start:WeightedPricingDescriptor)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
   if (GetArenaNoVirtual() == NULL && tier_ != NULL) {
     delete tier_;
   }
   tier_ = NULL;
-  ::memset(&weight_, 0, reinterpret_cast<char*>(&weightingrams_) -
-    reinterpret_cast<char*>(&weight_) + sizeof(weightingrams_));
+  ::memset(&weight_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&weightingrams_) -
+      reinterpret_cast<char*>(&weight_)) + sizeof(weightingrams_));
+  _internal_metadata_.Clear();
 }
 
 bool WeightedPricingDescriptor::MergePartialFromCodedStream(
@@ -1234,7 +1286,7 @@ bool WeightedPricingDescriptor::MergePartialFromCodedStream(
       // .PricingWeightTier weight = 1;
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(8u)) {
+            static_cast< ::google::protobuf::uint8>(8u /* 8 & 0xFF */)) {
           int value;
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
@@ -1249,7 +1301,7 @@ bool WeightedPricingDescriptor::MergePartialFromCodedStream(
       // .UnitPricingDescriptor tier = 2;
       case 2: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(18u)) {
+            static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_tier()));
         } else {
@@ -1261,7 +1313,7 @@ bool WeightedPricingDescriptor::MergePartialFromCodedStream(
       // float weightInGrams = 3;
       case 3: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(29u)) {
+            static_cast< ::google::protobuf::uint8>(29u /* 29 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    float, ::google::protobuf::internal::WireFormatLite::TYPE_FLOAT>(
@@ -1274,12 +1326,11 @@ bool WeightedPricingDescriptor::MergePartialFromCodedStream(
 
       default: {
       handle_unusual:
-        if (tag == 0 ||
-            ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+        if (tag == 0) {
           goto success;
         }
-        DO_(::google::protobuf::internal::WireFormatLite::SkipField(input, tag));
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
         break;
       }
     }
@@ -1316,6 +1367,10 @@ void WeightedPricingDescriptor::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::WriteFloat(3, this->weightingrams(), output);
   }
 
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
+  }
   // @@protoc_insertion_point(serialize_end:WeightedPricingDescriptor)
 }
 
@@ -1344,6 +1399,10 @@ void WeightedPricingDescriptor::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormatLite::WriteFloatToArray(3, this->weightingrams(), target);
   }
 
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
+  }
   // @@protoc_insertion_point(serialize_to_array_end:WeightedPricingDescriptor)
   return target;
 }
@@ -1352,6 +1411,11 @@ size_t WeightedPricingDescriptor::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:WeightedPricingDescriptor)
   size_t total_size = 0;
 
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
+  }
   // .UnitPricingDescriptor tier = 2;
   if (this->has_tier()) {
     total_size += 1 +
@@ -1448,10 +1512,12 @@ void WeightedPricingDescriptor::UnsafeArenaSwap(WeightedPricingDescriptor* other
   InternalSwap(other);
 }
 void WeightedPricingDescriptor::InternalSwap(WeightedPricingDescriptor* other) {
-  std::swap(tier_, other->tier_);
-  std::swap(weight_, other->weight_);
-  std::swap(weightingrams_, other->weightingrams_);
-  std::swap(_cached_size_, other->_cached_size_);
+  using std::swap;
+  swap(tier_, other->tier_);
+  swap(weight_, other->weight_);
+  swap(weightingrams_, other->weightingrams_);
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata WeightedPricingDescriptor::GetMetadata() const {
@@ -1485,9 +1551,10 @@ void WeightedPricingDescriptor::clear_tier() {
   tier_ = NULL;
 }
 const ::UnitPricingDescriptor& WeightedPricingDescriptor::tier() const {
+  const ::UnitPricingDescriptor* p = tier_;
   // @@protoc_insertion_point(field_get:WeightedPricingDescriptor.tier)
-  return tier_ != NULL ? *tier_
-                         : *::UnitPricingDescriptor::internal_default_instance();
+  return p != NULL ? *p : *reinterpret_cast<const ::UnitPricingDescriptor*>(
+      &::_UnitPricingDescriptor_default_instance_);
 }
 ::UnitPricingDescriptor* WeightedPricingDescriptor::mutable_tier() {
   
@@ -1557,9 +1624,7 @@ FreebiePricingDescriptor::FreebiePricingDescriptor()
 FreebiePricingDescriptor::FreebiePricingDescriptor(::google::protobuf::Arena* arena)
   : ::google::protobuf::Message(),
   _internal_metadata_(arena) {
-#ifdef GOOGLE_PROTOBUF_NO_STATIC_INITIALIZER
   protobuf_structs_2fpricing_2fPricingDescriptor_2eproto::InitDefaults();
-#endif  // GOOGLE_PROTOBUF_NO_STATIC_INITIALIZER
   SharedCtor();
   RegisterArenaDtor(arena);
   // @@protoc_insertion_point(arena_constructor:FreebiePricingDescriptor)
@@ -1583,6 +1648,7 @@ FreebiePricingDescriptor::~FreebiePricingDescriptor() {
 
 void FreebiePricingDescriptor::SharedDtor() {
   ::google::protobuf::Arena* arena = GetArenaNoVirtual();
+  GOOGLE_DCHECK(arena == NULL);
   if (arena != NULL) {
     return;
   }
@@ -1616,6 +1682,11 @@ FreebiePricingDescriptor* FreebiePricingDescriptor::New(::google::protobuf::Aren
 
 void FreebiePricingDescriptor::Clear() {
 // @@protoc_insertion_point(message_clear_start:FreebiePricingDescriptor)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  _internal_metadata_.Clear();
 }
 
 bool FreebiePricingDescriptor::MergePartialFromCodedStream(
@@ -1628,12 +1699,11 @@ bool FreebiePricingDescriptor::MergePartialFromCodedStream(
     tag = p.first;
     if (!p.second) goto handle_unusual;
   handle_unusual:
-    if (tag == 0 ||
-        ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-        ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+    if (tag == 0) {
       goto success;
     }
-    DO_(::google::protobuf::internal::WireFormatLite::SkipField(input, tag));
+    DO_(::google::protobuf::internal::WireFormat::SkipField(
+          input, tag, _internal_metadata_.mutable_unknown_fields()));
   }
 success:
   // @@protoc_insertion_point(parse_success:FreebiePricingDescriptor)
@@ -1650,6 +1720,10 @@ void FreebiePricingDescriptor::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
+  }
   // @@protoc_insertion_point(serialize_end:FreebiePricingDescriptor)
 }
 
@@ -1660,6 +1734,10 @@ void FreebiePricingDescriptor::SerializeWithCachedSizes(
   ::google::protobuf::uint32 cached_has_bits = 0;
   (void) cached_has_bits;
 
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
+  }
   // @@protoc_insertion_point(serialize_to_array_end:FreebiePricingDescriptor)
   return target;
 }
@@ -1668,6 +1746,11 @@ size_t FreebiePricingDescriptor::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:FreebiePricingDescriptor)
   size_t total_size = 0;
 
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
+  }
   int cached_size = ::google::protobuf::internal::ToCachedSize(total_size);
   GOOGLE_SAFE_CONCURRENT_WRITES_BEGIN();
   _cached_size_ = cached_size;
@@ -1737,7 +1820,9 @@ void FreebiePricingDescriptor::UnsafeArenaSwap(FreebiePricingDescriptor* other) 
   InternalSwap(other);
 }
 void FreebiePricingDescriptor::InternalSwap(FreebiePricingDescriptor* other) {
-  std::swap(_cached_size_, other->_cached_size_);
+  using std::swap;
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata FreebiePricingDescriptor::GetMetadata() const {
@@ -1911,9 +1996,7 @@ PricingDescriptor::PricingDescriptor()
 PricingDescriptor::PricingDescriptor(::google::protobuf::Arena* arena)
   : ::google::protobuf::Message(),
   _internal_metadata_(arena) {
-#ifdef GOOGLE_PROTOBUF_NO_STATIC_INITIALIZER
   protobuf_structs_2fpricing_2fPricingDescriptor_2eproto::InitDefaults();
-#endif  // GOOGLE_PROTOBUF_NO_STATIC_INITIALIZER
   SharedCtor();
   RegisterArenaDtor(arena);
   // @@protoc_insertion_point(arena_constructor:PricingDescriptor)
@@ -1943,8 +2026,9 @@ PricingDescriptor::PricingDescriptor(const PricingDescriptor& from)
 }
 
 void PricingDescriptor::SharedCtor() {
-  ::memset(&unit_, 0, reinterpret_cast<char*>(&type_) -
-    reinterpret_cast<char*>(&unit_) + sizeof(type_));
+  ::memset(&unit_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&type_) -
+      reinterpret_cast<char*>(&unit_)) + sizeof(type_));
   _cached_size_ = 0;
 }
 
@@ -1955,19 +2039,14 @@ PricingDescriptor::~PricingDescriptor() {
 
 void PricingDescriptor::SharedDtor() {
   ::google::protobuf::Arena* arena = GetArenaNoVirtual();
+  GOOGLE_DCHECK(arena == NULL);
   if (arena != NULL) {
     return;
   }
 
-  if (this != internal_default_instance()) {
-    delete unit_;
-  }
-  if (this != internal_default_instance()) {
-    delete weighted_;
-  }
-  if (this != internal_default_instance()) {
-    delete freebie_;
-  }
+  if (this != internal_default_instance()) delete unit_;
+  if (this != internal_default_instance()) delete weighted_;
+  if (this != internal_default_instance()) delete freebie_;
 }
 
 void PricingDescriptor::ArenaDtor(void* object) {
@@ -1997,6 +2076,10 @@ PricingDescriptor* PricingDescriptor::New(::google::protobuf::Arena* arena) cons
 
 void PricingDescriptor::Clear() {
 // @@protoc_insertion_point(message_clear_start:PricingDescriptor)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
   if (GetArenaNoVirtual() == NULL && unit_ != NULL) {
     delete unit_;
   }
@@ -2010,6 +2093,7 @@ void PricingDescriptor::Clear() {
   }
   freebie_ = NULL;
   type_ = 0;
+  _internal_metadata_.Clear();
 }
 
 bool PricingDescriptor::MergePartialFromCodedStream(
@@ -2025,7 +2109,7 @@ bool PricingDescriptor::MergePartialFromCodedStream(
       // .PricingType type = 1;
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(8u)) {
+            static_cast< ::google::protobuf::uint8>(8u /* 8 & 0xFF */)) {
           int value;
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
@@ -2040,7 +2124,7 @@ bool PricingDescriptor::MergePartialFromCodedStream(
       // .UnitPricingDescriptor unit = 20;
       case 20: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(162u)) {
+            static_cast< ::google::protobuf::uint8>(162u /* 162 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_unit()));
         } else {
@@ -2052,7 +2136,7 @@ bool PricingDescriptor::MergePartialFromCodedStream(
       // .WeightedPricingDescriptor weighted = 21;
       case 21: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(170u)) {
+            static_cast< ::google::protobuf::uint8>(170u /* 170 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_weighted()));
         } else {
@@ -2064,7 +2148,7 @@ bool PricingDescriptor::MergePartialFromCodedStream(
       // .FreebiePricingDescriptor freebie = 22;
       case 22: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(178u)) {
+            static_cast< ::google::protobuf::uint8>(178u /* 178 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_freebie()));
         } else {
@@ -2075,12 +2159,11 @@ bool PricingDescriptor::MergePartialFromCodedStream(
 
       default: {
       handle_unusual:
-        if (tag == 0 ||
-            ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+        if (tag == 0) {
           goto success;
         }
-        DO_(::google::protobuf::internal::WireFormatLite::SkipField(input, tag));
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
         break;
       }
     }
@@ -2124,6 +2207,10 @@ void PricingDescriptor::SerializeWithCachedSizes(
       22, *this->freebie_, output);
   }
 
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
+  }
   // @@protoc_insertion_point(serialize_end:PricingDescriptor)
 }
 
@@ -2161,6 +2248,10 @@ void PricingDescriptor::SerializeWithCachedSizes(
         22, *this->freebie_, deterministic, target);
   }
 
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
+  }
   // @@protoc_insertion_point(serialize_to_array_end:PricingDescriptor)
   return target;
 }
@@ -2169,6 +2260,11 @@ size_t PricingDescriptor::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:PricingDescriptor)
   size_t total_size = 0;
 
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
+  }
   // .UnitPricingDescriptor unit = 20;
   if (this->has_unit()) {
     total_size += 2 +
@@ -2277,11 +2373,13 @@ void PricingDescriptor::UnsafeArenaSwap(PricingDescriptor* other) {
   InternalSwap(other);
 }
 void PricingDescriptor::InternalSwap(PricingDescriptor* other) {
-  std::swap(unit_, other->unit_);
-  std::swap(weighted_, other->weighted_);
-  std::swap(freebie_, other->freebie_);
-  std::swap(type_, other->type_);
-  std::swap(_cached_size_, other->_cached_size_);
+  using std::swap;
+  swap(unit_, other->unit_);
+  swap(weighted_, other->weighted_);
+  swap(freebie_, other->freebie_);
+  swap(type_, other->type_);
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata PricingDescriptor::GetMetadata() const {
@@ -2315,9 +2413,10 @@ void PricingDescriptor::clear_unit() {
   unit_ = NULL;
 }
 const ::UnitPricingDescriptor& PricingDescriptor::unit() const {
+  const ::UnitPricingDescriptor* p = unit_;
   // @@protoc_insertion_point(field_get:PricingDescriptor.unit)
-  return unit_ != NULL ? *unit_
-                         : *::UnitPricingDescriptor::internal_default_instance();
+  return p != NULL ? *p : *reinterpret_cast<const ::UnitPricingDescriptor*>(
+      &::_UnitPricingDescriptor_default_instance_);
 }
 ::UnitPricingDescriptor* PricingDescriptor::mutable_unit() {
   
@@ -2364,9 +2463,10 @@ void PricingDescriptor::clear_weighted() {
   weighted_ = NULL;
 }
 const ::WeightedPricingDescriptor& PricingDescriptor::weighted() const {
+  const ::WeightedPricingDescriptor* p = weighted_;
   // @@protoc_insertion_point(field_get:PricingDescriptor.weighted)
-  return weighted_ != NULL ? *weighted_
-                         : *::WeightedPricingDescriptor::internal_default_instance();
+  return p != NULL ? *p : *reinterpret_cast<const ::WeightedPricingDescriptor*>(
+      &::_WeightedPricingDescriptor_default_instance_);
 }
 ::WeightedPricingDescriptor* PricingDescriptor::mutable_weighted() {
   
@@ -2413,9 +2513,10 @@ void PricingDescriptor::clear_freebie() {
   freebie_ = NULL;
 }
 const ::FreebiePricingDescriptor& PricingDescriptor::freebie() const {
+  const ::FreebiePricingDescriptor* p = freebie_;
   // @@protoc_insertion_point(field_get:PricingDescriptor.freebie)
-  return freebie_ != NULL ? *freebie_
-                         : *::FreebiePricingDescriptor::internal_default_instance();
+  return p != NULL ? *p : *reinterpret_cast<const ::FreebiePricingDescriptor*>(
+      &::_FreebiePricingDescriptor_default_instance_);
 }
 ::FreebiePricingDescriptor* PricingDescriptor::mutable_freebie() {
   
@@ -2475,9 +2576,7 @@ ProductPricing::ProductPricing(::google::protobuf::Arena* arena)
   _internal_metadata_(arena),
   discounts_(arena),
   manifest_(arena) {
-#ifdef GOOGLE_PROTOBUF_NO_STATIC_INITIALIZER
   protobuf_structs_2fpricing_2fPricingDescriptor_2eproto::InitDefaults();
-#endif  // GOOGLE_PROTOBUF_NO_STATIC_INITIALIZER
   SharedCtor();
   RegisterArenaDtor(arena);
   // @@protoc_insertion_point(arena_constructor:ProductPricing)
@@ -2503,6 +2602,7 @@ ProductPricing::~ProductPricing() {
 
 void ProductPricing::SharedDtor() {
   ::google::protobuf::Arena* arena = GetArenaNoVirtual();
+  GOOGLE_DCHECK(arena == NULL);
   if (arena != NULL) {
     return;
   }
@@ -2536,8 +2636,13 @@ ProductPricing* ProductPricing::New(::google::protobuf::Arena* arena) const {
 
 void ProductPricing::Clear() {
 // @@protoc_insertion_point(message_clear_start:ProductPricing)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
   discounts_.Clear();
   manifest_.Clear();
+  _internal_metadata_.Clear();
 }
 
 bool ProductPricing::MergePartialFromCodedStream(
@@ -2553,7 +2658,7 @@ bool ProductPricing::MergePartialFromCodedStream(
       // repeated .SaleDescriptor discounts = 1;
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(10u)) {
+            static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                 input, add_discounts()));
         } else {
@@ -2565,7 +2670,7 @@ bool ProductPricing::MergePartialFromCodedStream(
       // repeated .PricingDescriptor manifest = 2;
       case 2: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(18u)) {
+            static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                 input, add_manifest()));
         } else {
@@ -2576,12 +2681,11 @@ bool ProductPricing::MergePartialFromCodedStream(
 
       default: {
       handle_unusual:
-        if (tag == 0 ||
-            ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+        if (tag == 0) {
           goto success;
         }
-        DO_(::google::protobuf::internal::WireFormatLite::SkipField(input, tag));
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
         break;
       }
     }
@@ -2602,17 +2706,23 @@ void ProductPricing::SerializeWithCachedSizes(
   (void) cached_has_bits;
 
   // repeated .SaleDescriptor discounts = 1;
-  for (unsigned int i = 0, n = this->discounts_size(); i < n; i++) {
+  for (unsigned int i = 0,
+      n = static_cast<unsigned int>(this->discounts_size()); i < n; i++) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      1, this->discounts(i), output);
+      1, this->discounts(static_cast<int>(i)), output);
   }
 
   // repeated .PricingDescriptor manifest = 2;
-  for (unsigned int i = 0, n = this->manifest_size(); i < n; i++) {
+  for (unsigned int i = 0,
+      n = static_cast<unsigned int>(this->manifest_size()); i < n; i++) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      2, this->manifest(i), output);
+      2, this->manifest(static_cast<int>(i)), output);
   }
 
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
+  }
   // @@protoc_insertion_point(serialize_end:ProductPricing)
 }
 
@@ -2624,19 +2734,25 @@ void ProductPricing::SerializeWithCachedSizes(
   (void) cached_has_bits;
 
   // repeated .SaleDescriptor discounts = 1;
-  for (unsigned int i = 0, n = this->discounts_size(); i < n; i++) {
+  for (unsigned int i = 0,
+      n = static_cast<unsigned int>(this->discounts_size()); i < n; i++) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        1, this->discounts(i), deterministic, target);
+        1, this->discounts(static_cast<int>(i)), deterministic, target);
   }
 
   // repeated .PricingDescriptor manifest = 2;
-  for (unsigned int i = 0, n = this->manifest_size(); i < n; i++) {
+  for (unsigned int i = 0,
+      n = static_cast<unsigned int>(this->manifest_size()); i < n; i++) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        2, this->manifest(i), deterministic, target);
+        2, this->manifest(static_cast<int>(i)), deterministic, target);
   }
 
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
+  }
   // @@protoc_insertion_point(serialize_to_array_end:ProductPricing)
   return target;
 }
@@ -2645,25 +2761,30 @@ size_t ProductPricing::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:ProductPricing)
   size_t total_size = 0;
 
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
+  }
   // repeated .SaleDescriptor discounts = 1;
   {
-    unsigned int count = this->discounts_size();
+    unsigned int count = static_cast<unsigned int>(this->discounts_size());
     total_size += 1UL * count;
     for (unsigned int i = 0; i < count; i++) {
       total_size +=
         ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
-          this->discounts(i));
+          this->discounts(static_cast<int>(i)));
     }
   }
 
   // repeated .PricingDescriptor manifest = 2;
   {
-    unsigned int count = this->manifest_size();
+    unsigned int count = static_cast<unsigned int>(this->manifest_size());
     total_size += 1UL * count;
     for (unsigned int i = 0; i < count; i++) {
       total_size +=
         ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
-          this->manifest(i));
+          this->manifest(static_cast<int>(i)));
     }
   }
 
@@ -2738,9 +2859,11 @@ void ProductPricing::UnsafeArenaSwap(ProductPricing* other) {
   InternalSwap(other);
 }
 void ProductPricing::InternalSwap(ProductPricing* other) {
+  using std::swap;
   discounts_.InternalSwap(&other->discounts_);
   manifest_.InternalSwap(&other->manifest_);
-  std::swap(_cached_size_, other->_cached_size_);
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata ProductPricing::GetMetadata() const {

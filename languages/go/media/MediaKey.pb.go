@@ -19,7 +19,7 @@ type MediaKey struct {
 func (m *MediaKey) Reset()                    { *m = MediaKey{} }
 func (m *MediaKey) String() string            { return proto.CompactTextString(m) }
 func (*MediaKey) ProtoMessage()               {}
-func (*MediaKey) Descriptor() ([]byte, []int) { return fileDescriptor12, []int{0} }
+func (*MediaKey) Descriptor() ([]byte, []int) { return fileDescriptor13, []int{0} }
 
 func (m *MediaKey) GetId() string {
 	if m != nil {
@@ -32,9 +32,9 @@ func init() {
 	proto.RegisterType((*MediaKey)(nil), "MediaKey")
 }
 
-func init() { proto.RegisterFile("media/MediaKey.proto", fileDescriptor12) }
+func init() { proto.RegisterFile("media/MediaKey.proto", fileDescriptor13) }
 
-var fileDescriptor12 = []byte{
+var fileDescriptor13 = []byte{
 	// 114 bytes of a gzipped FileDescriptorProto
 	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0xe2, 0x12, 0xc9, 0x4d, 0x4d, 0xc9,
 	0x4c, 0xd4, 0xf7, 0x05, 0x91, 0xde, 0xa9, 0x95, 0x7a, 0x05, 0x45, 0xf9, 0x25, 0xf9, 0x4a, 0x52,

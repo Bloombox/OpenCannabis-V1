@@ -7,16 +7,14 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * <pre>
  * -- Media Type: Images -- //
- * </pre>
  *
- * Protobuf type <code>ImageType</code>
+ * Generated from protobuf message <code>ImageType</code>
  */
 class ImageType extends \Google\Protobuf\Internal\Message
 {
     /**
-     * <code>.ImageType.ImageKind kind = 1;</code>
+     * Generated from protobuf field <code>.ImageType.ImageKind kind = 1;</code>
      */
     private $kind = 0;
 
@@ -26,7 +24,8 @@ class ImageType extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>.ImageType.ImageKind kind = 1;</code>
+     * Generated from protobuf field <code>.ImageType.ImageKind kind = 1;</code>
+     * @return int
      */
     public function getKind()
     {
@@ -34,12 +33,16 @@ class ImageType extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>.ImageType.ImageKind kind = 1;</code>
+     * Generated from protobuf field <code>.ImageType.ImageKind kind = 1;</code>
+     * @param int $var
+     * @return $this
      */
     public function setKind($var)
     {
         GPBUtil::checkEnum($var, \ImageType_ImageKind::class);
         $this->kind = $var;
+
+        return $this;
     }
 
 }

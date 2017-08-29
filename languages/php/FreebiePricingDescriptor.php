@@ -7,7 +7,7 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Protobuf type <code>FreebiePricingDescriptor</code>
+ * Generated from protobuf message <code>FreebiePricingDescriptor</code>
  */
 class FreebiePricingDescriptor extends \Google\Protobuf\Internal\Message
 {

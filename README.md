@@ -1,6 +1,6 @@
 
 # OpenCannabis
-## Release __1.0.0-beta4__
+## Release __1.0.3__
 
 _An Open Model for the Legal Cannabis Industry_
 

@@ -7,12 +7,12 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Protobuf type <code>ProductKey</code>
+ * Generated from protobuf message <code>ProductKey</code>
  */
 class ProductKey extends \Google\Protobuf\Internal\Message
 {
     /**
-     * <code>string id = 1;</code>
+     * Generated from protobuf field <code>string id = 1;</code>
      */
     private $id = '';
 
@@ -22,7 +22,8 @@ class ProductKey extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>string id = 1;</code>
+     * Generated from protobuf field <code>string id = 1;</code>
+     * @return string
      */
     public function getId()
     {
@@ -30,12 +31,16 @@ class ProductKey extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>string id = 1;</code>
+     * Generated from protobuf field <code>string id = 1;</code>
+     * @param string $var
+     * @return $this
      */
     public function setId($var)
     {
         GPBUtil::checkString($var, True);
         $this->id = $var;
+
+        return $this;
     }
 
 }

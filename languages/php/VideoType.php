@@ -7,16 +7,14 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * <pre>
  * -- Media Type: Video -- //
- * </pre>
  *
- * Protobuf type <code>VideoType</code>
+ * Generated from protobuf message <code>VideoType</code>
  */
 class VideoType extends \Google\Protobuf\Internal\Message
 {
     /**
-     * <code>.VideoType.VideoKind kind = 1;</code>
+     * Generated from protobuf field <code>.VideoType.VideoKind kind = 1;</code>
      */
     private $kind = 0;
 
@@ -26,7 +24,8 @@ class VideoType extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>.VideoType.VideoKind kind = 1;</code>
+     * Generated from protobuf field <code>.VideoType.VideoKind kind = 1;</code>
+     * @return int
      */
     public function getKind()
     {
@@ -34,12 +33,16 @@ class VideoType extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>.VideoType.VideoKind kind = 1;</code>
+     * Generated from protobuf field <code>.VideoType.VideoKind kind = 1;</code>
+     * @param int $var
+     * @return $this
      */
     public function setKind($var)
     {
         GPBUtil::checkEnum($var, \VideoType_VideoKind::class);
         $this->kind = $var;
+
+        return $this;
     }
 
 }

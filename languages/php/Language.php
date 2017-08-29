@@ -8,15 +8,15 @@
 class Language
 {
     /**
-     * <code>ENGLISH = 0;</code>
+     * Generated from protobuf enum <code>ENGLISH = 0;</code>
      */
     const ENGLISH = 0;
     /**
-     * <code>SPANISH = 1;</code>
+     * Generated from protobuf enum <code>SPANISH = 1;</code>
      */
     const SPANISH = 1;
     /**
-     * <code>FRENCH = 2;</code>
+     * Generated from protobuf enum <code>FRENCH = 2;</code>
      */
     const FRENCH = 2;
 }

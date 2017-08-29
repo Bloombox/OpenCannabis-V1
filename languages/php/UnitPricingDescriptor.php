@@ -7,24 +7,22 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * <pre>
  * -- Pricing: Typed Descriptors
- * </pre>
  *
- * Protobuf type <code>UnitPricingDescriptor</code>
+ * Generated from protobuf message <code>UnitPricingDescriptor</code>
  */
 class UnitPricingDescriptor extends \Google\Protobuf\Internal\Message
 {
     /**
-     * <code>float price_value = 1;</code>
+     * Generated from protobuf field <code>float price_value = 1;</code>
      */
     private $price_value = 0.0;
     /**
-     * <code>.PricingTierAvailability status = 2;</code>
+     * Generated from protobuf field <code>.PricingTierAvailability status = 2;</code>
      */
     private $status = null;
     /**
-     * <code>repeated .SaleDescriptor discounts = 3;</code>
+     * Generated from protobuf field <code>repeated .SaleDescriptor discounts = 3;</code>
      */
     private $discounts;
 
@@ -34,7 +32,8 @@ class UnitPricingDescriptor extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>float price_value = 1;</code>
+     * Generated from protobuf field <code>float price_value = 1;</code>
+     * @return float
      */
     public function getPriceValue()
     {
@@ -42,16 +41,21 @@ class UnitPricingDescriptor extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>float price_value = 1;</code>
+     * Generated from protobuf field <code>float price_value = 1;</code>
+     * @param float $var
+     * @return $this
      */
     public function setPriceValue($var)
     {
         GPBUtil::checkFloat($var);
         $this->price_value = $var;
+
+        return $this;
     }
 
     /**
-     * <code>.PricingTierAvailability status = 2;</code>
+     * Generated from protobuf field <code>.PricingTierAvailability status = 2;</code>
+     * @return \PricingTierAvailability
      */
     public function getStatus()
     {
@@ -59,16 +63,21 @@ class UnitPricingDescriptor extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>.PricingTierAvailability status = 2;</code>
+     * Generated from protobuf field <code>.PricingTierAvailability status = 2;</code>
+     * @param \PricingTierAvailability $var
+     * @return $this
      */
-    public function setStatus(&$var)
+    public function setStatus($var)
     {
         GPBUtil::checkMessage($var, \PricingTierAvailability::class);
         $this->status = $var;
+
+        return $this;
     }
 
     /**
-     * <code>repeated .SaleDescriptor discounts = 3;</code>
+     * Generated from protobuf field <code>repeated .SaleDescriptor discounts = 3;</code>
+     * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getDiscounts()
     {
@@ -76,12 +85,16 @@ class UnitPricingDescriptor extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>repeated .SaleDescriptor discounts = 3;</code>
+     * Generated from protobuf field <code>repeated .SaleDescriptor discounts = 3;</code>
+     * @param \SaleDescriptor[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @return $this
      */
-    public function setDiscounts(&$var)
+    public function setDiscounts($var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \SaleDescriptor::class);
         $this->discounts = $arr;
+
+        return $this;
     }
 
 }

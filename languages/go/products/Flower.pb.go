@@ -26,7 +26,7 @@ type Flower struct {
 func (m *Flower) Reset()                    { *m = Flower{} }
 func (m *Flower) String() string            { return proto.CompactTextString(m) }
 func (*Flower) ProtoMessage()               {}
-func (*Flower) Descriptor() ([]byte, []int) { return fileDescriptor14, []int{0} }
+func (*Flower) Descriptor() ([]byte, []int) { return fileDescriptor15, []int{0} }
 
 func (m *Flower) GetKey() *ProductKey {
 	if m != nil {
@@ -67,9 +67,9 @@ func init() {
 	proto.RegisterType((*Flower)(nil), "Flower")
 }
 
-func init() { proto.RegisterFile("products/Flower.proto", fileDescriptor14) }
+func init() { proto.RegisterFile("products/Flower.proto", fileDescriptor15) }
 
-var fileDescriptor14 = []byte{
+var fileDescriptor15 = []byte{
 	// 278 bytes of a gzipped FileDescriptorProto
 	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0x5c, 0x90, 0xdf, 0x4a, 0xc3, 0x30,
 	0x14, 0xc6, 0x0d, 0xe2, 0x84, 0x6c, 0x53, 0x29, 0x56, 0xcb, 0x74, 0x20, 0x5e, 0xf8, 0xe7, 0x26,

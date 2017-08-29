@@ -7,64 +7,50 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Protobuf type <code>ProductContent</code>
+ * Generated from protobuf message <code>ProductContent</code>
  */
 class ProductContent extends \Google\Protobuf\Internal\Message
 {
     /**
-     * <pre>
      * -- Basic Properties
-     * </pre>
      *
-     * <code>.Name name = 1;</code>
+     * Generated from protobuf field <code>.Name name = 1;</code>
      */
     private $name = null;
     /**
-     * <pre>
      * narrative summary
-     * </pre>
      *
-     * <code>.Content summary = 2;</code>
+     * Generated from protobuf field <code>.Content summary = 2;</code>
      */
     private $summary = null;
     /**
-     * <pre>
      * product's brand
-     * </pre>
      *
-     * <code>.Brand brand = 3;</code>
+     * Generated from protobuf field <code>.Brand brand = 3;</code>
      */
     private $brand = null;
     /**
-     * <pre>
      * -- Media
-     * </pre>
      *
-     * <code>repeated .MediaItem media = 20;</code>
+     * Generated from protobuf field <code>repeated .MediaItem media = 20;</code>
      */
     private $media;
     /**
-     * <pre>
      * -- Extended Attributes
-     * </pre>
      *
-     * <code>.Content usage = 30;</code>
+     * Generated from protobuf field <code>.Content usage = 30;</code>
      */
     private $usage = null;
     /**
-     * <pre>
      * dosage advice
-     * </pre>
      *
-     * <code>.Content dosage = 31;</code>
+     * Generated from protobuf field <code>.Content dosage = 31;</code>
      */
     private $dosage = null;
     /**
-     * <pre>
      * internal advice
-     * </pre>
      *
-     * <code>.Content advice = 32;</code>
+     * Generated from protobuf field <code>.Content advice = 32;</code>
      */
     private $advice = null;
 
@@ -74,11 +60,10 @@ class ProductContent extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <pre>
      * -- Basic Properties
-     * </pre>
      *
-     * <code>.Name name = 1;</code>
+     * Generated from protobuf field <code>.Name name = 1;</code>
+     * @return \Name
      */
     public function getName()
     {
@@ -86,24 +71,25 @@ class ProductContent extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <pre>
      * -- Basic Properties
-     * </pre>
      *
-     * <code>.Name name = 1;</code>
+     * Generated from protobuf field <code>.Name name = 1;</code>
+     * @param \Name $var
+     * @return $this
      */
-    public function setName(&$var)
+    public function setName($var)
     {
         GPBUtil::checkMessage($var, \Name::class);
         $this->name = $var;
+
+        return $this;
     }
 
     /**
-     * <pre>
      * narrative summary
-     * </pre>
      *
-     * <code>.Content summary = 2;</code>
+     * Generated from protobuf field <code>.Content summary = 2;</code>
+     * @return \Content
      */
     public function getSummary()
     {
@@ -111,24 +97,25 @@ class ProductContent extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <pre>
      * narrative summary
-     * </pre>
      *
-     * <code>.Content summary = 2;</code>
+     * Generated from protobuf field <code>.Content summary = 2;</code>
+     * @param \Content $var
+     * @return $this
      */
-    public function setSummary(&$var)
+    public function setSummary($var)
     {
         GPBUtil::checkMessage($var, \Content::class);
         $this->summary = $var;
+
+        return $this;
     }
 
     /**
-     * <pre>
      * product's brand
-     * </pre>
      *
-     * <code>.Brand brand = 3;</code>
+     * Generated from protobuf field <code>.Brand brand = 3;</code>
+     * @return \Brand
      */
     public function getBrand()
     {
@@ -136,24 +123,25 @@ class ProductContent extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <pre>
      * product's brand
-     * </pre>
      *
-     * <code>.Brand brand = 3;</code>
+     * Generated from protobuf field <code>.Brand brand = 3;</code>
+     * @param \Brand $var
+     * @return $this
      */
-    public function setBrand(&$var)
+    public function setBrand($var)
     {
         GPBUtil::checkMessage($var, \Brand::class);
         $this->brand = $var;
+
+        return $this;
     }
 
     /**
-     * <pre>
      * -- Media
-     * </pre>
      *
-     * <code>repeated .MediaItem media = 20;</code>
+     * Generated from protobuf field <code>repeated .MediaItem media = 20;</code>
+     * @return \Google\Protobuf\Internal\RepeatedField
      */
     public function getMedia()
     {
@@ -161,24 +149,25 @@ class ProductContent extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <pre>
      * -- Media
-     * </pre>
      *
-     * <code>repeated .MediaItem media = 20;</code>
+     * Generated from protobuf field <code>repeated .MediaItem media = 20;</code>
+     * @param \MediaItem[]|\Google\Protobuf\Internal\RepeatedField $var
+     * @return $this
      */
-    public function setMedia(&$var)
+    public function setMedia($var)
     {
         $arr = GPBUtil::checkRepeatedField($var, \Google\Protobuf\Internal\GPBType::MESSAGE, \MediaItem::class);
         $this->media = $arr;
+
+        return $this;
     }
 
     /**
-     * <pre>
      * -- Extended Attributes
-     * </pre>
      *
-     * <code>.Content usage = 30;</code>
+     * Generated from protobuf field <code>.Content usage = 30;</code>
+     * @return \Content
      */
     public function getUsage()
     {
@@ -186,24 +175,25 @@ class ProductContent extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <pre>
      * -- Extended Attributes
-     * </pre>
      *
-     * <code>.Content usage = 30;</code>
+     * Generated from protobuf field <code>.Content usage = 30;</code>
+     * @param \Content $var
+     * @return $this
      */
-    public function setUsage(&$var)
+    public function setUsage($var)
     {
         GPBUtil::checkMessage($var, \Content::class);
         $this->usage = $var;
+
+        return $this;
     }
 
     /**
-     * <pre>
      * dosage advice
-     * </pre>
      *
-     * <code>.Content dosage = 31;</code>
+     * Generated from protobuf field <code>.Content dosage = 31;</code>
+     * @return \Content
      */
     public function getDosage()
     {
@@ -211,24 +201,25 @@ class ProductContent extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <pre>
      * dosage advice
-     * </pre>
      *
-     * <code>.Content dosage = 31;</code>
+     * Generated from protobuf field <code>.Content dosage = 31;</code>
+     * @param \Content $var
+     * @return $this
      */
-    public function setDosage(&$var)
+    public function setDosage($var)
     {
         GPBUtil::checkMessage($var, \Content::class);
         $this->dosage = $var;
+
+        return $this;
     }
 
     /**
-     * <pre>
      * internal advice
-     * </pre>
      *
-     * <code>.Content advice = 32;</code>
+     * Generated from protobuf field <code>.Content advice = 32;</code>
+     * @return \Content
      */
     public function getAdvice()
     {
@@ -236,16 +227,18 @@ class ProductContent extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <pre>
      * internal advice
-     * </pre>
      *
-     * <code>.Content advice = 32;</code>
+     * Generated from protobuf field <code>.Content advice = 32;</code>
+     * @param \Content $var
+     * @return $this
      */
-    public function setAdvice(&$var)
+    public function setAdvice($var)
     {
         GPBUtil::checkMessage($var, \Content::class);
         $this->advice = $var;
+
+        return $this;
     }
 
 }

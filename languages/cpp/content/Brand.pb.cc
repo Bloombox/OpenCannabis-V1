@@ -16,7 +16,10 @@
 #include <google/protobuf/reflection_ops.h>
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
-class BrandDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<Brand> {
+class BrandDefaultTypeInternal {
+public:
+ ::google::protobuf::internal::ExplicitlyConstructed<Brand>
+     _instance;
 } _Brand_default_instance_;
 
 namespace protobuf_content_2fBrand_2eproto {
@@ -29,20 +32,20 @@ namespace {
 }  // namespace
 
 PROTOBUF_CONSTEXPR_VAR ::google::protobuf::internal::ParseTableField
-    const TableStruct::entries[] = {
+    const TableStruct::entries[] GOOGLE_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
   {0, 0, 0, ::google::protobuf::internal::kInvalidMask, 0, 0},
 };
 
 PROTOBUF_CONSTEXPR_VAR ::google::protobuf::internal::AuxillaryParseTableField
-    const TableStruct::aux[] = {
+    const TableStruct::aux[] GOOGLE_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
   ::google::protobuf::internal::AuxillaryParseTableField(),
 };
 PROTOBUF_CONSTEXPR_VAR ::google::protobuf::internal::ParseTable const
-    TableStruct::schema[] = {
-  { NULL, NULL, 0, -1, -1, false },
+    TableStruct::schema[] GOOGLE_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
+  { NULL, NULL, 0, -1, -1, -1, -1, NULL, false },
 };
 
-const ::google::protobuf::uint32 TableStruct::offsets[] = {
+const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
   ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Brand, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -53,8 +56,7 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Brand, summary_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Brand, media_),
 };
-
-static const ::google::protobuf::internal::MigrationSchema schemas[] = {
+static const ::google::protobuf::internal::MigrationSchema schemas[] GOOGLE_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, sizeof(Brand)},
 };
 
@@ -84,12 +86,6 @@ void protobuf_RegisterTypes(const ::std::string&) {
 }
 
 }  // namespace
-
-void TableStruct::Shutdown() {
-  _Brand_default_instance_.Shutdown();
-  delete file_level_metadata[0].reflection;
-}
-
 void TableStruct::InitDefaultsImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
@@ -97,12 +93,13 @@ void TableStruct::InitDefaultsImpl() {
   ::protobuf_content_2fName_2eproto::InitDefaults();
   ::protobuf_content_2fContent_2eproto::InitDefaults();
   ::protobuf_media_2fMediaItem_2eproto::InitDefaults();
-  _Brand_default_instance_.DefaultConstruct();
-  _Brand_default_instance_.get_mutable()->name_ = const_cast< ::Name*>(
+  _Brand_default_instance_._instance.DefaultConstruct();
+  ::google::protobuf::internal::OnShutdownDestroyMessage(
+      &_Brand_default_instance_);_Brand_default_instance_._instance.get_mutable()->name_ = const_cast< ::Name*>(
       ::Name::internal_default_instance());
-  _Brand_default_instance_.get_mutable()->parent_ = const_cast< ::Brand*>(
+  _Brand_default_instance_._instance.get_mutable()->parent_ = const_cast< ::Brand*>(
       ::Brand::internal_default_instance());
-  _Brand_default_instance_.get_mutable()->summary_ = const_cast< ::Content*>(
+  _Brand_default_instance_._instance.get_mutable()->summary_ = const_cast< ::Content*>(
       ::Content::internal_default_instance());
 }
 
@@ -110,9 +107,10 @@ void InitDefaults() {
   static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
   ::google::protobuf::GoogleOnceInit(&once, &TableStruct::InitDefaultsImpl);
 }
+namespace {
 void AddDescriptorsImpl() {
   InitDefaults();
-  static const char descriptor[] = {
+  static const char descriptor[] GOOGLE_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
       "\n\023content/Brand.proto\032\022content/Name.prot"
       "o\032\025content/Content.proto\032\025media/MediaIte"
       "m.proto\"j\n\005Brand\022\023\n\004name\030\001 \001(\0132\005.Name\022\026\n"
@@ -128,14 +126,14 @@ void AddDescriptorsImpl() {
   ::protobuf_content_2fName_2eproto::AddDescriptors();
   ::protobuf_content_2fContent_2eproto::AddDescriptors();
   ::protobuf_media_2fMediaItem_2eproto::AddDescriptors();
-  ::google::protobuf::internal::OnShutdown(&TableStruct::Shutdown);
 }
+} // anonymous namespace
 
 void AddDescriptors() {
   static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
   ::google::protobuf::GoogleOnceInit(&once, &AddDescriptorsImpl);
 }
-// Force AddDescriptors() to be called at static initialization time.
+// Force AddDescriptors() to be called at dynamic initialization time.
 struct StaticDescriptorInitializer {
   StaticDescriptorInitializer() {
     AddDescriptors();
@@ -307,9 +305,7 @@ Brand::Brand(::google::protobuf::Arena* arena)
   : ::google::protobuf::Message(),
   _internal_metadata_(arena),
   media_(arena) {
-#ifdef GOOGLE_PROTOBUF_NO_STATIC_INITIALIZER
   protobuf_content_2fBrand_2eproto::InitDefaults();
-#endif  // GOOGLE_PROTOBUF_NO_STATIC_INITIALIZER
   SharedCtor();
   RegisterArenaDtor(arena);
   // @@protoc_insertion_point(arena_constructor:Brand)
@@ -339,8 +335,9 @@ Brand::Brand(const Brand& from)
 }
 
 void Brand::SharedCtor() {
-  ::memset(&name_, 0, reinterpret_cast<char*>(&summary_) -
-    reinterpret_cast<char*>(&name_) + sizeof(summary_));
+  ::memset(&name_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&summary_) -
+      reinterpret_cast<char*>(&name_)) + sizeof(summary_));
   _cached_size_ = 0;
 }
 
@@ -351,19 +348,14 @@ Brand::~Brand() {
 
 void Brand::SharedDtor() {
   ::google::protobuf::Arena* arena = GetArenaNoVirtual();
+  GOOGLE_DCHECK(arena == NULL);
   if (arena != NULL) {
     return;
   }
 
-  if (this != internal_default_instance()) {
-    delete name_;
-  }
-  if (this != internal_default_instance()) {
-    delete parent_;
-  }
-  if (this != internal_default_instance()) {
-    delete summary_;
-  }
+  if (this != internal_default_instance()) delete name_;
+  if (this != internal_default_instance()) delete parent_;
+  if (this != internal_default_instance()) delete summary_;
 }
 
 void Brand::ArenaDtor(void* object) {
@@ -393,6 +385,10 @@ Brand* Brand::New(::google::protobuf::Arena* arena) const {
 
 void Brand::Clear() {
 // @@protoc_insertion_point(message_clear_start:Brand)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
   media_.Clear();
   if (GetArenaNoVirtual() == NULL && name_ != NULL) {
     delete name_;
@@ -406,6 +402,7 @@ void Brand::Clear() {
     delete summary_;
   }
   summary_ = NULL;
+  _internal_metadata_.Clear();
 }
 
 bool Brand::MergePartialFromCodedStream(
@@ -421,7 +418,7 @@ bool Brand::MergePartialFromCodedStream(
       // .Name name = 1;
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(10u)) {
+            static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_name()));
         } else {
@@ -433,7 +430,7 @@ bool Brand::MergePartialFromCodedStream(
       // .Brand parent = 2;
       case 2: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(18u)) {
+            static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_parent()));
         } else {
@@ -445,7 +442,7 @@ bool Brand::MergePartialFromCodedStream(
       // .Content summary = 3;
       case 3: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(26u)) {
+            static_cast< ::google::protobuf::uint8>(26u /* 26 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_summary()));
         } else {
@@ -457,7 +454,7 @@ bool Brand::MergePartialFromCodedStream(
       // repeated .MediaItem media = 20;
       case 20: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(162u)) {
+            static_cast< ::google::protobuf::uint8>(162u /* 162 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                 input, add_media()));
         } else {
@@ -468,12 +465,11 @@ bool Brand::MergePartialFromCodedStream(
 
       default: {
       handle_unusual:
-        if (tag == 0 ||
-            ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+        if (tag == 0) {
           goto success;
         }
-        DO_(::google::protobuf::internal::WireFormatLite::SkipField(input, tag));
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
         break;
       }
     }
@@ -512,11 +508,16 @@ void Brand::SerializeWithCachedSizes(
   }
 
   // repeated .MediaItem media = 20;
-  for (unsigned int i = 0, n = this->media_size(); i < n; i++) {
+  for (unsigned int i = 0,
+      n = static_cast<unsigned int>(this->media_size()); i < n; i++) {
     ::google::protobuf::internal::WireFormatLite::WriteMessageMaybeToArray(
-      20, this->media(i), output);
+      20, this->media(static_cast<int>(i)), output);
   }
 
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
+  }
   // @@protoc_insertion_point(serialize_end:Brand)
 }
 
@@ -549,12 +550,17 @@ void Brand::SerializeWithCachedSizes(
   }
 
   // repeated .MediaItem media = 20;
-  for (unsigned int i = 0, n = this->media_size(); i < n; i++) {
+  for (unsigned int i = 0,
+      n = static_cast<unsigned int>(this->media_size()); i < n; i++) {
     target = ::google::protobuf::internal::WireFormatLite::
       InternalWriteMessageNoVirtualToArray(
-        20, this->media(i), deterministic, target);
+        20, this->media(static_cast<int>(i)), deterministic, target);
   }
 
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
+  }
   // @@protoc_insertion_point(serialize_to_array_end:Brand)
   return target;
 }
@@ -563,14 +569,19 @@ size_t Brand::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:Brand)
   size_t total_size = 0;
 
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
+  }
   // repeated .MediaItem media = 20;
   {
-    unsigned int count = this->media_size();
+    unsigned int count = static_cast<unsigned int>(this->media_size());
     total_size += 2UL * count;
     for (unsigned int i = 0; i < count; i++) {
       total_size +=
         ::google::protobuf::internal::WireFormatLite::MessageSizeNoVirtual(
-          this->media(i));
+          this->media(static_cast<int>(i)));
     }
   }
 
@@ -674,11 +685,13 @@ void Brand::UnsafeArenaSwap(Brand* other) {
   InternalSwap(other);
 }
 void Brand::InternalSwap(Brand* other) {
+  using std::swap;
   media_.InternalSwap(&other->media_);
-  std::swap(name_, other->name_);
-  std::swap(parent_, other->parent_);
-  std::swap(summary_, other->summary_);
-  std::swap(_cached_size_, other->_cached_size_);
+  swap(name_, other->name_);
+  swap(parent_, other->parent_);
+  swap(summary_, other->summary_);
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata Brand::GetMetadata() const {
@@ -698,9 +711,10 @@ void Brand::clear_name() {
   name_ = NULL;
 }
 const ::Name& Brand::name() const {
+  const ::Name* p = name_;
   // @@protoc_insertion_point(field_get:Brand.name)
-  return name_ != NULL ? *name_
-                         : *::Name::internal_default_instance();
+  return p != NULL ? *p : *reinterpret_cast<const ::Name*>(
+      &::_Name_default_instance_);
 }
 ::Name* Brand::mutable_name() {
   
@@ -747,9 +761,10 @@ void Brand::clear_parent() {
   parent_ = NULL;
 }
 const ::Brand& Brand::parent() const {
+  const ::Brand* p = parent_;
   // @@protoc_insertion_point(field_get:Brand.parent)
-  return parent_ != NULL ? *parent_
-                         : *::Brand::internal_default_instance();
+  return p != NULL ? *p : *reinterpret_cast<const ::Brand*>(
+      &::_Brand_default_instance_);
 }
 ::Brand* Brand::mutable_parent() {
   
@@ -796,9 +811,10 @@ void Brand::clear_summary() {
   summary_ = NULL;
 }
 const ::Content& Brand::summary() const {
+  const ::Content* p = summary_;
   // @@protoc_insertion_point(field_get:Brand.summary)
-  return summary_ != NULL ? *summary_
-                         : *::Content::internal_default_instance();
+  return p != NULL ? *p : *reinterpret_cast<const ::Content*>(
+      &::_Content_default_instance_);
 }
 ::Content* Brand::mutable_summary() {
   

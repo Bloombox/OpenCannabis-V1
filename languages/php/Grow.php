@@ -8,19 +8,19 @@
 class Grow
 {
     /**
-     * <code>GENERIC = 0;</code>
+     * Generated from protobuf enum <code>GENERIC = 0;</code>
      */
     const GENERIC = 0;
     /**
-     * <code>INDOOR = 1;</code>
+     * Generated from protobuf enum <code>INDOOR = 1;</code>
      */
     const INDOOR = 1;
     /**
-     * <code>GREENHOUSE = 2;</code>
+     * Generated from protobuf enum <code>GREENHOUSE = 2;</code>
      */
     const GREENHOUSE = 2;
     /**
-     * <code>OUTDOOR = 3;</code>
+     * Generated from protobuf enum <code>OUTDOOR = 3;</code>
      */
     const OUTDOOR = 3;
 }

@@ -16,6 +16,7 @@ It is generated from these files:
 	content/MaterialsData.proto
 	content/Name.proto
 	content/ProductContent.proto
+	geo/Address.proto
 	media/MediaItem.proto
 	media/MediaKey.proto
 	media/MediaType.proto
@@ -37,6 +38,7 @@ It has these top-level messages:
 	MaterialsData
 	Name
 	ProductContent
+	Address
 	MediaItem
 	MediaKey
 	MediaType

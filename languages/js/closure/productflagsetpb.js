@@ -1,15 +1,17 @@
 /**
  * @fileoverview
  * @enhanceable
+ * @suppress {messageConventions} JS Compiler reports an error if a variable or
+ *     field starts with 'MSG_' and isn't a translatable message.
  * @public
  */
 // GENERATED CODE -- DO NOT EDIT!
 
 goog.provide('proto.ProductFlagset');
 
-goog.require('jspb.Message');
 goog.require('jspb.BinaryReader');
 goog.require('jspb.BinaryWriter');
+goog.require('jspb.Message');
 goog.require('proto.ProductFlagValue');
 
 
@@ -62,6 +64,7 @@ proto.ProductFlagset.prototype.toObject = function(opt_includeInstance) {
  *     http://goto/soy-param-migration
  * @param {!proto.ProductFlagset} msg The msg instance to transform.
  * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.ProductFlagset.toObject = function(includeInstance, msg) {
   var f, obj = {
@@ -133,6 +136,7 @@ proto.ProductFlagset.prototype.serializeBinary = function() {
  * format), writing to the given BinaryWriter.
  * @param {!proto.ProductFlagset} message
  * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.ProductFlagset.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
@@ -149,8 +153,6 @@ proto.ProductFlagset.serializeBinaryToWriter = function(message, writer) {
 
 /**
  * repeated ProductFlagValue flags = 1;
- * If you change this array by adding, removing or replacing elements, or if you
- * replace the array itself, then you must call the setter to update it.
  * @return {!Array.<!proto.ProductFlagValue>}
  */
 proto.ProductFlagset.prototype.getFlagsList = function() {

@@ -7,16 +7,14 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * <pre>
  * -- Product Type: Top-level -- //
- * </pre>
  *
- * Protobuf type <code>ProductType</code>
+ * Generated from protobuf message <code>ProductType</code>
  */
 class ProductType extends \Google\Protobuf\Internal\Message
 {
     /**
-     * <code>.ProductKind kind = 1;</code>
+     * Generated from protobuf field <code>.ProductKind kind = 1;</code>
      */
     private $kind = 0;
 
@@ -26,7 +24,8 @@ class ProductType extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>.ProductKind kind = 1;</code>
+     * Generated from protobuf field <code>.ProductKind kind = 1;</code>
+     * @return int
      */
     public function getKind()
     {
@@ -34,12 +33,16 @@ class ProductType extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>.ProductKind kind = 1;</code>
+     * Generated from protobuf field <code>.ProductKind kind = 1;</code>
+     * @param int $var
+     * @return $this
      */
     public function setKind($var)
     {
         GPBUtil::checkEnum($var, \ProductKind::class);
         $this->kind = $var;
+
+        return $this;
     }
 
 }

@@ -37,15 +37,15 @@ var Grow_value = map[string]int32{
 func (x Grow) String() string {
 	return proto.EnumName(Grow_name, int32(x))
 }
-func (Grow) EnumDescriptor() ([]byte, []int) { return fileDescriptor17, []int{0} }
+func (Grow) EnumDescriptor() ([]byte, []int) { return fileDescriptor18, []int{0} }
 
 func init() {
 	proto.RegisterEnum("Grow", Grow_name, Grow_value)
 }
 
-func init() { proto.RegisterFile("structs/Grow.proto", fileDescriptor17) }
+func init() { proto.RegisterFile("structs/Grow.proto", fileDescriptor18) }
 
-var fileDescriptor17 = []byte{
+var fileDescriptor18 = []byte{
 	// 154 bytes of a gzipped FileDescriptorProto
 	0x1f, 0x8b, 0x08, 0x00, 0x00, 0x00, 0x00, 0x00, 0x02, 0xff, 0xe2, 0x12, 0x2a, 0x2e, 0x29, 0x2a,
 	0x4d, 0x2e, 0x29, 0xd6, 0x77, 0x2f, 0xca, 0x2f, 0xd7, 0x2b, 0x28, 0xca, 0x2f, 0xc9, 0xd7, 0xb2,

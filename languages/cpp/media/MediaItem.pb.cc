@@ -16,7 +16,10 @@
 #include <google/protobuf/reflection_ops.h>
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
-class MediaItemDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<MediaItem> {
+class MediaItemDefaultTypeInternal {
+public:
+ ::google::protobuf::internal::ExplicitlyConstructed<MediaItem>
+     _instance;
 } _MediaItem_default_instance_;
 
 namespace protobuf_media_2fMediaItem_2eproto {
@@ -29,20 +32,20 @@ namespace {
 }  // namespace
 
 PROTOBUF_CONSTEXPR_VAR ::google::protobuf::internal::ParseTableField
-    const TableStruct::entries[] = {
+    const TableStruct::entries[] GOOGLE_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
   {0, 0, 0, ::google::protobuf::internal::kInvalidMask, 0, 0},
 };
 
 PROTOBUF_CONSTEXPR_VAR ::google::protobuf::internal::AuxillaryParseTableField
-    const TableStruct::aux[] = {
+    const TableStruct::aux[] GOOGLE_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
   ::google::protobuf::internal::AuxillaryParseTableField(),
 };
 PROTOBUF_CONSTEXPR_VAR ::google::protobuf::internal::ParseTable const
-    TableStruct::schema[] = {
-  { NULL, NULL, 0, -1, -1, false },
+    TableStruct::schema[] GOOGLE_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
+  { NULL, NULL, 0, -1, -1, -1, -1, NULL, false },
 };
 
-const ::google::protobuf::uint32 TableStruct::offsets[] = {
+const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
   ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MediaItem, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -52,8 +55,7 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MediaItem, type_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(MediaItem, name_),
 };
-
-static const ::google::protobuf::internal::MigrationSchema schemas[] = {
+static const ::google::protobuf::internal::MigrationSchema schemas[] GOOGLE_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, sizeof(MediaItem)},
 };
 
@@ -83,22 +85,17 @@ void protobuf_RegisterTypes(const ::std::string&) {
 }
 
 }  // namespace
-
-void TableStruct::Shutdown() {
-  _MediaItem_default_instance_.Shutdown();
-  delete file_level_metadata[0].reflection;
-}
-
 void TableStruct::InitDefaultsImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   ::google::protobuf::internal::InitProtobufDefaults();
   ::protobuf_media_2fMediaKey_2eproto::InitDefaults();
   ::protobuf_media_2fMediaType_2eproto::InitDefaults();
-  _MediaItem_default_instance_.DefaultConstruct();
-  _MediaItem_default_instance_.get_mutable()->key_ = const_cast< ::MediaKey*>(
+  _MediaItem_default_instance_._instance.DefaultConstruct();
+  ::google::protobuf::internal::OnShutdownDestroyMessage(
+      &_MediaItem_default_instance_);_MediaItem_default_instance_._instance.get_mutable()->key_ = const_cast< ::MediaKey*>(
       ::MediaKey::internal_default_instance());
-  _MediaItem_default_instance_.get_mutable()->type_ = const_cast< ::MediaType*>(
+  _MediaItem_default_instance_._instance.get_mutable()->type_ = const_cast< ::MediaType*>(
       ::MediaType::internal_default_instance());
 }
 
@@ -106,9 +103,10 @@ void InitDefaults() {
   static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
   ::google::protobuf::GoogleOnceInit(&once, &TableStruct::InitDefaultsImpl);
 }
+namespace {
 void AddDescriptorsImpl() {
   InitDefaults();
-  static const char descriptor[] = {
+  static const char descriptor[] GOOGLE_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
       "\n\025media/MediaItem.proto\032\024media/MediaKey."
       "proto\032\025media/MediaType.proto\"K\n\tMediaIte"
       "m\022\026\n\003key\030\001 \001(\0132\t.MediaKey\022\030\n\004type\030\002 \001(\0132"
@@ -122,14 +120,14 @@ void AddDescriptorsImpl() {
     "media/MediaItem.proto", &protobuf_RegisterTypes);
   ::protobuf_media_2fMediaKey_2eproto::AddDescriptors();
   ::protobuf_media_2fMediaType_2eproto::AddDescriptors();
-  ::google::protobuf::internal::OnShutdown(&TableStruct::Shutdown);
 }
+} // anonymous namespace
 
 void AddDescriptors() {
   static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
   ::google::protobuf::GoogleOnceInit(&once, &AddDescriptorsImpl);
 }
-// Force AddDescriptors() to be called at static initialization time.
+// Force AddDescriptors() to be called at dynamic initialization time.
 struct StaticDescriptorInitializer {
   StaticDescriptorInitializer() {
     AddDescriptors();
@@ -252,9 +250,7 @@ MediaItem::MediaItem()
 MediaItem::MediaItem(::google::protobuf::Arena* arena)
   : ::google::protobuf::Message(),
   _internal_metadata_(arena) {
-#ifdef GOOGLE_PROTOBUF_NO_STATIC_INITIALIZER
   protobuf_media_2fMediaItem_2eproto::InitDefaults();
-#endif  // GOOGLE_PROTOBUF_NO_STATIC_INITIALIZER
   SharedCtor();
   RegisterArenaDtor(arena);
   // @@protoc_insertion_point(arena_constructor:MediaItem)
@@ -284,8 +280,9 @@ MediaItem::MediaItem(const MediaItem& from)
 
 void MediaItem::SharedCtor() {
   name_.UnsafeSetDefault(&::google::protobuf::internal::GetEmptyStringAlreadyInited());
-  ::memset(&key_, 0, reinterpret_cast<char*>(&type_) -
-    reinterpret_cast<char*>(&key_) + sizeof(type_));
+  ::memset(&key_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&type_) -
+      reinterpret_cast<char*>(&key_)) + sizeof(type_));
   _cached_size_ = 0;
 }
 
@@ -296,17 +293,14 @@ MediaItem::~MediaItem() {
 
 void MediaItem::SharedDtor() {
   ::google::protobuf::Arena* arena = GetArenaNoVirtual();
+  GOOGLE_DCHECK(arena == NULL);
   if (arena != NULL) {
     return;
   }
 
   name_.Destroy(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), arena);
-  if (this != internal_default_instance()) {
-    delete key_;
-  }
-  if (this != internal_default_instance()) {
-    delete type_;
-  }
+  if (this != internal_default_instance()) delete key_;
+  if (this != internal_default_instance()) delete type_;
 }
 
 void MediaItem::ArenaDtor(void* object) {
@@ -336,6 +330,10 @@ MediaItem* MediaItem::New(::google::protobuf::Arena* arena) const {
 
 void MediaItem::Clear() {
 // @@protoc_insertion_point(message_clear_start:MediaItem)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
   name_.ClearToEmpty(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), GetArenaNoVirtual());
   if (GetArenaNoVirtual() == NULL && key_ != NULL) {
     delete key_;
@@ -345,6 +343,7 @@ void MediaItem::Clear() {
     delete type_;
   }
   type_ = NULL;
+  _internal_metadata_.Clear();
 }
 
 bool MediaItem::MergePartialFromCodedStream(
@@ -360,7 +359,7 @@ bool MediaItem::MergePartialFromCodedStream(
       // .MediaKey key = 1;
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(10u)) {
+            static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_key()));
         } else {
@@ -372,7 +371,7 @@ bool MediaItem::MergePartialFromCodedStream(
       // .MediaType type = 2;
       case 2: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(18u)) {
+            static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_type()));
         } else {
@@ -384,11 +383,11 @@ bool MediaItem::MergePartialFromCodedStream(
       // string name = 3;
       case 3: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(26u)) {
+            static_cast< ::google::protobuf::uint8>(26u /* 26 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadString(
                 input, this->mutable_name()));
           DO_(::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-            this->name().data(), this->name().length(),
+            this->name().data(), static_cast<int>(this->name().length()),
             ::google::protobuf::internal::WireFormatLite::PARSE,
             "MediaItem.name"));
         } else {
@@ -399,12 +398,11 @@ bool MediaItem::MergePartialFromCodedStream(
 
       default: {
       handle_unusual:
-        if (tag == 0 ||
-            ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+        if (tag == 0) {
           goto success;
         }
-        DO_(::google::protobuf::internal::WireFormatLite::SkipField(input, tag));
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
         break;
       }
     }
@@ -439,13 +437,17 @@ void MediaItem::SerializeWithCachedSizes(
   // string name = 3;
   if (this->name().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->name().data(), this->name().length(),
+      this->name().data(), static_cast<int>(this->name().length()),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "MediaItem.name");
     ::google::protobuf::internal::WireFormatLite::WriteStringMaybeAliased(
       3, this->name(), output);
   }
 
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
+  }
   // @@protoc_insertion_point(serialize_end:MediaItem)
 }
 
@@ -473,7 +475,7 @@ void MediaItem::SerializeWithCachedSizes(
   // string name = 3;
   if (this->name().size() > 0) {
     ::google::protobuf::internal::WireFormatLite::VerifyUtf8String(
-      this->name().data(), this->name().length(),
+      this->name().data(), static_cast<int>(this->name().length()),
       ::google::protobuf::internal::WireFormatLite::SERIALIZE,
       "MediaItem.name");
     target =
@@ -481,6 +483,10 @@ void MediaItem::SerializeWithCachedSizes(
         3, this->name(), target);
   }
 
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
+  }
   // @@protoc_insertion_point(serialize_to_array_end:MediaItem)
   return target;
 }
@@ -489,6 +495,11 @@ size_t MediaItem::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:MediaItem)
   size_t total_size = 0;
 
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
+  }
   // string name = 3;
   if (this->name().size() > 0) {
     total_size += 1 +
@@ -588,10 +599,12 @@ void MediaItem::UnsafeArenaSwap(MediaItem* other) {
   InternalSwap(other);
 }
 void MediaItem::InternalSwap(MediaItem* other) {
+  using std::swap;
   name_.Swap(&other->name_);
-  std::swap(key_, other->key_);
-  std::swap(type_, other->type_);
-  std::swap(_cached_size_, other->_cached_size_);
+  swap(key_, other->key_);
+  swap(type_, other->type_);
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata MediaItem::GetMetadata() const {
@@ -611,9 +624,10 @@ void MediaItem::clear_key() {
   key_ = NULL;
 }
 const ::MediaKey& MediaItem::key() const {
+  const ::MediaKey* p = key_;
   // @@protoc_insertion_point(field_get:MediaItem.key)
-  return key_ != NULL ? *key_
-                         : *::MediaKey::internal_default_instance();
+  return p != NULL ? *p : *reinterpret_cast<const ::MediaKey*>(
+      &::_MediaKey_default_instance_);
 }
 ::MediaKey* MediaItem::mutable_key() {
   
@@ -660,9 +674,10 @@ void MediaItem::clear_type() {
   type_ = NULL;
 }
 const ::MediaType& MediaItem::type() const {
+  const ::MediaType* p = type_;
   // @@protoc_insertion_point(field_get:MediaItem.type)
-  return type_ != NULL ? *type_
-                         : *::MediaType::internal_default_instance();
+  return p != NULL ? *p : *reinterpret_cast<const ::MediaType*>(
+      &::_MediaType_default_instance_);
 }
 ::MediaType* MediaItem::mutable_type() {
   
@@ -713,6 +728,14 @@ void MediaItem::set_name(const ::std::string& value) {
   name_.Set(&::google::protobuf::internal::GetEmptyStringAlreadyInited(), value, GetArenaNoVirtual());
   // @@protoc_insertion_point(field_set:MediaItem.name)
 }
+#if LANG_CXX11
+void MediaItem::set_name(::std::string&& value) {
+  
+  name_.Set(
+    &::google::protobuf::internal::GetEmptyStringAlreadyInited(), ::std::move(value), GetArenaNoVirtual());
+  // @@protoc_insertion_point(field_set_rvalue:MediaItem.name)
+}
+#endif
 void MediaItem::set_name(const char* value) {
   GOOGLE_DCHECK(value != NULL);
   

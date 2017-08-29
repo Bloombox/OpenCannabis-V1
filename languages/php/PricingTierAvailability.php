@@ -7,16 +7,16 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * Protobuf type <code>PricingTierAvailability</code>
+ * Generated from protobuf message <code>PricingTierAvailability</code>
  */
 class PricingTierAvailability extends \Google\Protobuf\Internal\Message
 {
     /**
-     * <code>bool offered = 1;</code>
+     * Generated from protobuf field <code>bool offered = 1;</code>
      */
     private $offered = false;
     /**
-     * <code>bool available = 2;</code>
+     * Generated from protobuf field <code>bool available = 2;</code>
      */
     private $available = false;
 
@@ -26,7 +26,8 @@ class PricingTierAvailability extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>bool offered = 1;</code>
+     * Generated from protobuf field <code>bool offered = 1;</code>
+     * @return bool
      */
     public function getOffered()
     {
@@ -34,16 +35,21 @@ class PricingTierAvailability extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>bool offered = 1;</code>
+     * Generated from protobuf field <code>bool offered = 1;</code>
+     * @param bool $var
+     * @return $this
      */
     public function setOffered($var)
     {
         GPBUtil::checkBool($var);
         $this->offered = $var;
+
+        return $this;
     }
 
     /**
-     * <code>bool available = 2;</code>
+     * Generated from protobuf field <code>bool available = 2;</code>
+     * @return bool
      */
     public function getAvailable()
     {
@@ -51,12 +57,16 @@ class PricingTierAvailability extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>bool available = 2;</code>
+     * Generated from protobuf field <code>bool available = 2;</code>
+     * @param bool $var
+     * @return $this
      */
     public function setAvailable($var)
     {
         GPBUtil::checkBool($var);
         $this->available = $var;
+
+        return $this;
     }
 
 }

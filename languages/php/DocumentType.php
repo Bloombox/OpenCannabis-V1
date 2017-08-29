@@ -7,20 +7,18 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * <pre>
  * -- Media Type: Document -- //
- * </pre>
  *
- * Protobuf type <code>DocumentType</code>
+ * Generated from protobuf message <code>DocumentType</code>
  */
 class DocumentType extends \Google\Protobuf\Internal\Message
 {
     /**
-     * <code>.DocumentType.DocumentKind kind = 1;</code>
+     * Generated from protobuf field <code>.DocumentType.DocumentKind kind = 1;</code>
      */
     private $kind = 0;
     /**
-     * <code>bool compressed = 2;</code>
+     * Generated from protobuf field <code>bool compressed = 2;</code>
      */
     private $compressed = false;
 
@@ -30,7 +28,8 @@ class DocumentType extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>.DocumentType.DocumentKind kind = 1;</code>
+     * Generated from protobuf field <code>.DocumentType.DocumentKind kind = 1;</code>
+     * @return int
      */
     public function getKind()
     {
@@ -38,16 +37,21 @@ class DocumentType extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>.DocumentType.DocumentKind kind = 1;</code>
+     * Generated from protobuf field <code>.DocumentType.DocumentKind kind = 1;</code>
+     * @param int $var
+     * @return $this
      */
     public function setKind($var)
     {
         GPBUtil::checkEnum($var, \DocumentType_DocumentKind::class);
         $this->kind = $var;
+
+        return $this;
     }
 
     /**
-     * <code>bool compressed = 2;</code>
+     * Generated from protobuf field <code>bool compressed = 2;</code>
+     * @return bool
      */
     public function getCompressed()
     {
@@ -55,12 +59,16 @@ class DocumentType extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>bool compressed = 2;</code>
+     * Generated from protobuf field <code>bool compressed = 2;</code>
+     * @param bool $var
+     * @return $this
      */
     public function setCompressed($var)
     {
         GPBUtil::checkBool($var);
         $this->compressed = $var;
+
+        return $this;
     }
 
 }

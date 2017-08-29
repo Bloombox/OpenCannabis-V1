@@ -16,7 +16,10 @@
 #include <google/protobuf/reflection_ops.h>
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
-class GeneticsDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<Genetics> {
+class GeneticsDefaultTypeInternal {
+public:
+ ::google::protobuf::internal::ExplicitlyConstructed<Genetics>
+     _instance;
 } _Genetics_default_instance_;
 
 namespace protobuf_structs_2fGenetics_2eproto {
@@ -29,20 +32,20 @@ namespace {
 }  // namespace
 
 PROTOBUF_CONSTEXPR_VAR ::google::protobuf::internal::ParseTableField
-    const TableStruct::entries[] = {
+    const TableStruct::entries[] GOOGLE_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
   {0, 0, 0, ::google::protobuf::internal::kInvalidMask, 0, 0},
 };
 
 PROTOBUF_CONSTEXPR_VAR ::google::protobuf::internal::AuxillaryParseTableField
-    const TableStruct::aux[] = {
+    const TableStruct::aux[] GOOGLE_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
   ::google::protobuf::internal::AuxillaryParseTableField(),
 };
 PROTOBUF_CONSTEXPR_VAR ::google::protobuf::internal::ParseTable const
-    TableStruct::schema[] = {
-  { NULL, NULL, 0, -1, -1, false },
+    TableStruct::schema[] GOOGLE_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
+  { NULL, NULL, 0, -1, -1, -1, -1, NULL, false },
 };
 
-const ::google::protobuf::uint32 TableStruct::offsets[] = {
+const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
   ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Genetics, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -51,8 +54,7 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Genetics, male_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(Genetics, female_),
 };
-
-static const ::google::protobuf::internal::MigrationSchema schemas[] = {
+static const ::google::protobuf::internal::MigrationSchema schemas[] GOOGLE_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, sizeof(Genetics)},
 };
 
@@ -82,21 +84,16 @@ void protobuf_RegisterTypes(const ::std::string&) {
 }
 
 }  // namespace
-
-void TableStruct::Shutdown() {
-  _Genetics_default_instance_.Shutdown();
-  delete file_level_metadata[0].reflection;
-}
-
 void TableStruct::InitDefaultsImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   ::google::protobuf::internal::InitProtobufDefaults();
   ::protobuf_content_2fName_2eproto::InitDefaults();
-  _Genetics_default_instance_.DefaultConstruct();
-  _Genetics_default_instance_.get_mutable()->male_ = const_cast< ::Name*>(
+  _Genetics_default_instance_._instance.DefaultConstruct();
+  ::google::protobuf::internal::OnShutdownDestroyMessage(
+      &_Genetics_default_instance_);_Genetics_default_instance_._instance.get_mutable()->male_ = const_cast< ::Name*>(
       ::Name::internal_default_instance());
-  _Genetics_default_instance_.get_mutable()->female_ = const_cast< ::Name*>(
+  _Genetics_default_instance_._instance.get_mutable()->female_ = const_cast< ::Name*>(
       ::Name::internal_default_instance());
 }
 
@@ -104,9 +101,10 @@ void InitDefaults() {
   static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
   ::google::protobuf::GoogleOnceInit(&once, &TableStruct::InitDefaultsImpl);
 }
+namespace {
 void AddDescriptorsImpl() {
   InitDefaults();
-  static const char descriptor[] = {
+  static const char descriptor[] GOOGLE_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
       "\n\026structs/Genetics.proto\032\022content/Name.p"
       "roto\"6\n\010Genetics\022\023\n\004male\030\001 \001(\0132\005.Name\022\025\n"
       "\006female\030\002 \001(\0132\005.NameB;\n!io.bloombox.sche"
@@ -118,14 +116,14 @@ void AddDescriptorsImpl() {
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "structs/Genetics.proto", &protobuf_RegisterTypes);
   ::protobuf_content_2fName_2eproto::AddDescriptors();
-  ::google::protobuf::internal::OnShutdown(&TableStruct::Shutdown);
 }
+} // anonymous namespace
 
 void AddDescriptors() {
   static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
   ::google::protobuf::GoogleOnceInit(&once, &AddDescriptorsImpl);
 }
-// Force AddDescriptors() to be called at static initialization time.
+// Force AddDescriptors() to be called at dynamic initialization time.
 struct StaticDescriptorInitializer {
   StaticDescriptorInitializer() {
     AddDescriptors();
@@ -247,9 +245,7 @@ Genetics::Genetics()
 Genetics::Genetics(::google::protobuf::Arena* arena)
   : ::google::protobuf::Message(),
   _internal_metadata_(arena) {
-#ifdef GOOGLE_PROTOBUF_NO_STATIC_INITIALIZER
   protobuf_structs_2fGenetics_2eproto::InitDefaults();
-#endif  // GOOGLE_PROTOBUF_NO_STATIC_INITIALIZER
   SharedCtor();
   RegisterArenaDtor(arena);
   // @@protoc_insertion_point(arena_constructor:Genetics)
@@ -273,8 +269,9 @@ Genetics::Genetics(const Genetics& from)
 }
 
 void Genetics::SharedCtor() {
-  ::memset(&male_, 0, reinterpret_cast<char*>(&female_) -
-    reinterpret_cast<char*>(&male_) + sizeof(female_));
+  ::memset(&male_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&female_) -
+      reinterpret_cast<char*>(&male_)) + sizeof(female_));
   _cached_size_ = 0;
 }
 
@@ -285,16 +282,13 @@ Genetics::~Genetics() {
 
 void Genetics::SharedDtor() {
   ::google::protobuf::Arena* arena = GetArenaNoVirtual();
+  GOOGLE_DCHECK(arena == NULL);
   if (arena != NULL) {
     return;
   }
 
-  if (this != internal_default_instance()) {
-    delete male_;
-  }
-  if (this != internal_default_instance()) {
-    delete female_;
-  }
+  if (this != internal_default_instance()) delete male_;
+  if (this != internal_default_instance()) delete female_;
 }
 
 void Genetics::ArenaDtor(void* object) {
@@ -324,6 +318,10 @@ Genetics* Genetics::New(::google::protobuf::Arena* arena) const {
 
 void Genetics::Clear() {
 // @@protoc_insertion_point(message_clear_start:Genetics)
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
   if (GetArenaNoVirtual() == NULL && male_ != NULL) {
     delete male_;
   }
@@ -332,6 +330,7 @@ void Genetics::Clear() {
     delete female_;
   }
   female_ = NULL;
+  _internal_metadata_.Clear();
 }
 
 bool Genetics::MergePartialFromCodedStream(
@@ -347,7 +346,7 @@ bool Genetics::MergePartialFromCodedStream(
       // .Name male = 1;
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(10u)) {
+            static_cast< ::google::protobuf::uint8>(10u /* 10 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_male()));
         } else {
@@ -359,7 +358,7 @@ bool Genetics::MergePartialFromCodedStream(
       // .Name female = 2;
       case 2: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(18u)) {
+            static_cast< ::google::protobuf::uint8>(18u /* 18 & 0xFF */)) {
           DO_(::google::protobuf::internal::WireFormatLite::ReadMessageNoVirtual(
                input, mutable_female()));
         } else {
@@ -370,12 +369,11 @@ bool Genetics::MergePartialFromCodedStream(
 
       default: {
       handle_unusual:
-        if (tag == 0 ||
-            ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+        if (tag == 0) {
           goto success;
         }
-        DO_(::google::protobuf::internal::WireFormatLite::SkipField(input, tag));
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
         break;
       }
     }
@@ -407,6 +405,10 @@ void Genetics::SerializeWithCachedSizes(
       2, *this->female_, output);
   }
 
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
+  }
   // @@protoc_insertion_point(serialize_end:Genetics)
 }
 
@@ -431,6 +433,10 @@ void Genetics::SerializeWithCachedSizes(
         2, *this->female_, deterministic, target);
   }
 
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
+  }
   // @@protoc_insertion_point(serialize_to_array_end:Genetics)
   return target;
 }
@@ -439,6 +445,11 @@ size_t Genetics::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:Genetics)
   size_t total_size = 0;
 
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
+  }
   // .Name male = 1;
   if (this->has_male()) {
     total_size += 1 +
@@ -528,9 +539,11 @@ void Genetics::UnsafeArenaSwap(Genetics* other) {
   InternalSwap(other);
 }
 void Genetics::InternalSwap(Genetics* other) {
-  std::swap(male_, other->male_);
-  std::swap(female_, other->female_);
-  std::swap(_cached_size_, other->_cached_size_);
+  using std::swap;
+  swap(male_, other->male_);
+  swap(female_, other->female_);
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata Genetics::GetMetadata() const {
@@ -550,9 +563,10 @@ void Genetics::clear_male() {
   male_ = NULL;
 }
 const ::Name& Genetics::male() const {
+  const ::Name* p = male_;
   // @@protoc_insertion_point(field_get:Genetics.male)
-  return male_ != NULL ? *male_
-                         : *::Name::internal_default_instance();
+  return p != NULL ? *p : *reinterpret_cast<const ::Name*>(
+      &::_Name_default_instance_);
 }
 ::Name* Genetics::mutable_male() {
   
@@ -599,9 +613,10 @@ void Genetics::clear_female() {
   female_ = NULL;
 }
 const ::Name& Genetics::female() const {
+  const ::Name* p = female_;
   // @@protoc_insertion_point(field_get:Genetics.female)
-  return female_ != NULL ? *female_
-                         : *::Name::internal_default_instance();
+  return p != NULL ? *p : *reinterpret_cast<const ::Name*>(
+      &::_Name_default_instance_);
 }
 ::Name* Genetics::mutable_female() {
   

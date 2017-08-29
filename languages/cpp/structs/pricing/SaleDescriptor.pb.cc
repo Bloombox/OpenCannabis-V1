@@ -16,7 +16,10 @@
 #include <google/protobuf/reflection_ops.h>
 #include <google/protobuf/wire_format.h>
 // @@protoc_insertion_point(includes)
-class SaleDescriptorDefaultTypeInternal : public ::google::protobuf::internal::ExplicitlyConstructed<SaleDescriptor> {
+class SaleDescriptorDefaultTypeInternal {
+public:
+ ::google::protobuf::internal::ExplicitlyConstructed<SaleDescriptor>
+     _instance;
 } _SaleDescriptor_default_instance_;
 
 namespace protobuf_structs_2fpricing_2fSaleDescriptor_2eproto {
@@ -30,20 +33,20 @@ const ::google::protobuf::EnumDescriptor* file_level_enum_descriptors[1];
 }  // namespace
 
 PROTOBUF_CONSTEXPR_VAR ::google::protobuf::internal::ParseTableField
-    const TableStruct::entries[] = {
+    const TableStruct::entries[] GOOGLE_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
   {0, 0, 0, ::google::protobuf::internal::kInvalidMask, 0, 0},
 };
 
 PROTOBUF_CONSTEXPR_VAR ::google::protobuf::internal::AuxillaryParseTableField
-    const TableStruct::aux[] = {
+    const TableStruct::aux[] GOOGLE_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
   ::google::protobuf::internal::AuxillaryParseTableField(),
 };
 PROTOBUF_CONSTEXPR_VAR ::google::protobuf::internal::ParseTable const
-    TableStruct::schema[] = {
-  { NULL, NULL, 0, -1, -1, false },
+    TableStruct::schema[] GOOGLE_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
+  { NULL, NULL, 0, -1, -1, -1, -1, NULL, false },
 };
 
-const ::google::protobuf::uint32 TableStruct::offsets[] = {
+const ::google::protobuf::uint32 TableStruct::offsets[] GOOGLE_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
   ~0u,  // no _has_bits_
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SaleDescriptor, _internal_metadata_),
   ~0u,  // no _extensions_
@@ -58,8 +61,7 @@ const ::google::protobuf::uint32 TableStruct::offsets[] = {
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SaleDescriptor, loyalty_trigger_),
   GOOGLE_PROTOBUF_GENERATED_MESSAGE_FIELD_OFFSET(SaleDescriptor, loyalty_reward_),
 };
-
-static const ::google::protobuf::internal::MigrationSchema schemas[] = {
+static const ::google::protobuf::internal::MigrationSchema schemas[] GOOGLE_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
   { 0, -1, sizeof(SaleDescriptor)},
 };
 
@@ -89,26 +91,22 @@ void protobuf_RegisterTypes(const ::std::string&) {
 }
 
 }  // namespace
-
-void TableStruct::Shutdown() {
-  _SaleDescriptor_default_instance_.Shutdown();
-  delete file_level_metadata[0].reflection;
-}
-
 void TableStruct::InitDefaultsImpl() {
   GOOGLE_PROTOBUF_VERIFY_VERSION;
 
   ::google::protobuf::internal::InitProtobufDefaults();
-  _SaleDescriptor_default_instance_.DefaultConstruct();
-}
+  _SaleDescriptor_default_instance_._instance.DefaultConstruct();
+  ::google::protobuf::internal::OnShutdownDestroyMessage(
+      &_SaleDescriptor_default_instance_);}
 
 void InitDefaults() {
   static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
   ::google::protobuf::GoogleOnceInit(&once, &TableStruct::InitDefaultsImpl);
 }
+namespace {
 void AddDescriptorsImpl() {
   InitDefaults();
-  static const char descriptor[] = {
+  static const char descriptor[] GOOGLE_ATTRIBUTE_SECTION_VARIABLE(protodesc_cold) = {
       "\n$structs/pricing/SaleDescriptor.proto\"\307"
       "\001\n\016SaleDescriptor\022\027\n\004type\030\001 \001(\0162\t.SaleTy"
       "pe\022\021\n\teffective\030\002 \001(\004\022\022\n\nexpiration\030\003 \001("
@@ -123,14 +121,14 @@ void AddDescriptorsImpl() {
       descriptor, 360);
   ::google::protobuf::MessageFactory::InternalRegisterGeneratedFile(
     "structs/pricing/SaleDescriptor.proto", &protobuf_RegisterTypes);
-  ::google::protobuf::internal::OnShutdown(&TableStruct::Shutdown);
 }
+} // anonymous namespace
 
 void AddDescriptors() {
   static GOOGLE_PROTOBUF_DECLARE_ONCE(once);
   ::google::protobuf::GoogleOnceInit(&once, &AddDescriptorsImpl);
 }
-// Force AddDescriptors() to be called at static initialization time.
+// Force AddDescriptors() to be called at dynamic initialization time.
 struct StaticDescriptorInitializer {
   StaticDescriptorInitializer() {
     AddDescriptors();
@@ -179,9 +177,7 @@ SaleDescriptor::SaleDescriptor()
 SaleDescriptor::SaleDescriptor(::google::protobuf::Arena* arena)
   : ::google::protobuf::Message(),
   _internal_metadata_(arena) {
-#ifdef GOOGLE_PROTOBUF_NO_STATIC_INITIALIZER
   protobuf_structs_2fpricing_2fSaleDescriptor_2eproto::InitDefaults();
-#endif  // GOOGLE_PROTOBUF_NO_STATIC_INITIALIZER
   SharedCtor();
   RegisterArenaDtor(arena);
   // @@protoc_insertion_point(arena_constructor:SaleDescriptor)
@@ -192,14 +188,15 @@ SaleDescriptor::SaleDescriptor(const SaleDescriptor& from)
       _cached_size_(0) {
   _internal_metadata_.MergeFrom(from._internal_metadata_);
   ::memcpy(&effective_, &from.effective_,
-    reinterpret_cast<char*>(&loyalty_reward_) -
-    reinterpret_cast<char*>(&effective_) + sizeof(loyalty_reward_));
+    static_cast<size_t>(reinterpret_cast<char*>(&loyalty_reward_) -
+    reinterpret_cast<char*>(&effective_)) + sizeof(loyalty_reward_));
   // @@protoc_insertion_point(copy_constructor:SaleDescriptor)
 }
 
 void SaleDescriptor::SharedCtor() {
-  ::memset(&effective_, 0, reinterpret_cast<char*>(&loyalty_reward_) -
-    reinterpret_cast<char*>(&effective_) + sizeof(loyalty_reward_));
+  ::memset(&effective_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&loyalty_reward_) -
+      reinterpret_cast<char*>(&effective_)) + sizeof(loyalty_reward_));
   _cached_size_ = 0;
 }
 
@@ -210,6 +207,7 @@ SaleDescriptor::~SaleDescriptor() {
 
 void SaleDescriptor::SharedDtor() {
   ::google::protobuf::Arena* arena = GetArenaNoVirtual();
+  GOOGLE_DCHECK(arena == NULL);
   if (arena != NULL) {
     return;
   }
@@ -243,8 +241,14 @@ SaleDescriptor* SaleDescriptor::New(::google::protobuf::Arena* arena) const {
 
 void SaleDescriptor::Clear() {
 // @@protoc_insertion_point(message_clear_start:SaleDescriptor)
-  ::memset(&effective_, 0, reinterpret_cast<char*>(&loyalty_reward_) -
-    reinterpret_cast<char*>(&effective_) + sizeof(loyalty_reward_));
+  ::google::protobuf::uint32 cached_has_bits = 0;
+  // Prevent compiler warnings about cached_has_bits being unused
+  (void) cached_has_bits;
+
+  ::memset(&effective_, 0, static_cast<size_t>(
+      reinterpret_cast<char*>(&loyalty_reward_) -
+      reinterpret_cast<char*>(&effective_)) + sizeof(loyalty_reward_));
+  _internal_metadata_.Clear();
 }
 
 bool SaleDescriptor::MergePartialFromCodedStream(
@@ -260,7 +264,7 @@ bool SaleDescriptor::MergePartialFromCodedStream(
       // .SaleType type = 1;
       case 1: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(8u)) {
+            static_cast< ::google::protobuf::uint8>(8u /* 8 & 0xFF */)) {
           int value;
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    int, ::google::protobuf::internal::WireFormatLite::TYPE_ENUM>(
@@ -275,7 +279,7 @@ bool SaleDescriptor::MergePartialFromCodedStream(
       // uint64 effective = 2;
       case 2: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(16u)) {
+            static_cast< ::google::protobuf::uint8>(16u /* 16 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint64, ::google::protobuf::internal::WireFormatLite::TYPE_UINT64>(
@@ -289,7 +293,7 @@ bool SaleDescriptor::MergePartialFromCodedStream(
       // uint64 expiration = 3;
       case 3: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(24u)) {
+            static_cast< ::google::protobuf::uint8>(24u /* 24 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint64, ::google::protobuf::internal::WireFormatLite::TYPE_UINT64>(
@@ -303,7 +307,7 @@ bool SaleDescriptor::MergePartialFromCodedStream(
       // uint32 percentage_amount = 20;
       case 20: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(160u)) {
+            static_cast< ::google::protobuf::uint8>(160u /* 160 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
@@ -317,7 +321,7 @@ bool SaleDescriptor::MergePartialFromCodedStream(
       // uint32 bogo_trigger = 21;
       case 21: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(168u)) {
+            static_cast< ::google::protobuf::uint8>(168u /* 168 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
@@ -331,7 +335,7 @@ bool SaleDescriptor::MergePartialFromCodedStream(
       // uint32 bogo_reward = 22;
       case 22: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(176u)) {
+            static_cast< ::google::protobuf::uint8>(176u /* 176 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
@@ -345,7 +349,7 @@ bool SaleDescriptor::MergePartialFromCodedStream(
       // uint32 loyalty_trigger = 23;
       case 23: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(184u)) {
+            static_cast< ::google::protobuf::uint8>(184u /* 184 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
@@ -359,7 +363,7 @@ bool SaleDescriptor::MergePartialFromCodedStream(
       // uint32 loyalty_reward = 24;
       case 24: {
         if (static_cast< ::google::protobuf::uint8>(tag) ==
-            static_cast< ::google::protobuf::uint8>(192u)) {
+            static_cast< ::google::protobuf::uint8>(192u /* 192 & 0xFF */)) {
 
           DO_((::google::protobuf::internal::WireFormatLite::ReadPrimitive<
                    ::google::protobuf::uint32, ::google::protobuf::internal::WireFormatLite::TYPE_UINT32>(
@@ -372,12 +376,11 @@ bool SaleDescriptor::MergePartialFromCodedStream(
 
       default: {
       handle_unusual:
-        if (tag == 0 ||
-            ::google::protobuf::internal::WireFormatLite::GetTagWireType(tag) ==
-            ::google::protobuf::internal::WireFormatLite::WIRETYPE_END_GROUP) {
+        if (tag == 0) {
           goto success;
         }
-        DO_(::google::protobuf::internal::WireFormatLite::SkipField(input, tag));
+        DO_(::google::protobuf::internal::WireFormat::SkipField(
+              input, tag, _internal_metadata_.mutable_unknown_fields()));
         break;
       }
     }
@@ -438,6 +441,10 @@ void SaleDescriptor::SerializeWithCachedSizes(
     ::google::protobuf::internal::WireFormatLite::WriteUInt32(24, this->loyalty_reward(), output);
   }
 
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    ::google::protobuf::internal::WireFormat::SerializeUnknownFields(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), output);
+  }
   // @@protoc_insertion_point(serialize_end:SaleDescriptor)
 }
 
@@ -489,6 +496,10 @@ void SaleDescriptor::SerializeWithCachedSizes(
     target = ::google::protobuf::internal::WireFormatLite::WriteUInt32ToArray(24, this->loyalty_reward(), target);
   }
 
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    target = ::google::protobuf::internal::WireFormat::SerializeUnknownFieldsToArray(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()), target);
+  }
   // @@protoc_insertion_point(serialize_to_array_end:SaleDescriptor)
   return target;
 }
@@ -497,6 +508,11 @@ size_t SaleDescriptor::ByteSizeLong() const {
 // @@protoc_insertion_point(message_byte_size_start:SaleDescriptor)
   size_t total_size = 0;
 
+  if ((_internal_metadata_.have_unknown_fields() &&  ::google::protobuf::internal::GetProto3PreserveUnknownsDefault())) {
+    total_size +=
+      ::google::protobuf::internal::WireFormat::ComputeUnknownFieldsSize(
+        (::google::protobuf::internal::GetProto3PreserveUnknownsDefault()   ? _internal_metadata_.unknown_fields()   : _internal_metadata_.default_instance()));
+  }
   // uint64 effective = 2;
   if (this->effective() != 0) {
     total_size += 1 +
@@ -645,15 +661,17 @@ void SaleDescriptor::UnsafeArenaSwap(SaleDescriptor* other) {
   InternalSwap(other);
 }
 void SaleDescriptor::InternalSwap(SaleDescriptor* other) {
-  std::swap(effective_, other->effective_);
-  std::swap(expiration_, other->expiration_);
-  std::swap(type_, other->type_);
-  std::swap(percentage_amount_, other->percentage_amount_);
-  std::swap(bogo_trigger_, other->bogo_trigger_);
-  std::swap(bogo_reward_, other->bogo_reward_);
-  std::swap(loyalty_trigger_, other->loyalty_trigger_);
-  std::swap(loyalty_reward_, other->loyalty_reward_);
-  std::swap(_cached_size_, other->_cached_size_);
+  using std::swap;
+  swap(effective_, other->effective_);
+  swap(expiration_, other->expiration_);
+  swap(type_, other->type_);
+  swap(percentage_amount_, other->percentage_amount_);
+  swap(bogo_trigger_, other->bogo_trigger_);
+  swap(bogo_reward_, other->bogo_reward_);
+  swap(loyalty_trigger_, other->loyalty_trigger_);
+  swap(loyalty_reward_, other->loyalty_reward_);
+  _internal_metadata_.Swap(&other->_internal_metadata_);
+  swap(_cached_size_, other->_cached_size_);
 }
 
 ::google::protobuf::Metadata SaleDescriptor::GetMetadata() const {

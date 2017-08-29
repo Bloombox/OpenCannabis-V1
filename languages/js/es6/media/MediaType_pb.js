@@ -1,6 +1,8 @@
 /**
  * @fileoverview
  * @enhanceable
+ * @suppress {messageConventions} JS Compiler reports an error if a variable or
+ *     field starts with 'MSG_' and isn't a translatable message.
  * @public
  */
 // GENERATED CODE -- DO NOT EDIT!
@@ -56,6 +58,7 @@ proto.MediaType.prototype.toObject = function(opt_includeInstance) {
  *     http://goto/soy-param-migration
  * @param {!proto.MediaType} msg The msg instance to transform.
  * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.MediaType.toObject = function(includeInstance, msg) {
   var f, obj = {
@@ -143,6 +146,7 @@ proto.MediaType.prototype.serializeBinary = function() {
  * format), writing to the given BinaryWriter.
  * @param {!proto.MediaType} message
  * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.MediaType.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
@@ -338,6 +342,7 @@ proto.ImageType.prototype.toObject = function(opt_includeInstance) {
  *     http://goto/soy-param-migration
  * @param {!proto.ImageType} msg The msg instance to transform.
  * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.ImageType.toObject = function(includeInstance, msg) {
   var f, obj = {
@@ -407,6 +412,7 @@ proto.ImageType.prototype.serializeBinary = function() {
  * format), writing to the given BinaryWriter.
  * @param {!proto.ImageType} message
  * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.ImageType.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
@@ -489,6 +495,7 @@ proto.DocumentType.prototype.toObject = function(opt_includeInstance) {
  *     http://goto/soy-param-migration
  * @param {!proto.DocumentType} msg The msg instance to transform.
  * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.DocumentType.toObject = function(includeInstance, msg) {
   var f, obj = {
@@ -563,6 +570,7 @@ proto.DocumentType.prototype.serializeBinary = function() {
  * format), writing to the given BinaryWriter.
  * @param {!proto.DocumentType} message
  * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.DocumentType.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;
@@ -668,6 +676,7 @@ proto.VideoType.prototype.toObject = function(opt_includeInstance) {
  *     http://goto/soy-param-migration
  * @param {!proto.VideoType} msg The msg instance to transform.
  * @return {!Object}
+ * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.VideoType.toObject = function(includeInstance, msg) {
   var f, obj = {
@@ -737,6 +746,7 @@ proto.VideoType.prototype.serializeBinary = function() {
  * format), writing to the given BinaryWriter.
  * @param {!proto.VideoType} message
  * @param {!jspb.BinaryWriter} writer
+ * @suppress {unusedLocalVariables} f is only used for nested messages
  */
 proto.VideoType.serializeBinaryToWriter = function(message, writer) {
   var f = undefined;

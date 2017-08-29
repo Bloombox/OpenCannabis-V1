@@ -7,32 +7,28 @@ use Google\Protobuf\Internal\RepeatedField;
 use Google\Protobuf\Internal\GPBUtil;
 
 /**
- * <pre>
  * -- Pricing: Main Descriptor
- * </pre>
  *
- * Protobuf type <code>PricingDescriptor</code>
+ * Generated from protobuf message <code>PricingDescriptor</code>
  */
 class PricingDescriptor extends \Google\Protobuf\Internal\Message
 {
     /**
-     * <code>.PricingType type = 1;</code>
+     * Generated from protobuf field <code>.PricingType type = 1;</code>
      */
     private $type = 0;
     /**
-     * <pre>
      * -- descriptors
-     * </pre>
      *
-     * <code>.UnitPricingDescriptor unit = 20;</code>
+     * Generated from protobuf field <code>.UnitPricingDescriptor unit = 20;</code>
      */
     private $unit = null;
     /**
-     * <code>.WeightedPricingDescriptor weighted = 21;</code>
+     * Generated from protobuf field <code>.WeightedPricingDescriptor weighted = 21;</code>
      */
     private $weighted = null;
     /**
-     * <code>.FreebiePricingDescriptor freebie = 22;</code>
+     * Generated from protobuf field <code>.FreebiePricingDescriptor freebie = 22;</code>
      */
     private $freebie = null;
 
@@ -42,7 +38,8 @@ class PricingDescriptor extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>.PricingType type = 1;</code>
+     * Generated from protobuf field <code>.PricingType type = 1;</code>
+     * @return int
      */
     public function getType()
     {
@@ -50,20 +47,23 @@ class PricingDescriptor extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>.PricingType type = 1;</code>
+     * Generated from protobuf field <code>.PricingType type = 1;</code>
+     * @param int $var
+     * @return $this
      */
     public function setType($var)
     {
         GPBUtil::checkEnum($var, \PricingType::class);
         $this->type = $var;
+
+        return $this;
     }
 
     /**
-     * <pre>
      * -- descriptors
-     * </pre>
      *
-     * <code>.UnitPricingDescriptor unit = 20;</code>
+     * Generated from protobuf field <code>.UnitPricingDescriptor unit = 20;</code>
+     * @return \UnitPricingDescriptor
      */
     public function getUnit()
     {
@@ -71,20 +71,23 @@ class PricingDescriptor extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <pre>
      * -- descriptors
-     * </pre>
      *
-     * <code>.UnitPricingDescriptor unit = 20;</code>
+     * Generated from protobuf field <code>.UnitPricingDescriptor unit = 20;</code>
+     * @param \UnitPricingDescriptor $var
+     * @return $this
      */
-    public function setUnit(&$var)
+    public function setUnit($var)
     {
         GPBUtil::checkMessage($var, \UnitPricingDescriptor::class);
         $this->unit = $var;
+
+        return $this;
     }
 
     /**
-     * <code>.WeightedPricingDescriptor weighted = 21;</code>
+     * Generated from protobuf field <code>.WeightedPricingDescriptor weighted = 21;</code>
+     * @return \WeightedPricingDescriptor
      */
     public function getWeighted()
     {
@@ -92,16 +95,21 @@ class PricingDescriptor extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>.WeightedPricingDescriptor weighted = 21;</code>
+     * Generated from protobuf field <code>.WeightedPricingDescriptor weighted = 21;</code>
+     * @param \WeightedPricingDescriptor $var
+     * @return $this
      */
-    public function setWeighted(&$var)
+    public function setWeighted($var)
     {
         GPBUtil::checkMessage($var, \WeightedPricingDescriptor::class);
         $this->weighted = $var;
+
+        return $this;
     }
 
     /**
-     * <code>.FreebiePricingDescriptor freebie = 22;</code>
+     * Generated from protobuf field <code>.FreebiePricingDescriptor freebie = 22;</code>
+     * @return \FreebiePricingDescriptor
      */
     public function getFreebie()
     {
@@ -109,12 +117,16 @@ class PricingDescriptor extends \Google\Protobuf\Internal\Message
     }
 
     /**
-     * <code>.FreebiePricingDescriptor freebie = 22;</code>
+     * Generated from protobuf field <code>.FreebiePricingDescriptor freebie = 22;</code>
+     * @param \FreebiePricingDescriptor $var
+     * @return $this
      */
-    public function setFreebie(&$var)
+    public function setFreebie($var)
     {
         GPBUtil::checkMessage($var, \FreebiePricingDescriptor::class);
         $this->freebie = $var;
+
+        return $this;
     }
 
 }
