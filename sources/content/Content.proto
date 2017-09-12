@@ -1,6 +1,8 @@
 
 syntax = "proto3";
 
+package content;
+
 option optimize_for = SPEED;
 option cc_enable_arenas = true;
 option java_package = "io.bloombox.schema.content";
@@ -26,6 +28,6 @@ message Content {
   Encoding encoding = 2;
   bytes content = 3;
 
-  Language language = 4;
-  Compression compression = 5;
+  base.Language language = 4;
+  base.Compression compression = 5;
 }

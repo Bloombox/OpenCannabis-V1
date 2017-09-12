@@ -1,6 +1,8 @@
 
 syntax = "proto3";
 
+package content;
+
 option optimize_for = SPEED;
 option cc_enable_arenas = true;
 option java_package = "io.bloombox.schema.content";
@@ -14,10 +16,10 @@ import "media/MediaItem.proto";
 
 message Brand {
   // -- Basic Properties
-  Name name = 1;
-  Brand parent = 2;
-  Content summary = 3;
+  content.Name name = 1;
+  content.Brand parent = 2;
+  content.Content summary = 3;
 
   // -- Media
-  repeated MediaItem media = 20;
+  repeated media.MediaItem media = 20;
 }

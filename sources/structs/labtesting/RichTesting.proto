@@ -1,0 +1,61 @@
+
+syntax = "proto3";
+
+package structs.labtesting;
+
+option optimize_for = SPEED;
+option cc_enable_arenas = true;
+option java_package = "io.bloombox.schema.product.struct.testing";
+option java_multiple_files = true;
+option java_outer_classname = "RichTestingSpec";
+
+import "structs/labtesting/TestValue.proto";
+import "structs/labtesting/BasicTesting.proto";
+import "structs/labtesting/SubjectiveTesting.proto";
+
+
+// -- Testing: Basic Protocol
+enum AromaFlavor {
+  PINE = 0;
+  LEMON = 1;
+  PEPPER = 2;
+  LAVENDER = 3;
+  HOPS = 4;
+}
+
+enum Terpene {
+  LIMONENE = 0;
+  PINENE = 1;
+}
+
+message TerpeneTestValue {
+  Terpene terpene = 1;
+  TestValue measurement = 2;
+}
+
+message RichTesting {
+  bool available = 1;
+  repeated TestMedia media = 2;
+  int64 last_updated = 3;
+
+  // --- Testing Extensions
+  structs.labtesting.BasicTesting basic = 30;
+  TerpeneTesting terpenes = 31;
+  PesticideTesting pesticides = 32;
+  MoistureTesting moisture = 33;
+  repeated AromaFlavor aroma = 34;
+  structs.labtesting.SubjectiveTesting subjective_testing = 35;
+}
+
+message TerpeneTesting {
+  bool available = 1;
+  repeated TerpeneTestValue terpenes = 10;
+}
+
+message PesticideTesting {
+  // @TODO: how do we express this?
+}
+
+message MoistureTesting {
+  // @TODO: how do we express this?
+}

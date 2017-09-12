@@ -11,18 +11,19 @@ import "base/ProductKey.proto";
 import "content/MaterialsData.proto";
 import "content/ProductContent.proto";
 import "structs/FlagsDescriptor.proto";
+import "structs/labtesting/RichTesting.proto";
 import "structs/pricing/PricingDescriptor.proto";
 
 
 message Flower {
-  // -- Object Key
-  ProductKey key = 1;
+  base.ProductKey key = 1;
 
   // -- Basic Product & Materials Data
-  ProductContent product_data = 20;
-  MaterialsData material_data = 21;
+  content.ProductContent product = 20;
+  content.MaterialsData material = 21;
 
-  // -- Flags and Pricing
-  FlagsDescriptor flags = 22;
-  ProductPricing pricing = 23;
+  // -- Flags, Pricing and Testing
+  repeated structs.ProductFlag flags = 22;
+  structs.pricing.ProductPricing pricing = 23;
+  structs.labtesting.RichTesting testing = 24;
 }

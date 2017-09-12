@@ -1,6 +1,6 @@
 
 # OpenCannabis
-## Release __1.0.3__
+## Release __1.0.5__
 
 _An Open Model for the Legal Cannabis Industry_
 
@@ -38,13 +38,11 @@ schema categories include:
 - `structs`: Commonly-referenced structures and enumerations such as `Grow` and `Species`.
              Pricing, testing, and other extensions are stored under `structs`.
 
-In the `languages` folder, you'll find a language implementation for the full set of schemas.
-Currently-supported languages include:
-
+After executing `make`, in the `languages` folder, you'll find a language implementation
+for the full set of schemas in each of the following languages.
 - [C++](https://github.com/Bloombox/OpenCannabis/tree/master/languages/cpp)
 - [C#](https://github.com/Bloombox/OpenCannabis/tree/master/languages/csharp)
 - [Java](https://github.com/Bloombox/OpenCannabis/tree/master/languages/java)
-- [JavaNano](https://github.com/Bloombox/OpenCannabis/tree/master/languages/javanano)
 - [JavaScript](https://github.com/Bloombox/OpenCannabis/tree/master/languages/js)
 - [PHP](https://github.com/Bloombox/OpenCannabis/tree/master/languages/php)
 - [Python](https://github.com/Bloombox/OpenCannabis/tree/master/languages/python)
@@ -62,3 +60,4 @@ Coming soon.
 ### Contributing
 
 Coming soon.
+

@@ -1,6 +1,8 @@
 
 syntax = "proto3";
 
+package base;
+
 option optimize_for = SPEED;
 option cc_enable_arenas = true;
 option java_package = "io.bloombox.schema.base";
@@ -12,5 +14,5 @@ import "base/ProductKind.proto";
 
 // -- Product Type: Top-level -- //
 message ProductType {
-  ProductKind kind = 1;
+  base.ProductKind kind = 1;
 }

@@ -1,0 +1,5 @@
+node_modules/
+languages/
+release/
+.DS_Store
+*.DS_Store

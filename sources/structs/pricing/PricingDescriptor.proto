@@ -1,6 +1,8 @@
 
 syntax = "proto3";
 
+package structs.pricing;
+
 option optimize_for = SPEED;
 option cc_enable_arenas = true;
 option java_package = "io.bloombox.schema.product.struct";
@@ -39,7 +41,7 @@ message PricingTierAvailability {
 message UnitPricingDescriptor {
   float price_value = 1;
   PricingTierAvailability status = 2;
-  repeated SaleDescriptor discounts = 3;
+  repeated structs.pricing.SaleDescriptor discounts = 3;
 }
 
 message WeightedPricingDescriptor {
@@ -64,6 +66,6 @@ message PricingDescriptor {
 
 // -- Pricing: Product-level Object
 message ProductPricing {
-  repeated SaleDescriptor discounts = 1;
+  repeated structs.pricing.SaleDescriptor discounts = 1;
   repeated PricingDescriptor manifest = 2;
 }

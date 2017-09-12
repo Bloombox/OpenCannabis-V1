@@ -1,6 +1,8 @@
 
 syntax = "proto3";
 
+package media;
+
 option optimize_for = SPEED;
 option cc_enable_arenas = true;
 option java_package = "io.bloombox.schema.media";
@@ -12,7 +14,7 @@ import "media/MediaType.proto";
 
 
 message MediaItem {
-  MediaKey key = 1;
-  MediaType type = 2;
+  media.MediaKey key = 1;
+  media.MediaType type = 2;
   string name = 3;
 }

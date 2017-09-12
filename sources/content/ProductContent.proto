@@ -1,6 +1,8 @@
 
 syntax = "proto3";
 
+package content;
+
 option optimize_for = SPEED;
 option cc_enable_arenas = true;
 option java_package = "io.bloombox.schema.content";
@@ -15,15 +17,19 @@ import "media/MediaItem.proto";
 
 message ProductContent {
   // -- Basic Properties
-  Name name = 1;  // product name
-  Content summary = 2; // narrative summary
-  Brand brand = 3;  // product's brand
+  content.Name name = 1;  // product name
+  content.Content summary = 2; // narrative summary
+  content.Brand brand = 3;  // product's brand
 
   // -- Media
-  repeated MediaItem media = 20;  // images, videos, etc
+  repeated media.MediaItem media = 20;  // images, videos, etc
 
   // -- Extended Attributes
-  Content usage = 30;  // usage advice
-  Content dosage = 31;  // dosage advice
-  Content advice = 32;  // internal advice
+  content.Content usage = 30;  // usage advice
+  content.Content dosage = 31;  // dosage advice
+  content.Content advice = 32;  // internal advice
+
+  // -- Timestamps
+  int64 modified = 40;  // timestamp for last-modified
+  int64 created = 41;  // timestamp for creation
 }

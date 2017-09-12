@@ -1,0 +1,30 @@
+
+syntax = "proto3";
+
+package structs.labtesting;
+
+option optimize_for = SPEED;
+option cc_enable_arenas = true;
+option java_package = "io.bloombox.schema.product.struct.testing";
+option java_multiple_files = true;
+option java_outer_classname = "BasicTestingSpec";
+
+import "structs/labtesting/TestValue.proto";
+import "structs/labtesting/SubjectiveTesting.proto";
+
+
+// -- Testing: Basic Protocol
+message BasicTesting {
+  bool available = 1;
+  repeated structs.labtesting.TestMedia media = 2;
+  int64 last_updated = 3;
+
+  // --- Cannabinoids
+  structs.labtesting.TestValue thc = 10;
+  structs.labtesting.TestValue cbd = 11;
+  structs.labtesting.TestValue cbn = 12;
+  structs.labtesting.TestValue cbg = 13;
+
+  // --- Testing Extensions
+  structs.labtesting.SubjectiveTesting subjective_testing = 30;
+}

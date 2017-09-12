@@ -1,6 +1,8 @@
 
 syntax = "proto3";
 
+package structs;
+
 option optimize_for = SPEED;
 option cc_enable_arenas = true;
 option java_package = "io.bloombox.schema.product.struct";
@@ -11,6 +13,6 @@ import "content/Name.proto";
 
 
 message Genetics {
-  Name male = 1;
-  Name female = 2;
+  content.Name male = 1;
+  content.Name female = 2;
 }

@@ -1,0 +1,40 @@
+
+syntax = "proto3";
+
+package structs.labtesting;
+
+option optimize_for = SPEED;
+option cc_enable_arenas = true;
+option java_package = "io.bloombox.schema.product.struct.testing";
+option java_multiple_files = true;
+option java_outer_classname = "BaseTestingSpec";
+
+import "media/MediaItem.proto";
+
+
+// -- Testing: Base (Shared) Protocol
+enum TestValueType {
+  MILLIGRAMS = 0;
+  PERCENTAGE = 1;
+  PRESENCE = 3;
+}
+
+message TestValue {
+  TestValueType type = 1;
+
+  oneof value {
+    double measurement = 10;
+    bool present = 20;
+  }
+}
+
+enum TestMediaType {
+  CERTIFICATE = 0;
+  RESULTS = 1;
+  PRODUCT_IMAGE = 2;
+}
+
+message TestMedia {
+  TestMediaType type = 1;
+  media.MediaItem media_item = 2;
+}

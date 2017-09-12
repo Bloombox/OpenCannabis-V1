@@ -1,13 +1,18 @@
 
 syntax = "proto3";
 
+package base;
+
 option optimize_for = SPEED;
 option cc_enable_arenas = true;
 option java_package = "io.bloombox.schema.base";
 option java_multiple_files = true;
 option java_outer_classname = "BaseProductKey";
 
+import "base/ProductType.proto";
+
 
 message ProductKey {
   string id = 1;
+  base.ProductType type = 2;
 }

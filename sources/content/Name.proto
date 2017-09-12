@@ -1,6 +1,8 @@
 
 syntax = "proto3";
 
+package content;
+
 option optimize_for = SPEED;
 option cc_enable_arenas = true;
 option java_package = "io.bloombox.schema.content";

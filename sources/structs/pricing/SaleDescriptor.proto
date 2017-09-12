@@ -1,6 +1,8 @@
 
 syntax = "proto3";
 
+package structs.pricing;
+
 option optimize_for = SPEED;
 option cc_enable_arenas = true;
 option java_package = "io.bloombox.schema.product.struct";
@@ -9,7 +11,7 @@ option java_outer_classname = "ProductDiscount";
 
 
 enum SaleType {
-  PERCENTAGE = 0;
+  PERCENTAGE_OFF = 0;
   BOGO = 1;
   LOYALTY = 2;
 }

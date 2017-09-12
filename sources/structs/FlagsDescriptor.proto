@@ -1,6 +1,8 @@
 
 syntax = "proto3";
 
+package structs;
+
 option optimize_for = SPEED;
 option cc_enable_arenas = true;
 option java_package = "io.bloombox.schema.product.struct";
@@ -8,7 +10,7 @@ option java_multiple_files = true;
 option java_outer_classname = "BaseStructs";
 
 
-enum ProductFlag {
+enum FlagType {
   VISIBLE = 0;
   PREMIUM = 1;
   FEATURED = 2;
@@ -16,19 +18,7 @@ enum ProductFlag {
   INHOUSE = 4;
 }
 
-message ProductFlagValue {
-  ProductFlag type = 1;
+message ProductFlag {
+  FlagType type = 1;
   bool value = 2;
-}
-
-message ProductFlagset {
-  repeated ProductFlagValue flags = 1;
-}
-
-message FlagsDescriptor {
-  bool visible = 1;
-  bool premium = 2;
-  bool featured = 3;
-  bool lastchance = 4;
-  bool inhouse = 5;
 }
