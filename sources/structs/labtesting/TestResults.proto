@@ -1,0 +1,142 @@
+
+syntax = "proto3";
+
+package structs.labtesting;
+
+option optimize_for = SPEED;
+option cc_enable_arenas = true;
+option java_package = "io.bloombox.schema.product.struct.testing";
+option java_multiple_files = true;
+option java_outer_classname = "LabTesting";
+
+import "content/Content.proto";
+
+import "structs/labtesting/TestValue.proto";
+
+
+// -- Testing: Full Protocol
+message TestResults {
+  bool available = 1;
+  repeated TestMedia media = 2;
+  int64 last_updated = 3;
+
+  // --- Testing Extensions
+  Cannabinoids cannabinoids = 30;
+  Terpenes terpenes = 31;
+  Pesticides pesticides = 32;
+  Moisture moisture = 33;
+  repeated AromaFlavor aroma = 34;
+  Subjective subjective_testing = 35;
+
+  enum AromaFlavor {
+    PINE = 0;
+    LEMON = 1;
+    PEPPER = 2;
+    LAVENDER = 3;
+    HOPS = 4;
+  }
+}
+
+
+// -- Testing: Cannabinoids
+message Cannabinoids {
+  TestValue thc = 1;
+  TestValue thca = 2;
+  TestValue thcv = 3;
+  TestValue cbd = 4;
+  TestValue cbda = 5;
+  TestValue cbdv = 6;
+  TestValue cbdva = 7;
+  TestValue cbc = 8;
+  TestValue cbg = 9;
+  TestValue cbga = 10;
+  TestValue cbn = 11;
+}
+
+
+// -- Testing: Subjective
+message Subjective {
+  content.Content description = 1;
+  content.Content taste = 2;
+  PotencyEstimate potency = 3;
+  repeated Feeling feeling_tags = 4;
+  repeated TasteNote tasting_notes = 5;
+
+  enum Feeling {
+    GROUNDING = 0;
+    SLEEP = 1;
+    CALMING = 2;
+    STIMULATING = 3;
+    FUNNY = 4;
+    FOCUS = 5;
+    PASSION = 6;
+  }
+
+  enum TasteNote {
+    SWEET = 0;
+    SOUR = 1;
+    SPICE = 2;
+    SMOOTH = 3;
+    CITRUS = 4;
+    PINE = 5;
+    FRUIT = 6;
+    TROPICS = 7;
+    FLORAL = 8;
+    HERB = 9;
+    EARTH = 10;
+  }
+
+  enum PotencyEstimate {
+    LIGHT = 0;
+    MEDIUM = 1;
+    HEAVY = 2;
+    SUPER = 3;
+  }
+}
+
+
+// -- Testing: Terpenes
+message Terpenes {
+  bool available = 1;
+  repeated Result terpenes = 10;
+
+  message Result {
+    Terpene terpene = 1;
+    TestValue measurement = 2;
+  }
+
+  enum Terpene {
+    CAMPHENE = 0;
+    CARENE = 1;
+    BETA_CARYOPHYLLENE = 2;
+    CARYOPHYLLENE_OXIDE = 3;
+    EUCALYPTOL = 4;
+    FENCHOL = 5;
+    ALPHA_HUMULENE = 6;
+    LIMONENE = 7;
+    LINALOOL = 8;
+    MYRCENE = 9;
+    ALPHA_OCIMENE = 10;
+    BETA_OCIMENE = 11;
+    ALPHA_PHELLANDRENE = 12;
+    ALPHA_PINENE = 13;
+    BETA_PINENE = 14;
+    ALPHA_TERPINEOL = 15;
+    ALPHA_TERPININE = 16;
+    GAMMA_TERPININE = 17;
+    TERPINOLENE = 18;
+  }
+}
+
+
+// -- Testing: Pesticides
+message Pesticides {
+  bool pesticide_free = 1;
+  map<string, TestValue> measurements = 2;
+}
+
+
+// -- Testing: Moisture
+message Moisture {
+  TestValue measurement = 1;
+}

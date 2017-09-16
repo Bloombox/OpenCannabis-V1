@@ -1,0 +1,16 @@
+
+syntax = "proto3";
+
+package geo;
+
+option optimize_for = SPEED;
+option java_package = "io.bloombox.schema.geo";
+option java_multiple_files = true;
+
+
+message Point {
+  double latitude = 1;
+  double longitude = 2;
+  double elevation = 3;
+  double accuracy = 4;
+}

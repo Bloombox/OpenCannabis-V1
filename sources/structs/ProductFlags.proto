@@ -1,0 +1,23 @@
+
+syntax = "proto3";
+
+package structs;
+
+option optimize_for = SPEED;
+option cc_enable_arenas = true;
+option java_package = "io.bloombox.schema.product.struct";
+option java_multiple_files = true;
+option java_outer_classname = "BaseStructs";
+
+
+enum ProductFlag {
+  // top-level flags
+  VISIBLE = 0;
+  PREMIUM = 1;
+  FEATURED = 2;
+  ORGANIC = 3;
+  EXCLUSIVE = 4;
+  IN_HOUSE = 5;
+  LAST_CHANCE = 6;
+  LIMITED_TIME = 7;
+}

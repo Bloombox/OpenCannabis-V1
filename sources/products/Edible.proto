@@ -1,0 +1,48 @@
+
+syntax = "proto3";
+
+package products;
+
+option optimize_for = SPEED;
+option cc_enable_arenas = true;
+option java_package = "io.bloombox.schema.product";
+option java_multiple_files = false;
+option java_outer_classname = "EdibleProduct";
+
+import "base/ProductKey.proto";
+
+import "content/MaterialsData.proto";
+import "content/ProductContent.proto";
+
+import "structs/labtesting/BasicTestResults.proto";
+
+
+message Edible {
+  base.ProductKey key = 1;
+  Type type = 2;
+
+  // -- Flags
+  repeated Flag flags = 10;
+
+  // -- Basic Product & Materials Data
+  content.ProductContent product = 20;
+  content.MaterialsData material = 21;
+
+  // -- Pricing and Testing
+  structs.labtesting.BasicTestResults testing = 22;
+
+  enum Type {
+    CHOCOLATE = 0;
+    BAKED_GOOD = 1;
+    CANDY = 2;
+    DRINK = 3;
+    OTHER = 99;
+  }
+
+  enum Flag {
+    VEGAN = 0;
+    GLUTEN_FREE = 2;
+    SUGAR_FREE = 3;
+    FAIR_TRADE = 4;
+  }
+}

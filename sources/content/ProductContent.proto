@@ -12,7 +12,11 @@ option java_outer_classname = "AttachedContent";
 import "content/Name.proto";
 import "content/Content.proto";
 import "content/Brand.proto";
+
 import "media/MediaItem.proto";
+
+import "structs/ProductFlags.proto";
+import "structs/pricing/PricingDescriptor.proto";
 
 
 message ProductContent {
@@ -28,6 +32,10 @@ message ProductContent {
   content.Content usage = 30;  // usage advice
   content.Content dosage = 31;  // dosage advice
   content.Content advice = 32;  // internal advice
+
+  // -- Flags and Pricing
+  repeated structs.ProductFlag flags = 22;
+  structs.pricing.ProductPricing pricing = 24;
 
   // -- Timestamps
   int64 modified = 40;  // timestamp for last-modified

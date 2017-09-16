@@ -1,0 +1,19 @@
+
+syntax = "proto3";
+
+package contact;
+
+option optimize_for = SPEED;
+option java_package = "io.bloombox.schema.contact";
+option java_multiple_files = true;
+
+import "geo/Location.proto";
+import "contact/PhoneNumber.proto";
+import "contact/EmailAddress.proto";
+
+
+message ContactInfo {
+  geo.Location location = 1;
+  contact.PhoneNumber phone = 2;
+  contact.EmailAddress email = 3;
+}

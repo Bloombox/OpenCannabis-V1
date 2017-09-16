@@ -1,7 +1,7 @@
 
 ### Description
 
-- Version: `1.0.6`
+- Version: `1.1.0`
 - Filed By: @sgammon
 - Linked Issue: `Bloombox/OpenCannabis#1`
 

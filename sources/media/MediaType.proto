@@ -20,9 +20,12 @@ message MediaType {
   }
 
   Kind kind = 1;
-  ImageType image_type = 101;
-  DocumentType document_type = 201;
-  VideoType video_type = 301;
+
+  oneof content {
+    ImageType image_type = 101;
+    DocumentType document_type = 201;
+    VideoType video_type = 301;
+  }
 }
 
 

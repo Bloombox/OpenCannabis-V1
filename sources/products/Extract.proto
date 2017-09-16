@@ -7,9 +7,11 @@ option optimize_for = SPEED;
 option cc_enable_arenas = true;
 option java_package = "io.bloombox.schema.product";
 option java_multiple_files = false;
-option java_outer_classname = "FlowerProduct";
+option java_outer_classname = "ExtractProduct";
 
 import "base/ProductKey.proto";
+
+import "products/Flower.proto";
 
 import "content/MaterialsData.proto";
 import "content/ProductContent.proto";
@@ -18,9 +20,11 @@ import "structs/Shelf.proto";
 import "structs/labtesting/TestResults.proto";
 
 
-message Flower {
+message Extract {
   base.ProductKey key = 1;
   structs.Shelf shelf = 2;
+  Type type = 3;
+  products.Flower flower = 4;
 
   // -- Basic Product & Materials Data
   content.ProductContent product = 20;
@@ -28,4 +32,16 @@ message Flower {
 
   // -- Flags, Pricing and Testing
   structs.labtesting.TestResults testing = 22;
+
+  enum Type {
+    OIL = 0;
+    WAX = 1;
+    SHATTER = 2;
+    KIEF = 3;
+    HASH = 4;
+    LIVE_RESIN = 5;
+    ROSIN = 6;
+
+    OTHER = 99;
+  }
 }

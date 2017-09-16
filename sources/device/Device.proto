@@ -1,0 +1,43 @@
+
+syntax = "proto3";
+
+package device;
+
+option optimize_for = SPEED;
+option java_package = "io.bloombox.schema.device";
+option java_multiple_files = true;
+
+
+message Device {
+  DeviceMetadata metadata = 1;
+  DeviceType type = 2;
+  DeviceFlags flags = 3;
+  DeviceKey key = 4;
+}
+
+
+message DeviceMetadata {
+  string uuid = 1;
+  string fingerprint = 2;
+}
+
+
+enum DeviceType {
+  WEB = 0;
+  MOBILE = 1;
+  DESKTOP = 2;
+  SERVER = 3;
+}
+
+
+message DeviceFlags {
+  bool ephemeral = 1;
+  bool managed = 2;
+}
+
+
+message DeviceKey {
+  bytes public = 1;
+  bytes sha256 = 2;
+  bytes private = 3;
+}

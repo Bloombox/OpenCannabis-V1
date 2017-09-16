@@ -1,0 +1,14 @@
+
+syntax = "proto3";
+
+package oauth;
+
+option optimize_for = SPEED;
+option java_package = "io.bloombox.schema.oauth";
+option java_multiple_files = true;
+
+
+message Scope {
+  string label = 1;
+  string uri = 2;
+}

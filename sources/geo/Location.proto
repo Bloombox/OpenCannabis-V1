@@ -1,0 +1,19 @@
+
+syntax = "proto3";
+
+package geo;
+
+option optimize_for = SPEED;
+option java_package = "io.bloombox.schema.geo";
+option java_multiple_files = true;
+
+import "geo/Point.proto";
+import "geo/Address.proto";
+import "content/Name.proto";
+
+
+message Location {
+  content.Name name = 1;
+  geo.Address address = 2;
+  geo.Point point = 3;
+}

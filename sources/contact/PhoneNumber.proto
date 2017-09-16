@@ -1,0 +1,14 @@
+
+syntax = "proto3";
+
+package contact;
+
+option optimize_for = SPEED;
+option java_package = "io.bloombox.schema.contact";
+option java_multiple_files = true;
+
+
+message PhoneNumber {
+  string e164 = 1;
+  bool validated = 2;
+}

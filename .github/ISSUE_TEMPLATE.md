@@ -1,7 +1,7 @@
 
 ### Description
 
-Version: `1.0.6`
+Version: `1.1.0`
 
 <!-- Describe what happened. Include as much detail as necessary. -->
 

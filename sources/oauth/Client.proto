@@ -1,0 +1,24 @@
+
+syntax = "proto3";
+
+package oauth;
+
+option optimize_for = SPEED;
+option java_package = "io.bloombox.schema.oauth";
+option java_multiple_files = true;
+
+
+message Client {
+  string client_id = 1;
+  string client_secret = 2;  
+}
+
+
+message ClientID {
+  string id = 1;
+}
+
+
+message ClientSecret {
+  string secret = 1;
+}

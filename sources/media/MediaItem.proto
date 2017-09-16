@@ -17,4 +17,5 @@ message MediaItem {
   media.MediaKey key = 1;
   media.MediaType type = 2;
   string name = 3;
+  string uri = 4;
 }
