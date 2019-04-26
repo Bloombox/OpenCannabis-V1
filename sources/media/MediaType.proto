@@ -1,69 +1,142 @@
+// OpenCannabis Protocol
+//
+// Copyright $today.year (c) OpenCannabis Authors. All rights reserved.
+// https://rfc.opencannabis.info - https://github.com/opencannabis/protocol
+//
+// Redistribution and use in source and binary forms, with or without
+// modification, are permitted provided that the following conditions are met:
+//
+// * Redistributions of source code must retain the above copyright notice,
+//   this list of conditions and the following disclaimer.
+//
+// * Redistributions in binary form must reproduce the above copyright notice,
+//   this list of conditions and the following disclaimer in the documentation
+//   and/or other materials provided with the distribution.
+//
+// The source programming code in this file is licensed for open source use
+// under the terms of the Apache License 2.0. Please see NOTICE.txt and
+// LICENSE.txt at the root of this repository, or at the GitHub URL listed at
+// the top of this file, for more information.
 
+/**
+ * Provides a structure for media type. Enumerates various types of media file types.
+ */
 syntax = "proto3";
 
-package media;
+package opencannabis.media;
 
 option optimize_for = SPEED;
-option cc_enable_arenas = true;
-option java_package = "io.bloombox.schema.media";
-option java_multiple_files = true;
+option objc_class_prefix = "OCS";
+option java_package = "io.opencannabis.schema.media";
+option java_multiple_files = false;
 option java_outer_classname = "MediaItemType";
 
+import "bq_field.proto";
 
-// -- Media Type: Top-level -- //
+
+// Specifies the type of media being attached or described.
 message MediaType {
+  // Enumerates, in generic terms, the kinds of media that can be attached or described.
   enum Kind {
+    // Web link, or URI.
     LINK = 0;
+
+    // Image or photograph.
     IMAGE = 1;
+
+    // Document or text data.
     DOCUMENT = 2;
+
+    // Video data.
     VIDEO = 3;
   }
 
-  Kind kind = 1;
-
-  oneof content {
-    ImageType image_type = 101;
-    DocumentType document_type = 201;
-    VideoType video_type = 301;
-  }
-}
-
-
-// -- Media Type: Images -- //
-message ImageType {
+  // Specifies kinds of images that may be attached or described.
   enum ImageKind {
-    PNG = 0;
-    JPG = 1;
-    GIF = 2;
-    SVG = 3;
-    WEBP = 4;
+    // Unspecified image type.
+    UNSPECIFIED_IMAGE_TYPE = 0;
+
+    // PNG image.
+    PNG = 1;
+
+    // JPG image.
+    JPG = 2;
+
+    // GIF image.
+    GIF = 3;
+
+    // SVG image.
+    SVG = 4;
+
+    // WEBP image.
+    WEBP = 5;
   }
 
-  ImageKind kind = 1;
-}
+  // Specifies the pixel density setting for an image.
+  enum ImageDPI {
+    // The image has normal, 1:1 pixel density.
+    X1 = 0;
 
+    // The image has double pixel density.
+    X2 = 1;
 
-// -- Media Type: Document -- //
-message DocumentType {
+    // The image has triple pixel density.
+    X3 = 2;
+  }
+
+  // Specifies kinds of documents that may be attached or described.
   enum DocumentKind {
-    TXT = 0;
-    HTML = 1;
-    PDF = 2;
-    MARKDOWN = 3;
+    // Unspecified document type.
+    UNSPECIFIED_DOCUMENT_TYPE = 0;
+
+    // Plaintext format.
+    TXT = 1;
+
+    // HTML format.
+    HTML = 2;
+
+    // PDF format.
+    PDF = 3;
+
+    // Markdown format.
+    MARKDOWN = 4;
   }
 
-  DocumentKind kind = 1;
-  bool compressed = 2;
-}
-
-
-// -- Media Type: Video -- //
-message VideoType {
+  // Specifies kinds of videos that may be attached or described.
   enum VideoKind {
-    MP4 = 0;
-    FLV = 1;
-    HLS = 2;
+    // Unspecified video type.
+    UNSPECIFIED_VIDEO_TYPE = 0;
+
+    // MP4 video.
+    MP4 = 1;
+
+    // Flash video.
+    FLV = 2;
+
+    // HTTP Live Streaming video.
+    HLS = 3;
   }
 
-  VideoKind kind = 1;
+  // Specifies the generic kind of media being described or attached.
+  Kind kind = 1 [
+    (gen_bq_schema.description) = "Specifies the generic kind of media being described or attached."
+  ];
+
+  // Specifies the content type for the media item.
+  oneof content {
+    // Specifies content type for an image-based media item.
+    ImageKind image_type = 101 [
+      (gen_bq_schema.description) = "Specifies content for an image-based media item."
+    ];
+
+    // Specifies content type for a document-based media item.
+    DocumentKind document_type = 201 [
+      (gen_bq_schema.description) = "Specifies content for a document-based media item."
+    ];
+
+    // Specifies content type for a video-based media item.
+    VideoKind video_type = 301 [
+      (gen_bq_schema.description) = "Specifies content for a video-based media item."
+    ];
+  }
 }

@@ -1,19 +1,112 @@
+// OpenCannabis Protocol
+//
+// Copyright $today.year (c) OpenCannabis Authors. All rights reserved.
+// https://rfc.opencannabis.info - https://github.com/opencannabis/protocol
+//
+// Redistribution and use in source and binary forms, with or without
+// modification, are permitted provided that the following conditions are met:
+//
+// * Redistributions of source code must retain the above copyright notice,
+//   this list of conditions and the following disclaimer.
+//
+// * Redistributions in binary form must reproduce the above copyright notice,
+//   this list of conditions and the following disclaimer in the documentation
+//   and/or other materials provided with the distribution.
+//
+// The source programming code in this file is licensed for open source use
+// under the terms of the Apache License 2.0. Please see NOTICE.txt and
+// LICENSE.txt at the root of this repository, or at the GitHub URL listed at
+// the top of this file, for more information.
 
+/**
+ * Specifies combined contact information for a given record.
+ */
 syntax = "proto3";
 
-package contact;
+package opencannabis.contact;
 
 option optimize_for = SPEED;
-option java_package = "io.bloombox.schema.contact";
-option java_multiple_files = true;
+option objc_class_prefix = "OCS";
+option java_package = "io.opencannabis.schema.contact";
+option java_multiple_files = false;
+option java_outer_classname = "GenericContact";
+
+import "bq_field.proto";
 
 import "geo/Location.proto";
 import "contact/PhoneNumber.proto";
 import "contact/EmailAddress.proto";
+import "contact/Website.proto";
 
 
+// Contact information for a person, organization, or other entity.
 message ContactInfo {
-  geo.Location location = 1;
-  contact.PhoneNumber phone = 2;
-  contact.EmailAddress email = 3;
+  // Geographic location and physical mail contact information.
+  opencannabis.geo.Location location = 1 [
+    (gen_bq_schema.description) = "Geographic location and physical mail contact information."
+  ];
+
+  // Telephone contact information.
+  opencannabis.contact.PhoneNumber phone = 2 [
+    (gen_bq_schema.description) = "Telephone contact information."
+  ];
+
+  // Electronic mail contact information.
+  opencannabis.contact.EmailAddress email = 3 [
+    (gen_bq_schema.description) = "Electronic mail contact information."
+  ];
+
+  // Website contact information.
+  opencannabis.contact.Website website = 4 [
+    (gen_bq_schema.description) = "Website contact information."
+  ];
+}
+
+
+// Specifies social profile URLs for a given entity, person, or organization.
+message SocialInfo {
+  // Enumerates known social providers.
+  enum SocialProvider {
+    // Indicates an un-enumerated social provider.
+    UNSPECIFIED_SOCIAL_PROVIDER = 0;
+
+    // Social profile on Facebook.
+    FACEBOOK = 1;
+
+    // Social profile on Twitter.
+    TWITTER = 2;
+
+    // Social profile on Instagram.
+    INSTAGRAM = 3;
+
+    // Social profile on YouTube.
+    YOUTUBE = 4;
+
+    // Social profile on Leafly.
+    LEAFLY = 5;
+
+    // Social profile on WeedMaps.
+    WEEDMAPS = 6;
+  }
+
+  // Specifies the notion of an individual social profile, for a given provider.
+  message SocialProfile {
+    // Specifies the provider context for the profile.
+    oneof provider {
+      // Known social account provider.
+      SocialProvider known = 10;
+
+      // Custom social account provider.
+      string custom = 11;
+    }
+
+    // Profile ID/username.
+    string username = 1;
+
+    // Full URL to the profile.
+    opencannabis.contact.Website url = 2;
+  }
+
+  // Profile listings for a given entity or person.
+  repeated SocialProfile profile = 1;
 }

@@ -1,0 +1,51 @@
+// OpenCannabis Protocol
+//
+// Copyright $today.year (c) OpenCannabis Authors. All rights reserved.
+// https://rfc.opencannabis.info - https://github.com/opencannabis/protocol
+//
+// Redistribution and use in source and binary forms, with or without
+// modification, are permitted provided that the following conditions are met:
+//
+// * Redistributions of source code must retain the above copyright notice,
+//   this list of conditions and the following disclaimer.
+//
+// * Redistributions in binary form must reproduce the above copyright notice,
+//   this list of conditions and the following disclaimer in the documentation
+//   and/or other materials provided with the distribution.
+//
+// The source programming code in this file is licensed for open source use
+// under the terms of the Apache License 2.0. Please see NOTICE.txt and
+// LICENSE.txt at the root of this repository, or at the GitHub URL listed at
+// the top of this file, for more information.
+
+/**
+ * Provides an enumeration of California licensure agencies.
+ */
+syntax = "proto3";
+
+package opencannabis.regulatory.usa.ca;
+
+option optimize_for = SPEED;
+option objc_class_prefix = "BBS";
+option java_package = "io.opencannabis.schema.regulatory.usa";
+option java_multiple_files = false;
+option java_outer_classname = "California";
+
+
+// Enumerates California executive agencies involved in cannabis licensure.
+enum CaliforniaAgency {
+  // Unknown agency backstop value.
+  UNKNOWN_AGENCY = 0;
+
+  // California Department of Farm and Agriculture
+  CDFA = 1;
+
+  // Bureau of Cannabis Control
+  CBCC = 2;
+
+  // Department of Consumer Affairs
+  CDCA = 3;
+
+  // California Department of Public Health
+  CDPH = 4;
+}

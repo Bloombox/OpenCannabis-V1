@@ -1,15 +1,68 @@
+// OpenCannabis Protocol
+//
+// Copyright $today.year (c) OpenCannabis Authors. All rights reserved.
+// https://rfc.opencannabis.info - https://github.com/opencannabis/protocol
+//
+// Redistribution and use in source and binary forms, with or without
+// modification, are permitted provided that the following conditions are met:
+//
+// * Redistributions of source code must retain the above copyright notice,
+//   this list of conditions and the following disclaimer.
+//
+// * Redistributions in binary form must reproduce the above copyright notice,
+//   this list of conditions and the following disclaimer in the documentation
+//   and/or other materials provided with the distribution.
+//
+// The source programming code in this file is licensed for open source use
+// under the terms of the Apache License 2.0. Please see NOTICE.txt and
+// LICENSE.txt at the root of this repository, or at the GitHub URL listed at
+// the top of this file, for more information.
 
+/**
+ * Provides structures relating to a media key and reference.
+ */
 syntax = "proto3";
 
-package media;
+package opencannabis.media;
 
 option optimize_for = SPEED;
-option cc_enable_arenas = true;
-option java_package = "io.bloombox.schema.media";
-option java_multiple_files = true;
+option objc_class_prefix = "OCS";
+option java_package = "io.opencannabis.schema.media";
+option java_multiple_files = false;
 option java_outer_classname = "MediaItemKey";
 
+import "core/Datamodel.proto";
+import "media/MediaType.proto";
 
+
+// Key uniquely describing an item of media known to the system. An "item of media" can be anything from an image or a
+// video, to a PDF document, or larger data.
 message MediaKey {
-  string id = 1;
+  // Unique ID for this media item.
+  string id = 1 [
+    (core.field).type = ID,
+    (core.field).description = "Unique ID for this media item."
+  ];
+}
+
+
+
+// Reference to a global media item, which consists of at least a key/ID and a URL at which the media may be consumed.
+// Referenced media is expected to be public.
+message MediaReference {
+  // Key for the media item.
+  MediaKey key = 1 [
+    (core.field).type = KEY,
+    (core.field).description = "Key being referenced as this media item."
+  ];
+
+  // URI at which the media item can be consumed/downloaded.
+  string uri = 2 [
+    (core.field).description = "URI at which the media item can be consumed/downloaded."
+  ];
+
+  // Specifies the type of media being referenced.
+  opencannabis.media.MediaType type = 3 [
+    (core.field).description = "Specifies the type of media being referenced."
+  ];
 }

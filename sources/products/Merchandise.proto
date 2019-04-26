@@ -1,39 +1,93 @@
+// OpenCannabis Protocol
+//
+// Copyright $today.year (c) OpenCannabis Authors. All rights reserved.
+// https://rfc.opencannabis.info - https://github.com/opencannabis/protocol
+//
+// Redistribution and use in source and binary forms, with or without
+// modification, are permitted provided that the following conditions are met:
+//
+// * Redistributions of source code must retain the above copyright notice,
+//   this list of conditions and the following disclaimer.
+//
+// * Redistributions in binary form must reproduce the above copyright notice,
+//   this list of conditions and the following disclaimer in the documentation
+//   and/or other materials provided with the distribution.
+//
+// The source programming code in this file is licensed for open source use
+// under the terms of the Apache License 2.0. Please see NOTICE.txt and
+// LICENSE.txt at the root of this repository, or at the GitHub URL listed at
+// the top of this file, for more information.
 
+/**
+ * Provides structures relating to merchandise and enumerates various merchandise flags, and types.
+ */
 syntax = "proto3";
 
-package products;
+package opencannabis.products;
 
 option optimize_for = SPEED;
-option cc_enable_arenas = true;
-option java_package = "io.bloombox.schema.product";
+option objc_class_prefix = "OCS";
+option java_package = "io.opencannabis.schema.product";
 option java_multiple_files = false;
 option java_outer_classname = "MerchandiseProduct";
 
 import "base/ProductKey.proto";
-
-import "content/MaterialsData.proto";
 import "content/ProductContent.proto";
 
 
+// Specifies types of generic merchandise that may be carried on a dispensary menu.
+enum MerchandiseType {
+  // Unknown, unrecognized, or otherwise unspecified merchandise subcategory.
+  UNSPECIFIED_MERCHANDISE = 0;
+
+  // Clothing - i.e. shirts, pants, hoodies, and other wearable textiles.
+  CLOTHING = 1;
+
+  // Cups, mugs, on up to pipes and bongs.
+  GLASSWARE = 2;
+
+  // Containers for cannabis.
+  CONTAINER = 3;
+
+  // Tools to produce fire to consume cannabis.
+  LIGHTER = 4;
+
+  // Specific clothing value for t-shirts.
+  TSHIRT = 5;
+
+  // Specific clothing value for sweatshirts.
+  HOODIE = 6;
+
+  // Specific clothing value for hats.
+  HAT = 7;
+}
+
+
+// Flags that may be applied specifically to merchandise items.
+enum MerchandiseFlag {
+  // No flags specified.
+  NO_MERCHANDISE_FLAGS = 0;
+
+  // This item requires that a user have a valid medical recommendation for cannabis.
+  MEDICAL_ONLY = 1;
+
+  // This item is branded for the partner and should be promoted as such.
+  BRAND_SWAG = 2;
+}
+
+
+// Specifies an item of merchandise, that does not contain cannabis, but is sold anyway by a dispensary, such as branded
+// clothing, containers, lighters, and other random stuff.
 message Merchandise {
-  base.ProductKey key = 1;
-  Type type = 2;
+  // Product key uniquely identifying this merchandise item.
+  opencannabis.base.ProductKey key = 1;
 
-  // -- Flags
-  repeated Flag flags = 10;
+  // Sub-category for this merchandise item, if known.
+  MerchandiseType type = 2;
 
-  // -- Basic Product & Materials Data
-  content.ProductContent product = 20;
-  content.MaterialsData material = 21;
+  // Flags for this merchandise item.
+  repeated MerchandiseFlag flags = 3;
 
-  enum Type {
-  	CLOTHING = 0;
-  	GLASSWARE = 1;
-  	ACCESSORIES = 2;
-  	OTHER = 99;
-  }
-
-  enum Flag {
-  	MEDICAL_ONLY = 0;
-  }
+  // Content about this merchandise item.
+  opencannabis.content.ProductContent product = 4;
 }

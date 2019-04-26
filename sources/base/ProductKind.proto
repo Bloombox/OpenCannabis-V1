@@ -1,22 +1,60 @@
+// OpenCannabis Protocol
+//
+// Copyright $today.year (c) OpenCannabis Authors. All rights reserved.
+// https://rfc.opencannabis.info - https://github.com/opencannabis/protocol
+//
+// Redistribution and use in source and binary forms, with or without
+// modification, are permitted provided that the following conditions are met:
+//
+// * Redistributions of source code must retain the above copyright notice,
+//   this list of conditions and the following disclaimer.
+//
+// * Redistributions in binary form must reproduce the above copyright notice,
+//   this list of conditions and the following disclaimer in the documentation
+//   and/or other materials provided with the distribution.
+//
+// The source programming code in this file is licensed for open source use
+// under the terms of the Apache License 2.0. Please see NOTICE.txt and
+// LICENSE.txt at the root of this repository, or at the GitHub URL listed at
+// the top of this file, for more information.
 
+/**
+ * Enumerates types of addressable cannabis products.
+ */
 syntax = "proto3";
 
-package base;
+package opencannabis.base;
 
 option optimize_for = SPEED;
-option cc_enable_arenas = true;
-option java_package = "io.bloombox.schema.base";
-option java_multiple_files = true;
+option objc_class_prefix = "OCS";
+option java_package = "io.opencannabis.schema.base";
+option java_multiple_files = false;
 option java_outer_classname = "BaseProductKind";
 
 
+// Enumerates types of products known to the spec.
 enum ProductKind {
+  // Traditional buds or 'flower'-based products, essentially sold in bags or jars.
   FLOWERS = 0;
+
+  // Manufactured products that are edible, like drinks, snacks, candy, and food.
   EDIBLES = 1;
+
+  // Manufactured products that are concentrated from flowers in some manner, such as wax or oil.
   EXTRACTS = 2;
+
+  // Pre-rolled items, generally made from flowers, like a cigarette - this would cover joints, etc.
   PREROLLS = 3;
+
+  // Tinctures, topicals, capsules, and other forms of manufactured cannabis.
   APOTHECARY = 4;
+
+  // Vaporizor cartridges, batteries, and kits.
   CARTRIDGES = 5;
+
+  // Plants sold direct, in various forms such as pre-grown (clones) or raw seeds.
   PLANTS = 6;
+
+  // Merchandise, usually branded in-house. Also covers glassware and miscellaneous items.
   MERCHANDISE = 7;
 }

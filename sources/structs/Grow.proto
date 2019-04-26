@@ -1,18 +1,51 @@
+// OpenCannabis Protocol
+//
+// Copyright $today.year (c) OpenCannabis Authors. All rights reserved.
+// https://rfc.opencannabis.info - https://github.com/opencannabis/protocol
+//
+// Redistribution and use in source and binary forms, with or without
+// modification, are permitted provided that the following conditions are met:
+//
+// * Redistributions of source code must retain the above copyright notice,
+//   this list of conditions and the following disclaimer.
+//
+// * Redistributions in binary form must reproduce the above copyright notice,
+//   this list of conditions and the following disclaimer in the documentation
+//   and/or other materials provided with the distribution.
+//
+// The source programming code in this file is licensed for open source use
+// under the terms of the Apache License 2.0. Please see NOTICE.txt and
+// LICENSE.txt at the root of this repository, or at the GitHub URL listed at
+// the top of this file, for more information.
 
+/**
+ * Enumerates grow type.
+ */
 syntax = "proto3";
 
-package structs;
+package opencannabis.structs;
 
 option optimize_for = SPEED;
-option cc_enable_arenas = true;
-option java_package = "io.bloombox.schema.product.struct";
+option objc_class_prefix = "OCS";
+option java_package = "io.opencannabis.schema.product.struct";
 option java_multiple_files = true;
 option java_outer_classname = "MaterialGrow";
 
 
+// Enumerates common/known types or styles of cultivation that might produce a flower for sale, or resale after
+// manufacture.
 enum Grow {
+  // Generic, or unknown, grow circumstances.
   GENERIC = 0;
+
+  // Indoor grow circumstances, implying high-precision environment controls (temperature, humidity, light, and so on)
+  // and close monitoring and optimization.
   INDOOR = 1;
+
+  // Greenhouse-based grow circumstances. This includes any indoor grow operation that makes use of natural light in any
+  // manner, augmenting replacing controlled indoor lighting.
   GREENHOUSE = 2;
+
+  // Outdoor-based grow circumstances, that use entirely natural light from the sun.
   OUTDOOR = 3;
 }

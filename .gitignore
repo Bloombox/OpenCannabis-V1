@@ -3,3 +3,8 @@ languages/
 release/
 .DS_Store
 *.DS_Store
+Schema.iws
+descriptors/
+.env
+*.dbk
+*.html

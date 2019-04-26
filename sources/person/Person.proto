@@ -1,0 +1,86 @@
+// OpenCannabis Protocol
+//
+// Copyright $today.year (c) OpenCannabis Authors. All rights reserved.
+// https://rfc.opencannabis.info - https://github.com/opencannabis/protocol
+//
+// Redistribution and use in source and binary forms, with or without
+// modification, are permitted provided that the following conditions are met:
+//
+// * Redistributions of source code must retain the above copyright notice,
+//   this list of conditions and the following disclaimer.
+//
+// * Redistributions in binary form must reproduce the above copyright notice,
+//   this list of conditions and the following disclaimer in the documentation
+//   and/or other materials provided with the distribution.
+//
+// The source programming code in this file is licensed for open source use
+// under the terms of the Apache License 2.0. Please see NOTICE.txt and
+// LICENSE.txt at the root of this repository, or at the GitHub URL listed at
+// the top of this file, for more information.
+
+/**
+ * Provides structures related to a person and all their characteristics. As well as enumerating gender.
+ */
+syntax = "proto3";
+
+package opencannabis.person;
+
+option optimize_for = SPEED;
+option objc_class_prefix = "OCS";
+option java_package = "io.opencannabis.schema.person";
+option java_multiple_files = true;
+
+import "bq_field.proto";
+
+import "temporal/Date.proto";
+import "contact/ContactInfo.proto";
+import "person/PersonName.proto";
+
+
+// Genders that a user may be.
+enum Gender {
+  // Unspecified gender.
+  UNSPECIFIED = 0;
+
+  // Male.
+  MALE = 1;
+
+  // Female.
+  FEMALE = 2;
+
+  // Other.
+  OTHER = 3;
+}
+
+
+// A person/patint and their name, legal name, nickname, etc.
+message Person {
+  // Person's primary name information.
+  Name name = 1 [
+    (gen_bq_schema.description) = "Person's primary name information."
+  ];
+
+  // Person's legal name, if it differs from their primary name.
+  Name legal_name = 2 [
+    (gen_bq_schema.description) = "Person's legal name, if it differs from their primary name."
+  ];
+
+  // Person's optional alternate name.
+  Name alternate_name = 3 [
+    (gen_bq_schema.description) = "Person's optional alternate name."
+  ];
+
+  // Person's contact information.
+  opencannabis.contact.ContactInfo contact = 4 [
+    (gen_bq_schema.description) = "Person's contact information."
+  ];
+
+  // Date of birth.
+  opencannabis.temporal.Date date_of_birth = 5 [
+    (gen_bq_schema.description) = "Date of birth."
+  ];
+
+  Gender gender = 6 [
+    (gen_bq_schema.description) = "Gender."
+  ];
+}

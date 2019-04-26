@@ -1,16 +1,59 @@
+// OpenCannabis Protocol
+//
+// Copyright $today.year (c) OpenCannabis Authors. All rights reserved.
+// https://rfc.opencannabis.info - https://github.com/opencannabis/protocol
+//
+// Redistribution and use in source and binary forms, with or without
+// modification, are permitted provided that the following conditions are met:
+//
+// * Redistributions of source code must retain the above copyright notice,
+//   this list of conditions and the following disclaimer.
+//
+// * Redistributions in binary form must reproduce the above copyright notice,
+//   this list of conditions and the following disclaimer in the documentation
+//   and/or other materials provided with the distribution.
+//
+// The source programming code in this file is licensed for open source use
+// under the terms of the Apache License 2.0. Please see NOTICE.txt and
+// LICENSE.txt at the root of this repository, or at the GitHub URL listed at
+// the top of this file, for more information.
 
+/**
+ * Provides a structure for specifying a specific point on the earth.
+ */
 syntax = "proto3";
 
-package geo;
+package opencannabis.geo;
 
 option optimize_for = SPEED;
-option java_package = "io.bloombox.schema.geo";
+option objc_class_prefix = "OCS";
+option java_package = "io.opencannabis.schema.geo";
 option java_multiple_files = true;
 
+import "bq_field.proto";
+import "geo/Distance.proto";
 
+
+// Specifies a specific point on the earth, via a standard set of latitude/longitude coordinates, an elevation, and
+// optionally an accuracy rating. Accuracy and elevation are interpreted in 'feet' by default.
 message Point {
-  double latitude = 1;
-  double longitude = 2;
-  double elevation = 3;
-  double accuracy = 4;
+  // Latitude value of this point.
+  double latitude = 1 [
+    (gen_bq_schema.description) = "Latitude value of this point."
+  ];
+
+  // Longitude value of this point.
+  double longitude = 2 [
+    (gen_bq_schema.description) = "Longitude value of this point."
+  ];
+
+  // Elevation of this point, if any.
+  Distance elevation = 3 [
+    (gen_bq_schema.description) = "Elevation of this point, if any."
+  ];
+
+  // Accuracy rating attached to this point, if any.
+  Distance accuracy = 4 [
+    (gen_bq_schema.description) = "Accuracy rating attached to this point, if any."
+  ];
 }

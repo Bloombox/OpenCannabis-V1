@@ -1,18 +1,44 @@
+// OpenCannabis Protocol
+//
+// Copyright $today.year (c) OpenCannabis Authors. All rights reserved.
+// https://rfc.opencannabis.info - https://github.com/opencannabis/protocol
+//
+// Redistribution and use in source and binary forms, with or without
+// modification, are permitted provided that the following conditions are met:
+//
+// * Redistributions of source code must retain the above copyright notice,
+//   this list of conditions and the following disclaimer.
+//
+// * Redistributions in binary form must reproduce the above copyright notice,
+//   this list of conditions and the following disclaimer in the documentation
+//   and/or other materials provided with the distribution.
+//
+// The source programming code in this file is licensed for open source use
+// under the terms of the Apache License 2.0. Please see NOTICE.txt and
+// LICENSE.txt at the root of this repository, or at the GitHub URL listed at
+// the top of this file, for more information.
 
+/**
+ * Provides genetic lineage structures.
+ */
 syntax = "proto3";
 
-package structs;
+package opencannabis.structs;
 
 option optimize_for = SPEED;
-option cc_enable_arenas = true;
-option java_package = "io.bloombox.schema.product.struct";
+option objc_class_prefix = "OCS";
+option java_package = "io.opencannabis.schema.product.struct";
 option java_multiple_files = true;
 option java_outer_classname = "GeneticsStructs";
 
-import "content/Name.proto";
+import "base/ProductKey.proto";
 
 
+// Specifies genetics for a particular plant or flower item.
 message Genetics {
-  content.Name male = 1;
-  content.Name female = 2;
+  // Specifies the male side of an item's genetics.
+  opencannabis.base.ProductReference male = 1;
+
+  // Specifies the female side of an item's genetics.
+  opencannabis.base.ProductReference female = 2;
 }

@@ -1,0 +1,59 @@
+// OpenCannabis Protocol
+//
+// Copyright $today.year (c) OpenCannabis Authors. All rights reserved.
+// https://rfc.opencannabis.info - https://github.com/opencannabis/protocol
+//
+// Redistribution and use in source and binary forms, with or without
+// modification, are permitted provided that the following conditions are met:
+//
+// * Redistributions of source code must retain the above copyright notice,
+//   this list of conditions and the following disclaimer.
+//
+// * Redistributions in binary form must reproduce the above copyright notice,
+//   this list of conditions and the following disclaimer in the documentation
+//   and/or other materials provided with the distribution.
+//
+// The source programming code in this file is licensed for open source use
+// under the terms of the Apache License 2.0. Please see NOTICE.txt and
+// LICENSE.txt at the root of this repository, or at the GitHub URL listed at
+// the top of this file, for more information.
+
+/**
+ * Specifies the notion of a 'customer,' which is a person who is completing a purchase transaction, has completed a
+ * purchase transaction in the past, or intends to commit a purchase transaction in the future.
+ */
+syntax = "proto3";
+
+package opencannabis.commerce;
+
+option optimize_for = SPEED;
+option objc_class_prefix = "OCS";
+option java_package = "io.opencannabis.schema.commerce";
+option java_multiple_files = false;
+option java_outer_classname = "OrderCustomer";
+
+import "bq_field.proto";
+
+import "person/Person.proto";
+
+
+// Customer identity.
+message Customer {
+  // Person attached to this customer.
+  opencannabis.person.Person person = 1 [
+    (gen_bq_schema.require) = true,
+    (gen_bq_schema.description) = "Person attached to this customer."
+  ];
+
+  // Partner-scoped foreign system ID.
+  string foreign_id = 2 [
+    (gen_bq_schema.require) = true,
+    (gen_bq_schema.description) = "Partner-scoped foreign system ID."
+  ];
+
+  // Resolved subject user key.
+  string user_key = 3 [
+    (gen_bq_schema.require) = true,
+    (gen_bq_schema.description) = "Resolved subject user key."
+  ];
+}

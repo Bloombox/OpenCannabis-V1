@@ -1,17 +1,48 @@
+// OpenCannabis Protocol
+//
+// Copyright $today.year (c) OpenCannabis Authors. All rights reserved.
+// https://rfc.opencannabis.info - https://github.com/opencannabis/protocol
+//
+// Redistribution and use in source and binary forms, with or without
+// modification, are permitted provided that the following conditions are met:
+//
+// * Redistributions of source code must retain the above copyright notice,
+//   this list of conditions and the following disclaimer.
+//
+// * Redistributions in binary form must reproduce the above copyright notice,
+//   this list of conditions and the following disclaimer in the documentation
+//   and/or other materials provided with the distribution.
+//
+// The source programming code in this file is licensed for open source use
+// under the terms of the Apache License 2.0. Please see NOTICE.txt and
+// LICENSE.txt at the root of this repository, or at the GitHub URL listed at
+// the top of this file, for more information.
 
+/**
+ * Specifies natural language-related messages and enumerations. Also enumerates registered languages.
+ */
 syntax = "proto3";
 
-package base;
+package opencannabis.base;
 
 option optimize_for = SPEED;
-option cc_enable_arenas = true;
-option java_package = "io.bloombox.schema.base";
-option java_multiple_files = true;
+option objc_class_prefix = "OCS";
+option java_package = "io.opencannabis.schema.base";
+option java_multiple_files = false;
 option java_outer_classname = "BaseLanguage";
 
 
+// Specifies languages available for specification, usually used as an attachment to content or media.
 enum Language {
-  ENGLISH = 0;
-  SPANISH = 1;
-  FRENCH = 2;
+  // Default or unset language.
+  LANGUAGE_UNSPECIFIED = 0;
+
+  // English.
+  ENGLISH = 1;
+
+  // Spanish.
+  SPANISH = 2;
+
+  // French.
+  FRENCH = 3;
 }

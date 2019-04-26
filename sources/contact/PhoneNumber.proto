@@ -1,14 +1,55 @@
+// OpenCannabis Protocol
+//
+// Copyright $today.year (c) OpenCannabis Authors. All rights reserved.
+// https://rfc.opencannabis.info - https://github.com/opencannabis/protocol
+//
+// Redistribution and use in source and binary forms, with or without
+// modification, are permitted provided that the following conditions are met:
+//
+// * Redistributions of source code must retain the above copyright notice,
+//   this list of conditions and the following disclaimer.
+//
+// * Redistributions in binary form must reproduce the above copyright notice,
+//   this list of conditions and the following disclaimer in the documentation
+//   and/or other materials provided with the distribution.
+//
+// The source programming code in this file is licensed for open source use
+// under the terms of the Apache License 2.0. Please see NOTICE.txt and
+// LICENSE.txt at the root of this repository, or at the GitHub URL listed at
+// the top of this file, for more information.
 
+/**
+ * Provides a structured record that specifies an E164-formatted telephone number.
+ */
 syntax = "proto3";
 
-package contact;
+package opencannabis.contact;
 
 option optimize_for = SPEED;
-option java_package = "io.bloombox.schema.contact";
-option java_multiple_files = true;
+option objc_class_prefix = "OCS";
+option java_package = "io.opencannabis.schema.contact";
+option java_multiple_files = false;
+option java_outer_classname = "ContactPhone";
+
+import "bq_field.proto";
 
 
+// Payload that specifies a phone number, and any additional information to be carried with it (including verification
+// state, if applicable).
 message PhoneNumber {
-  string e164 = 1;
-  bool validated = 2;
+  // E164-formatted telephone number.
+  string e164 = 1 [
+    (gen_bq_schema.description) = "E164-formatted telephone number."
+  ];
+
+  // Validation status. Usable by providers to indicate a phone number that has already been validated, or that a phone
+  // number remains unvalidated.
+  bool validated = 2 [
+    (gen_bq_schema.description) = "Validation status for this phone number."
+  ];
+
+  // Display text for this phone number, if applicable.
+  string display = 3 [
+    (gen_bq_schema.description) = "Display text for this phone number, if applicable."
+  ];
 }
